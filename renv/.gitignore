@@ -1,0 +1,10 @@
+library/
+local/
+lock/
+python/
+staging/
+
+.RData
+.Renviron
+
+**/*.DS_Store
