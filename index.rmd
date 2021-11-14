@@ -1,13 +1,15 @@
 ---
-knit: "bookdown::render_book"
+knit: bookdown::render_book
 title: "Data Team Handbook"
 author: "Global TIES for Children Data Team"
-description: "This is a compendium of knowledge for the TIES Data Team, both for internal capacity development and for external communication for accountability. This work includes technical information about our practices and non-technical guides to support our colleagues."
+description: |
+  This is a compendium of knowledge for the TIES Data Team, both for internal capacity development and for external communication for accountability.
+  This work includes technical information about our practices and non-technical guides to support our colleagues.
 url: 'https\://r4ds.had.co.nz/'
 github-repo: nyuglobalties/dt-handbook
 twitter-handle: NYUGlobalTIES
 site: bookdown::bookdown_site
-documentclass: book
+output: bookdown::bs4_book
 ---
 
 # Welcome {-}
