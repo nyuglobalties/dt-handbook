@@ -5,9 +5,12 @@ options(width = 60)
 bslib::page_navbar
 downlit::href_article
 xml2::xml_root
+mime::mimemap
+markdown::renderMarkdown
+servr::make
 
 # example chunk options set globally
 knitr::opts_chunk$set(
   comment = "#>",
   collapse = TRUE
-  )
+)
