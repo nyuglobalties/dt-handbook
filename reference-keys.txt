@@ -1,3 +1,5 @@
+dt-structure
+members
 styling-r
 syntax
 object-names
