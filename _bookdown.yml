@@ -4,6 +4,7 @@ before_chapter_script: _common.R
 delete_merged_file: true
 rmd_files: [
   "index.Rmd",
+  "handbook/team/structure.Rmd",
 
   "handbook/guides/styling-r.Rmd",
 ]

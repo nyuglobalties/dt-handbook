@@ -1,5 +1,6 @@
 bookdown::bs4_book:
-  css: bs4_style.css
+  css: ['bs4_style.css', 'style.css']
   theme:
     primary: "rgb(87,6,140)" # NYU violet
   repo: https://github.com/nyuglobalties/dt-handbook
+  search: true
