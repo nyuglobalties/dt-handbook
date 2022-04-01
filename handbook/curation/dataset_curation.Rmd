@@ -1,0 +1,241 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+# Data Curation
+
+The goal of the Data Team when archiving, sharing, and preserving data products (datasets and derived data products) is to reduce data uncertainty and serve specific designated communities including the source community. Datasets and derived data products are archived according to the Open Archival Information System (OAIS) and the FAIR standards of scientific data management. They are shared in a way that protects and respects TIES survey respondents. 
+
+Below are a list of general concepts followed by various standards for different kinds of datasets. The appendix has background material/definitions for common curation practices.
+
+## General Concepts
+
+### Data Uncertainty
+
+This is the degree to which data is inaccurate, imprecise, untrusted, or unknown. All complex systems have a degree of uncertainty inherent within them. Practically this means that when designing data products, efforts should be made to reduce or remove missingness and ensure that data products are properly described with metadata/documentation where applicable.
+
+### Desginated Community
+
+This is the audience for a data product and can be an imagined group or persona. The term is borrowed from the Open Archival Information System (OAIS) Reference Model and defined as “an identified group of potential Consumers who should be able to understand a particular set of information.” Each designated community has its own Knowledge Base. The Knowledge Base of a DC can change over time to the point where the archive would need to update and enhance preserved information to make it understandable again for the DC.
+
+### Dataset and Derived Data Product
+
+The dataset is the data that is to be preserved and shared. A derived data product is the analysis or aggregation of the dataset for reports, visualizations, or further analysis. Each dataset has a designated community that defines the linguistic and conceptual needs of the metadata and documentation. 
+
+### Metadata
+
+Metadata is the context, definitions, descriptions of the values in a dataset. This can include labels, study information, authorship, titles, funders, etc. 
+
+### Open Science
+
+TIES participates in open science where and when it doesn’t pose a risk to our sources. Open science is the movement to make scientific research (including publications, data, physical samples, and software) and its dissemination acceptable to the public with limited to no restrictions. 
+
+The Data Team's contributions to data processing, including code and packages, are open source, available to the public through Github, and we work to publish them in a appropriate repositories. For R packages, the appropriate repository is CRAN (the Comprehensive R Archive Network).
+
+We also follow FAIR principles, making certain that our datasets are accessible and our metadata is open. These datasets are anonymized/deidentified to protect the subjects. Where possible, we use multilingual information thesauri and controlled vocabularies to increase interoperability by the host countries of our studies. 
+
+### Internationalization
+
+According to the World Wide Web Consortium (W3C), internationalization is taking steps to develop content or applications in a way that will work for users from any culture, region, or language. Data Team standards state that we use internationalized and multilingual controlled vocabularies where and when feasible in our reuse datasets. 
+
+## Raw Dataset Standards
+
+### Designated Community
+
+- Data Team 
+
+### Description
+
+Datasets of raw data from the data collector. Has identifiable information.
+
+### Study level metadata standard
+
+- Title
+- PIs
+- Funder
+- Preregistration - if exists
+
+### Variable level metadata standard
+
+- Variable labels
+
+### File structure standard
+
+- As provided by data collectors
+
+### Licensing/Terms of use
+
+- Data use agreement 
+- Data Management plan
+
+### Variable restriction standard
+
+- None
+
+### Conceptual structure standard
+
+- None
+
+### Language/internationalization standard
+
+- None
+
+### Restriction/embargo standards
+
+- Completely restricted. Data is not shared outside of the DUA/DMP
+
+### Repository/Storage/Archive solution
+
+- Specified by the DUA/DMP
+
+### Quality Assurance level
+
+- Low
+
+### Derived Data Products allowed
+
+- None
+
+### Type of dcoumentation generated
+
+- Preliminary reports
+
+---
+
+## Internal Datasets Standards
+
+### Designated Community
+
+- Global TIES for Children staff
+
+### Description
+
+Data that is being processed by the Data Team but available to other Global TIES staffmembers. Metadata is a HTML codebook with summary statistics. 
+
+### Study level metadata standard
+
+Metadata moved into the DDI-Codebook schema in a YAML file
+
+**Suggested elements**
+
+- codeBook
+  - stdyDscr: Study Description
+    - citation
+      - titlStmt: Title Statement
+        - titl: [Title](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/titlStmt.html#a18)
+      - serStmt: Series Statement
+        - serName: [Series Name](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/serStmt.html#a16), abbreviation can be put in as an attribute
+        - serInfo: [Series Information](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/serInfo.html)
+      - rspStmt
+        - AuthEnty: [Authoring Entity/Primary Investigator](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/AuthEnty.html)
+        - othId: [Other Identifications/Acknowledgements](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/AuthEnty.html), please include role and affiliations
+      - prodStmt: [Production Statement](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/prodStmt.html)
+        - producer: [Producer](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/prodStmt.html#a19)
+        - fundAg: [Funding Agency/Sponsor](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/fundAg.html), abbreviation and role can be included in the attributes
+        - grantNo: [Grant Number](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/grantNo.html)
+        - prodPlac: [Production Place](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/prodPlac.html)
+    - method
+      - dataColl: Data Collection Methodology
+        - timeMeth: [Time Method](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/dataColl.html#a29)
+        - dataCollector: [Data Collector](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/dataCollector.html)
+        - collMode: [Mode of Data Collection](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/collMode.html)
+      - stdyInfo: Study Scope
+        - subject: Subject
+          - keyword: [Keyword](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/keyword.html)
+        - abstract: [Abstract](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/abstract.html)
+        - sumDscr: Summary Data Description
+          - nation: [Country](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/nation.html), use of abbreviation using ISO country codes recommended
+          - geogCover: [Geographic Coverage](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/geogCover.html)
+          - geogUnit: [Geographic Unit](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/geogUnit.html)
+          - dataKind: [Kind of Data](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/dataKind.html)
+          - anlyUnit: [Unit of Analysis](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/anlyUnit.html)
+          - universe: [Universe](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/universe.html), specify level at study and assume clusion attribute is I for included universe
+          
+
+### Variable level metadata standard
+
+Variables grouped by measure with descriptions in DDI elements within a YAML file
+
+**Suggested elements**
+
+- codeBook
+  - dataDscr: Variable Description
+    - varGrp: [Variable Group](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/varGrp.html), attributes needed are type, a list of vars, a name
+      - labl: [Label](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/labl.html)
+      - defntn: [Definiton](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/defntn.html)
+      - universe: [Universe](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/universe.html), specify level and assume clusion is I for included in attributes
+    - var: [Variable](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/var.html), name attribute required
+      - labl: [Label](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/labl.html)
+      - respUnit: [Response Unit](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/respUnit.html)
+      - anlysUnit: [Analysis Unit](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/anlysUnit.html)
+      - catgry: Category
+        - labl: [Label](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/labl.html)
+        - catValu: [Category Value](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/catValu.html)
+      - qstn: [Question](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/qstn.html)
+      - universe: [Universe](https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/field_level_documentation_files/schemas/codebook_xsd/elements/universe.html), if different from varGrp
+
+### File structure standard
+
+- Determined by data team and researchers
+
+### Licensing/Terms of use
+
+- Data use agreement 
+- Data Management plan
+
+### Variable restriction standard
+
+- None
+
+### Conceptual structure standard
+
+- None
+
+### Language/internationalization standard
+
+- None
+
+### Restriction/embargo standards
+
+- Completely restricted. Data is not shared outside of Global TIES for Children
+
+### Repository/Storage/Archive solution
+
+- Specified by the DUA/DMP but probably a combination of Box and Github
+
+### Quality Assurance level
+
+- Low
+
+### Derived Data Products allowed
+
+- None
+
+### Type of dcoumentation generated
+
+- PHTML codebooks and automated analysis
+
+--- 
+
+## Internal Datasets Standards
+
+### Designated Community
+
+
+## Partner-shared Datasets Standards
+
+- **Designated Community**: Global TIES for Children staff and official partners
+- **Description**: Almost finished datasets that are ready to be shared with partners. Data is deidentified and has been reviewed. Metadata is a HTML codebook. 
+
+## Replication/Verification Datasets Standards
+
+- **Designated Community**: Academics and independent scholars in the article's field
+- **Description**: Datasets generated in support of an academic derived data product (article, presentation, poster). Data is limited to the variables and measures used in the product and metadata is limited. Study level metadata is focused on discovery and variable level metadata is a codebook without summary statistics. 
+- Replication/Verification datasets may include code used to generate the derived data product.
+
+## Datasets for Reuse Standards
+
+### FAIR standards
+
+- These datasets are 
