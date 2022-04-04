@@ -7,4 +7,6 @@ rmd_files: [
   "handbook/team/structure.Rmd",
 
   "handbook/guides/styling-r.Rmd",
+  
+  "handbook/curation/dataset_curation.Rmd"
 ]
