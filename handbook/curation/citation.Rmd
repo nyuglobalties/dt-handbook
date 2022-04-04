@@ -1,0 +1,64 @@
+# Citation formats
+
+Both datasets and derived data products need to be citable and cited after archiving. TIES follows the DataCite citation format for datasets and the APA style guide for derived data products (communication materials, policy briefs, posters, presentations, academic articles, preprints, etc.)
+
+## Dataset
+
+We use the DataCite format to cite datasets (https://datacite.org/cite-your-data.html). The basic citation format is as follows:
+
+- Creator (PublicationYear). Title. Publisher. Identifier
+
+There are also two optional properties. If used the citation format is:
+
+- Creator (PublicationYear). Title. Version. Publisher. ResourceType. Identifier.
+
+The APA style guide also has a dataset citation format:
+
+- Author or Rightsholder, A. A. (Year). Title (Version Number) [Description of Form]. Publisher. Identifier or URL.
+
+The Datacite format is preferable because it’s an open format and the DOI registration agency for datasets. There’s no differentiation between Publisher and Distributor in the citations. My preference is to include both in order to recognize the publishers (like Global TIES & IRC) and distributor (repository).
+
+- Creators (Publication Year). Title. Publisher [Publisher]. Distributor [distributor]. Identifier.
+
+## Academic works
+
+We use APA citation style to cite articles, books, and preprints. The below cases are 6th edition. 
+
+**Articles**
+
+- Last Name, First Initial. Second Initial. (Year). Title. Journal, Volume(Issue), pages. DOI link.
+
+**Book**
+
+- Author last name, First Initial. Second Initial. (Year). Book title: Subtitle. Publisher. URL
+- Author last name, First Initial. Second Initial. (Ed.). (Year). Book title: Subtitle. Publisher. URL link
+
+**Book chapter**
+
+- Chapter Author’s Last Name, First Initial. Second Initial. (Year). Chapter title. In Editor First initial. Second  Initial. Editor Last Name (Ed.). Book title: Subtitle (edition, Volume, pages). Publisher Name. identifier or url link.
+
+**Conference sessions, poster abstracts and poster presentations**
+
+- Presenter last name, First initial. Second initial (date of conference). Title of presentation or poster [type of work]. Conference title. Conference location. URL or identifier link.
+
+**Preprint**
+
+- Last Name, First Initial. Second Initial. (Year). Title. Preprint repository. URL or DOI link.
+
+## Research instrument
+
+We use APA citation style to cite research instrumentation (surveys, items, etc).
+
+- Author last name, First initial., Second initial. (Year). Title [format of work]. URL or doi link.
+
+## Derived data product
+
+We use APA citation style to cite derived data products, preferably hosted on figshare. 
+
+**Visual (video or photograph) or audio work**
+
+- Creator last name, First initial. Second Initial. (Year, Month Day). Title of work [Description of media, graph or table]. Source. URL or DOI link.
+
+**Policy Brief or report**
+
+- Organization (Year, Month Day). Title of work [Policy brief or report]. Source. URL or DOI link.

@@ -8,5 +8,8 @@ rmd_files: [
 
   "handbook/guides/styling-r.Rmd",
   
-  "handbook/curation/dataset_curation.Rmd"
+  "handbook/curation/DMP.Rmd",
+  "handbook/curation/dataset_curation.Rmd",
+  "handbook/curation/citation.Rmd",
+  "handbook/curation/glossary.Rmd"
 ]

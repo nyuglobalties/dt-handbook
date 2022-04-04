@@ -1,0 +1,148 @@
+# Glossary
+
+## Badges to Acknowledge Open Practices (CoS)
+
+These badges are granted by the Center for Open Science (CoS) and mark an academic article as open. For more see <https://osf.io/tvyxz/wiki/home/>.  There are three badges: 
+
+- Open Data: Data deposited in a repository as public domain or with an open data license
+- Open Materials: Data (open or not) is deposited alongside digitally-shareable materials that explain the studies. These materials should be are publicly available and have enough detail and explanation that an independent researcher can understand the methodology that generated the data.
+- Preregistered: The study was preregistered in an institutional registration system. For studies that also included a pre-analysis plan there's a Preregistered+Analysis Plan badge.
+
+## Code
+
+High level programming files that can be used for analysis, data cleaning, data processing, or anything else that can be programmed on a computer. This is both a tool and potentially data. Code files may be included as supplementary material in datasets where appropriate.
+
+## Copyleft
+
+A type of open license that requires that the original creator is cited and that any derived products maintain the same type of license as the dataset. Copyleft seeks to give credit to the creators while not limiting the rights of reusers, like a copyright might. The term is a play on copyright.
+
+## Controlled Vocabulary
+
+A controlled vocabulary is a list, information thesaurus, hierarchy, or another knowledge organization system (KOS) that is maintained by an organization or community of users. Typically they're publicly available and have permanent URLs although there are exceptions like the APA's *Thesaurus of Psychological Index Terms*.
+
+## Creative Commons (CC)
+
+A nonprofit dedicated to open access to creative works (writing, images, music, etc). They maintain the CC copyright licenses (see: <https://creativecommons.org/licenses/>) and the CC0 public domain license.
+
+## Crossref
+
+Crossref is an official digital object identifier (DOI) Registration Agency that assigns DOIs to academic publications. 
+
+## Crosswalk
+
+A crosswalk is a file that maps equivalences between the elements of two or more  metadata schemas. This allows for the conversion of metadata from one schema to another, increased interoperability between datasets, and the enhancing of datasets by combining data from different fields.
+
+## Data Documentation Initiative (DDI)
+
+The standard metadata schema for human survey data. The DDI Alliance maintains two metadata schemas in active use, the DDI-Codebook (DDI 2.5) and the DDI Lifecycle (DDI 3). They also maintain controlled vocabularies and other schemas. For more see: <https://ddialliance.org/>.
+
+## DataCite
+
+DataCite is a DOI Registration Agency that focuses on registering and managing DOIs for data and datasets. Datacite also maintains a citation standard.
+
+## Dataset
+
+The dataset is the data that is to be preserved and shared. Each dataset has a designated community that defines the linguistic and conceptual needs of the metadata and documentation. 
+
+## Derived Data Product
+
+ A derived data product is the analysis or aggregation of the dataset for reports, visualizations, or further analysis.
+ 
+## DOI (Digital Object Identifier)
+
+A DOI or digital object identifier is a persistent ID and url for a digital object, whether an academic article, dataset, or derived data object.
+
+## Embargo
+
+A period in which access to a work that has been submitted to a distributor or publisher is restricted.
+
+## Hierarchical data
+
+Data organized in a hierarchy with parent and child elements. These elements are usually organized in a broader-than/narrower-than or a has-part/is-part-of relationship. This type of data is more flexible than a table of data since it isn't limited to only two dimension. 
+
+## Human Readable
+
+Data or documentation designed to be read by humans rather than machines. Typically, this is in documentation/natural language form but there are exceptions where a file is designed to be human and machine readable, like YAML.
+
+## Information Thesaurus
+ 
+
+ 
+## Internationalization
+
+According to the World Wide Web Consortium (W3C), internationalization is taking steps to develop content or applications in a way that will work for users from any culture, region, or language. Data Team standards state that we use internationalized and multilingual controlled vocabularies where and when feasible in our reuse datasets. 
+
+## JSON
+
+## Knowledge Organization System
+
+## LaTeX
+
+## Linked data
+
+## Machine Readable
+
+## Make Data Count
+
+## markdown
+
+## Metadata
+
+Metadata is the context, definitions, descriptions of the values in a dataset. This can include labels, study information, authorship, titles, funders, etc. 
+
+## Natural Language data
+
+## Open License
+
+## Open Science
+
+TIES participates in open science where and when it doesn’t pose a risk to our sources. Open science is the movement to make scientific research (including publications, data, physical samples, and software) and its dissemination acceptable to the public with limited to no restrictions. 
+
+The Data Team's contributions to data processing, including code and packages, are open source, available to the public through Github, and we work to publish them in a appropriate repositories. For R packages, the appropriate repository is CRAN (the Comprehensive R Archive Network).
+
+We also follow FAIR principles, making certain that our datasets are accessible and our metadata is open. These datasets are anonymized/deidentified to protect the subjects. Where possible, we use multilingual information thesauri and controlled vocabularies to increase interoperability by the host countries of our studies. 
+
+## ORCID (Open Researcher and Contributor ID)
+
+## PID (Persistent Identifier)
+
+## Preservation file formats
+
+## Repositories
+
+**Social Science Research Data Repositories**
+
+- Dataverse
+- Inter-uiversity Consortiium for POlitical and Social Research (ICPSR)
+- Qualitative Data Repository (QDR)
+
+**Research Lifecycle Repositories**
+
+- Dryad
+- Figshare
+- Open Science Framework (OSF)
+- Zenodo
+
+**Code Repositories**
+
+- Github
+- Gitlab
+- Bitbucket
+
+**Domain Specific Repositories**
+
+- Humanitarian Data eXchange
+
+**Institutional Repositories**
+
+- NYU Faculty Digital Archive
+
+## Schema
+
+## Tabular data
+
+## Tidy data
+
+## YAML
+
+## XML
