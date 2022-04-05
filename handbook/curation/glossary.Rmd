@@ -1,6 +1,10 @@
 # Glossary
 
-## Badges to Acknowledge Open Practices (CoS)
+## API (Application Programming Interface)
+
+A software interface that allows for computers or applications to talk to one another.
+
+## Badges to Acknowledge Open Practices 
 
 These badges are granted by the Center for Open Science (CoS) and mark an academic article as open. For more see <https://osf.io/tvyxz/wiki/home/>.  There are three badges: 
 
@@ -15,6 +19,10 @@ High level programming files that can be used for analysis, data cleaning, data 
 ## Copyleft
 
 A type of open license that requires that the original creator is cited and that any derived products maintain the same type of license as the dataset. Copyleft seeks to give credit to the creators while not limiting the rights of reusers, like a copyright might. The term is a play on copyright.
+
+## Conceptual Structure
+
+The semantic meaning of a metadata element along with a controlled vocabulary. Used to increase interoperability. 
 
 ## Controlled Vocabulary
 
@@ -36,6 +44,14 @@ A crosswalk is a file that maps equivalences between the elements of two or more
 
 The standard metadata schema for human survey data. The DDI Alliance maintains two metadata schemas in active use, the DDI-Codebook (DDI 2.5) and the DDI Lifecycle (DDI 3). They also maintain controlled vocabularies and other schemas. For more see: <https://ddialliance.org/>.
 
+## Data Infomraiton Knowledge Wisdom (DIKW) Pyramid
+
+A loosely organized model that defines the relationships between data, information, knowledge, and wisdom. In this pyramid, data is a series of raw observations, stimuli, or symbols that are refined as information. Information are data that has been interrogated and made useful. It is processed data that has meaning and purpose. Next is knowledge. Knowledge is a synthesis of information over time from multiple sources combined with contextual information and experience. Finally comes wisdom which is implicit knowledge based on experience applying knowledge to different situations. Wisdom allows user to ask and answer why we would use information or knowledge in a certain way without apparent thought.
+
+## Data Uncertainty
+
+The degree to which data is inaccurate, imprecise, untrusted, or unknown. All complex systems have a degree of uncertainty inherent within them. A dataset with a high proportion of NA values (missingness) has a high level of uncertainty.
+
 ## DataCite
 
 DataCite is a DOI Registration Agency that focuses on registering and managing DOIs for data and datasets. Datacite also maintains a citation standard.
@@ -46,7 +62,11 @@ The dataset is the data that is to be preserved and shared. Each dataset has a d
 
 ## Derived Data Product
 
- A derived data product is the analysis or aggregation of the dataset for reports, visualizations, or further analysis.
+A derived data product is the analysis or aggregation of the dataset for reports, visualizations, or further analysis.
+ 
+## Designated Commmunity
+
+A designated community is the imagined set of users of a dataset or archive. 
  
 ## DOI (Digital Object Identifier)
 
@@ -66,25 +86,43 @@ Data or documentation designed to be read by humans rather than machines. Typica
 
 ## Information Thesaurus
  
-
+A form of controlled vocabulary that maps semantic relationships between elements. These are typically organized hierarchically (broader-than/narrower-than) with synonyms (see also statements)
  
 ## Internationalization
 
 According to the World Wide Web Consortium (W3C), internationalization is taking steps to develop content or applications in a way that will work for users from any culture, region, or language. Data Team standards state that we use internationalized and multilingual controlled vocabularies where and when feasible in our reuse datasets. 
 
-## JSON
+## JSON (JavaScript Object Notation)
+
+A data serialization format used in APIs. It is derived from JSON but is language independent and typically viewed as lightweight compared to XML. It works by creating key-value pairs with records and subgroups surrounded by brackets.
 
 ## Knowledge Organization System
 
+A concept system or scheme used to organize materials (digital or physical) to retrieve or manage items in those materials. It can refer to a wide range of tools including subject headings, controlled vocabularies, topic maps, information thesauri, lists, ontologies, authority files, etc. Broadly speaking this is the material in the scheme rather than the structure or schema.
+
 ## LaTeX
+
+LaTeX is a document preparation markup language used in scientific documents and outputs a pdf. It's a complex language with many packages and the ability to write macros, allowing for intricate formatting and making it the more flexible than markdown or HTML. 
 
 ## Linked data
 
+Linked data is data organized as a triple (node-relationship-node or subject-predicate-object). This structure creates a graph and allows for non-hierarchical relationships between objects.
+
 ## Machine Readable
+
+A program or document designed to be read by machines rather than humans.
 
 ## Make Data Count
 
+An international project to standardize metrics on research data use, especially views, downloads and citations, by combining various community existing standards into an open framework. It relies on Crossref and DataCite's Event APIs. See: <https://makedatacount.org/>
+
 ## markdown
+
+A lightweight and simple markup language for creating formatted text. For a cheatsheet that covers most markdown syntax see: <https://www.markdownguide.org/cheat-sheet/> 
+
+## Markup language
+
+A set of rules that uses tags to define formatting and other elements within a document. It is both human and machine readable.
 
 ## Metadata
 
@@ -92,57 +130,75 @@ Metadata is the context, definitions, descriptions of the values in a dataset. T
 
 ## Natural Language data
 
+A file of plain text or audio that is designed for human consumption, following the rules of a grammar along with idioms and other linguistic elements. 
+
 ## Open License
+
+The legal statement alongside a work (including a dataset) that allows free content and software to be distributed and used with few if any restrictions. 
 
 ## Open Science
 
-TIES participates in open science where and when it doesn’t pose a risk to our sources. Open science is the movement to make scientific research (including publications, data, physical samples, and software) and its dissemination acceptable to the public with limited to no restrictions. 
-
-The Data Team's contributions to data processing, including code and packages, are open source, available to the public through Github, and we work to publish them in a appropriate repositories. For R packages, the appropriate repository is CRAN (the Comprehensive R Archive Network).
-
-We also follow FAIR principles, making certain that our datasets are accessible and our metadata is open. These datasets are anonymized/deidentified to protect the subjects. Where possible, we use multilingual information thesauri and controlled vocabularies to increase interoperability by the host countries of our studies. 
+Open science is the movement to make scientific research (including publications, data, physical samples, and software) and its dissemination acceptable to the public with limited to no restrictions. 
 
 ## ORCID (Open Researcher and Contributor ID)
 
+A PID, in the form of an alphanumeric code, that identifies authors and contributors to scholarly works. ORCID also allows users to maintain a record of their work on their website. 
+
 ## PID (Persistent Identifier)
+
+A unique and persistent identifier that identifies an agent, organization, location, or work. These are permanent identifiers, akin to an identification number from a government. 
 
 ## Preservation file formats
 
+Preferred file formats to preserve data or datasets in perpetuity. These are usually lossless and non-proprietary. For tabular datasets, the preferred format is csv.
+
 ## Repositories
+
+A digital storage space for researchers and research organizations to deposit datasets and derived data objects associated with their research.
 
 **Social Science Research Data Repositories**
 
-- Dataverse
-- Inter-uiversity Consortiium for POlitical and Social Research (ICPSR)
-- Qualitative Data Repository (QDR)
+- [Dataverse](https://dataverse.org/): An open source repository that maintains its collections in <schema.org>'s schemas. 
+- [Inter-university Consortium for Political and Social Research (ICPSR)](https://www.icpsr.umich.edu): The oldest social science repository, established in 1962, and hosted by the Institute for Social Research at the University of Michigan.
+- [Qualitative Data Repository (QDR)](https://data.qdr.syr.edu/): A Dataverse instance dedicated to archiving and preserving data generated through qualitatie research methods. This project is hosted at the Center for Qualitative and Multi-Method Inquiry at Syracuse University.
 
 **Research Lifecycle Repositories**
 
-- Dryad
-- Figshare
-- Open Science Framework (OSF)
-- Zenodo
+- [Dryad](https://datadryad.org): An international open-access research data repository for complete, re-usable, open datasets. All datasets are licensed under a CC0 (Creative Commons Zero) waiver. There is a submission fee.  
+- [figshare](https://figshare.com/): A repository designed for derived data objects and research outputs. figshare accepts data in any format making it more flexible than other repositories.
+- [Open Science Framework (OSF)](https://osf.io/): An open platform designed to manage data throughout its lifecycle and enable collaboration. OSF hosts a number of services including preprints, preregistrations, and meeting and conference support. It also offers useful integrations into other repositories and systems. 
+- [Zenodo](https://zenodo.org/): A general-purpose open-access repository operated by CERN. Allows for the deposit of research papers, datasets and research software. 
 
 **Code Repositories**
 
-- Github
-- Gitlab
-- Bitbucket
+- [Github](https://github.com/): Repository for software development and version control using git. There's the ability to assign a DOI with Zenodo in Github. Owned by Microsoft.
+- [Gitlab](https://about.gitlab.com/): A software development platform and version control system using git designed to be a set of collaboration tools and a code repository. Gitlab has built in continuous integration/continuous delivery (CI/CD) and DevOps features.
+- [Bitbucket](https://bitbucket.org/): A software development platform and version control system using git designed for teams. It is a product of Atlassian, the owners of Trello, Confluence, Jira, and Sourcetree. 
 
 **Domain Specific Repositories**
 
-- Humanitarian Data eXchange
+- [Humanitarian Data eXchange (HDX)](https://data.humdata.org/): A repository that hosts international humanitarian data. The repository is hosted by the Center for Humanitarian Data in the United Nations Office for the Coordination of Humanitarian Affairs (OCHA). While not necessarily a research data repository, HDX allows for metadata records. 
 
 **Institutional Repositories**
 
-- NYU Faculty Digital Archive
+- [NYU Faculty Digital Archive](https://archive.nyu.edu/): Repository of NYU faculty scholarship. 
 
 ## Schema
 
+The structure of a metadata file, database or other digital object. 
+
 ## Tabular data
+
+Data that exists in a table with an x and y position. Usually viewed as a spreadsheet.
 
 ## Tidy data
 
-## YAML
+A data organizing philosophy that organizes data as one row per object/observation with the properties as columns/variables. It is the cornerstone of the `tidyverse` R package. It's an alternative name for a data matrix.
 
-## XML
+## YAML (YAML Ain't Markup Language)
+
+A human-readable data serialization language that is usually used for configuration files and for data storage. It is an official subset of and compatible with JSON.
+
+## XML (eXtensible Markup Language)
+
+The oldest markup and data serialization language used for representing structured information. XML typically has a schema and can represent data or metadata. For example, DDI codebooks are written in XML.

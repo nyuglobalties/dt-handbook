@@ -27,7 +27,7 @@ Below are a list of general concepts followed by various standards for different
 ## Raw Dataset Standards
 
 
-Datasets of raw data from the data collector. Has identifiable information and can be multiple files. 
+Datasets of raw data from the data collector in whatever format it's received. Has identifiable information and can be multiple files. 
 
 Basic study level metadata is collected or collated from preregistrations and pre-analysis plans. Variable level metadata is limited to variable names and labels. At this stage there is no conceptual structure.
 
@@ -37,7 +37,7 @@ Due to the sensitive nature of these data, Data use agreements and data manageme
 
 ## Internal Datasets Standards
 
-Data that is being processed by the Data Team but available to other Global TIES staffmembers. This data is in the process of being cleaned and deidentified. 
+Data that is being processed by the Data Team but available to other Global TIES staffmembers. This data is in the process of being cleaned and deidentified. The output of this cleaning is in a csv file.  
 
 At this point study and variable level metadata has been moved into a YAML file and follows the DDI-Codebook (2.5) schema. The metadata is focused on the needs of TIES staff and partners, therefore it does not yet include a conceptual structure for interoperability. 
 
@@ -59,7 +59,7 @@ Data is licensed using a standard or custom license depending on the sensitivity
 
 ## Datasets for Reuse Standards
 
-These datasets are designed for reuse on a wider scale than a replication/verification dataset. Here, all variables in a study are included, as long as there's no potential harm to the data subject. In cases where the inclusion of a variable may lead to the risk of identification, it may be embargoed or recoded to limit risk. 
+These datasets are designed for reuse on a wider scale than a replication/verification dataset. To remove data uncertainty, multiple csv files may be used. In these files, all variables in a study are included, as long as there's no potential harm to the data subject. In cases where the inclusion of a variable may lead to the risk of identification, it may be embargoed or recoded to limit risk. 
 
 The metadata is generated in a DDI-Codebook and as documentation in a pdf. Study level metadata is complete, with conceptual structures to address a larger designated community than other datasets. Variable level metadata includes a data dictionary, variable grouping, conceptual structures, and summary statistics, including visualizations where appropriate. 
 
