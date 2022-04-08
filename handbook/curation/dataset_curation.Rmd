@@ -2,7 +2,7 @@
 
 The goal of the Data Team when archiving, sharing, and preserving data products (datasets and derived data products) is to reduce data uncertainty and serve specific designated communities including the source community. Datasets and derived data products are archived according to the Open Archival Information System (OAIS) and the FAIR standards of scientific data management. They are shared in a way that protects and respects TIES survey respondents. 
 
-|   | Raw Datasets | Internal Datasets| Replication/Verification Datasets | Reuse datasets |
+|   | Raw Datasets | Internal Datasets| Replication/Verification Datasets | Reuse Datasets |
 |---|---|---|---|---| 
 |**Designated Communities** | TIES Data Team| TIES Staff | Academic and scholarly users | Academic and scholarly users, host country (government) users, NGO users|
 |**Metadata Requirements** | None | limited | targeted towards academic use including academic schemas | complete DDI codebook |
@@ -104,4 +104,4 @@ List from https://www.go-fair.org/fair-principles/
 
 ---
 
-## Protecting data subjects: Curation tactices 
+## Protecting data subjects: Curation tactics 
