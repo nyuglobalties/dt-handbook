@@ -10,7 +10,9 @@ rmd_files: [
   
   "handbook/curation/DMP.Rmd",
   "handbook/curation/dataset_curation.Rmd",
+  "handbook/curation/spreadsheets.Rmd",
   "handbook/curation/citation.Rmd",
+  "handbook/curation/other_services.Rmd",
   "handbook/curation/resources.Rmd",
   "handbook/curation/glossary.Rmd"
 ]
