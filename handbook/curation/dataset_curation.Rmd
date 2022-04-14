@@ -26,7 +26,6 @@ Below are a list of general concepts followed by various standards for different
 
 ## Raw Dataset Standards
 
-
 Datasets of raw data from the data collector in whatever format it's received. Has identifiable information and can be multiple files. 
 
 Basic study level metadata is collected or collated from preregistrations and pre-analysis plans. Variable level metadata is limited to variable names and labels. At this stage there is no conceptual structure.
@@ -91,7 +90,7 @@ FAIR stands for Findable, Accessible, Interoperable, and Reusable. These standar
 
 - (Meta)data use a  formal, accessible, shared, and broadly applicable language for knowledge representation
 - (Meta)data use vocabularies that follow the FAIR principles
-(Meta)data include qualified references to other (meta)data
+- (Meta)data include qualified references to other (meta)data
 
 **Reusable**
 
@@ -101,7 +100,3 @@ FAIR stands for Findable, Accessible, Interoperable, and Reusable. These standar
 - (Meta)data meet domain-relevant community standards
 
 List from https://www.go-fair.org/fair-principles/
-
----
-
-## Protecting data subjects: Curation tactics 

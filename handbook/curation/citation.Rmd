@@ -54,7 +54,6 @@ We use APA citation style to cite research instrumentation (surveys, items, etc)
 ## Derived data product
 
 We use APA citation style to cite derived data products, preferably hosted on figshare. 
-
 **Visual (video or photograph) or audio work**
 
 - Creator last name, First initial. Second Initial. (Year, Month Day). Title of work [Description of media, graph or table]. Source. URL or DOI link.

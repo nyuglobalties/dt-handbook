@@ -44,7 +44,7 @@ A crosswalk is a file that maps equivalences between the elements of two or more
 
 The standard metadata schema for human survey data. The DDI Alliance maintains two metadata schemas in active use, the DDI-Codebook (DDI 2.5) and the DDI Lifecycle (DDI 3). They also maintain controlled vocabularies and other schemas. For more see: <https://ddialliance.org/>.
 
-## Data Infomraiton Knowledge Wisdom (DIKW) Pyramid
+## Data Information Knowledge Wisdom (DIKW) Pyramid
 
 A loosely organized model that defines the relationships between data, information, knowledge, and wisdom. In this pyramid, data is a series of raw observations, stimuli, or symbols that are refined as information. Information are data that has been interrogated and made useful. It is processed data that has meaning and purpose. Next is knowledge. Knowledge is a synthesis of information over time from multiple sources combined with contextual information and experience. Finally comes wisdom which is implicit knowledge based on experience applying knowledge to different situations. Wisdom allows user to ask and answer why we would use information or knowledge in a certain way without apparent thought.
 
@@ -54,7 +54,7 @@ The degree to which data is inaccurate, imprecise, untrusted, or unknown. All co
 
 ## DataCite
 
-DataCite is a DOI Registration Agency that focuses on registering and managing DOIs for data and datasets. Datacite also maintains a citation standard.
+DataCite is a DOI Registration Agency that focuses on registering and managing DOIs for data and datasets. DataCite also maintains a citation standard.
 
 ## Dataset
 
@@ -70,7 +70,7 @@ A designated community is the imagined set of users of a dataset or archive.
  
 ## DOI (Digital Object Identifier)
 
-A DOI or digital object identifier is a persistent ID and url for a digital object, whether an academic article, dataset, or derived data object.
+A DOI or digital object identifier is a persistent ID and URL for a digital object, whether an academic article, dataset, or derived data object.
 
 ## Embargo
 
@@ -118,7 +118,7 @@ An international project to standardize metrics on research data use, especially
 
 ## markdown
 
-A lightweight and simple markup language for creating formatted text. For a cheatsheet that covers most markdown syntax see: <https://www.markdownguide.org/cheat-sheet/> 
+A lightweight and simple markup language for creating formatted text. For a cheat sheet that covers most markdown syntax see: <https://www.markdownguide.org/cheat-sheet/> 
 
 ## Markup language
 
@@ -160,7 +160,7 @@ A digital storage space for researchers and research organizations to deposit da
 
 - [Dataverse](https://dataverse.org/): An open source repository that maintains its collections in <https://schema.org/>'s schemas. 
 - [Inter-university Consortium for Political and Social Research (ICPSR)](https://www.icpsr.umich.edu): The oldest social science repository, established in 1962, and hosted by the Institute for Social Research at the University of Michigan.
-- [Qualitative Data Repository (QDR)](https://data.qdr.syr.edu/): A Dataverse instance dedicated to archiving and preserving data generated through qualitatie research methods. This project is hosted at the Center for Qualitative and Multi-Method Inquiry at Syracuse University.
+- [Qualitative Data Repository (QDR)](https://data.qdr.syr.edu/): A Dataverse instance dedicated to archiving and preserving data generated through qualitative research methods. This project is hosted at the Center for Qualitative and Multi-Method Inquiry at Syracuse University.
 
 **Research Lifecycle Repositories**
 

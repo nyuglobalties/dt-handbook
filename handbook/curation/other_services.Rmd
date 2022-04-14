@@ -18,8 +18,7 @@ To create static documents we rely on three markup languages.
 
 - **markdown**: Lightweight markup language to add formatting to natural language data. Can be used in multiple output formats (word docs, pdf, web pages, presentations, etc.There’s also various flavors of markdown including Github and Trello. Cheat sheet: <https://www.markdownguide.org/cheat-sheet/>
 - **HyperText Markup Language (HTML)**: Used to structure a web page and its content. Consists of elements that can enclose, wrap, or format natural langauge data or other values. To set a uniform format for documents, the Data Team can use Cascading Style Sheets (CSS). Cheat sheet: <https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf>
-- **LaTeX**: Document preparation system used for the communication and publication of scientific documents. Outputs pdf and allows for more intricate formatting, especially of scientific/mathematical formulas. LaTeX is more complex than markdown and HTML, allowing for more intricate customization, including custom macros.
-A file called preface.tex can be used to uniformly format documents. An example from the Urban Institute can be found in this [Github repository](https://github.com/UrbanInstitute/rmarkdown-factsheets). Overleaf is an online LaTeX editor that can be used for collaborative writing.
+- **LaTeX**: Document preparation system used for the communication and publication of scientific documents. Outputs pdf and allows for more intricate formatting, especially of scientific/mathematical formulas. LaTeX is more complex than markdown and HTML, allowing for more intricate customization, including custom macros. A file called preface.tex can be used to uniformly format documents. An example from the Urban Institute can be found in this [Github repository](https://github.com/UrbanInstitute/rmarkdown-factsheets). Overleaf is an online LaTeX editor that can be used for collaborative writing.
 
 ## Research Impact
 
@@ -29,18 +28,18 @@ The impact of a dataset, publication, or author can be measured using a variety 
 
 Impact is determined by the data source. Don’t be surprised if your H-Index changes depending on the corpus of research documents/database being used. Also, there are various ways of hacking the below basic terms, especially H-Index so always take research impact metrics with a grain of salt.
 
-It’s also important to note that every academic work has a *half life* (the period in which it reaches half of its reach) and *velocity*, the speed at which it gets to its halflife and full reach. Once an article reaches its full reach, it can become obsolete. The period to reach this point though has been growing due to the ease of access in online databases.
+It’s also important to note that every academic work has a *half life* (the period in which it reaches half of its reach) and *velocity*, the speed at which it gets to its half life and full reach. Once an article reaches its full reach, it can become obsolete. The period to reach this point though has been growing due to the ease of access in online databases.
 
 ### Bibliometric Terms
 
 - **H-Index**: an author metric that matches the most times an article has been cited and the number of articles an author has published. There’s a slew of adaptations to the H-Index as well as Google Scholar’s I10 Index (the number of articles cited 10 times).
 - **Times cited**: the number of times an article has been cited by other peer reviewed articles within a database
 - **Journal Impact Factor**: ratio between the number of times articles in a journal has been cited and the number of citable articles.
-**Immediacy index**: the average number of times a journal article was cited in the year it was published.
+- **Immediacy index**: the average number of times a journal article was cited in the year it was published.
 
 ### Altmetrics
 
-Altmetrics are alternative metrics that measure an article’s non-academic impact in social media, the news, Wikipedia, public policy, teaching, etc. They’re viewed as being complimentary to bibliometrics
+Altmetrics are alternative metrics that measure an article’s non-academic impact in social media, the news, Wikipedia, public policy, teaching, etc. They’re viewed as being complimentary to bibliometrics.
 
 Common altmetrics used:
 
@@ -66,7 +65,7 @@ Below are the four general types of data visualizations.
 
 ### Parts of a data visualizaiton
 
-Besides the visualization itself, a data visualization can have any of the below aspects. Each aspect gives the viewer information on the data that the visualization is representing
+Besides the visualization itself, a data visualization can have any of the below aspects. Each aspect gives the viewer information on the data that the visualization is representing.
 
 - axis
 - title/subtitle
@@ -90,4 +89,4 @@ Dashboards also usually allow the user to join datasets from different sources, 
 - [Tableau](https://www.tableau.com/)
 - [Microsoft Power BI](https://powerbi.microsoft.com/en-us/)
 
-The Data Team will usually use Google Data Studio to build a dashboard because it's free to use and incorporates the same privacy features and capabilities as the Google Platform
+The Data Team will usually use Google Data Studio to build a dashboard because it's free to use and incorporates the same privacy features and capabilities as the Google Platform.
