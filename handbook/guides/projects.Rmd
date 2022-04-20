@@ -1,0 +1,68 @@
+# Project Structure {#dt-proj-structure}
+
+```{css, echo=FALSE}
+#dt-proj-structure pre code {
+  font-size: 0.8rem;
+}
+```
+
+The Data Team uses a variety of technologies, mainly in the R ecosystem, to create its data projects. Each project has a similar file structure to maintain consistency and replicability across projects:
+
+```
+.github/         # All Github configuration [optional]
+  workflows/     # All CI workflow definition files [optional]
+blueprints/      # Contains all "blueprints" of datasets
+codebooks/       # Contains exported codebooks of select datasets, depending on blueprint definition
+config/
+  environment.R  # Definitions of all environment variables used in this project
+  packages.R     # Any `library()` for packages to be available across the project
+R/               # All definitions for custom functions employed in the pipeline
+_targets.R       # The main workflow orchestration definition file
+renv.lock        # Package dependency state capture file
+```
+
+What's important note from the outset is that **data are not inside in these projects**. Each project is versioned with [git](https://git-scm.org) and hosted on [TIES' GitHub organization page](https://github.com/nyuglobalties). Most of our data are sensitive to some degree, so our operational practice is to load data directly via APIs or read from [NYU Box](https://nyu.app.box.com).
+
+## Blueprints
+
+The Data Team uses its [blueprintr](https://nyuglobalties.github.io/blueprintr) package to build, test, and document datasets. blueprintr is akin to [dbt](https://getdbt.com), but it is designed to manage a whole host of metadata, a necessary task for dissemination of project findings and data publication. Moreover, blueprintr operates without a connection to a data warehouse, given the assumptions of low connectivity and technical availability that the Data Team operates in.
+
+Each **blueprint** is a pair of two files:
+
+1. An R script with a single `blueprint()` command. This file details how to generate the desired dataset and optionally includes arbitrary metadata at dataset/table level.
+1. A CSV file with, at minimum, the columns `name`, `type`, and `description`. This file enumerates the variable-level metadata.
+
+Here is an example blueprint R file:
+
+```{r example-blueprint, eval=FALSE}
+blueprint(
+  "ch_scales",
+  description = "Self-Regulation & Self-Regulated Learning",
+  command =
+    .TARGET("verified_child_data") %>%
+      select(
+        unique_id,
+        c_id_01,
+        starts_with("c_sr_"),
+        starts_with("c_srl_")
+      ) %>%
+      shorten_domain_prefixes() %>%
+      enumerator_regulation_score() %>%
+      basic_number_renaming() %>%
+      drop_underscore_in_vars(
+        c("sr", "srl"),
+        "^.*{var}_(\\d+)r?$"
+      )
+)
+```
+
+And here is an example metadata CSV for the same blueprint:
+
+```{r, results='asis', echo=FALSE}
+meta <- data.table::fread(here::here("data/ch_scales.csv"))
+
+meta |>
+  kableExtra::kbl() |>
+  kableExtra::kable_paper() |>
+  kableExtra::scroll_box(width = "100%", height = "200px")
+```

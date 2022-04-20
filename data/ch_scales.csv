@@ -1,0 +1,60 @@
+"name","type","title","description","coding","tests","scale","section"
+"unique_id","character","Survey submission ID",,,,,"IDs"
+"cid_1","character","Child ID",,,"has_no_duplicates()",,"IDs"
+"csr4","integer","csr4","Some kids find it easy to sit still when they are bored
+BUT
+Other kids find it hard to sit still when they are bored
+Are you more like the kids that find it easy or hard?","coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0))","in_set(c(0:3, NA))","Child Self-Regulation","Child Self-Regulation"
+"csr5","integer","csr5","Some kids find it easy to remember what they are supposed to do 
+BUT 
+Other kids find it hard to remember what they are supposed to do 
+Are you more like the kids that find it easy or hard?","coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0))","in_set(c(0:3, NA))","Child Self-Regulation","Child Self-Regulation"
+"csr8","integer","csr8","Some kids find it easy to obey rules
+BUT
+Other kids find it hard to obey rules
+Are you more like the kids that find it easy or hard?","coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0))","in_set(c(0:3, NA))","Child Self-Regulation","Child Self-Regulation"
+"csr10","integer","csr10","Some kids find it easy to be careful
+BUT
+Other kids find it hard to be careful
+Are you more like the kids that find it easy or hard?","coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0))","in_set(c(0:3, NA))","Child Self-Regulation","Child Self-Regulation"
+"csr12","integer","csr12","Some kids find it easy to think before they act
+BUT
+Other kids find it hard to think before they act
+Are you more like the kids that find it easy or hard?","coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0))","in_set(c(0:3, NA))","Child Self-Regulation","Child Self-Regulation"
+"csr13","integer","csr13","Some kids find it easy to pay attention to their schoolwork
+BUT
+Other kids find it hard to pay attention to their schoolwork
+Are you more like the kids that find it easy or hard?","coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0))","in_set(c(0:3, NA))","Child Self-Regulation","Child Self-Regulation"
+"csr15","integer","csr15","Some kids find it easy to focus on things that are important
+BUT
+Other kids find it hard to focus on things that are important
+Are you more like the kids that find it easy or hard?","coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0))","in_set(c(0:3, NA))","Child Self-Regulation","Child Self-Regulation"
+"csr16","integer","csr16","Some kids find it easy to work on a project until they are finished
+BUT
+Other kids find it hard to work on a project until they are finished
+Are you more like the kids that find it easy or hard?","coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0))","in_set(c(0:3, NA))","Child Self-Regulation","Child Self-Regulation"
+"csr17","integer","csr17","Some kids find it easy to concentrate on one thing for a long time
+BUT
+Other kids find it hard to concentrate on one thing for a long time
+Are you more like the kids that find it easy or hard?","coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0))","in_set(c(0:3, NA))","Child Self-Regulation","Child Self-Regulation"
+"csr18","integer","csr18","Some kids find it easy to stay focused on their goals
+BUT
+Other kids find it hard to stay focused on their goals
+Are you more like the kids that find it easy or hard?","coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0))","in_set(c(0:3, NA))","Child Self-Regulation","Child Self-Regulation"
+"csrl1","integer","csrl1","Some kids make sure no one disturbs them when they study at home. Would you say you are like them? [pause for response]. 
+Now that you decided that you [ARE/ARE NOT] like them. [If Yes] Are you ""A lot"" or ""Kind of "" like them? [If No] Are you ""A little"" or ""Not at all "" like them? [pause for response]","coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0))","in_set(c(0:3, NA))","Child Self-Regulated Learning","Child Self-Regulated Learning"
+"csrl3","integer","csrl3","Some kids try to find a quiet place to study at home. Would you say you are like them? [pause for response]. 
+Now that you decided that you [ARE/ARE NOT] like them. [If Yes] Are you ""A lot"" or ""Kind of "" like them? [If No] Are you ""A little"" or ""Not at all "" like them? [pause for response]","coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0))","in_set(c(0:3, NA))","Child Self-Regulated Learning","Child Self-Regulated Learning"
+"csrl4","integer","csrl4","Some kids ask their friends or family for help when they are struggling with their homework. Would you say you are like them? [pause for response]. 
+Now that you decided that you [ARE/ARE NOT] like them. [If Yes] Are you ""A lot"" or ""Kind of "" like them? [If No] Are you ""A little"" or ""Not at all "" like them? [pause for response]","coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0))","in_set(c(0:3, NA))","Child Self-Regulated Learning","Child Self-Regulated Learning"
+"csrl10","integer","csrl10","Some kids encourage themselves or tell themselves ""you can do it"" when they are struggling with their homework. Would you say you are like them? [pause for response]. 
+Now that you decided that you [ARE/ARE NOT] like them. [If Yes] Are you ""A lot"" or ""Kind of "" like them? [If No] Are you ""A little"" or ""Not at all "" like them? [pause for response]","coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0))","in_set(c(0:3, NA))","Child Self-Regulated Learning","Child Self-Regulated Learning"
+"csrl15","integer","csrl15","Some kids review the instructions before starting their homework. Would you say you are like them?","coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0))","in_set(c(0:3, NA))","Child Self-Regulated Learning","Child Self-Regulated Learning"
+"csrl16","integer","csrl16","Some kids try to calm down or take a deep breath when they are struggling with their homework. Would you say you are like them?","coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0))","in_set(c(0:3, NA))","Child Self-Regulated Learning","Child Self-Regulated Learning"
+"csrl17","integer","csrl17","Some kids try to ""take their time"" and do their homework with patience. Would you say you are like them?","coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0))","in_set(c(0:3, NA))","Child Self-Regulated Learning","Child Self-Regulated Learning"
+"csrl18","integer","csrl18","Some kids take little breaks when working on challenging homework. Would you say you are like them?","coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0))","in_set(c(0:3, NA))","Child Self-Regulated Learning","Child Self-Regulated Learning"
+"csrl19","integer","csrl19","Some kids gather their notebooks or any materials they need before they start their homework. Would you say you are like them?","coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0))","in_set(c(0:3, NA))","Child Self-Regulated Learning","Child Self-Regulated Learning"
+"csrl20","integer","csrl20","Some kids look for information in their notes, videos, books, internet or exercises when they are struggling with their homework. Would you say you are like them?","coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0))","in_set(c(0:3, NA))","Child Self-Regulated Learning","Child Self-Regulated Learning"
+"csrl21","integer","csrl21","Some kids prepare for an exam by reviewing their notes or making study materials. Would you say you are like them?","coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0))","in_set(c(0:3, NA))","Child Self-Regulated Learning","Child Self-Regulated Learning"
+"csrl24","integer","csrl24","Some kids look to see how hard their homework is before deciding whether they will work on their homework or do something fun. Would you say you are like them?","coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0))","in_set(c(0:3, NA))","Child Self-Regulated Learning","Child Self-Regulated Learning"
+"csrl22","integer","csrl22","Some kids prepare for an exam by doing practice tests to see where they are having trouble. Would you say you are like them?","coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0))","in_set(c(0:3, NA))","Child Self-Regulated Learning","Child Self-Regulated Learning"
