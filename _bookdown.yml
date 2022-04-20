@@ -6,13 +6,17 @@ rmd_files: [
   "index.Rmd",
   "handbook/team/structure.Rmd",
 
+  "handbook/guides/guides.Rmd",
   "handbook/guides/styling-r.Rmd",
   
+  "handbook/curation/curation.Rmd",
   "handbook/curation/DMP.Rmd",
   "handbook/curation/dataset_curation.Rmd",
   "handbook/curation/spreadsheets.Rmd",
   "handbook/curation/citation.Rmd",
   "handbook/curation/other_services.Rmd",
-  "handbook/curation/resources.Rmd",
-  "handbook/curation/glossary.Rmd"
+  
+  "handbook/appendix/appendix.Rmd",
+  "handbook/appendix/glossary.Rmd",
+  "handbook/appendix/resources.Rmd",
 ]
