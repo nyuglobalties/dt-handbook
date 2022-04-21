@@ -1,4 +1,4 @@
-# Glossary
+# Glossary {-}
 
 ## API (Application Programming Interface)
 
