@@ -1,0 +1,102 @@
+# Dataset Curation Standards
+
+The goal of the Data Team when archiving, sharing, and preserving data products (datasets and derived data products) is to reduce data uncertainty and serve specific designated communities including the source community. Datasets and derived data products are archived according to the Open Archival Information System (OAIS) and the FAIR standards of scientific data management. They are shared in a way that protects and respects TIES survey respondents. 
+
+|   | Raw Datasets | Internal Datasets| Replication/Verification Datasets | Reuse Datasets |
+|---|---|---|---|---| 
+|**Designated Communities** | TIES Data Team| TIES Staff | Academic and scholarly users | Academic and scholarly users, host country (government) users, NGO users|
+|**Metadata Requirements** | None | limited | targeted towards academic use including academic schemas | complete DDI codebook |
+|**Language / Internationalization standards**| None | English and language of host country | English and language of article | English and language of host country |
+|**Derived data products**| Internal datasets | Internal reports, policy briefs, presentations | academic articles | policy briefs, presentations |
+|**Repository / Storage solution**| according to DUA/DMP | according to DUA/DMP | journal approved or sponsored repository | Harvard Dataverse |
+|**Deidentification/Anonymization level** | None | Deidentified | Anonymized | Anonymized |
+|**Quality Assurance Level** | Low | Medium | High | High |
+
+---
+
+Below are a list of general concepts followed by various standards for different kinds of datasets. The appendix has background material/definitions for common curation practices.
+
+**Data Uncertainty**: This is the degree to which data is inaccurate, imprecise, untrusted, or unknown. All complex systems have a degree of uncertainty inherent within them. Practically this means that when designing data products, efforts should be made to reduce or remove missingness and ensure that data products are properly described with metadata/documentation where applicable.
+
+**Desginated Community**: This is the audience for a data product and can be an imagined group or persona. The term is borrowed from the Open Archival Information System (OAIS) Reference Model and defined as “an identified group of potential Consumers who should be able to understand a particular set of information.” Each designated community has its own Knowledge Base. The Knowledge Base of a DC can change over time to the point where the archive would need to update and enhance preserved information to make it understandable again for the DC.
+
+**Conceptual Structure**: The conceptual structure of a dataset exists in the metadata and consists of controlled vocabularies that exist as permanent URLs. It defines the concepts that underlies the elements and variables and increases interoperability.
+
+---
+
+## Raw Dataset Standards
+
+Datasets of raw data from the data collector in whatever format it's received. Has identifiable information and can be multiple files. 
+
+Basic study level metadata is collected or collated from preregistrations and pre-analysis plans. Variable level metadata is limited to variable names and labels. At this stage there is no conceptual structure.
+
+Due to the sensitive nature of these data, Data use agreements and data management plans disallow the sharing of these datasets. The only derived product from raw data are in process deidentified datasets designated for internal use.
+
+---
+
+## Internal Datasets Standards
+
+Data that is being processed by the Data Team but available to other Global TIES staffmembers. This data is in the process of being cleaned and deidentified. The output of this cleaning is in a csv file.  
+
+At this point study and variable level metadata has been moved into a YAML file and follows the DDI-Codebook (2.5) schema. The metadata is focused on the needs of TIES staff and partners, therefore it does not yet include a conceptual structure for interoperability. 
+
+Terms of use are still determined by the data use agreement and data management plan. Typically, this data is not shared outside of partners or through an application procedure. The data is also held according to the DUA and DMP, usually in an NYU storage solution (Box) or in private repositories.
+
+As the data is prepared, deidentified, and getting close to finalized, derived data products may be created from it, namely data dictionaries, policy briefs, presentations, and funder reports. Metadata shared with funder reports may be multilingual in the language of the funder or partner. 
+
+---
+
+## Replication/Verification Datasets Standards
+
+These datasets are generated in support of an academic derived data product (article, presentation, poster). Data is limited to the variables and measures used in the academic work and is produced in a single csv file. These datasets may include code used to generate the derived data product.
+
+Metadata is generated in a DDI-Codebook and as documentation in a pdf. Study level metadata is focused on discovery and linked to the published article. Variable level metadata have labels and categories. A conceptual structure constructed from academic controlled vocabularies is used.
+
+Data is licensed using a standard or custom license depending on the sensitivity of the data.
+
+---
+
+## Datasets for Reuse Standards
+
+These datasets are designed for reuse on a wider scale than a replication/verification dataset. To remove data uncertainty, multiple csv files may be used. In these files, all variables in a study are included, as long as there's no potential harm to the data subject. In cases where the inclusion of a variable may lead to the risk of identification, it may be embargoed or recoded to limit risk. 
+
+The metadata is generated in a DDI-Codebook and as documentation in a pdf. Study level metadata is complete, with conceptual structures to address a larger designated community than other datasets. Variable level metadata includes a data dictionary, variable grouping, conceptual structures, and summary statistics, including visualizations where appropriate. 
+
+Datasets are deposited in FAIR repositories that provide the most discoverability. Currently, we deposit reuse datasets in Harvard Dataverse because it is indexed in Google Dataset Search. The data is licensed under a custom license to increase protection of our data subjects. 
+
+---
+
+## FAIR standards
+
+These standards were published in 2016 by Mark Wilkinson in the journal Scientific Data (https://doi.org/10.1038/sdata.2016.18) and are considered the standard for scientific data assets and products. They can also be referred to as the FAIR Principles and are applied to data, metadata, and docuemntation.
+
+FAIR stands for Findable, Accessible, Interoperable, and Reusable. These standards are intended for both humans and machines and apply to both human-readable and machine-readable files. 
+
+**Findable** 
+
+- (Meta)data are assigned globally unique and persistent identifiers
+- Data are described with rich metadata
+- Metadata clearly and explicitly include the identifier of the data they describe
+- (Meta)data are registered or indexed in a searchable resource
+
+**Accessible**
+
+- (Meta)data are retrievable by their identifier using a standardized communication protocol
+- The protocol is open, free and universally implementable
+- The protocol allows for an authentication and authorisation where necessary
+- Metadata should be accessible even when the data is no longer available
+
+**Interoperable**
+
+- (Meta)data use a  formal, accessible, shared, and broadly applicable language for knowledge representation
+- (Meta)data use vocabularies that follow the FAIR principles
+- (Meta)data include qualified references to other (meta)data
+
+**Reusable**
+
+- (Meta)data are richly described with a plurality of accurate and relevant attributes
+- (Meta)data are released with a clear and accessible data usage license
+- (Meta)data are associated with detailed provenance
+- (Meta)data meet domain-relevant community standards
+
+List from https://www.go-fair.org/fair-principles/
