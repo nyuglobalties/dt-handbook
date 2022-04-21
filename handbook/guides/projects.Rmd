@@ -29,10 +29,10 @@ The Data Team uses its [blueprintr](https://nyuglobalties.github.io/blueprintr) 
 
 Each **blueprint** is a pair of two files:
 
-1. An R script with a single `blueprint()` command. This file details how to generate the desired dataset and optionally includes arbitrary metadata at dataset/table level.
-1. A CSV file with, at minimum, the columns `name`, `type`, and `description`. This file enumerates the variable-level metadata.
+1. **The blueprint definition file**: an R script with a single `blueprint()` command. This file details how to generate the desired dataset and optionally includes arbitrary metadata at dataset/table level.
+1. **The blueprint metadata file**: a CSV file with, at minimum, the columns `name`, `type`, and `description`. This file enumerates the variable-level metadata.
 
-Here is an example blueprint R file:
+Here is an example blueprint definition file:
 
 ```{r example-blueprint, eval=FALSE}
 blueprint(
@@ -63,6 +63,23 @@ meta <- data.table::fread(here::here("data/ch_scales.csv"))
 
 meta |>
   kableExtra::kbl() |>
-  kableExtra::kable_paper() |>
   kableExtra::scroll_box(width = "100%", height = "200px")
 ```
+
+## Codebooks
+
+"Codebooks" are essentially [data dictionaries](https://en.wikipedia.org/wiki/Data_dictionary), targeted for social science research. They commonly include enumerations of variables in a dataset, as well as their descriptions and (when applicable) categorical codings. Some codebooks also include methodology descriptions and other descriptive statistics of the data.
+
+The `codebooks` folder contains HTML codebook exports of selected blueprints, as indicated by the presence of `blueprintr::bp_export_codebook()` in the blueprint definition file:
+
+```{r, eval=FALSE}
+blueprint(
+  "ch_scales",
+  description = "Self-Regulation & Self-Regulated Learning",
+  command =
+    some_command()
+) |>
+  bp_export_codebook()
+```
+
+Unless otherwise agreed upon, **these codebooks are for internal purposes only**. They are mainly present to support TIES' members in their research.
