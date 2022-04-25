@@ -48,6 +48,26 @@ some_func(1:5, cond = NULL)
 
 If `isTRUE()` were omitted in favor of `if (cond) {...}`, then this would cause an error since `NULL` is technically a length-0 object in R. The condition to `if` _must_ be length-1; `isTRUE()` ensures that requirement.
 
-## Pipes
+### Pipes
 
 In general, prefer the base R pipe introduced in R 4.0: `|>`. If you use the ["Fira Code"](https://github.com/tonsky/FiraCode) typeface, you can take advantage of its font ligatures that visually combine the individual `|` and `>` symbols into a right arrow.
+
+## Functions {#rstyle-funcs}
+
+### Dependencies on other packages {#rstyle-funcs-package-deps}
+
+Use the `package::func()` qualified call styling for referring to functions from other packages, unless it is cumbersome to do so (e.g. the pipe `%>%` from `magrittr` would have to be referred to as `` magrittr::`%>%`()``, which defeats the purpose of using the pipe). This makes it easier for long-term maintenance since the package dependency is explicitly stated.
+
+```r
+# Good
+clean_some_data <- function(dat) {
+  dat |> 
+    tidytable::mutate.(var = sum(x)) # mutate.() is known to be from tidytable
+}
+
+# Bad
+clean_some_data <- function(dat) {
+  dat |> 
+    mutate.(var = sum(x)) # mutate.() could be from anywhere!
+}
+```
