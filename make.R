@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 
 # Capture soft dependencies
-languageserver::run
+invisible(languageserver::run)
 
 renv::restore()
 bookdown::serve_book()

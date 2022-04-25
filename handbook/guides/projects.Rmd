@@ -17,15 +17,18 @@ config/
   environment.R  # Definitions of all environment variables used in this project
   packages.R     # Any `library()` for packages to be available across the project
 R/               # All definitions for custom functions employed in the pipeline
+.Rprofile        # Supplemental file that primarily sets up `renv`
 _targets.R       # The main workflow orchestration definition file
-renv.lock        # Package dependency state capture file
+renv.lock        # Package dependency state capture file for `renv`
 ```
 
 What's important note from the outset is that **data are not inside in these projects**. Each project is versioned with [git](https://git-scm.org) and hosted on [TIES' GitHub organization page](https://github.com/nyuglobalties). Most of our data are sensitive to some degree, so our operational practice is to load data directly via APIs or read from [NYU Box](https://nyu.app.box.com).
 
-## Blueprints
+Project templates can be created with the internal tool [dtproj](https://github.com/nyuglobalties/dtproj).
 
-The Data Team uses its [blueprintr](https://nyuglobalties.github.io/blueprintr) package to build, test, and document datasets. blueprintr is akin to [dbt](https://getdbt.com), but it is designed to manage a whole host of metadata, a necessary task for dissemination of project findings and data publication. Moreover, blueprintr operates without a connection to a data warehouse, given the assumptions of low connectivity and technical availability that the Data Team operates in.
+## `blueprints`
+
+The Data Team uses its [`blueprintr`](https://nyuglobalties.github.io/blueprintr) package to build, test, and document datasets. `blueprintr` is akin to [dbt](https://getdbt.com), but it is designed to manage a whole host of metadata, a necessary task for dissemination of project findings and data publication. Moreover, `blueprintr` operates without a connection to a data warehouse, given the assumptions of low connectivity and technical availability that the Data Team operates in.
 
 Each **blueprint** is a pair of two files:
 
@@ -66,7 +69,7 @@ meta |>
   kableExtra::scroll_box(width = "100%", height = "200px")
 ```
 
-## Codebooks
+## `codebooks`
 
 "Codebooks" are essentially [data dictionaries](https://en.wikipedia.org/wiki/Data_dictionary), targeted for social science research. They commonly include enumerations of variables in a dataset, as well as their descriptions and (when applicable) categorical codings. Some codebooks also include methodology descriptions and other descriptive statistics of the data.
 
@@ -83,3 +86,54 @@ blueprint(
 ```
 
 Unless otherwise agreed upon, **these codebooks are for internal purposes only**. They are mainly present to support TIES' members in their research.
+
+## `config`
+
+The `config` folder has two main R files:
+
+- `environment.R`
+- `packages.R`
+
+Other project-specific files, like YAML configuration, may be stored in this folder.
+
+### `environment.R`
+
+Sensitive information necessary for pipeline function, like API keys and passwords, **must** be stored as environment variables and **never** checked into version control. Environment variables are generally stored in a personal [`.Renviron`](https://rstats.wtf/r-startup.html#renviron) file, but it is our practice to load them into global variables at the start of the pipeline to avoid unnecessary calls to `Sys.getenv()`.
+
+Here is an example `environment.R`:
+
+```{r, eval=FALSE}
+BOX_PATH <- Sys.getenv("BOX_PATH", unset = NULL)
+F_RUN_TESTS <- as.logical(Sys.getenv("F_RUN_TESTS", unset = "FALSE"))
+F_NIGHTLY <- as.logical(Sys.getenv("F_NIGHTLY", unset = "FALSE"))
+
+CACHE_PASSPHRASE <- Sys.getenv("CACHE_PASSPHRASE", unset = NULL)
+```
+
+### `packages.R`
+
+This file serves two purposes:
+
+1. Capture soft dependencies in the project code (i.e. packages that are required but not directly referred to in the code)
+1. Attach packages via `library()` to make those packages' exported functions available across the entire pipeline
+
+Our project structure uses [`renv`](https://rstudio.github.io/renv/articles/renv.html) to manage the specific versions of packages employed in our pipeline to improve replicability. `renv` is able to capture these dependencies via code inspection; however sometimes a soft dependency (one that is not explicitly stated in the code) can occur e.g. a package depends on another for some plotting routine. To capture these dependecies, we place a reference to one of the package's functions in `packages.R` so that `renv` can treat that package as a hard dependency.
+
+Use of `library()` should be restricted to packages that are used extensively. As stated in \@ref(rstyle-funcs-package-deps), it is preferred to use `package::func()` syntax in function writing; moreover, it is preferred the same style throughout most of the pipeline definition as well for clarity and long-term maintenance.
+
+Example of `packages.R`:
+
+```{r, eval=FALSE}
+# Retain suggested packages in renv
+labelled::to_labelled
+kableExtra::kable_as_image
+styler::style_dir # Format-on-save capability in VSCode
+languageserver::run # Necessary for VSCode to work in renv projects
+
+# Attach packages used in the entire pipeline here
+library(targets)
+library(tarchetypes)
+library(tidytable)
+library(blueprintr)
+library(rcoder)
+```
