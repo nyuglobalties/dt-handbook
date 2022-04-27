@@ -1,0 +1,90 @@
+# Dataset Restrictions and Embargos
+
+Data and dataset restrictions and embargoes are access limitations placed on the data. This can be done for entire datasets or specific variables or variable groups. Restrictions and embargoes can also happen at different user levels, restricting access for different groups. 
+
+## Definitions
+
+### restriction
+
+A restricted dataset, variable, or measure is restricted to a group or people or institutions with no time frame for release.
+
+### embargo
+
+An embargo is a dataset, variable, or measure that is not available until a certain date. 
+
+## Reasons to restrict access
+
+Data may be restricted due to contractual/legal reasons including partner relationships represented in Data Use Agreements and consent forms, ethical responsibilities to protect vulnerable data subjects from reidentification attacks, because data collection is not complete, and/or to allow for analytical work to be completed. 
+
+## How to restrict access
+
+Raw data or internal data are always restricted. In the case of raw data that restriction is permanent and governed by the data use agreement and data management plan. Internal data is restricted, however, the PIs may set up an access application and contract to grant access after the data quality is deemed acceptable by the Data Team and PIs. 
+
+### Complete datasets
+
+Datasets may be published in an embargoed format in a repository. This may be necessary to fulfill funder or other agreements. In these cases, the repository and codebook metadata will outline the details of the embargo, including an end date. These datasets will also have completed metadata which will be licensed under an appropriate Creative Commons license.
+
+Below is a sample DDI codeBook on how to embargo an entire dataset. We rely heavily on the `dataAccs` and `useStmt` elements and their child elements in the `stdyDscr`. It is also recommended to include the `contact` element and ,verStmt. elements in the citation branches. By setting the ID attributes in `dataAccs` elements we can link them directly to affected `var` and `varGrp` elements using the acces attribute. 
+
+```
+<codeBook>
+  <stdyDscr>
+    <citation>
+      <titlStmt>
+        <titl>Sample codebook</titl>
+      </titlStmt>
+    </citation>
+    <dataAccs>
+      <setAvail>
+        <avlStatus ID="s_a_1">This dataset is currently under embargo until YYYY-MM-DD.</avlStatus>
+        <complete ID="c1">Due to embargo provisions, data values for some variables have been masked. Users should consult the data definition statements to see which variables are under embargo. A new version of the collection will be released after embargoes are lifted.</complete>
+        <notes>Insert other notes here</note>
+      </setAvail>
+      <useStmt>
+        <conditions>The dataset is embargoed. Potential users of this dataset are advised to contact the PI...<conditions>
+        <restrctn>For access or use restrictions. Specify types of users if use is restricted to or for those types.</restrctn>
+        <specPerm ID="sp1" required="yes" formNo="ABC123" url = "https://www.form.xyz/ABC123">Users may apply to access this dataset before the embargo ends by filling out an access application and a confidentiality  agreement with Global TIES for Children</specPerm>
+      </useStmt>
+  </stdyDscr>
+```
+
+### Partial datasets
+
+Datasets may also be published but restrict or embargo individual or groups of variables. This may be desireable when publishing the data in an incomplete form could result in a public good. In these cases, the description of the variable need to be included in the codebook and documentation along with details of the restriction or embargo including the reasoning behind the restrictions. These restrictions or embargoes can be permanent or temporary depending on the reason. 
+
+In addition to the elements listed above, here it's recommended to list the restrictions or embargoes on individual variables in the `dataDscr` and the reasoning behind them. Either the `security` and `embargo` elements should be used in `var`. In addition, the access attribute linking the `var` or `varGrp` to the appropriate elements in `dataAccs` should be used. This will allow us to reduce repetition, especially for `useStmt` child elements. 
+
+```
+<codeBook>
+  <stdyDscr>
+    <citation>
+      <titlStmt>
+        <titl>Sample codebook</titl>
+      </titlStmt>
+    </citation>
+    ...
+  </stdyDscr>
+  <dataDscr>
+    <var name="ABC1" access="sp1">
+      <labl>Restricted variable label</labl>
+      <qstn>Original question asked</qstn>
+      <anlysUnit>This variable describes identifiable information about the student</anlysUnit>
+      <universe>Individual 8 years old</universe>
+      <security date="YYYY-MM-DD">This variable has been restricted to protect the identity of the subject</security>
+  </dataDscr>
+```
+
+### Replication / verification datasets
+
+For these cases, data is implicitely restricted because the datasets are limited to the data and variables used in the study. Here, it is important to outline the process of how the data was filtered from the general dataset. This will avoid future data exclusion, where the study consists of less observations than the dataset as a whole with no explanation, in the main dataset when it's published. This can be done using the `codeBook/stdyDscr/dataAccs/setAvail/complete` element to describe how a replication/verificaton datasetchose its subjects. 
+
+## Processes to gain access
+
+Access to restricted data may be granted in two forms.
+
+1) Access application and acceptance of the dataset license
+2) Access application and contract with Global TIES with Children including a confidentiality agreement and data use agreement. 
+
+## Restrictions and FAIR standards
+
+While it may seem that restricting or embargoing datasets goes against the "A" in FAIR, accessibility, it does not if done correclty. In FAIR, accessibility means that thet process to access the dataset is published in an open licensed document and is included in the dataset. Limiting access through restrictions or embargoes can have positive benefits for the reseaerchers, funders, and data subjects if done with thought and care. 
