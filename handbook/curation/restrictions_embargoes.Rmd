@@ -4,13 +4,17 @@ Data and dataset restrictions and embargoes are access limitations placed on the
 
 ## Definitions
 
-### restriction
+### Vulnerability
 
-A restricted dataset, variable, or measure is restricted to a group or people or institutions with no time frame for release.
+The academic debate on vulnerability is complex and spans bioethics, law, philosophy, and other fields. We adapt Florencia Luna's layer appraoch to vulnerabilty that rejects the view of vulnerability as a fixed attribute or label of an individual in favor of vulnerability as multiple layers constructed by status, time, and location. This allows for us to take a nuanced, intersectional approach for our data subjects that focuses on risk management and mitigation.
 
-### embargo
+### Restriction
 
-An embargo is a dataset, variable, or measure that is not available until a certain date. 
+A dataset, variable, or measure that is restricted from access with no time frame for release. There may be levels of restriction that allow access to certain groups.
+
+### Embargo
+
+A dataset, variable, or measure that is not available until a certain date. 
 
 ## Reasons to restrict access
 
@@ -76,7 +80,7 @@ In addition to the elements listed above, here it's recommended to list the rest
 
 ### Replication / verification datasets
 
-For these cases, data is implicitely restricted because the datasets are limited to the data and variables used in the study. Here, it is important to outline the process of how the data was filtered from the general dataset. This will avoid future data exclusion, where the study consists of less observations than the dataset as a whole with no explanation, in the main dataset when it's published. This can be done using the `codeBook/stdyDscr/dataAccs/setAvail/complete` element to describe how a replication/verificaton datasetchose its subjects. 
+For these cases, data is implicitely restricted because the datasets are limited to the data and variables used in the study. Here, it is important to outline the process of how the data was filtered from the general dataset. This will avoid future data exclusion, where the study consists of less observations than the dataset as a whole with no explanation, in the main dataset when it's published. This can be done using the `codeBook/stdyDscr/dataAccs/setAvail/complete` element to describe how a replication/verificaton dataset chose its subjects. 
 
 ## Processes to gain access
 

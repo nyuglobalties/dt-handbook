@@ -2,6 +2,8 @@
 
 The goal of the Data Team when archiving, sharing, and preserving data products (datasets and derived data products) is to reduce data uncertainty and serve specific designated communities including the source community. Datasets and derived data products are archived according to the Open Archival Information System (OAIS) and the FAIR standards of scientific data management. They are shared in a way that protects and respects TIES survey respondents. 
 
+The Data Team seeks to curate datasets actively. This involves building tools and processes to assist in capturing and refining metadata at the study and variable level as early as possible in the research data lifecycle. 
+
 |   | Raw Datasets | Internal Datasets| Replication/Verification Datasets | Reuse Datasets |
 |---|---|---|---|---| 
 |**Designated Communities** | TIES Data Team| TIES Staff | Academic and scholarly users | Academic and scholarly users, host country (government) users, NGO users|
@@ -15,6 +17,8 @@ The goal of the Data Team when archiving, sharing, and preserving data products 
 ---
 
 Below are a list of general concepts followed by various standards for different kinds of datasets. The appendix has background material/definitions for common curation practices.
+
+**Active Curation**: The process of capturing and data and metadata early and refining it throughout the data life cycle. See: <https://doi.org/10.2218/ijdc.v12i2.552>
 
 **Data Uncertainty**: This is the degree to which data is inaccurate, imprecise, untrusted, or unknown. All complex systems have a degree of uncertainty inherent within them. Practically this means that when designing data products, efforts should be made to reduce or remove missingness and ensure that data products are properly described with metadata/documentation where applicable.
 
