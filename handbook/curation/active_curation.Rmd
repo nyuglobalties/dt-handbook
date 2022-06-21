@@ -1,0 +1,26 @@
+# Active Curation
+
+A main precept of the Global TIES for Children Data Team is to use, encourage, and build tools to institute active data curation. Active curation is the process where data and metadata are captured early in the research data lifecycle and then continuously refined until publication and, if needed, afterwards. 
+
+Active curation was promoted by the Sustainable Environment/Actionable Data (SEAD) project that was sponsored as part of the U.S.A. National Science Foundation's DataNet program. DataNet sought to build capabilities that would serve the data management and curation needs of individual researchers and small research teams in long tail science. The ultimate goal was to fix traditional approaches to data curation, which separated curation from the overall research lifecycle and led to posthoc curation.
+
+## Removing the risk of Posthoc Curation
+
+Active curation removes the risk of posthoc curation. Posthoc curation is when data is generated and curated at the end of the lifecycle. More crudely it can be referred to as "upload & dump." This process leads to poor labeling, unclear and insufficient metadata, and non-FAIR datasets. This is due tolag between collection, processing and archiving which leads to lost provenance, collection and processing protocol details being lost, and makes verifciation and replication impossible. Datasets that are curated post-hoc are more likely to only include data related to publication, limiting its reuse. 
+
+## Data Team active curation processes and tools
+
+- Data pipeline
+  - Blueprints and dictionaries
+  - ID verification (anara)
+  - Data collection wave harmonization (panelcleaner) 
+  - Issue fixes 
+- Curation 
+  - Selection and use of controlled vocabularies
+  - Metadata Curation Tool
+  - rddi
+
+## Quality Assurance processes
+
+- Rubrics
+- Codebooks
