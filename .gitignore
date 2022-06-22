@@ -8,3 +8,4 @@ _bookdown_files
 
 **/*.rds
 .Rproj.user
+.Rhistory
