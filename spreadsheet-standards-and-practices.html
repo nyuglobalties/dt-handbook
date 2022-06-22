@@ -4,16 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>6 Spreadsheet standards and practices | Data Team Handbook</title>
+<title>8 Spreadsheet standards and practices | Data Team Handbook</title>
 <meta name="author" content="Global TIES for Children Data Team">
 <meta name="description" content="This section goes over proper spreadsheet design and maintenance. Like datasets, spreadsheets should be designed to reduce data uncertainty ensuring that each spreadsheet is clear and concise. To...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="6 Spreadsheet standards and practices | Data Team Handbook">
+<meta property="og:title" content="8 Spreadsheet standards and practices | Data Team Handbook">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://r4ds.had.co.nz/spreadsheet-standards-and-practices.html">
 <meta property="og:description" content="This section goes over proper spreadsheet design and maintenance. Like datasets, spreadsheets should be designed to reduce data uncertainty ensuring that each spreadsheet is clear and concise. To...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="6 Spreadsheet standards and practices | Data Team Handbook">
+<meta name="twitter:title" content="8 Spreadsheet standards and practices | Data Team Handbook">
 <meta name="twitter:site" content="@NYUGlobalTIES">
 <meta name="twitter:description" content="This section goes over proper spreadsheet design and maintenance. Like datasets, spreadsheets should be designed to reduce data uncertainty ensuring that each spreadsheet is clear and concise. To...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -51,9 +51,11 @@
 <li class="book-part">Curation</li>
 <li><a class="" href="data-management-plan-templates.html"><span class="header-section-number">4</span> Data Management Plan Templates</a></li>
 <li><a class="" href="dataset-curation-standards.html"><span class="header-section-number">5</span> Dataset Curation Standards</a></li>
-<li><a class="active" href="spreadsheet-standards-and-practices.html"><span class="header-section-number">6</span> Spreadsheet standards and practices</a></li>
-<li><a class="" href="citation-formats.html"><span class="header-section-number">7</span> Citation formats</a></li>
-<li><a class="" href="other-data-team-services.html"><span class="header-section-number">8</span> Other Data Team Services</a></li>
+<li><a class="" href="active-curation.html"><span class="header-section-number">6</span> Active Curation</a></li>
+<li><a class="" href="dataset-restrictions-and-embargos.html"><span class="header-section-number">7</span> Dataset Restrictions and Embargos</a></li>
+<li><a class="active" href="spreadsheet-standards-and-practices.html"><span class="header-section-number">8</span> Spreadsheet standards and practices</a></li>
+<li><a class="" href="citation-formats.html"><span class="header-section-number">9</span> Citation formats</a></li>
+<li><a class="" href="other-data-team-services.html"><span class="header-section-number">10</span> Other Data Team Services</a></li>
 <li class="book-part">Appendix</li>
 <li><a class="" href="glossary.html">Glossary</a></li>
 <li><a class="" href="resources-1.html">Resources</a></li>
@@ -64,20 +66,20 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="spreadsheet-standards-and-practices" class="section level1" number="6">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="spreadsheet-standards-and-practices" class="section level1" number="8">
 <h1>
-<span class="header-section-number">6</span> Spreadsheet standards and practices<a class="anchor" aria-label="anchor" href="#spreadsheet-standards-and-practices"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8</span> Spreadsheet standards and practices<a class="anchor" aria-label="anchor" href="#spreadsheet-standards-and-practices"><i class="fas fa-link"></i></a>
 </h1>
 <p>This section goes over proper spreadsheet design and maintenance. Like datasets, spreadsheets should be designed to reduce data uncertainty ensuring that each spreadsheet is clear and concise. To accomplish this we rely on a few methods and tools.</p>
-<div id="uses" class="section level2" number="6.1">
+<div id="uses" class="section level2" number="8.1">
 <h2>
-<span class="header-section-number">6.1</span> Uses<a class="anchor" aria-label="anchor" href="#uses"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.1</span> Uses<a class="anchor" aria-label="anchor" href="#uses"><i class="fas fa-link"></i></a>
 </h2>
 <p>Spreadsheets are used to hold data and metadata. They are not for transformations either through macros or formulas. Transformations and analysis occur within the data processing pipeline and other tools.</p>
 </div>
-<div id="tidy-data" class="section level2" number="6.2">
+<div id="tidy-data" class="section level2" number="8.2">
 <h2>
-<span class="header-section-number">6.2</span> Tidy Data<a class="anchor" aria-label="anchor" href="#tidy-data"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2</span> Tidy Data<a class="anchor" aria-label="anchor" href="#tidy-data"><i class="fas fa-link"></i></a>
 </h2>
 <p>All spreadsheets should follow the tidy data philosophy laid out by Hadley Wickham in the article “<a href="https://www.jstatsoft.org/article/view/v059i10">Tidy Data</a>.” This paper and Tidy Data in general sets one row per observation with each variable or property in a column. Each row should have a unique persistent identifier (PID).</p>
 <p>In addition to organizing spreadsheet data into a tidy format, to reduce data uncertainty and missingness in the spreadsheet, it is Data Team pracitce to use multiple smaller spreadsheets rather than wide spreadsheets that combine multiple universes and response units. In this way, we would keep teacher responses separate from student responses and classroom data separate from school data. Relationships between spreadsheets are designed using the PID as foreign keys, following an entity relationship model similar to a RDMS.</p>
@@ -130,16 +132,16 @@
 </tbody>
 </table></div>
 </div>
-<div id="spreadsheet-file-type" class="section level2" number="6.3">
+<div id="spreadsheet-file-type" class="section level2" number="8.3">
 <h2>
-<span class="header-section-number">6.3</span> Spreadsheet file type<a class="anchor" aria-label="anchor" href="#spreadsheet-file-type"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.3</span> Spreadsheet file type<a class="anchor" aria-label="anchor" href="#spreadsheet-file-type"><i class="fas fa-link"></i></a>
 </h2>
 <p>The preferred file type for spreadsheets is .csv (comma separated value) or .tsv (tab separated value). These are platform and application neutral, open, and non-proprietary data formats making them suitable for archiving and preservation.</p>
 <p>Other file types like .xlsx (Microsoft Excel) are not used because they are proprietary and not human readable or usable in version control systems.</p>
 </div>
-<div id="spreadsheet-applications" class="section level2" number="6.4">
+<div id="spreadsheet-applications" class="section level2" number="8.4">
 <h2>
-<span class="header-section-number">6.4</span> Spreadsheet applications<a class="anchor" aria-label="anchor" href="#spreadsheet-applications"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.4</span> Spreadsheet applications<a class="anchor" aria-label="anchor" href="#spreadsheet-applications"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
 <li>
@@ -150,9 +152,9 @@
 <strong>Google Sheets</strong>: Not for data (not sure why but not for data)</li>
 </ul>
 </div>
-<div id="resources" class="section level2" number="6.5">
+<div id="resources" class="section level2" number="8.5">
 <h2>
-<span class="header-section-number">6.5</span> Resources<a class="anchor" aria-label="anchor" href="#resources"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.5</span> Resources<a class="anchor" aria-label="anchor" href="#resources"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
 <li>
@@ -161,17 +163,17 @@
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="dataset-curation-standards.html"><span class="header-section-number">5</span> Dataset Curation Standards</a></div>
-<div class="next"><a href="citation-formats.html"><span class="header-section-number">7</span> Citation formats</a></div>
+<div class="prev"><a href="dataset-restrictions-and-embargos.html"><span class="header-section-number">7</span> Dataset Restrictions and Embargos</a></div>
+<div class="next"><a href="citation-formats.html"><span class="header-section-number">9</span> Citation formats</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#spreadsheet-standards-and-practices"><span class="header-section-number">6</span> Spreadsheet standards and practices</a></li>
-<li><a class="nav-link" href="#uses"><span class="header-section-number">6.1</span> Uses</a></li>
-<li><a class="nav-link" href="#tidy-data"><span class="header-section-number">6.2</span> Tidy Data</a></li>
-<li><a class="nav-link" href="#spreadsheet-file-type"><span class="header-section-number">6.3</span> Spreadsheet file type</a></li>
-<li><a class="nav-link" href="#spreadsheet-applications"><span class="header-section-number">6.4</span> Spreadsheet applications</a></li>
-<li><a class="nav-link" href="#resources"><span class="header-section-number">6.5</span> Resources</a></li>
+<li><a class="nav-link" href="#spreadsheet-standards-and-practices"><span class="header-section-number">8</span> Spreadsheet standards and practices</a></li>
+<li><a class="nav-link" href="#uses"><span class="header-section-number">8.1</span> Uses</a></li>
+<li><a class="nav-link" href="#tidy-data"><span class="header-section-number">8.2</span> Tidy Data</a></li>
+<li><a class="nav-link" href="#spreadsheet-file-type"><span class="header-section-number">8.3</span> Spreadsheet file type</a></li>
+<li><a class="nav-link" href="#spreadsheet-applications"><span class="header-section-number">8.4</span> Spreadsheet applications</a></li>
+<li><a class="nav-link" href="#resources"><span class="header-section-number">8.5</span> Resources</a></li>
 </ul>
 
       <div class="book-extra">
