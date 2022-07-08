@@ -14,10 +14,6 @@ if-statements
 pipes
 rstyle-funcs
 rstyle-funcs-package-deps
-data-management-plan-templates
-ties-owns-raw-and-processed-data
-ties-shares-ownership-with-data-collector
-ties-is-a-subcontractor-without-ownership
 dataset-curation-standards
 raw-dataset-standards
 internal-datasets-standards
@@ -28,6 +24,9 @@ active-curation
 removing-the-risk-of-posthoc-curation
 data-team-active-curation-processes-and-tools
 quality-assurance-processes
+diversity-equity-inclusion-and-accessibility-in-data
+bias-in-data
+data-deia-resources
 dataset-restrictions-and-embargos
 definitions
 vulnerability
@@ -40,6 +39,10 @@ partial-datasets
 replication-verification-datasets
 processes-to-gain-access
 restrictions-and-fair-standards
+data-management-plan-templates
+ties-owns-raw-and-processed-data
+ties-shares-ownership-with-data-collector
+ties-is-a-subcontractor-without-ownership
 spreadsheet-standards-and-practices
 uses
 tidy-data
