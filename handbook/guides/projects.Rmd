@@ -69,6 +69,23 @@ meta |>
   kableExtra::scroll_box(width = "100%", height = "200px")
 ```
 
+These metadata CSVs have three required fields:
+
+- **name**: The variable name
+- **type**: The variable type (usually "character", "integer", "double", or "logical")
+- **description**: Description of the variable content. If the dataset corresponds to a survey, this is usually the question wording in English.
+
+There are often other columns:
+
+- **coding**: If the variable is categorical, this contains the label-value mapping for the variable, written with [rcoder](https://nyuglobalties.github.io/rcoder) syntax.
+- **tests**: Any content tests on the data
+- **scale**: If the variable belongs to a psychometric scale, the name of the scale. This is used for identifying variable groups for psychometric descriptive statistics.
+- **title**: A shorter description for the variable, used as a variable label when exported to Stata
+- **section**: Codebook section; if no section is assigned, the codebook will place the variable into the "Other" section
+- **section_description**: Description for the section. Useful for providing extra context for the codebook section.
+- **group**: Codebook subsection / variable group. Useful to have for combining a collection of variables together e.g. a scale
+- **group_description**: Description for the variable group. Useful for adding an introductory statement asked before each question in the group.
+
 ## `codebooks`
 
 "Codebooks" are essentially [data dictionaries](https://en.wikipedia.org/wiki/Data_dictionary), targeted for social science research. They commonly include enumerations of variables in a dataset, as well as their descriptions and (when applicable) categorical codings. Some codebooks also include methodology descriptions and other descriptive statistics of the data.
