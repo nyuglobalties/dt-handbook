@@ -4,16 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>2 Project Structure | Data Team Handbook</title>
+<title>4 Project Structure | Data Team Handbook</title>
 <meta name="author" content="Global TIES for Children Data Team">
 <meta name="description" content="#dt-proj-structure pre code {  font-size: 0.8rem; } The Data Team uses a variety of technologies, mainly in the R ecosystem, to create its data projects. Each project has a similar file structure...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="2 Project Structure | Data Team Handbook">
+<meta property="og:title" content="4 Project Structure | Data Team Handbook">
 <meta property="og:type" content="book">
 <meta property="og:url" content="https://r4ds.had.co.nz/dt-proj-structure.html">
 <meta property="og:description" content="#dt-proj-structure pre code {  font-size: 0.8rem; } The Data Team uses a variety of technologies, mainly in the R ecosystem, to create its data projects. Each project has a similar file structure...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2 Project Structure | Data Team Handbook">
+<meta name="twitter:title" content="4 Project Structure | Data Team Handbook">
 <meta name="twitter:site" content="@NYUGlobalTIES">
 <meta name="twitter:description" content="#dt-proj-structure pre code {  font-size: 0.8rem; } The Data Team uses a variety of technologies, mainly in the R ecosystem, to create its data projects. Each project has a similar file structure...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -44,19 +44,22 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html">Welcome</a></li>
-<li><a class="" href="dt-structure.html"><span class="header-section-number">1</span> Data Team Structure</a></li>
+<li class="book-part">Team</li>
+<li><a class="" href="dt-purpose.html"><span class="header-section-number">1</span> Data Team Purpose</a></li>
+<li><a class="" href="dt-structure.html"><span class="header-section-number">2</span> Data Team Structure</a></li>
+<li><a class="" href="dt-workflow.html"><span class="header-section-number">3</span> How the Data Team schedules work</a></li>
 <li class="book-part">Guides</li>
-<li><a class="active" href="dt-proj-structure.html"><span class="header-section-number">2</span> Project Structure</a></li>
-<li><a class="" href="styling-r.html"><span class="header-section-number">3</span> R Style Guide</a></li>
+<li><a class="active" href="dt-proj-structure.html"><span class="header-section-number">4</span> Project Structure</a></li>
+<li><a class="" href="styling-r.html"><span class="header-section-number">5</span> R Style Guide</a></li>
 <li class="book-part">Curation</li>
-<li><a class="" href="dataset-curation-standards.html"><span class="header-section-number">4</span> Dataset Curation Standards</a></li>
-<li><a class="" href="active-curation.html"><span class="header-section-number">5</span> Active Curation</a></li>
-<li><a class="" href="diversity-equity-inclusion-and-accessibility-in-data.html"><span class="header-section-number">6</span> Diversity, Equity, Inclusion and Accessibility in Data</a></li>
-<li><a class="" href="dataset-restrictions-and-embargos.html"><span class="header-section-number">7</span> Dataset Restrictions and Embargos</a></li>
-<li><a class="" href="data-management-plan-templates.html"><span class="header-section-number">8</span> Data Management Plan Templates</a></li>
-<li><a class="" href="spreadsheet-standards-and-practices.html"><span class="header-section-number">9</span> Spreadsheet standards and practices</a></li>
-<li><a class="" href="citation-formats.html"><span class="header-section-number">10</span> Citation formats</a></li>
-<li><a class="" href="other-data-team-services.html"><span class="header-section-number">11</span> Other Data Team Services</a></li>
+<li><a class="" href="dataset-curation-standards.html"><span class="header-section-number">6</span> Dataset Curation Standards</a></li>
+<li><a class="" href="active-curation.html"><span class="header-section-number">7</span> Active Curation</a></li>
+<li><a class="" href="diversity-equity-inclusion-and-accessibility-in-data.html"><span class="header-section-number">8</span> Diversity, Equity, Inclusion and Accessibility in Data</a></li>
+<li><a class="" href="dataset-restrictions-and-embargos.html"><span class="header-section-number">9</span> Dataset Restrictions and Embargos</a></li>
+<li><a class="" href="data-management-plan-templates.html"><span class="header-section-number">10</span> Data Management Plan Templates</a></li>
+<li><a class="" href="spreadsheet-standards-and-practices.html"><span class="header-section-number">11</span> Spreadsheet standards and practices</a></li>
+<li><a class="" href="citation-formats.html"><span class="header-section-number">12</span> Citation formats</a></li>
+<li><a class="" href="other-data-team-services.html"><span class="header-section-number">13</span> Other Data Team Services</a></li>
 <li class="book-part">Appendix</li>
 <li><a class="" href="glossary.html">Glossary</a></li>
 <li><a class="" href="resources-1.html">Resources</a></li>
@@ -67,9 +70,9 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="dt-proj-structure" class="section level1" number="2">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="dt-proj-structure" class="section level1" number="4">
 <h1>
-<span class="header-section-number">2</span> Project Structure<a class="anchor" aria-label="anchor" href="#dt-proj-structure"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4</span> Project Structure<a class="anchor" aria-label="anchor" href="#dt-proj-structure"><i class="fas fa-link"></i></a>
 </h1>
 <style type="text/css">
 #dt-proj-structure pre code {
@@ -90,9 +93,9 @@ _targets.R       # The main workflow orchestration definition file
 renv.lock        # Package dependency state capture file for `renv`</code></pre>
 <p>What’s important note from the outset is that <strong>data are not inside in these projects</strong>. Each project is versioned with <a href="https://git-scm.org">git</a> and hosted on <a href="https://github.com/nyuglobalties">TIES’ GitHub organization page</a>. Most of our data are sensitive to some degree, so our operational practice is to load data directly via APIs or read from <a href="https://nyu.app.box.com">NYU Box</a>.</p>
 <p>Project templates can be created with the internal tool <a href="https://github.com/nyuglobalties/dtproj">dtproj</a>.</p>
-<div id="blueprints" class="section level2" number="2.1">
+<div id="blueprints" class="section level2" number="4.1">
 <h2>
-<span class="header-section-number">2.1</span> <code>blueprints</code><a class="anchor" aria-label="anchor" href="#blueprints"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.1</span> <code>blueprints</code><a class="anchor" aria-label="anchor" href="#blueprints"><i class="fas fa-link"></i></a>
 </h2>
 <p>The Data Team uses its <a href="https://nyuglobalties.github.io/blueprintr"><code>blueprintr</code></a> package to build, test, and document datasets. <code>blueprintr</code> is akin to <a href="https://getdbt.com">dbt</a>, but it is designed to manage a whole host of metadata, a necessary task for dissemination of project findings and data publication. Moreover, <code>blueprintr</code> operates without a connection to a data warehouse, given the assumptions of low connectivity and technical availability that the Data Team operates in.</p>
 <p>Each <strong>blueprint</strong> is a pair of two files:</p>
@@ -833,10 +836,38 @@ Child Self-Regulated Learning
 </tbody>
 </table></div>
 </div>
+<p>These metadata CSVs have three required fields:</p>
+<ul>
+<li>
+<strong>name</strong>: The variable name</li>
+<li>
+<strong>type</strong>: The variable type (usually “character”, “integer”, “double”, or “logical”)</li>
+<li>
+<strong>description</strong>: Description of the variable content. If the dataset corresponds to a survey, this is usually the question wording in English.</li>
+</ul>
+<p>There are often other columns:</p>
+<ul>
+<li>
+<strong>coding</strong>: If the variable is categorical, this contains the label-value mapping for the variable, written with <a href="https://nyuglobalties.github.io/rcoder">rcoder</a> syntax.</li>
+<li>
+<strong>tests</strong>: Any content tests on the data</li>
+<li>
+<strong>scale</strong>: If the variable belongs to a psychometric scale, the name of the scale. This is used for identifying variable groups for psychometric descriptive statistics.</li>
+<li>
+<strong>title</strong>: A shorter description for the variable, used as a variable label when exported to Stata</li>
+<li>
+<strong>section</strong>: Codebook section; if no section is assigned, the codebook will place the variable into the “Other” section</li>
+<li>
+<strong>section_description</strong>: Description for the section. Useful for providing extra context for the codebook section.</li>
+<li>
+<strong>group</strong>: Codebook subsection / variable group. Useful to have for combining a collection of variables together e.g. a scale</li>
+<li>
+<strong>group_description</strong>: Description for the variable group. Useful for adding an introductory statement asked before each question in the group.</li>
+</ul>
 </div>
-<div id="codebooks" class="section level2" number="2.2">
+<div id="codebooks" class="section level2" number="4.2">
 <h2>
-<span class="header-section-number">2.2</span> <code>codebooks</code><a class="anchor" aria-label="anchor" href="#codebooks"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.2</span> <code>codebooks</code><a class="anchor" aria-label="anchor" href="#codebooks"><i class="fas fa-link"></i></a>
 </h2>
 <p>“Codebooks” are essentially <a href="https://en.wikipedia.org/wiki/Data_dictionary">data dictionaries</a>, targeted for social science research. They commonly include enumerations of variables in a dataset, as well as their descriptions and (when applicable) categorical codings. Some codebooks also include methodology descriptions and other descriptive statistics of the data.</p>
 <p>The <code>codebooks</code> folder contains HTML codebook exports of selected blueprints, as indicated by the presence of <code>blueprintr::bp_export_codebook()</code> in the blueprint definition file:</p>
@@ -850,9 +881,9 @@ Child Self-Regulated Learning
   <span class="fu">bp_export_codebook</span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>Unless otherwise agreed upon, <strong>these codebooks are for internal purposes only</strong>. They are mainly present to support TIES’ members in their research.</p>
 </div>
-<div id="config" class="section level2" number="2.3">
+<div id="config" class="section level2" number="4.3">
 <h2>
-<span class="header-section-number">2.3</span> <code>config</code><a class="anchor" aria-label="anchor" href="#config"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3</span> <code>config</code><a class="anchor" aria-label="anchor" href="#config"><i class="fas fa-link"></i></a>
 </h2>
 <p>The <code>config</code> folder has two main R files:</p>
 <ul>
@@ -860,9 +891,9 @@ Child Self-Regulated Learning
 <li><code>packages.R</code></li>
 </ul>
 <p>Other project-specific files, like YAML configuration, may be stored in this folder.</p>
-<div id="environment.r" class="section level3" number="2.3.1">
+<div id="environment.r" class="section level3" number="4.3.1">
 <h3>
-<span class="header-section-number">2.3.1</span> <code>environment.R</code><a class="anchor" aria-label="anchor" href="#environment.r"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3.1</span> <code>environment.R</code><a class="anchor" aria-label="anchor" href="#environment.r"><i class="fas fa-link"></i></a>
 </h3>
 <p>Sensitive information necessary for pipeline function, like API keys and passwords, <strong>must</strong> be stored as environment variables and <strong>never</strong> checked into version control. Environment variables are generally stored in a personal <a href="https://rstats.wtf/r-startup.html#renviron"><code>.Renviron</code></a> file, but it is our practice to load them into global variables at the start of the pipeline to avoid unnecessary calls to <code><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv()</a></code>.</p>
 <p>Here is an example <code>environment.R</code>:</p>
@@ -873,9 +904,9 @@ Child Self-Regulated Learning
 
 <span class="va">CACHE_PASSPHRASE</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html">Sys.getenv</a></span><span class="op">(</span><span class="st">"CACHE_PASSPHRASE"</span>, unset <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="packages.r" class="section level3" number="2.3.2">
+<div id="packages.r" class="section level3" number="4.3.2">
 <h3>
-<span class="header-section-number">2.3.2</span> <code>packages.R</code><a class="anchor" aria-label="anchor" href="#packages.r"><i class="fas fa-link"></i></a>
+<span class="header-section-number">4.3.2</span> <code>packages.R</code><a class="anchor" aria-label="anchor" href="#packages.r"><i class="fas fa-link"></i></a>
 </h3>
 <p>This file serves two purposes:</p>
 <ol style="list-style-type: decimal">
@@ -883,7 +914,7 @@ Child Self-Regulated Learning
 <li>Attach packages via <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> to make those packages’ exported functions available across the entire pipeline</li>
 </ol>
 <p>Our project structure uses <a href="https://rstudio.github.io/renv/articles/renv.html"><code>renv</code></a> to manage the specific versions of packages employed in our pipeline to improve replicability. <code>renv</code> is able to capture these dependencies via code inspection; however sometimes a soft dependency (one that is not explicitly stated in the code) can occur e.g. a package depends on another for some plotting routine. To capture these dependecies, we place a reference to one of the package’s functions in <code>packages.R</code> so that <code>renv</code> can treat that package as a hard dependency.</p>
-<p>Use of <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> should be restricted to packages that are used extensively. As stated in <a href="styling-r.html#rstyle-funcs-package-deps">3.2.1</a>, it is preferred to use <code>package::func()</code> syntax in function writing; moreover, it is preferred the same style throughout most of the pipeline definition as well for clarity and long-term maintenance.</p>
+<p>Use of <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> should be restricted to packages that are used extensively. As stated in <a href="styling-r.html#rstyle-funcs-package-deps">5.2.1</a>, it is preferred to use <code>package::func()</code> syntax in function writing; moreover, it is preferred the same style throughout most of the pipeline definition as well for clarity and long-term maintenance.</p>
 <p>Example of <code>packages.R</code>:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Retain suggested packages in renv</span>
@@ -903,18 +934,18 @@ Child Self-Regulated Learning
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="dt-structure.html"><span class="header-section-number">1</span> Data Team Structure</a></div>
-<div class="next"><a href="styling-r.html"><span class="header-section-number">3</span> R Style Guide</a></div>
+<div class="prev"><a href="dt-workflow.html"><span class="header-section-number">3</span> How the Data Team schedules work</a></div>
+<div class="next"><a href="styling-r.html"><span class="header-section-number">5</span> R Style Guide</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#dt-proj-structure"><span class="header-section-number">2</span> Project Structure</a></li>
-<li><a class="nav-link" href="#blueprints"><span class="header-section-number">2.1</span> blueprints</a></li>
-<li><a class="nav-link" href="#codebooks"><span class="header-section-number">2.2</span> codebooks</a></li>
+<li><a class="nav-link" href="#dt-proj-structure"><span class="header-section-number">4</span> Project Structure</a></li>
+<li><a class="nav-link" href="#blueprints"><span class="header-section-number">4.1</span> blueprints</a></li>
+<li><a class="nav-link" href="#codebooks"><span class="header-section-number">4.2</span> codebooks</a></li>
 <li>
-<a class="nav-link" href="#config"><span class="header-section-number">2.3</span> config</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#environment.r"><span class="header-section-number">2.3.1</span> environment.R</a></li>
-<li><a class="nav-link" href="#packages.r"><span class="header-section-number">2.3.2</span> packages.R</a></li>
+<a class="nav-link" href="#config"><span class="header-section-number">4.3</span> config</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#environment.r"><span class="header-section-number">4.3.1</span> environment.R</a></li>
+<li><a class="nav-link" href="#packages.r"><span class="header-section-number">4.3.2</span> packages.R</a></li>
 </ul>
 </li>
 </ul>

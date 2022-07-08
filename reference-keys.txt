@@ -1,5 +1,15 @@
+dt-purpose
+rationale
+research-lifecyle-buckets
 dt-structure
 members
+dt-workflow
+agile-and-nightlies
+sprints
+sprint-schedule
+task-pointing
+sequencing
+prioritization
 dt-proj-structure
 blueprints
 codebooks
