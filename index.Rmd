@@ -14,6 +14,13 @@ output: bookdown::bs4_book
 
 # Welcome {-}
 
-This is a website that documents the work and process of the TIES Data Team. <!-- TODO: Finish welcome-->
+This is a website that documents the work and process of the TIES Data Team.
+
+Our mission is **to develop open-science tooling for providing archival quality data products and capacity to research team members and external stakeholders with integrity and in a timely fashion.**
+
+## Orientation {-}
+- Read our [statement of purpose](#dt-purpose)
+- See our [list of members](#dt-structure)
+- View the sidebar to see the full list of articles
 
 This website is (and will always be) **free to use**, and is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) License.

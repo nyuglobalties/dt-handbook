@@ -1,11 +1,5 @@
 # Data Team Structure {#dt-structure}
 
-The mission of the Data Team is:
-
-> To provide data products and capacity to research team members and external stakeholders with integrity and in a timely fashion.
-
-<!-- TODO: Move mission to landing page? -->
-
 ## Members
 
 The Data Team is currently a sub-member of the PELE research group. It is composed of **Core** and **Advisory** members:
