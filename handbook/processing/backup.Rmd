@@ -1,0 +1,482 @@
+---
+title: Data Cleaning Structure
+author: Idan Falek
+date: "`r strftime(Sys.Date(), '%B %d, %Y')`"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+<!-- *Updated: `r strftime(Sys.Date(), "%B %d, %Y")`* -->
+
+Drake is a project management software that uses R expressions to inspect the dependency tree and determine the proper order of executing build targets. This is useful for projects that don't have a lot of code or can be easily written in a functional format. Our data cleaning protocols make extensive use of input and output files, so tracking those files is necessary in our project environment.
+
+![Data cleaning process](images/datacleaningpipeline.png)
+
+------------------------------------------------------------------------
+
+## Loading
+
+The primary step is loading all of the raw datasets for the data level. The datasets must be set `as.data.frame()` in order to process the data.
+
+------------------------------------------------------------------------
+
+## Mapping & Homogenization {.tabset .tabset-fade}
+
+Once all of the raw data is loaded, all of the variables from the various datasets must be homogenized. This can be done through the mapping file, which keeps track of all of the variables, their coding and descriptions.
+
+The Homogenization Sheet is a collection of all of the variables across all of the datasets in a data level. The sheet is an essential source of information for the cleaning toolkit as it informs the toolkit of all of the variables it must track for transformations. All naming and coding information is handled by [panelcleaner](https://github.com/nyuglobalties/panelcleaner).
+
+### Note For `read.csv` for R < 4.0
+
+While this does not directly affect the Homogenization Sheet, the authors of the sheet must be aware of how R handles variable names in `data.frames`. [panelcleaner](https://github.com/nyuglobalties/panelcleaner) expects that all of the variable names in the Homogenization Sheet are identical to those in the raw databases. If these databases were imported using `read.csv`or one of its relatives (`read.table`, `read.delim`, etc), the variable names *may* have changed.
+
+These functions have a parameter called `check.names`, which checks to make sure each variable name is an acceptable R name. Any variables that start with underscores or have spaces or non-alphanumeric characters (except underscores in the middle or end) will be renamed with "." or "X". If you do not want to consider these transformations in the Homogenization Sheet, set `check.names = FALSE` in your `read.csv` function call. [More details about acceptable R variable names can be found here.](https://stat.ethz.ch/R-manual/R-devel/library/base/html/make.names.html)
+
+------------------------------------------------------------------------
+
+### Mapping Raw Data
+
+Mapping is a single mechanism that documents how raw data appeared, facilitating transparency and reproducibility. The first part of the Homogenization Sheet is the mapping of all of the names, descriptions and coding for each item of each wave across all datasets. All of this information feeds into [panelcleaner](https://github.com/nyuglobalties/panelcleaner) as a description of what appears in the raw data. Prior to mapping raw data, there are several questions to consider:
+
+-   Is there a "raw codebook" (document created during project set-up of variables, description and coding) for this dataset?
+-   Does the dataset need to be spread wide or long?
+-   Do any datasets need to be merged prior to mapping (e.g., activity trackers)?
+
+> Example: Raw data mapping
+
++---------------+------------------------+--------------------------------------------+-----------+----------------------------------------+--------------------------------------------------------------------------------------------------------------+
+| **name\_by1** | code\_by1              | **description\_by1**                       | name\_ey1 | code\_ey1                              | **description\_ey1**                                                                                         |
++===============+========================+============================================+===========+========================================+==============================================================================================================+
+| FEMALE        | Is the student female? | coding(code("Male", 0), code("Female", 1)) | GENDER    | What is the student's gender?          | coding(code("Male", 1), code("Female", 2))                                                                   |
++---------------+------------------------+--------------------------------------------+-----------+----------------------------------------+--------------------------------------------------------------------------------------------------------------+
+|               |                        |                                            | LANG      | What languages does the student speak? | coding(code("Arabic", 1), code("Kanuri", 2), code("Hausa", 3), code("Other", 7), code("Not applicable", NA)) |
++---------------+------------------------+--------------------------------------------+-----------+----------------------------------------+--------------------------------------------------------------------------------------------------------------+
+
+Each column has a suffix with an underscore and a time code which tells [panelcleaner](https://github.com/nyuglobalties/panelcleaner) the location of each variable. The codes, unless overridden by the `waves` parameter in [panelcleaner](https://github.com/nyuglobalties/panelcleaner), adhere to the following pattern: start with "b", "m", or "e" to indicate Baseline, Midline, or Endline, respectively, then Y\#, where \# is the year number. However, these suffixes are not compulsory, particularly for data that is collected at one time point. This formatting is optional and can be adapted based on the researcher's request.
+
+There are three main variable columns:
+
+-   [**name**]{style="color: purple;"}: The name of the variable as it is found in the database. [**IMPORTANT**]{style="color: red;"}: Keep in mind that if you use R's default file reading functions like `read.table` or `read.csv`, any special characters in variables' names like spaces or slashes will be converted to dots ('.') *unless* the parameter `check.names` is `FALSE`. If you are using `check.names = TRUE`, please replace any special characters with dots. [More details about acceptable R variable names can be found here.](https://stat.ethz.ch/R-manual/R-devel/library/base/html/make.names.html)
+
+-   [**code**]{style="color: purple;"}: How the data for each variable appears in the database itself. Generally, this is a matrix constructed by coding that pairs values in the data with descriptions of what the values mean. [**IMPORTANT**]{style="color: red;"}: It is necessary that the first value within each `code()` carries the values found in the database while the second value carries the descriptions.
+
+-   [**description**]{style="color: purple;"}: What each variable actually means in the context of the assessment, often the direct question asked in the assessment. This information isn't read by [panelcleaner](https://github.com/nyuglobalties/panelcleaner), but it is important for human readers of the sheet.
+
+------------------------------------------------------------------------
+
+### Homogenizing Data
+
+In order to ensure that each time point has consistent variable names and values, [panelcleaner](https://github.com/nyuglobalties/panelcleaner) needs the master variable name and coding. This allows the user to specify the homogenizations before data verification and reduction.
+
+> Example: Homogenizing data
+
++-------+-------------------+--------------------------------------------------------------------------------------------------------------+
+| panel | homogenized\_name | homogenized\_coding                                                                                          |
++=======+===================+==============================================================================================================+
+| ODK   | FEMALE            | coding(code("Male", 0), code("Female", 1))                                                                   |
++-------+-------------------+--------------------------------------------------------------------------------------------------------------+
+| ODK   | LANG              | coding(code("Arabic", 1), code("Kanuri", 2), code("Hausa", 3), code("Other", 7), code("Not applicable", NA)) |
++-------+-------------------+--------------------------------------------------------------------------------------------------------------+
+
+-   [**panel**]{style="color: purple;"}: The assessment group to which the variable belongs (i.e. the dataset).
+
+-   [**homogenized\_name**]{style="color: purple;"}: The name of the variable to be used across time points. [**IMPORTANT**]{style="color: red;"}: no two variables in the same `panel` can have the same `homogenized_name`.
+
+-   [**homogenized\_coding**]{style="color: purple;"}: The coding to be used across time points. This has the exact same structure and requirements as the code\_[time] columns in the mapping section of the file.
+
+------------------------------------------------------------------------
+
+### Coding Specifications
+
+The coding is the direct interface between the abstracted Homogenization Sheet and the raw data inside the databases. [rcoder](https://github.com/nyuglobalties/rcoder) is the package used to captures categorical codings. To be sure that all of the databases have the same data meaning, coding tables are necessary to generate key-value pairs between the descriptions and the raw values. As mentioned in the discussion of code columns, the order of the vectors that generate the table is important.
+
+> Example: Coding and resulting table
+
+`coding(code("LOW", 1), code("MEDIUM", 2), code ("HIGH", 3))`
+
++----------+---------------+
+| Value    | Description   |
++:========:+:=============:+
+| 1        | LOW           |
++----------+---------------+
+| 2        | MEDIUM        |
++----------+---------------+
+| 3        | HIGH          |
++----------+---------------+
+
+As [panelcleaner](https://github.com/nyuglobalties/panelcleaner) attempts to homogenize the codings, it will search for everything in the "Value" column: the first vector. The "Description" column is necessary to link different values across time points. Internally, [panelcleaner](https://github.com/nyuglobalties/panelcleaner) builds a table of all the possible values, including the homogenized value, associated with that description. If the order of the vectors were switched, [panelcleaner](https://github.com/nyuglobalties/panelcleaner) would try to link "1" across time points rather than "LOW."
+
+#### Dimensionality and Homogenized Coding
+
+[panelcleaner](https://github.com/nyuglobalties/panelcleaner) supports having a final coding which has a row count that is smaller than or equal to the row count of the codings found in the time points. For example, suppose you had the following final coding:
+
++----------+----------------+
+| Value    | Description    |
++:========:+:==============:+
+| 1        | LOW            |
++----------+----------------+
+| 2        | MEDIUM         |
++----------+----------------+
+| 3        | HIGH           |
++----------+----------------+
+
+However, the timepoints may have the following codings:
+
++----------+----------------+
+| Value    | Description    |
++:========:+:==============:+
+| 1        | LOW            |
++----------+----------------+
+| 2        | MEDIUM-LOW     |
++----------+----------------+
+| 3        | MEDIUM         |
++----------+----------------+
+| 4        | HIGH           |
++----------+----------------+
+
+: Coding at T1
+
++----------+----------------+
+| Value    | Description    |
++:========:+:==============:+
+| 1        | LOW            |
++----------+----------------+
+| 2        | MEDIUM         |
++----------+----------------+
+| 3        | HIGH           |
++----------+----------------+
+
+: Coding at T~2~
+
+Since the number of possible values in $T_1$ is greater than the number of possible values in the Homogenized Coding, two questions need to be asked:
+
+-   Does the question at $T_1$ have the same meaning as the question at $T_2$? If not, this condition fails and the item must be separated.
+-   Do the responses in $T_1$ overlap with the responses in $T_2$ such that $T_1 \cap T_2 = \emptyset$? A case that would violate this would be something like "MEDIUM AND HIGHER" = 2 in $T_1$ while the $T_2$ has "MEDIUM" = 2 and "HIGH" = 3. Since the responses in $T_1$ do not map uniquely to one value in $T_2$, this condition fails and the item must be separated.
+
+Provided that these two criteria are met, a Homogenized Coding can be constructed that forms a union of the two independent sets of responses:
+
++---------+------------------+
+| Value   | Description      |
++:=======:+:================:+
+| 1       | LOW & MEDIUM-LOW |
++---------+------------------+
+| 2       | MEDIUM           |
++---------+------------------+
+| 3       | HIGH             |
++---------+------------------+
+
+The use of the "&" links two descriptions (and thus their values) together in the Homogenized Coding and merges them into one value.
+
+[panelcleaner](https://github.com/nyuglobalties/panelcleaner) does support Homogenized Coding whose dimensionality is larger than some time points, but it's ill-advised because this implicitly creates extrapolation which may tarnish the data's reliability. If you have a situation where this won't happen, you may use a Homogenized Coding with a larger dimensionality.
+
+------------------------------------------------------------------------
+
+## Verification {.tabset .tabset-fade}
+
+Next, the data must be verified. The purpose of verification is to ensure the accuracy of the raw data and participants are properly linked to one another across various datasets. Verification is a two-step process: (1) single-set verification and (2) multiple-set where verification. Below is the flow of verification.
+
+![Verification flow](images/verificationflow.png)
+
+The purpose of single-set verification is to ensure the participant record from a specific dataset is properly linked to a participant's IDs by comparing inconsistencies in the identifiable information (identifying variables). The multiple-set verification process mirrors the single-set verification, however instead of each dataset being broken up into separate 'fix files', it is one large 'fix file' for all of the datasets. This is done by comparing variables with identifying variables across multiple datasets side-by-side.
+
+### Issues
+
+During single-set verification, an 'issue file' is generated for each dataset at each timepoint, however in multiple-set verification it is one large 'issue file' of all of the assessments. The 'issue files' flags individual records from each assessment with problems and/or inconsistencies with the identifying variables to be reviewed.
+
+To begin this process, the Data Associate must write up a script in the `plan.r` file for the data level to generate an 'issue file'. Some notable elements include the participant ID (e.g., student ID, teacher ID, class ID), the UNIQUE ID for each record within a dataset and the reference dataset that is considered the 'masterlist'. The participant ID is used to compare the same participant across different datasets, primarily between the dataset 'issue file' and the reference dataset. The UNIQUE ID is used to alter the record. Each participant in the research study has one participant ID, but multiple UNIQUE IDs that are specific to each completed assessment record. The reference dataset is used to find the correct fix. In the script generating the 'issue file', the Data Associate indicates the margin of error for each identifying variable between the dataset and reference file. The standard is that ID variables have a 0% margin of error, while all other variables typically have a 20% margin of error. Once the 'issue files' are exported, they can be copied into a separate 'fix file' to begin working on fixes for the issues flagged.
+
+> Example: Issue File
+
+![Single-Set Verification](images/singleset_verification.png)
+
+![Multiple-Set Verification](images/multipleset_verification.png)
+
+------------------------------------------------------------------------
+
+### Fixes
+
+Once the 'issues file' is copied into a scratch folder within the parent fix folder, the verifier can begin reviewing the flagged issues to determine if a participant is mislinked with the wrong participant ID or if it is a duplicate case. Below is the recommended format to document and organize the corrections needed in the verification process. If corrections and notes emanating from the verification process are recorded this way, not only it helps to better keep track of the data cleaning process, but it also permits an automatized application of these fixes.
+
+The following columns will be automatically generated from the single-set verification. They must be filled-in in order to create fixes for the record:
+
+-   [**problem**]{style="color: purple;"}: This column is used as a flag for any fixes the verifier is unsure of. The verifier can either enter "Yes" or "No" in this column.
+
+-   [**verifer**]{style="color: purple;"}: The name of the person verifying the record. This is used to track all decisions and changes.
+
+-   [**note**]{style="color: purple;"}: Any case-specific information on the problem and how the case was solved.
+
+-   [**PeerReviewer**]{style="color: purple;"}: The name of the second person reviewing the fix. This is similarly used to track decisions and changes.
+
+-   [**PeerReview Notes**]{style="color: purple;"}: Any notes that the peer reviewer leaves for the verifier to know, this way we can track how the case was solved and why.
+
+-   [**Participant ID**]{style="color: purple;"}: (e.g., [**STID\_Y1:**]{style="color: purple;"}, [**TID\_Y1:**]{style="color: purple;"}): The participant ID for the fixed dataset should match a record in the reference file. This column will be automatically filled in.
+
+-   [**what**]{style="color: purple;"}: Fill in the name of the identifying variables that need to be fixed for each case (should match exactly with the variable names in the dataset). If there are multiple variables that need to be changed they can be separated by a comma (",") without any space. Example:
+
+    -   STID\_Y1
+    -   LOCID
+    -   RCID
+    -   TID\_Y2
+
+    Aside from the variable names present in the dataset, the function will also recognize two more text entries for [**what**]{style="color: purple;"}: to change for duplicate cases:
+
+    -   **WHOLE OBSERVATION**: You should enter this in the cases where that specific survey needs to be deleted from the database, either because it's a duplicate that won't be utilized, because it's empty or because the field team has identified it as unreliable. Typically, if there are duplicate assessments that are both completed (little to no missingness) but the responses are inconsistent, the first completed version of an assessment is kept. If you wrote "WHOLE OBSERVATION" under the "WHAT" column, then you can just indicate "Delete" under the "change.to" column and leave the "change.from" column empty.
+
+    -   **IDENTICAL**: This can be useful when completely identical surveys were received because of syncing issues, that have no unique information in them and the choice of which one to keep is irrelevant and can be made completely at random. In this case, it's a waste of your time to manually decide which one to drop, so you may just mark them as identical and the function will drop one of them at random. And you can leave "change.from" and "change.to" columns empty here.
+
+-   [**change.from**]{style="color: purple;"}: Fill in the mistaken value in the data for the variable that needs fixing. If the mistaken value is missing, enter "NULL" here. Similar to the "WHAT" column, if there are multiple variables that need to be changed they can be separated by a comma (",") without any space. The values should be ordered and separated consistently with the entries of the "WHAT" column for each row.
+
+-   [**change.to**]{style="color: purple;"}: Fill in the correct value that should substitute the mistaken one. Similar to the "WHAT" column, if there are multiple variables that need to be changed they can be separated by a comma (",") without any space. The values should be ordered and separated consistently with the entries of the "WHAT" column for each row.
+
+    For those cases that we are sure the participant is unidentified or supposed not to be surveyed, we change their ID into format "UNIDENTIFIED\_BEFORE\_". This way the case has its own unique unidentified ID based on the wrong ID it used to have so it will not conflict with other unidentified cases.
+
+-   [**database**]{style="color: purple;"}: This column is the name of the dataset for the record. This column will be automatically filled in.
+
+-   [**n\_issues**]{style="color: purple;"}: The number of identifying variables with issues. This column will be automatically filled in. Each identifying variable also has a boolean flag that indicates if the participant has inconsistencies within that identifying variable (e.g., LOCID\_ISSUE, NAME\_ISSUE, FEMALE\_ISSUE). These issues are flagged by comparing the identifying variables from each dataset to the reference dataset. The total count of "TRUE" for each identifying variable generates the number of issues.
+
+-   [**unique\_id**]{style="color: purple;"}: A unique identifier for each record entered into the dataset. This column will be automatically filled in.
+
+> Example: Fix File
+
+Below are examples of various fixes. Watch [this video](https://nyu.box.com/s/x3jj27nz2k6rre20l1x1yklmw139lszn) to see a demonstration. [**IMPORTANT**]{style="color: red;"}: This is not a representation of how the 'fix file' appears (it will look more similar to the Generated Issue File Example). This example should be used as a reference for formatting how to fill-in the 'fix file'. Review "NOTE" to get a glimpse of the process.
+
++---------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+-------------------+-------------+--------------------------------+-----------+
+| Problem | Verifier | Note                                                                                                                                                                                                                                                                                                                                                                                                                                      | STID\_Y2 | what              | change.from | change.to                      | database  |
++=========+==========+===========================================================================================================================================================================================================================================================================================================================================================================================================================================+==========+===================+=============+================================+===========+
+| No      | Shelly   |                                                                                                                                                                                                                                                                                                                                                                                                                                           | AREM2492 |                   |             |                                | EGMA\_Y2B |
++---------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+-------------------+-------------+--------------------------------+-----------+
+| No      | Shelly   | This survey do not have any info of the student and the score; therefore will be deleted                                                                                                                                                                                                                                                                                                                                                  | AREM2492 | WHOLE OBSERVATION |             | delete                         | EGMA\_Y2B |
++---------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+-------------------+-------------+--------------------------------+-----------+
+| No      | Shelly   | Both survey have exact same info of the student and very similar scores. Therefore will put Identical into what column to let the function determine which survey to delete.                                                                                                                                                                                                                                                              | BREM3087 | IDENTICAL         |             |                                | EGMA\_Y2B |
++---------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+-------------------+-------------+--------------------------------+-----------+
+| No      | Shelly   | Both survey have exact same info of the student and very similar scores. Therefore will put Identical into what column to let the function determine which survey to delete.                                                                                                                                                                                                                                                              | BREM3087 | IDENTICAL         |             |                                | EGMA\_Y2B |
++---------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+-------------------+-------------+--------------------------------+-----------+
+| No      | Phuong   | According to the masterlist, this student\'s correct ID is BREM3021 (similar characteristics)                                                                                                                                                                                                                                                                                                                                             | BREM3075 | STID\_Y2          | BREM3075    | BREM3021                       | EGMA\_Y2B |
++---------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+-------------------+-------------+--------------------------------+-----------+
+| No      | Shelly   | After searching on masterlist based on mother\'s name, there doesn\'t seem to be a student who is this particular age. Only BREM3297 is the only person who could potentially match this as this is the only male, but he is much younger than this student. I think that this person is a sibling to this student, but wasn\'t suppose to be surveyed (especially when BREM3297 already has a survey). Therefore, this should be changed | BREM3296 | STID\_Y2          | BREM3296    | UNIDENTIFIED\_BEFORE\_BREM3296 | EGMA\_Y2B |
++---------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------+-------------------+-------------+--------------------------------+-----------+
+
+------------------------------------------------------------------------
+
+### Integrity Check
+
+After the verifier completes all of the fixes, they must be checked to ensure there are no conflicts. This system is automated using the integrity checker script. This script outputs a file of all conflicts from the fixes. Some common issues that come up include:
+
+-   [**conflicting\_id**]{style="color: purple;"}: There is a problem with the ID listed in change.to
+
+-   [**missing\_uid**]{style="color: purple;"}: The UNIQUE ID specified for the fix cannot be found in the database. This usually indicates that the UNIQUE ID was not entered or not entered correctly for that record.
+
+-   [**incomplete\_record**]{style="color: purple;"}: The columns in the 'fix file' are not completely filled out.
+
+-   [**duplicate\_changes**]{style="color: purple;"}: The same change was made multiple times to one record.
+
+-   [**multiple\_conclusions**]{style="color: purple;"}: Multiple changes that are inconsistent were made for one fix in the record.
+
+-   [**what\_not\_found**]{style="color: purple;"}: The variable in the \"what\" field does not exist in the target database.
+
+-   [**existing\_id**]{style="color: purple;"}: This error appears when a fix to a participant ID is made, however that ID already exists for that dataset.
+
+-   [**nonexistent\_id\_removed**]{style="color: purple;"}: This corresponds with a record to be deleted in a fix that was already deleted. A common cause is if the non-existent ID in question was a test ID, which was already dealt with. It could also mean there were multiple fixes related to that ID, which is a bit trickier to track down. If you find that it is a test ID, then you can either leave as is or remove the fix request and leave a note about what the fix used to be, in case we need to re-apply it for whatever reason.
+
+-   [**problem\_case**]{style="color: purple;"}: These are the cases that were flagged "Yes" under the "Problem" column in the 'fix file'.
+
+Once the integrity check file is generated, the verifier must return to the 'fix file' and make the necessary changes.
+
+------------------------------------------------------------------------
+
+### Applying Fixes
+
+Once all of these issues are fixed in the scratch 'fix file', rerun the pipeline to ensure that there are no other issues. When the integrity check file comes back clean, these fixes are ready to be applied. Copy the scratch 'fix file' into the parent fix folder and use the parent version to apply the fixes.
+
+Once this process is completed for single-set verification, repeat for multiple-set.
+
+------------------------------------------------------------------------
+
+## Transformation {.tabset .tabset-fade}
+
+After the variables are homogenized and verified, data transformation can begin. This includes merging the datasets across assessments and waves, IDs are fixed and consistent across data levels and waves and variables for both descriptive and analysis purpose are cleaned with standard variable compilations, removing all litter variables.
+
+Data transformation results in two datasets: (1) cleaned dataset (often referred to as DB3) and (2) preimputed data (often referred to as DB4). The cleaned dataset should contain anything that could be interesting for descriptive purposes or to satisfy curiosities of the researchers (they could easily merge those variables into their data). The preimputed dataset should have variables that could be useful for modeling. Below are useful tips and considerations during data cleaning, with a separate section for open-response variables.
+
+### Cleaned Dataset
+
+A completed clean dataset will be merged across timepoints, includes variables for both descriptive and analysis purpose and variables are cleaned with standard variable compilations, however no litter variables and not all item level.
+
+#### Recommendations
+
+1.  All categorical and binary variables are properly coded, with categorizes numerically coded and correctly corresponding to the homogenized\_coding in the mapping file.
+
+    > Examples:
+
+    -   FEMALE responses are 0, 1 or NA (not -1)
+    -   No texts responses (must be recoded into a category
+
+2.  The responses to a variable are 'reasonable'.
+
+    > Examples:
+
+    -   Years of experience is reasonable considering participant's age
+    -   Class time is reasonable (e.g., classes wouldn't be held at 4:00 AM)
+
+3.  Variables are consistent individually and in relation to others.
+
+    > Examples:
+
+    -   ID structure consistent (e.g., ST\#\#\#, ENS\#\#\#)
+    -   Participant ID is consistent with the class ID and location ID across all assessments and timepoints (e.g., teacher ENS123 is always in class RC05 and in school DC14). [**IMPORTANT**]{style="color: red;"}: exceptions made and documented during verification if participant has moved, dropped out, etc.
+
+4.  Drop litter variables.
+
+    > Examples:
+
+    -   Empty variables (no data in column)
+    -   Name variables (e.g., TNAME, SCHOOL, NAME, MOTHER\_NAME )
+    -   Tablet generated variables (e.g., submission\_time, submitted\_by, xform\_id)
+    -   Other variables that do not contain useful information (e.g., verification flags, UNIQUE\_ID, time stamps, automatically created row numbers)
+
+5.  Date and time variables are properly recorded in the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) standard.
+
+6.  Missingness is properly coded. For datasets intended to be used in studies that examine the reasons of missingness, the missing categories should not be collapsed to a single value. However, the overwhelming majority of analyses just use a single type that gets computed away. Languages and statistical packages may use a different symbol / data structure to represent missingnes.
+
+    > Examples:
+
+    -   R uses NA
+    -   Julia language uses the symbol missing
+    -   Stata uses dots (.) or labeled dots (.a, .b, .c, \...)
+
+------------------------------------------------------------------------
+
+### Preimputed Dataset
+
+A completed preimputed dataset will be completely merged across assessments and timepoints, variable cleaned, with additional reductions needed to keep the dataset manageable, keeping only variables to be used for imputation and final analyses, with missing data.
+
+#### Recommendations
+
+1.  As advised by researchers, drop variables that are not possible to model (e.g., most open-ended answers that will only be used for descriptive purposes), have been confirmed as unreliable or are not useful for prediction of the variables in the final models and/or their missingness 
+
+2.  Create new variables as requested by researchers
+
+3.  Combine and/or reduce covariates and auxiliary variables, while minimizing the loss of information.
+
+    > Example:
+
+    -   Merging demographic variables across assessments (e.g., gender, age, grade, IDs, etc.)
+
+------------------------------------------------------------------------
+
+### Open Response Variables
+
+This is the recommended format to clean open response variables ("\_TEXT"). These guidelines are intended to give a general outline for assessing open responses based on experience with the 3EA Lebanon cleaning process.
+
+#### Instructions
+
+1.  [**General assessment**]{style="color: purple;"}: Prior to determining whether or not a variable should be categorized or dropped, a general assessment of the open response variable is crucial to determine significance. Review the mapping file to determine what the variable is assessing. This includes familiarizing yourself with which assessment and year (if applicable) the variable is from, as well as its description. Similarly the sister variable (ex: HHED & HHED\_TEXT) should be reviewed, with its coding as well.
+
+2.  [**Compare with sister variable**]{style="color: purple;"}: Check if the content of the text variable are similar to any of the preexisting categories of its sister variables (e.g., SCTR\_TEXT included "walk" in the text variable response but SCTR\_WALK is one of the sister variables and the same participant responded no to SCTR\_WALK). If so, be sure to transfer the relevant information in the text variable to its sister variable. Once this information is transferred, be sure to recode those responses to NA if the answer is now captured in the sister variable. The remaining information in the open response variable that is not captured by the sister variable should be used moving forward in considering categorizing or dropping the open response variable.
+
+3.  [**Determine whether to DROP or categorize**]{style="color: purple;"}:
+
+    -   [**DROP**]{style="color: purple;"}: Determine whether the variable should be dropped by assessing participation and variability. A substantial amount of participation (approx. \>10% of the year's population) in proportion to the population in necessary to categorize it. Additionally, variability among the answers is crucial. If approx. \>90% of those who responded provided the same response, then there is not much variability. If the variable does not meet these general thresholds, they should be dropped from the cleaned dataset
+
+    -   [**Categorize**]{style="color: purple;"}: If the variable is determined to be kept (not DROP), it should be categorized in the cleaned dataset. First extract the responses into a new file, removing any duplicates. These extracted responses should be in one column with a "label" title. Create a new column titled "category." Manually review each response and create approx. 4 -- 5 categorizes per variable. If it is challenging to condense the responses into a limited amount of categorizes, create an "OTHER" category. Any category that is approx. \<10% of the total responses should be recategorized into "OTHER" (e.g., category "ALLERGIES" created but only 3% of responses fall under "ALLERGIES," then recategorize to "OTHER").
+
+        -   [**IMPORTANT**]{style="color: red;"}: Any label that is left blank in the category column will be coded as NA. Category column should be left blank for any response that is not relevant or does not respond to the variable's question
+
+            -   [**Code**]{style="color: purple;"}: Using the relations function in R, categorize the responses. Be sure to load the auxiliary code file in the mapping file to ensure the code is applied.
+
+4.  [**Check**]{style="color: purple;"}: Once the variable is categorized or dropped, be sure to check that these changes are reflected in the database.
+
+------------------------------------------------------------------------
+
+## Documentation & Codebook {.tabset .tabset-fade}
+
+Throughout each stage of the cleaning process, all findings, decisions, transformations and reductions must be documented. For example, in the verification process the verifier discovered that a teacher dropped out half way through the program so this class has multiple teacher IDs associated with it. During data transformations, a variable was dropped because it doesn't have variance. Documentation is done to track back and fix mistakes, understand why certain decisions were made and transparency between data team, researchers and others using the datasets.
+
+The final stage of data cleaning is exporting documentation via a codebook for each dataset. A codebook delineates each variable with a description and provides information on the structure, contents, and layout of a data file. For each project, 2 codebooks are generated for each data level; one for the full dataset and another for the research sample. Other codebooks are generated based on researchers requests for our partners.
+
+### Codebook Generation
+
+The following are columns that must be filled to generate a codebook:
+
+-   [**name**]{style="color: purple;"}: The name of the variable as found in the database (must match the homogenized name).
+
+-   [**coding**]{style="color: purple;"}: How the data for each variable appears in the database itself (must match the homogenized coding).
+
+-   [**title**]{style="color: purple;"}: The title for each variable, typically a written-out version of the variable name.
+
+-   [**description**]{style="color: purple;"}: A description of what the variable is measuring, often the question from the assessment.
+
+-   [**type**]{style="color: purple;"}: How the values of a variable are stored, as either numeric, character or logical.
+
+    -   Numeric type consists of numbers such as **integer** (e.g., 1, -3, 33, 0) or **double**, which is a real number stored in double-precision floating point format (e.g., 2, 1.65, 5.28x10\^-8).
+    -   **Character** data type consists of letters or words (e.g., "a", "project", "house value").
+    -   **Logical** values can take on one of two values: TRUE or FALSE
+
+-   [**class**]{style="color: purple;"}: The class of a variable is a more specified variable type.
+
+    -   **Binary** class only holds two values.
+    -   **Continuous** variables can take on any numeric value, however **bounded-continuous** (discrete) are numeric but have constraints.
+    -   **Count** are variables representing frequency of occurrence (e.g., number of students in the class).
+    -   **Proportion** are ratios of counts (e.g., proportion of students attending a morning session).
+    -   **Ordinal** variables have two or more categories with an intrinsic ordering.
+    -   **Categorical** (nominal) is similar to ordinal, however there is not intrinsic ordering.
+    -   **Irrelevant** is used for character type.
+
+-   [**section**]{style="color: purple;"}: This column is used to group simila variables together
+
+-   [**section\_description**]{style="color: purple;"}: This column is used to describe the section, explaining why the variables are grouped together.
+
+> Example: Codebook Generating Document
+
++----------+-----------------------------------------------------------------------------+--------------------+----------------------------+-----------+--------------------+--------------------------+-------------------------------------------+
+| name     | coding                                                                      | title              | description                | type      | class              | section                  | section\_description                      |
++==========+=============================================================================+====================+============================+===========+====================+==========================+===========================================+
+| STID\_Y2 |                                                                             | Student ID         |                            | character | irrelevant         | IDs                      | Identification                            |
+|          |                                                                             |                    |                            |           |                    |                          | numbers                                   |
++----------+-----------------------------------------------------------------------------+--------------------+----------------------------+-----------+--------------------+--------------------------+-------------------------------------------+
+| TID\_Y2  |                                                                             | Teacher ID         |                            | character | irrelevant         | IDs                      | Identification                            |
+|          |                                                                             |                    |                            |           |                    |                          | numbers                                   |
++----------+-----------------------------------------------------------------------------+--------------------+----------------------------+-----------+--------------------+--------------------------+-------------------------------------------+
+| NAME     |                                                                             | Student's name     |                            | character | irrelevant         | Names                    | All                                       |
+|          |                                                                             |                    |                            |           |                    |                          | of the names. Remove prior to publication |
++----------+-----------------------------------------------------------------------------+--------------------+----------------------------+-----------+--------------------+--------------------------+-------------------------------------------+
+| MOTHER   |                                                                             | Mother's name      |                            | character | irrelevant         | Names                    | All                                       |
+|          |                                                                             |                    |                            |           |                    |                          | of the names. Remove prior to publication |
++----------+-----------------------------------------------------------------------------+--------------------+----------------------------+-----------+--------------------+--------------------------+-------------------------------------------+
+| GRADE    | coding(code(1,                                                              | Student's grade    |                            | integer   | ordinal            | Demographics             | Student's                                 |
+|          | "First grade"),code(2, "Second grade"),code(3, "Third grade"),code(NA, "Not |                    |                            |           |                    |                          | demographic information                   |
+|          | applicable"))                                                               |                    |                            |           |                    |                          |                                           |
++----------+-----------------------------------------------------------------------------+--------------------+----------------------------+-----------+--------------------+--------------------------+-------------------------------------------+
+| AGE      |                                                                             | Student's age      |                            | integer   | bounded-continuous | Demographics             | Student's                                 |
+|          |                                                                             |                    |                            |           |                    |                          | demographic information                   |
++----------+-----------------------------------------------------------------------------+--------------------+----------------------------+-----------+--------------------+--------------------------+-------------------------------------------+
+| FEMALE   | coding(code(0,                                                              | Student's gender   |                            | logical   | binary             | Demographics             | Student's                                 |
+|          | "Male"), code(1, "Female"))                                                 |                    |                            |           |                    |                          | demographic information                   |
++----------+-----------------------------------------------------------------------------+--------------------+----------------------------+-----------+--------------------+--------------------------+-------------------------------------------+
+| LANG     | coding(code(1,                                                              | Language           | Languages                  | integer   | categorical        | Demographics             | Student's                                 |
+|          | "French"),code(2, "English"),code(3, "Other"),code(NA, "Not applicable"))   |                    | student speaks at home     |           |                    |                          | demographic information                   |
++----------+-----------------------------------------------------------------------------+--------------------+----------------------------+-----------+--------------------+--------------------------+-------------------------------------------+
+| ADD1     | coding(code(0,                                                              | Addition problem 1 | Addition  problems - level | logical   | binary             | Addition Problem Level I | Addition problems assessment              |
+|          | "Incorrect/non-response"),code(1, "Correct"), code(NA, "Not applicable"))   |                    | 1: 1+3                     |           |                    |                          |                                           |
+|          |                                                                             |                    |                            |           |                    |                          |                                           |
+|          |                                                                             |                    |                            |           |                    |                          |                                           |
++----------+-----------------------------------------------------------------------------+--------------------+----------------------------+-----------+--------------------+--------------------------+-------------------------------------------+
+| ADD2     | coding(code(0,                                                              | Addition problem 2 | Addition  problems - level | logical   | binary             | Addition Problem Level I | Addition problems assessment              |
+|          | "Incorrect/non-response"),code(1, "Correct"), code(NA, "Not applicable"))   |                    | 1: 3+2                     |           |                    |                          |                                           |
+|          |                                                                             |                    |                            |           |                    |                          |                                           |
+|          |                                                                             |                    |                            |           |                    |                          |                                           |
++----------+-----------------------------------------------------------------------------+--------------------+----------------------------+-----------+--------------------+--------------------------+-------------------------------------------+
+| ADD3     | coding(code(0,                                                              | Addition problem 3 | Addition  problems - level | logical   | binary             | Addition Problem Level I | Addition problems assessment              |
+|          | "Incorrect/non-response"),code(1, "Correct"), code(NA, "Not applicable"))   |                    | 1: 6+2                     |           |                    |                          |                                           |
+|          |                                                                             |                    |                            |           |                    |                          |                                           |
+|          |                                                                             |                    |                            |           |                    |                          |                                           |
++----------+-----------------------------------------------------------------------------+--------------------+----------------------------+-----------+--------------------+--------------------------+-------------------------------------------+
+
+------------------------------------------------------------------------

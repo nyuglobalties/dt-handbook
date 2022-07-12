@@ -1,0 +1,95 @@
+# Extraction {#processing-ingest}
+
+Data come from many sources -- paper or electronic surveys, JSON APIs, spreadsheets, PDFs, and so on.
+Much of the work of "data cleaning" is actually focused on this stage: loading the data and harmonizing the data structure to allow for common data transformations.
+In canonical data engineering language, this phase of ingestion and harmonization is called **extraction**.
+
+## Ingestion
+
+## Harmonization
+
+Once all of the raw data is ingested, all of the variables from the various datasets must be homogenized. 
+This can be done through the **mapping file**, which keeps track of all of the variables, their coding and descriptions.
+
+The mapping file is a collection of all of the variables across all of the datasets in a data level.
+The sheet is an essential source of information for the processing pipeline as it informs the pipeline of all of the variables it must track for transformations.
+All naming and coding information is handled by [panelcleaner](https://github.com/nyuglobalties/panelcleaner).
+
+### Mapping Raw Data
+
+Mapping is a single mechanism that documents how raw data appeared, facilitating transparency and reproducibility. 
+The first part of the mapping file is the mapping of all of the names, descriptions and coding for each item of each wave across all datasets. 
+All of this information feeds into [panelcleaner](https://github.com/nyuglobalties/panelcleaner) as a description of what appears in the raw data. 
+Prior to mapping raw data, there are several questions to consider:
+
+- Is there a "raw codebook" (document created during project set-up of variables, description and coding) for this dataset?
+- Does the dataset need to be transformed so that the dataset variables are the columns of the data? This can happen if the input data derives from a spreadsheet.
+
+> Example: Raw data mapping
+
++---------------+------------------------+--------------------------------------------+-----------+----------------------------------------+--------------------------------------------------------------------------------------------------------------+
+| **name\_by1** | code\_by1              | **description\_by1**                       | name\_ey1 | code\_ey1                              | **description\_ey1**                                                                                         |
++===============+========================+============================================+===========+========================================+==============================================================================================================+
+| FEMALE        | Is the student female? | coding(code("Male", 0), code("Female", 1)) | GENDER    | What is the student's gender?          | coding(code("Male", 1), code("Female", 2))                                                                   |
++---------------+------------------------+--------------------------------------------+-----------+----------------------------------------+--------------------------------------------------------------------------------------------------------------+
+|               |                        |                                            | LANG      | What languages does the student speak? | coding(code("Arabic", 1), code("Kanuri", 2), code("Hausa", 3), code("Other", 7), code("Not applicable", NA)) |
++---------------+------------------------+--------------------------------------------+-----------+----------------------------------------+--------------------------------------------------------------------------------------------------------------+
+
+Each column has a suffix with an underscore and a time code which tells [panelcleaner](https://github.com/nyuglobalties/panelcleaner) the location of each variable. The codes, unless overridden by the `waves` parameter in [panelcleaner](https://github.com/nyuglobalties/panelcleaner), adhere to the following pattern: start with "b", "m", or "e" to indicate Baseline, Midline, or Endline, respectively, then Y\#, where \# is the year number. 
+However, these suffixes are not compulsory, particularly for data that is collected at one time point. 
+This formatting is optional and can be adapted based on the researcher's request.
+
+There are three main variable columns:
+
+-   [**name**]{style="color: purple;"}: The name of the variable as it is found in the database. [**IMPORTANT**]{style="color: red;"}: Keep in mind that if you use R's default file reading functions like `read.table` or `read.csv`, any special characters in variables' names like spaces or slashes will be converted to dots ('.') *unless* the parameter `check.names` is `FALSE`. If you are using `check.names = TRUE`, please replace any special characters with dots. [More details about acceptable R variable names can be found here.](https://stat.ethz.ch/R-manual/R-devel/library/base/html/make.names.html)
+
+-   [**code**]{style="color: purple;"}: How the data for each variable appears in the database itself. Generally, this is a matrix constructed by coding that pairs values in the data with descriptions of what the values mean. [**IMPORTANT**]{style="color: red;"}: It is necessary that the *second* value within each `code()` carries the values found in the database while the first value carries the value descriptions.
+
+-   [**description**]{style="color: purple;"}: What each variable actually means in the context of the assessment, often the direct question asked in the assessment. This information isn't read by [panelcleaner](https://github.com/nyuglobalties/panelcleaner), but it is important for human readers of the sheet.
+
+### Harmonizing the Data
+
+In order to ensure that each time point has consistent variable names and values, [panelcleaner](https://github.com/nyuglobalties/panelcleaner) needs the master variable name and coding. 
+This allows the user to specify the harmonizations before data transformation.
+
+> Example: Harmonizing data
+
++-------+-------------------+--------------------------------------------------------------------------------------------------------------+
+| panel | homogenized\_name | homogenized\_coding                                                                                          |
++=======+===================+==============================================================================================================+
+| ODK   | FEMALE            | coding(code("Male", 0), code("Female", 1))                                                                   |
++-------+-------------------+--------------------------------------------------------------------------------------------------------------+
+| ODK   | LANG              | coding(code("Arabic", 1), code("Kanuri", 2), code("Hausa", 3), code("Other", 7), code("Not applicable", NA)) |
++-------+-------------------+--------------------------------------------------------------------------------------------------------------+
+
+-   [**panel**]{style="color: purple;"}: The dataset to which the variable belongs
+
+-   [**homogenized\_name**]{style="color: purple;"}: The name of the variable to be used across time points. [**IMPORTANT**]{style="color: red;"}: no two variables in the same `panel` can have the same `homogenized_name`.
+
+-   [**homogenized\_coding**]{style="color: purple;"}: The coding to be used across time points. This has the exact same structure and requirements as the code\_[time] columns in the mapping section of the file.
+
+### Coding Specifications
+
+The coding is the direct interface between the abstracted mapping file and the raw data inside the databases.
+[rcoder](https://github.com/nyuglobalties/rcoder) is the package used to captures categorical codings.
+To be sure that all of the databases have the same data meaning, coding tables are necessary to generate key-value pairs between the descriptions and the raw values.
+As mentioned in the discussion of code columns, the order of the vectors that generate the table is important.
+
+> Example: Coding and resulting table
+
+`coding(code("LOW", 1), code("MEDIUM", 2), code ("HIGH", 3))`
+
++----------+---------+
+| Label    | Value   |
++:========:+:=======:+
+| LOW      | 1       |
++----------+---------+
+| MEDIUM   | 2       |
++----------+---------+
+| HIGH     | 3       |
++----------+---------+
+
+As [panelcleaner](https://github.com/nyuglobalties/panelcleaner) attempts to homogenize the codings, it will search for everything in the "Value" column: the first vector. 
+The "Label" column is necessary to link different values across time points.
+Internally, [panelcleaner](https://github.com/nyuglobalties/panelcleaner) builds a table of all the possible values, including the homogenized value, associated with that description.
+If the order of the vectors were switched, [panelcleaner](https://github.com/nyuglobalties/panelcleaner) would try to link "1" across time points rather than "LOW."

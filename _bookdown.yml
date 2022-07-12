@@ -14,6 +14,9 @@ rmd_files: [
   "handbook/guides/projects.Rmd",
   "handbook/guides/styling-r.Rmd",
 
+  "handbook/processing/processing.Rmd",
+  "handbook/processing/ingestion.Rmd",
+
   "handbook/curation/curation.Rmd",  
   "handbook/curation/dataset_curation.Rmd",
   "handbook/curation/active_curation.Rmd",
