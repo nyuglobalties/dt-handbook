@@ -13,6 +13,7 @@ rmd_files: [
   "handbook/guides/guides.Rmd",
   "handbook/guides/projects.Rmd",
   "handbook/guides/styling-r.Rmd",
+  "handbook/guides/datalad.Rmd",
 
   "handbook/curation/curation.Rmd",  
   "handbook/curation/dataset_curation.Rmd",
