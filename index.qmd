@@ -1,0 +1,35 @@
+---
+title: "Data Team Handbook"
+author: "Global TIES for Children Data Team"
+description: |
+  This is a compendium of knowledge for the TIES Data Team, both for internal capacity development and for external communication for accountability.
+  This work includes technical information about our practices and non-technical guides to support our colleagues.
+listing:
+  id: section-listing
+  type: grid
+  fields: [title, description]
+  contents:
+    - curation/index.qmd
+    - appendix/index.qmd
+    - team/index.qmd
+    - guides/index.qmd
+---
+
+# Welcome
+
+This is a website that documents the work and process of the TIES Data Team.
+
+Our mission is **to develop open-science tooling for providing archival quality data products and capacity to research team members and external stakeholders with integrity and in a timely fashion.**
+
+## Orientation
+- Read our [statement of purpose](./team/purpose.qmd)
+- See our [list of members](./team/structure.qmd)
+- Take a look at our sections below
+- Click the search icon in the top-right to look for a specific topic
+
+::: {#section-listing}
+:::
+
+---
+
+This website is (and will always be) **free to use**, and is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) License.

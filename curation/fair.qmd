@@ -1,0 +1,47 @@
+---
+title: "FAIR Standards"
+categories: ["standards"]
+aliases:
+  - curation/dataset_curation.html#fair-standards
+---
+
+<!--:standards:fair:findable:accessible:interoperable:reusable:-->
+
+These standards were published in 2016 by Mark Wilkinson in the journal Scientific Data^[[https://doi.org/10.1038/sdata.2016.18](https://doi.org/10.1038/sdata.2016.18)] and are considered the standard for scientific data assets and products. They can also be referred to as the FAIR Principles and are applied to data, metadata, and documentation.
+
+FAIR stands for **Findable**, **Accessible**, **Interoperable**, and **Reusable.** These standards are intended for both humans and machines and apply to both human-readable and machine-readable files. 
+
+# Findable
+
+- (Meta)data are assigned globally unique and persistent identifiers
+- Data are described with rich metadata
+- Metadata clearly and explicitly include the identifier of the data they describe
+- (Meta)data are registered or indexed in a searchable resource
+
+# Accessible
+
+- (Meta)data are retrievable by their identifier using a standardized communication protocol
+- The protocol is open, free and universally implementable
+- The protocol allows for an authentication and authorisation where necessary
+- Metadata should be accessible even when the data is no longer available
+
+# Interoperable
+
+- (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation
+- (Meta)data use vocabularies that follow the FAIR principles
+- (Meta)data include qualified references to other (meta)data
+
+# Reusable
+
+- (Meta)data are richly described with a plurality of accurate and relevant attributes
+- (Meta)data are released with a clear and accessible data usage license
+- (Meta)data are associated with detailed provenance
+- (Meta)data meet domain-relevant community standards
+
+---
+
+# See also
+
+- [Curation](index.qmd)
+- [Diversity, Equity, Inclusion, and Accessibility in Data](DEIA.qmd)
+- [FAIR Principles list](https://www.go-fair.org/fair-principles/)

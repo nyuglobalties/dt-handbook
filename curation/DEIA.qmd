@@ -1,0 +1,46 @@
+---
+title: Diversity, Equity, Inclusion, and Accessibility in Data
+author: Dan Woulfin
+categories: ["curation", "standards", "dei"]
+---
+
+<!--:curation:standards:dei:deia:accessibility:-->
+
+Broadly speaking, data is the product of surveillance or observation collected for a purpose or intervention. Data represents things in the "real world", whether a person, place, object, organism, idea or etc. and can implicitly or explicitly contain various biases from the "real world." 
+
+## Bias in Data
+
+Data is imbued with biases at every stage of a data product's lifecycle <!--:lifecycle:-->(whether raw data, processed data, a subset of the data, data analysis, or published data). This bias may come from the original purpose of the data collection, the data collectors, or the data subjects. It may come from the population from which the data subjects were chosen and be more macro in nature. It may also come from enhancing the dataset with other data for non-benign purposes. It is for this reason that data curators, librarians and others are concerned with Diversity, Equity, Inclusion and Accessibility (DEIA) and reducing the potential vulnerability of the data subject. 
+
+## Data DEIA resources
+
+For a short and non-comprehensive list resources on how DEIA has and continues to impact data curation, collection, and management see:
+
+### Data Feminism^[<https://data-feminism.mitpress.mit.edu/>]
+
+This book is a fundamental critical data studies book that looks at data from a gender perspective, exposing various social biases that are or can be implicit in datasets and analytics. Critical data studies is the application of critical theory to data. Critical theory can broadly be described as an academic approach that focuses on reflective assessment and critique of society and culture to reveal and challenge power structures.  
+
+### The CARE Principles for Indigenous Data Governance^[<https://www.gida-global.org/care>]
+
+This is a complementary set of principles to the [FAIR Principles](fair.qmd), encapsulated by the hashtag #BeFAIRandCARE. It is dedicated to correcting historic power differentials and contexts by ensuring that indigenous peoples maintain sovereignty over their data. CARE consists of four principles: Collective Benefit; Authority to Control; Responsibility; and Ethics.^[<https://static1.squarespace.com/static/5d3799de845604000199cd24/t/5d79c383e904c741c9e9cd86/1568260995760/CARE+Principles+for+Indigenous+Data+Governance_FINAL_Sept+06+2019.pdf>]
+
+### The Data Equity Framework^[<https://weallcount.com/the-data-process/>]
+
+This framework by **WE ALL COUNT**^[<https://weallcount.com/>]: project for equity in data science seeks to make data products, analysis and research more equitable. **WE ALL COUNT** sees equity as a continual goal or process and defines data equity "around the principles of fairness, transparency, inclusion and justice regardless of who may be experiencing them." 
+
+The framework breaks down data work into seven stages to find decision points where projects can be made more equitable. These stages are
+
+1. Funding
+1. Motivation 
+1. Project Design 
+1. Data Collection & Sourcing
+1. Analysis
+1. Interpretation 
+1. Communication and Distribution
+
+---
+
+# See also
+
+- [Curation](index.qmd)
+- [FAIR Principles](fair.qmd)

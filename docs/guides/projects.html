@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Data Team Handbook - Project Structure</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Data Team Handbook</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../team/purpose.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/nyuglobalties"><i class="bi bi-twitter" role="img" aria-label="Twitter account for NYU Global TIES for Children">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#blueprints" id="toc-blueprints" class="nav-link active" data-scroll-target="#blueprints"><code>blueprints</code></a></li>
+  <li><a href="#codebooks" id="toc-codebooks" class="nav-link" data-scroll-target="#codebooks"><code>codebooks</code></a></li>
+  <li><a href="#config" id="toc-config" class="nav-link" data-scroll-target="#config"><code>config</code></a>
+  <ul class="collapse">
+  <li><a href="#environment.r" id="toc-environment.r" class="nav-link" data-scroll-target="#environment.r"><code>environment.R</code></a></li>
+  <li><a href="#packages.r" id="toc-packages.r" class="nav-link" data-scroll-target="#packages.r"><code>packages.R</code></a></li>
+  </ul></li>
+  <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See also</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/guides/projects.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Project Structure</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">guide</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<!--:guide:r:-->
+<p>The Data Team uses a variety of technologies, mainly in the R ecosystem, to create its data projects. Each project has a similar file structure to maintain consistency and replicability across projects:</p>
+<pre><code>.github/         # All Github configuration [optional]
+  workflows/     # All CI workflow definition files [optional]
+blueprints/      # Contains all "blueprints" of datasets
+codebooks/       # Contains exported codebooks of select datasets, depending on blueprint definition
+config/
+  environment.R  # Definitions of all environment variables used in this project
+  packages.R     # Any `library()` for packages to be available across the project
+R/               # All definitions for custom functions employed in the pipeline
+.Rprofile        # Supplemental file that primarily sets up `renv`
+_targets.R       # The main workflow orchestration definition file
+renv.lock        # Package dependency state capture file for `renv`</code></pre>
+<p>What’s important note from the outset is that <strong>data are not inside in these projects</strong>. Each project is versioned with <a href="https://git-scm.org">git</a> and hosted on <a href="https://github.com/nyuglobalties">TIES’ GitHub organization page</a>. Most of our data are sensitive to some degree, so our operational practice is to load data directly via APIs or read from <a href="https://nyu.app.box.com">NYU Box</a>.</p>
+<p>Project templates can be created with the internal tool <a href="https://github.com/nyuglobalties/dtproj">dtproj</a>.</p>
+<section id="blueprints" class="level2">
+<h2 class="anchored" data-anchor-id="blueprints"><code>blueprints</code></h2>
+<p>The Data Team uses its <a href="https://nyuglobalties.github.io/blueprintr"><code>blueprintr</code></a> package to build, test, and document datasets. <code>blueprintr</code> is akin to <a href="https://getdbt.com">dbt</a>, but it is designed to manage a whole host of metadata, a necessary task for dissemination of project findings and data publication. Moreover, <code>blueprintr</code> operates without a connection to a data warehouse, given the assumptions of low connectivity and technical availability that the Data Team operates in.</p>
+<p>Each <strong>blueprint</strong> is a pair of two files:</p>
+<ol type="1">
+<li><strong>The blueprint definition file</strong>: an R script with a single <code>blueprint()</code> command. This file details how to generate the desired dataset and optionally includes arbitrary metadata at dataset/table level.</li>
+<li><strong>The blueprint metadata file</strong>: a CSV file with, at minimum, the columns <code>name</code>, <code>type</code>, and <code>description</code>. This file enumerates the variable-level metadata.</li>
+</ol>
+<p>Here is an example blueprint definition file:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">blueprint</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"ch_scales"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">description =</span> <span class="st">"Self-Regulation &amp; Self-Regulated Learning"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">command =</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.TARGET</span>(<span class="st">"verified_child_data"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>      <span class="fu">select</span>(</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        unique_id,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        c_id_01,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">starts_with</span>(<span class="st">"c_sr_"</span>),</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="fu">starts_with</span>(<span class="st">"c_srl_"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>      ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">shorten_domain_prefixes</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>      <span class="fu">enumerator_regulation_score</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">basic_number_renaming</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">drop_underscore_in_vars</span>(</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        <span class="fu">c</span>(<span class="st">"sr"</span>, <span class="st">"srl"</span>),</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"^.*{var}_(</span><span class="sc">\\</span><span class="st">d+)r?$"</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>And here is an example metadata CSV for the same blueprint:</p>
+<div class="cell-output-display">
+
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; overflow-x: scroll; width:100%; "><table>
+ <thead>
+  <tr>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> name </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> type </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> title </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> description </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> coding </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> tests </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> scale </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> section </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> unique_id </td>
+   <td style="text-align:left;"> character </td>
+   <td style="text-align:left;"> Survey submission ID </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> IDs </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> cid_1 </td>
+   <td style="text-align:left;"> character </td>
+   <td style="text-align:left;"> Child ID </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> has_no_duplicates() </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> IDs </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csr4 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csr4 </td>
+   <td style="text-align:left;"> Some kids find it easy to sit still when they are bored
+BUT
+Other kids find it hard to sit still when they are bored
+Are you more like the kids that find it easy or hard? </td>
+   <td style="text-align:left;"> coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csr5 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csr5 </td>
+   <td style="text-align:left;"> Some kids find it easy to remember what they are supposed to do 
+BUT 
+Other kids find it hard to remember what they are supposed to do 
+Are you more like the kids that find it easy or hard? </td>
+   <td style="text-align:left;"> coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csr8 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csr8 </td>
+   <td style="text-align:left;"> Some kids find it easy to obey rules
+BUT
+Other kids find it hard to obey rules
+Are you more like the kids that find it easy or hard? </td>
+   <td style="text-align:left;"> coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csr10 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csr10 </td>
+   <td style="text-align:left;"> Some kids find it easy to be careful
+BUT
+Other kids find it hard to be careful
+Are you more like the kids that find it easy or hard? </td>
+   <td style="text-align:left;"> coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csr12 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csr12 </td>
+   <td style="text-align:left;"> Some kids find it easy to think before they act
+BUT
+Other kids find it hard to think before they act
+Are you more like the kids that find it easy or hard? </td>
+   <td style="text-align:left;"> coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csr13 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csr13 </td>
+   <td style="text-align:left;"> Some kids find it easy to pay attention to their schoolwork
+BUT
+Other kids find it hard to pay attention to their schoolwork
+Are you more like the kids that find it easy or hard? </td>
+   <td style="text-align:left;"> coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csr15 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csr15 </td>
+   <td style="text-align:left;"> Some kids find it easy to focus on things that are important
+BUT
+Other kids find it hard to focus on things that are important
+Are you more like the kids that find it easy or hard? </td>
+   <td style="text-align:left;"> coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csr16 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csr16 </td>
+   <td style="text-align:left;"> Some kids find it easy to work on a project until they are finished
+BUT
+Other kids find it hard to work on a project until they are finished
+Are you more like the kids that find it easy or hard? </td>
+   <td style="text-align:left;"> coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csr17 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csr17 </td>
+   <td style="text-align:left;"> Some kids find it easy to concentrate on one thing for a long time
+BUT
+Other kids find it hard to concentrate on one thing for a long time
+Are you more like the kids that find it easy or hard? </td>
+   <td style="text-align:left;"> coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csr18 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csr18 </td>
+   <td style="text-align:left;"> Some kids find it easy to stay focused on their goals
+BUT
+Other kids find it hard to stay focused on their goals
+Are you more like the kids that find it easy or hard? </td>
+   <td style="text-align:left;"> coding(code(""Really easy"", 3), code(""Kind of easy"", 2), code(""Kind of hard"", 1), code(""Really hard"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+   <td style="text-align:left;"> Child Self-Regulation </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csrl1 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csrl1 </td>
+   <td style="text-align:left;"> Some kids make sure no one disturbs them when they study at home. Would you say you are like them? [pause for response]. 
+Now that you decided that you [ARE/ARE NOT] like them. [If Yes] Are you ""A lot"" or ""Kind of "" like them? [If No] Are you ""A little"" or ""Not at all "" like them? [pause for response] </td>
+   <td style="text-align:left;"> coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csrl3 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csrl3 </td>
+   <td style="text-align:left;"> Some kids try to find a quiet place to study at home. Would you say you are like them? [pause for response]. 
+Now that you decided that you [ARE/ARE NOT] like them. [If Yes] Are you ""A lot"" or ""Kind of "" like them? [If No] Are you ""A little"" or ""Not at all "" like them? [pause for response] </td>
+   <td style="text-align:left;"> coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csrl4 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csrl4 </td>
+   <td style="text-align:left;"> Some kids ask their friends or family for help when they are struggling with their homework. Would you say you are like them? [pause for response]. 
+Now that you decided that you [ARE/ARE NOT] like them. [If Yes] Are you ""A lot"" or ""Kind of "" like them? [If No] Are you ""A little"" or ""Not at all "" like them? [pause for response] </td>
+   <td style="text-align:left;"> coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csrl10 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csrl10 </td>
+   <td style="text-align:left;"> Some kids encourage themselves or tell themselves ""you can do it"" when they are struggling with their homework. Would you say you are like them? [pause for response]. 
+Now that you decided that you [ARE/ARE NOT] like them. [If Yes] Are you ""A lot"" or ""Kind of "" like them? [If No] Are you ""A little"" or ""Not at all "" like them? [pause for response] </td>
+   <td style="text-align:left;"> coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csrl15 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csrl15 </td>
+   <td style="text-align:left;"> Some kids review the instructions before starting their homework. Would you say you are like them? </td>
+   <td style="text-align:left;"> coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csrl16 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csrl16 </td>
+   <td style="text-align:left;"> Some kids try to calm down or take a deep breath when they are struggling with their homework. Would you say you are like them? </td>
+   <td style="text-align:left;"> coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csrl17 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csrl17 </td>
+   <td style="text-align:left;"> Some kids try to ""take their time"" and do their homework with patience. Would you say you are like them? </td>
+   <td style="text-align:left;"> coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csrl18 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csrl18 </td>
+   <td style="text-align:left;"> Some kids take little breaks when working on challenging homework. Would you say you are like them? </td>
+   <td style="text-align:left;"> coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csrl19 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csrl19 </td>
+   <td style="text-align:left;"> Some kids gather their notebooks or any materials they need before they start their homework. Would you say you are like them? </td>
+   <td style="text-align:left;"> coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csrl20 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csrl20 </td>
+   <td style="text-align:left;"> Some kids look for information in their notes, videos, books, internet or exercises when they are struggling with their homework. Would you say you are like them? </td>
+   <td style="text-align:left;"> coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csrl21 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csrl21 </td>
+   <td style="text-align:left;"> Some kids prepare for an exam by reviewing their notes or making study materials. Would you say you are like them? </td>
+   <td style="text-align:left;"> coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csrl24 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csrl24 </td>
+   <td style="text-align:left;"> Some kids look to see how hard their homework is before deciding whether they will work on their homework or do something fun. Would you say you are like them? </td>
+   <td style="text-align:left;"> coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> csrl22 </td>
+   <td style="text-align:left;"> integer </td>
+   <td style="text-align:left;"> csrl22 </td>
+   <td style="text-align:left;"> Some kids prepare for an exam by doing practice tests to see where they are having trouble. Would you say you are like them? </td>
+   <td style="text-align:left;"> coding(code(""A lot like them"", 3), code(""Kind of like them"", 2), code(""A little like them"", 1), code(""Not at all like them"", 0)) </td>
+   <td style="text-align:left;"> in_set(c(0:3, NA)) </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+   <td style="text-align:left;"> Child Self-Regulated Learning </td>
+  </tr>
+</tbody>
+</table></div>
+
+</div>
+<p>These metadata CSVs have three required fields:</p>
+<ul>
+<li><strong>name</strong>: The variable name</li>
+<li><strong>type</strong>: The variable type (usually “character”, “integer”, “double”, or “logical”)</li>
+<li><strong>description</strong>: Description of the variable content. If the dataset corresponds to a survey, this is usually the question wording in English.</li>
+</ul>
+<p>There are often other columns:</p>
+<ul>
+<li><strong>coding</strong>: If the variable is categorical, this contains the label-value mapping for the variable, written with <a href="https://nyuglobalties.github.io/rcoder">rcoder</a> syntax.</li>
+<li><strong>tests</strong>: Any content tests on the data</li>
+<li><strong>scale</strong>: If the variable belongs to a psychometric scale, the name of the scale. This is used for identifying variable groups for psychometric descriptive statistics.</li>
+<li><strong>title</strong>: A shorter description for the variable, used as a variable label when exported to Stata</li>
+<li><strong>section</strong>: Codebook section; if no section is assigned, the codebook will place the variable into the “Other” section</li>
+<li><strong>section_description</strong>: Description for the section. Useful for providing extra context for the codebook section.</li>
+<li><strong>group</strong>: Codebook subsection / variable group. Useful to have for combining a collection of variables together e.g.&nbsp;a scale</li>
+<li><strong>group_description</strong>: Description for the variable group. Useful for adding an introductory statement asked before each question in the group.</li>
+</ul>
+</section>
+<section id="codebooks" class="level2">
+<h2 class="anchored" data-anchor-id="codebooks"><code>codebooks</code></h2>
+<p>“Codebooks” are essentially <a href="https://en.wikipedia.org/wiki/Data_dictionary">data dictionaries</a>, targeted for social science research. They commonly include enumerations of variables in a dataset, as well as their descriptions and (when applicable) categorical codings. Some codebooks also include methodology descriptions and other descriptive statistics of the data.</p>
+<p>The <code>codebooks</code> folder contains HTML codebook exports of selected blueprints, as indicated by the presence of <code>blueprintr::bp_export_codebook()</code> in the blueprint definition file:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">blueprint</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"ch_scales"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">description =</span> <span class="st">"Self-Regulation &amp; Self-Regulated Learning"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">command =</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">some_command</span>()</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bp_export_codebook</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Unless otherwise agreed upon, <strong>these codebooks are for internal purposes only</strong>. They are mainly present to support TIES’ members in their research.</p>
+</section>
+<section id="config" class="level2">
+<h2 class="anchored" data-anchor-id="config"><code>config</code></h2>
+<p>The <code>config</code> folder has two main R files:</p>
+<ul>
+<li><code>environment.R</code></li>
+<li><code>packages.R</code></li>
+</ul>
+<p>Other project-specific files, like YAML configuration, may be stored in this folder.</p>
+<section id="environment.r" class="level3">
+<h3 class="anchored" data-anchor-id="environment.r"><code>environment.R</code></h3>
+<p>Sensitive information necessary for pipeline function, like API keys and passwords, <strong>must</strong> be stored as environment variables and <strong>never</strong> checked into version control. Environment variables are generally stored in a personal <a href="https://rstats.wtf/r-startup.html#renviron"><code>.Renviron</code></a> file, but it is our practice to load them into global variables at the start of the pipeline to avoid unnecessary calls to <code>Sys.getenv()</code>.</p>
+<p>Here is an example <code>environment.R</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>BOX_PATH <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"BOX_PATH"</span>, <span class="at">unset =</span> <span class="cn">NULL</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>F_RUN_TESTS <span class="ot">&lt;-</span> <span class="fu">as.logical</span>(<span class="fu">Sys.getenv</span>(<span class="st">"F_RUN_TESTS"</span>, <span class="at">unset =</span> <span class="st">"FALSE"</span>))</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>F_NIGHTLY <span class="ot">&lt;-</span> <span class="fu">as.logical</span>(<span class="fu">Sys.getenv</span>(<span class="st">"F_NIGHTLY"</span>, <span class="at">unset =</span> <span class="st">"FALSE"</span>))</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>CACHE_PASSPHRASE <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"CACHE_PASSPHRASE"</span>, <span class="at">unset =</span> <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="packages.r" class="level3">
+<h3 class="anchored" data-anchor-id="packages.r"><code>packages.R</code></h3>
+<p>This file serves two purposes:</p>
+<ol type="1">
+<li>Capture soft dependencies in the project code (i.e.&nbsp;packages that are required but not directly referred to in the code)</li>
+<li>Attach packages via <code>library()</code> to make those packages’ exported functions available across the entire pipeline</li>
+</ol>
+<p>Our project structure uses <a href="https://rstudio.github.io/renv/articles/renv.html"><code>renv</code></a> to manage the specific versions of packages employed in our pipeline to improve replicability. <code>renv</code> is able to capture these dependencies via code inspection; however sometimes a soft dependency (one that is not explicitly stated in the code) can occur e.g.&nbsp;a package depends on another for some plotting routine. To capture these dependecies, we place a reference to one of the package’s functions in <code>packages.R</code> so that <code>renv</code> can treat that package as a hard dependency.</p>
+<p>Use of <code>library()</code> should be restricted to packages that are used extensively. As stated in @ref(rstyle-funcs-package-deps), it is preferred to use <code>package::func()</code> syntax in function writing; moreover, it is preferred the same style throughout most of the pipeline definition as well for clarity and long-term maintenance.</p>
+<p>Example of <code>packages.R</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Retain suggested packages in renv</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>labelled<span class="sc">::</span>to_labelled</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>kableExtra<span class="sc">::</span>kable_as_image</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>styler<span class="sc">::</span>style_dir <span class="co"># Format-on-save capability in VSCode</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>languageserver<span class="sc">::</span>run <span class="co"># Necessary for VSCode to work in renv projects</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Attach packages used in the entire pipeline here</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(targets)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tarchetypes)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidytable)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(blueprintr)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rcoder)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+</section>
+<section id="see-also" class="level1">
+<h1>See also</h1>
+<ul>
+<li><a href="../guides/index.html">Guides</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

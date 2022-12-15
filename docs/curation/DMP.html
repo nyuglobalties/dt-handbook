@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dan Woulfin">
+
+<title>Data Team Handbook - Data Management Plans</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Data Team Handbook</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../team/purpose.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/nyuglobalties"><i class="bi bi-twitter" role="img" aria-label="Twitter account for NYU Global TIES for Children">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ties-owns-raw-and-processed-data" id="toc-ties-owns-raw-and-processed-data" class="nav-link active" data-scroll-target="#ties-owns-raw-and-processed-data">TIES owns raw and processed data</a></li>
+  <li><a href="#ties-shares-ownership-with-data-collector" id="toc-ties-shares-ownership-with-data-collector" class="nav-link" data-scroll-target="#ties-shares-ownership-with-data-collector">TIES shares ownership with data collector</a></li>
+  <li><a href="#ties-is-a-subcontractor-without-ownership" id="toc-ties-is-a-subcontractor-without-ownership" class="nav-link" data-scroll-target="#ties-is-a-subcontractor-without-ownership">TIES is a subcontractor without ownership</a></li>
+  <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See also</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/curation/DMP.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Management Plans</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">standards</div>
+    <div class="quarto-category">curation</div>
+    <div class="quarto-category">dmp</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dan Woulfin </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<!--:dmp:standards:curation:irb:-->
+<p>Data Management Plans (DMPs) are living documents that outline how data will be managed, secured, shared, archived, and destroyed (if necessary). They are based on organizational policies and capabilities as well as the Data Use Agreement with the funder(s) and IRB proposals and approvals. Below are three sample DMPs.</p>
+<section id="ties-owns-raw-and-processed-data" class="level2">
+<h2 class="anchored" data-anchor-id="ties-owns-raw-and-processed-data">TIES owns raw and processed data</h2>
+<blockquote class="blockquote">
+<p><strong>Data Management Plan</strong></p>
+<p><em>Research Products</em></p>
+<p>This data management plan outlines the expectations of data storing, sharing, dissemination, and archiving for any project that may use funds from this <insert name=""> proposal. Any project using funds from this proposal planning to collect data on human subjects must have IRB approval.</insert></p>
+<p><em>Internal Data Sharing</em></p>
+<p>All data will be retained for a period of no less than three years per NYU’s Data Retention and Access Policy. Copies of all data will be kept on NYU Box, which performs regular backups. To facilitate streamlined data pipelines, data may also be stored on a NYU Global TIES for Children (NYU-TIES) instance of the Open Science Framework (OSF), Github, or another version control capable repository host<!-- TODO: insert options-->. Any raw, identifiable data collected through a variety of methods (e.g., surveys, interview protocols, structured observations, administrative data, implementation data) will only be available to the research and data teams for quality assurance, processing, preliminary analysis, and anonymization. Only anonymized data will be used for published or publicly presented analysis. Identifiable data used during the cleaning process will be encrypted in transit and at rest.</p>
+<p><em>Collaboration with Partners or Subcontractors</em></p>
+<p>Should data collection be handled by a partner organization, the partner and/or subcontractor must have their own IRB and a DMP approved by NYU-TIES that governs data collection and management. NYU-TIES will also submit its own IRB proposal adhering to the guidelines outlined herein for the receipt of any identifiable data. The partner must ensure that the data is encrypted at rest and in transit. The partner and NYU-TIES shall hold joint ownership of the data. Ownership of and access to the derived data products shall be guided by the agreement between NYU-TIES and the partner and/or subcontractor.</p>
+<p><em>Dissemination, Access, and Sharing of Unpublished Data</em></p>
+<p>All shared data will be accompanied by data dictionaries, metadata that describe the content of the data. The data dictionaries will adhere to the Data Documentation Initiative (DDI) 2.5 or above standard to maximize long-term shareability. Deidentified data sharing prior to publication will be managed on a case-by-case basis, approved by the PI and Co-PI. Individuals wishing to acquire data in this manner must sign a data use agreement, authored by NYU-TIES, that includes a requirement to destroy copies of the data once the sharing agreement terminates. Raw, identifiable data will never be shared. Deidentified data will be published on our Dataverse instance on the Harvard Dataverse. The data may be subject to an embargo, allowed up to one year after the end of this proposal’s period end. Details about methodology will be hosted on the shareable data’s respective Dataverse repository, as well as copies of all measures used.</p>
+<p>Code and supplemental artifacts that help generate the published data will be hosted on an Open Science Framework project. All published assets will be licensed with a Creative Commons Attribution Share-Alike license.</p>
+<p><em>Data Archiving and Publishing</em></p>
+<p>Any raw or potentially identifiable data will be preserved on NYU Box for a period of no less than three years. Code and supplemental artifacts that help generate the published data will be hosted on an Open Science Framework project.</p>
+<p>The Data Team within NYU-TIES will manage and curate any published project or replication data for publications by depositing itted to a FAIRthe Dataverse repository listed in re3data.org, the Registry of Research Data Repositories. Data may be subject to an embargo, allowed up to one year after the end of this proposal’s period end. Details about methodology will be hosted on the shareable data’s respective repository in the metadata and documentation.</p>
+<p>Data will be published with a custom license that protects the identities and wellbeing of the subjects. In situations where an open data license is suitable, data will be published using an open data license, like the Open Data Commons Attribution License. All concurrent metadata and documentation will be licensed with a Creative Commons Attribution or Attribution Share-Alike license. Destruction of the identifiable raw data will follow NYU’s Data Retention and Access Policy and other relevant policies.</p>
+</blockquote>
+</section>
+<section id="ties-shares-ownership-with-data-collector" class="level2">
+<h2 class="anchored" data-anchor-id="ties-shares-ownership-with-data-collector">TIES shares ownership with data collector</h2>
+<blockquote class="blockquote">
+<p><strong>Data Management Plan</strong></p>
+<p><em>Research Products</em></p>
+<p>This data management plan outlines the expectations of data storing, sharing, dissemination, and archiving for any project that may use funds from this <insert name=""> proposal in coordination with <insert partner="" name="">, the data collector. Any project using funds from this proposal planning to collect data on human subjects must have IRB approval.</insert></insert></p>
+<p><em>Internal Data Sharing</em></p>
+<p>All data will be retained for a period of no less than three years per NYU’s Data Retention and Access Policy. Copies of all data will be kept on NYU Box, which performs regular backups. To facilitate streamlined data pipelines, data may also be stored on a NYU Global TIES for Children (NYU-TIES) instance of the Open Science Framework (OSF), Github, or another version control capable repository host. NYU Box is password-protected and requires multiple levels of authentication. Any raw, identifiable data collected through a variety of methods (e.g., surveys, interview protocols, structured observations, administrative data, implementation data) will only be available to the research and data teams for quality assurance, processing, preliminary analysis, and anonymization.. Only anonymized data will be used for published or publicly presented analysis. Identifiable data used during the cleaning process will be encrypted in transit and at rest.</p>
+<p><em>Collaboration with Partners or Subcontractors</em></p>
+<p>Data collection is to be handled by <name of="" partner="" organization="">. <partner organization=""> has their own IRB and a DMP that governs data collection and management. NYU-TIES will also submit its own IRB proposal adhering to the guidelines outlined herein for the receipt of any identifiable data. The partner must ensure that the data is encrypted at rest and in transit. The partner and NYU-TIES shall hold joint ownership of the <processed raw="" all="">) data and derived datasets(?).</processed></partner></name></p>
+<p>All subcontractors must have their own IRB and a DMP that governs data collection and management. NYU-TIES and <partner organization="" name=""> will maintain co-ownership over the data. At the end of the contract the subcontractor must agree to destroy the data in accordance to NYU-TIES and <partner organization=""> policies. Ownership of and access to the derived data products created by the subcontractor shall be guided by the agreement between NYU-TIES and the partner and/or subcontractor.</partner></partner></p>
+<p><em>Dissemination, Access, and Sharing of Unpublished Data</em></p>
+<p>All shared data will be accompanied by data dictionaries, metadata that describe the content of the data. The data dictionaries will adhere to the Data Documentation Initiative (DDI) 2.5 or above standard to maximize long-term shareability. Deidentified data sharing prior to publication will be managed on a case-by-case basis, approved by the PI and Co-PI. Individuals wishing to acquire data in this manner must sign a data use agreement, authored by NYU-TIES, that includes a requirement to destroy copies of the data once the sharing agreement terminates. Raw, identifiable data will never be shared.</p>
+<p><em>Data Archiving and Publishing</em></p>
+<p>Any raw or potentially identifiable data will be preserved on NYU Box for a period of no less than three years. Code and supplemental artifacts that help generate the published data will be hosted on an Open Science Framework project.</p>
+<p>The Data Team within NYU-TIES will manage and curate any published project or replication data for publications by depositing it to a FAIR listed in re3data.org, the Registry of Research Data Repositories. Data may be subject to an embargo, allowed up to one year after the end of this proposal’s period end. Details about methodology will be hosted on the shareable data’s respective repository in the metadata and documentation.</p>
+<p>Data will be published with a custom license that protects the identities and wellbeing of the subjects. In situations where an open data license is suitable, data will be published using an open data license, like the Open Data Commons Attribution License. All concurrent metadata and documentation will be licensed with a Creative Commons Attribution or Attribution Share-Alike license. Destruction of the identifiable raw data will follow NYU’s Data Retention and Access Policy and other relevant policies.</p>
+</blockquote>
+</section>
+<section id="ties-is-a-subcontractor-without-ownership" class="level2">
+<h2 class="anchored" data-anchor-id="ties-is-a-subcontractor-without-ownership">TIES is a subcontractor without ownership</h2>
+<blockquote class="blockquote">
+<p><strong>Data Management Plan</strong></p>
+<p><em>Research Products</em></p>
+<p>This data management plan outlines the expectations of data storing, sharing, dissemination, and archiving for any project that may use funds from this <insert name=""> proposal in coordination with <insert partner="" name="">, the data owner. Any project using funds from this proposal planning to collect data on human subjects must have IRB approval. NYU-TIES is not responsible for the data quality of the data provided by <insert partner="" name="">.</insert></insert></insert></p>
+<p><em>Internal Data Sharing</em></p>
+<p>All data will be retained for the duration of the relationship between NYU-TIES and <data owner=""> according to the terms of data use agreement. Copies of all data will be kept on NYU Box, which performs regular backups. To facilitate streamlined data pipelines, data may also be stored on a NYU Global TIES for Children (NYU-TIES) instance of the Open Science Framework (OSF), Github, or another version control capable repository host. NYU Box is password-protected and requires multiple levels of authentication. If provided by the data owner, any raw, identifiable data collected through a variety of methods (e.g., surveys, interview protocols, structured observations, administrative data, implementation data) will only be available to the research and data teams for quality assurance, processing, and anonymization. Only anonymized data will be used for analytical uses according to the terms of the data use agreement with <insert partner="" name="">. Identifiable data used during the cleaning process will be encrypted in transit and at rest. Identifiable data used during the cleaning process will be encrypted in transit and at rest.</insert></data></p>
+<p><em>Collaboration with Partners or Subcontractors</em></p>
+<p>Data will be provided by <name of="" partner="" organization="">. <partner organization=""> has their own IRB and a DMP that governs data collection and management. NYU-TIES will also submit its own IRB proposal adhering to the guidelines outlined herein for the receipt of any identifiable data. The data owner must ensure that the data is encrypted at rest and in transit. NYU-TIES shall hold access rights to the data and derived datasets/data products in line with the agreement with <data owner="">.</data></partner></name></p>
+<p><em>Data Archiving and Publishing</em></p>
+<p>At the end of the contract NYU-TIES agrees to destroy the provided data in accordance with NYU-TIES and <data owner=""> policies and data use agreement.</data></p>
+<p>The Data Team within NYU-TIES will manage and curate any derived data products by depositing it to a FAIR listed in re3data.org, the Registry of Research Data Repositories, and according to the agreement with <data owner="">. A derived data product is a data product produced by manipulating the original dataset and may include new datasets, tables, graphics, analysis, and other products. These derived data products may be subject to an embargo, allowed up to one year after the end of this proposal’s period end. Details about methodology will be hosted on the repository in the metadata and documentation.</data></p>
+<p>Derived data products will be published according to the agreement with <data owner="">. Open data will be published under the Open Data Commons Attribution License. All concurrent metadata and documentation will be licensed with a Creative Commons Attribution or Attribution Share-Alike license.</data></p>
+</blockquote>
+<hr>
+</section>
+<section id="see-also" class="level1">
+<h1>See also</h1>
+<ul>
+<li><a href="../curation/index.html">Curation</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

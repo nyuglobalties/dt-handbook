@@ -1,0 +1,91 @@
+---
+title: Resources
+---
+
+## Tutorials
+
+- [Data Organization in Spreadsheets for Social Scientists](https://datacarpentry.org/spreadsheets-socialsci/): **Data Carpentry**
+
+## Cheatsheets
+
+- [Markdown Basic Syntax](https://www.markdownguide.org/basic-syntax/)
+- W3C [SQL Tutorial](https://www.w3schools.com/sql/)
+
+## Useful Organizations
+
+- [The PID Forum](https://pidforum.org/)
+- Data Documentation Initiative
+- [Data Curation Network](https://datacurationnetwork.org/#)
+- DataCite
+- CrossRef
+- [Digital Curation Centre](https://www.dcc.ac.uk/)
+
+
+## Metadata schemas and controlled vocabularies
+
+### Schemas
+
+- Data Documentation Initiative (DDI)
+- Dublin Core Metadta Initiative (DC)
+- schema.org
+- Datacite
+- Humanitarian eXchange Language (HXL)
+
+### Controlled vocabularies
+
+- [UNESCO Thesaurus](http://vocabularies.unesco.org/browser/thesaurus/en/)
+- [Medical Subject Headings (MeSH)](https://www.nlm.nih.gov/mesh/meshhome.html)
+- IPTC [NewsCodes](https://iptc.org/standards/newscodes/)
+- IFLA's [Guidelines for Multilingual
+Thesauri](https://repository.ifla.org/bitstream/123456789/631/1/ifla-professional-reports-nr-115-en.pdf)
+
+
+## Bibliography
+
+### Data and Digital Curation
+
+- Curry, E., Freitas, A., & O’Riáin, S. (2010). The role of community-driven data curation for enterprises. In Wood, D. (eds). *Linking enterprise data*. Springer, Boston, MA. <https://doi.org/10.1007/978-1-4419-7665-9_2>
+- Higgins, S. (2008). The DCC Curation Lifecycle Model. *The International Journal of Digital Curation*, 1(3), 134-140. doi: [10.2218/ijdc.v3i1.48 ](https://doi.org/10.2218/ijdc.v3i1.48)
+
+### Data Sharing
+
+- Borgman, C. L. (2012). The conundrum of sharing research data. *Journal of the American Society for Information Science and Technology*, 63, 1059-1078. doi: [10.1002/asi.22634](https://doi.org/10.1002/asi.22634)
+- Cragin, M. H., Palmer, C. L., & Carlson, J. R. (2010). Data sharing, small science and institutional repositories. Philosophical Transactions of the Royal Society, 368, 4023-4038. doi: [10.1098/rsta.2010.0165](http://doi.org/10.1098/rsta.2010.0165)
+- Curty, R., Yoon, A., Jeng., W., & Qin, J. (2016). Untangling data sharing and reuse in social sciences. *Proceedings of the Association for Information Science and Technology*, 53(1), 1-5. doi: [10.1002/pra2.2016.14505301025](https://doi.org/10.1002/pra2.2016.14505301025)
+- Wills, C., Greenberg, J., & White, H. (2012). Analysis and synthesis of metadata goals for scientific data. Journal for the American Society for Information Science & Technology, 63, 1505-1520. doi: [10.1002/asi.22683](https://doi.org/10.1002/asi.22683)
+
+
+### Data Sharing in Psychology
+
+- Meyer M.N. (2018). Practical Tips for Ethical Data Sharing. *Advances in Methods and Practices in Psychological Science*, 1(1), 131-144. doi: [10.1177/2515245917747656](https://journals.sagepub.com/doi/full/10.1177/2515245917747656).
+- Ross, M. W., Iguchi, M. Y., & Panicker, S. (2018). Ethical aspects of data sharing and research participant protections. *The American psychologist*, 73(2), 138–145. doi: [10.1037/amp0000240](https://doi.org/10.1037/amp0000240).
+- Towse, J. N., Ellis, D. A., & Towse, A. S. (2021). Opening Pandora's Box: Peeking inside Psychology's data sharing practices, and seven recommendations for change. *Behavior research methods*, 53(4), 1455-1468. doi: [10.3758/s13428-020-01486-1](https://doi.org/10.3758/s13428-020-01486-1). 
+
+### Data Reuse
+
+- Curty, R. G. (2016). Factors influencing research data reuse in the social sciences: An exploratory study. *International Journal of Digital Curation*, 11(1), 96-117. doi: [10.2218/ijdc.v11i1.401](https://doi.org/10.2218/ijdc.v11i1.401). 
+- Buckner, Elizabeth, Daniel Shephard, and Anne Smiley. (2022). Beyond Numbers: The Use and Usefulness of Data for Education in Emergencies. *Journal on Education in Emergencies*, 8(1), 214-42. doi: [10.33682/tgfd-m9eg](https://doi.org/10.33682/tgfd-m9eg).
+- Faniel, I. M., Kriesberg, A., & Yakel, E. (2016). Social scientists’ satisfaction with data reuse. *Journal of the Association for Information Science and Technology*, 67(6), 1401-1416. doi: [10.1002/asi.23480](https://doi.org/10.1002/asi.23480).
+- Karcher, S., Kirilova, D., Pagé, C., & Weber, N. (2021). How Data Curation Enables Epistemically Responsible Reuse of Qualitative Data. *The Qualitative Report*, 26(6), 1996-2010. doi: [10.46743/2160-3715/2021.5012](https://doi.org/10.46743/2160-3715/2021.5012).
+- Wallis, J. C., Rolando, E., & Borgman, C. L. (2013). If we share data, will anyone use them? Data sharing and reuse in the long tail of science and technology. *PLoSONE*, 8(7), e67332. doi: [10.1371/journal.pone.0067332](https://doi.org/10.1371/journal.pone.0067332)
+
+### Archiving
+
+- Baker, K. S., Duerr, R. E., & Parsons, M. A. (2015). Scientific knowledge mobilization: Co-evolution of data products and designated communities. *International Journal of Digital Curation*, 10(2), 110-135. doi: [10.2218/ijdc.v10i2.346](https://doi.org/10.2218/ijdc.v10i2.346) 
+- Bettivia, R. S., 2016, The power of imaginary users: Designated communities in the OAIS reference model. *Proceedings of the Association for Information Science and Technology*, 53(1), 1-9. doi: [10.1002/pra2.2016.14505301038](https://doi.org/10.1002/pra2.2016.14505301038).
+- Boutard, G., 2020. Alter-Value in Data Reuse: Non-Designated Communities and Creative Processes. *Data Science Journal*, 19(1), p.23. doi: [10.5334/dsj-2020-023](http://doi.org/10.5334/dsj-2020-023). 
+- Donaldson, D. R., Zegler-Poleska, E., Yarmey, L. (2020). Data managers' perspectives on OAIS designated communities and the FAIR principles: mediation, tools and conceptual models. *Journal of Documentation*, 76(6), 1261-1277. doi: [10.1108/JD-10-2019-0204](https://doi.org/10.1108/JD-10-2019-0204) 
+- Parsons, M.A. and Duerr, R. (2005), “Designating user communities for scientific data: challenges and solutions”, *Data Science Journal*, 4(24), 31-38. doi: [10.2481/dsj.4.31](https://doi.org/10.2481/dsj.4.31).
+
+### Protecting Vulnerable Data Subjects
+
+- Calamai, S., Kolletzek, C., & Kelli, A. (2019, May). Towards a protocol for the curation and dissemination of vulnerable people archives. In *Selected papers from the CLARIN Annual Conference 2018*. Linköping Electronic Conference Proceedings 159 (28–38). <https://www.researchgate.net/publication/342832401_Towards_a_protocol_for_the_curation_and_dissemination_of_vulnerable_people_archives>
+- Malgieri, G., & González Fuster, G. (2021), The Vulnerable Data Subject: A Gendered Data Subject?. *Available at SSRN*. <https://ssrn.com/abstract=3913249> or <http://dx.doi.org/10.2139/ssrn.3913249>
+- Malgieri, G., & Niklas, J. (2020). Vulnerable Data Subjects. *Computer Law & Security Review*, 37, 105415. doi: [10.1016/j.clsr.2020.105415](https://doi.org/10.1016/j.clsr.2020.105415) 
+- Tiffin, N., George A., & LeFevre, A.E. (2019). How to use relevant data for maximal benefit with minimal risk: digital health data governance to protect vulnerable populations in low-income and middle-income countries. *BMJ Global Health*, 4(2). doi: [10.1136/bmjgh-2019-001395](http://dx.doi.org/10.1136/bmjgh-2019-001395)
+
+- Aggregated data provides a false sense of security [blog], https://iapp.org/news/a/aggregated-data-provides-a-false-sense-of-security/
+
+### Data Sovereignty
+
+Toward a More Just Library: Participatory Design with Native American Students: https://quod.lib.umich.edu/w/weave/12535642.0001.901?view=text;rgn=main

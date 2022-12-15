@@ -1,0 +1,48 @@
+---
+title: Spreadsheet standards and practices
+categories: [standards]
+---
+
+<!--:standards:csv:spreadsheets:-->
+
+This section goes over proper spreadsheet design and maintenance. Like datasets, spreadsheets should be designed to reduce data uncertainty ensuring that each spreadsheet is clear and concise. To accomplish this we rely on a few methods and tools.
+
+## Uses
+
+Spreadsheets are used to hold data and metadata. They are not for transformations either through macros or formulas. Transformations and analysis occur within the data processing pipeline and other tools. 
+
+## Tidy Data
+
+All spreadsheets should follow the tidy data philosophy laid out by Hadley Wickham in the article "[Tidy Data](https://www.jstatsoft.org/article/view/v059i10)." This paper and Tidy Data in general sets one row per observation with each variable or property in a column. Each row should have a unique persistent identifier (PID). 
+
+In addition to organizing spreadsheet data into a tidy format, to reduce data uncertainty and missingness in the spreadsheet, it is Data Team pracitce to use multiple smaller spreadsheets rather than wide spreadsheets that combine multiple universes and response units. In this way, we would keep teacher responses separate from student responses and classroom data separate from school data. Relationships between spreadsheets are designed using the PID as foreign keys, following an entity relationship model similar to a RDMS.
+
+---
+
+**Tidy Data Spreadsheet/Table example**
+
+|ID | Variable1| Varibale2| Variable3|
+|---|---|---|---|
+|observation1|value|value|value|
+|observation2|value|value|value|
+|observation3|value|value|value|
+|...|...|...|...|
+|...|...|...|...|
+|...|...|...|...|
+
+## Spreadsheet file type
+
+The preferred file type for spreadsheets is .csv (comma separated value) or .tsv (tab separated value). These are platform and application neutral, open, and non-proprietary data formats making them suitable for archiving and preservation.
+
+Other file types like .xlsx (Microsoft Excel) are not used because they are proprietary and not human readable or usable in version control systems.
+
+## Spreadsheet applications
+
+- **OpenOffice Calc**: The preferred spreadsheet applicaiton of the Data Team due to it natively using Unicode
+- **Microsoft Excel**: Non-preferred application due to it being commercial proprietary software, not open source, and doesn't natively support Unicode. 
+- **Google Sheets**: Not for data (not sure why but not for data)
+
+## Resources
+
+- [Data Organization in Spreadsheets for Social Scientists](https://datacarpentry.org/spreadsheets-socialsci/index.html) from Data Carpentry
+

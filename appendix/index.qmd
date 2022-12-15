@@ -1,0 +1,7 @@
+---
+title: Appendix
+listing:
+  contents: ["*.qmd", "!index.qmd"]
+  type: table
+  sort: title
+---

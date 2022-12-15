@@ -1,0 +1,41 @@
+---
+title: Data Team Purpose
+---
+<!--:team:-->
+Modern research projects are vast and complex, incorporating many partner, funder, and publisher requirements. The Data Team works to fill the information gap at TIES to develop and use data products for internal and external teams.
+
+## Rationale
+
+The Data Team responds to two major needs:
+
+1. The need for timely and accurate datasets that meet FAIR standards and allow for replication and reuse. 
+1. The need for deliberate engagement with emerging open science and data security principles and practices
+
+The Data Team presents an opportunity to meet these needs via innovation through application of new technologies, software, and methods (e.g. machine learning). More and more publishers are requiring datasets for publication that require these needs. Datasets will follow a “TIES” standard and format that allow them to be recognized as a TIES public good. We aim to advance the development and practice of these standards in the EiE realm.
+
+## Research Lifecycle Buckets
+
+The Data Team answers these needs by thoroughly integrated into the research lifecycle. We offer a handful of services for research teams to meet these needs:
+
+1. **Pre- and post-award support**: Draft, review, and provide feedback on data use agreements, IP terms, and data sharing provisions in contracts
+1. **Data collection support**: Consult with research teams on KoBo/data collection software programming to reduce manual entry errors, provide guidance on nightly checks, etc.
+1. **Dataset production for internal use**: Data harmonization, verification, and production of datasets within:
+    - 1 month for nightly data for preliminary analysis
+    - 3 months for analysis data for publishable analyses
+1. **Basic descriptive analyses and reports**: Production of descriptive reports (e.g., item and scale descriptives, data visualizations) that can be used internally and shared with partners; can link to psychometric report packages
+1. **Active data curation**: 
+    - Production and dissemination of datasets that meet replication and reuse standards and adhere to FAIR standards
+    - Promotes cross-Center coherence in our internally- and externally-shared data
+1. **Internal capacity strengthening**:
+    - Centralized information management with off-the-shelf or custom tooling, including the Item Bank for cross-project investigation
+    - Workshops and targeted support on R, Git, data dashboards, citation metrics, etc.
+1. **External capacity strengthening**: Modules on data standards and database basics
+1. **Innovation iteration**: Application of data science principles and technologies to research team problem
+1. **Research impact**: Creating and adapting analytic, predictive modeling, and data visualization tools to measure the impact of TIES publications, datasets, reports and etc in comparison to academic field and SDG benchmarks
+
+---
+
+# See also
+
+- [Team (listing)](index.qmd)
+- [Data Team Structure](structure.qmd)
