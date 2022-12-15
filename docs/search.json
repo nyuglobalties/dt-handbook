@@ -1,0 +1,779 @@
+[
+  {
+    "objectID": "appendix/glossary.html",
+    "href": "appendix/glossary.html",
+    "title": "Glossary",
+    "section": "",
+    "text": "A software interface that allows for computers or applications to talk to one another."
+  },
+  {
+    "objectID": "appendix/glossary.html#badges-to-acknowledge-open-practices",
+    "href": "appendix/glossary.html#badges-to-acknowledge-open-practices",
+    "title": "Glossary",
+    "section": "Badges to Acknowledge Open Practices",
+    "text": "Badges to Acknowledge Open Practices\nThese badges are granted by the Center for Open Science (CoS) and mark an academic article as open. For more see https://osf.io/tvyxz/wiki/home/. There are three badges:\n\nOpen Data: Data deposited in a repository as public domain or with an open data license\nOpen Materials: Data (open or not) is deposited alongside digitally-shareable materials that explain the studies. These materials should be are publicly available and have enough detail and explanation that an independent researcher can understand the methodology that generated the data.\nPreregistered: The study was preregistered in an institutional registration system. For studies that also included a pre-analysis plan there’s a Preregistered+Analysis Plan badge."
+  },
+  {
+    "objectID": "appendix/glossary.html#code",
+    "href": "appendix/glossary.html#code",
+    "title": "Glossary",
+    "section": "Code",
+    "text": "Code\nHigh level programming files that can be used for analysis, data cleaning, data processing, or anything else that can be programmed on a computer. This is both a tool and potentially data. Code files may be included as supplementary material in datasets where appropriate."
+  },
+  {
+    "objectID": "appendix/glossary.html#copyleft",
+    "href": "appendix/glossary.html#copyleft",
+    "title": "Glossary",
+    "section": "Copyleft",
+    "text": "Copyleft\nA type of open license that requires that the original creator is cited and that any derived products maintain the same type of license as the dataset. Copyleft seeks to give credit to the creators while not limiting the rights of reusers, like a copyright might. The term is a play on copyright."
+  },
+  {
+    "objectID": "appendix/glossary.html#conceptual-structure",
+    "href": "appendix/glossary.html#conceptual-structure",
+    "title": "Glossary",
+    "section": "Conceptual Structure",
+    "text": "Conceptual Structure\nThe semantic meaning of a metadata element along with a controlled vocabulary. Used to increase interoperability."
+  },
+  {
+    "objectID": "appendix/glossary.html#controlled-vocabulary",
+    "href": "appendix/glossary.html#controlled-vocabulary",
+    "title": "Glossary",
+    "section": "Controlled Vocabulary",
+    "text": "Controlled Vocabulary\nA controlled vocabulary is a list, information thesaurus, hierarchy, or another knowledge organization system (KOS) that is maintained by an organization or community of users. Typically they’re publicly available and have permanent URLs although there are exceptions like the APA’s Thesaurus of Psychological Index Terms."
+  },
+  {
+    "objectID": "appendix/glossary.html#creative-commons-cc",
+    "href": "appendix/glossary.html#creative-commons-cc",
+    "title": "Glossary",
+    "section": "Creative Commons (CC)",
+    "text": "Creative Commons (CC)\nA nonprofit dedicated to open access to creative works (writing, images, music, etc). They maintain the CC copyright licenses (see: https://creativecommons.org/licenses/) and the CC0 public domain license."
+  },
+  {
+    "objectID": "appendix/glossary.html#crossref",
+    "href": "appendix/glossary.html#crossref",
+    "title": "Glossary",
+    "section": "Crossref",
+    "text": "Crossref\nCrossref is an official digital object identifier (DOI) Registration Agency that assigns DOIs to academic publications."
+  },
+  {
+    "objectID": "appendix/glossary.html#crosswalk",
+    "href": "appendix/glossary.html#crosswalk",
+    "title": "Glossary",
+    "section": "Crosswalk",
+    "text": "Crosswalk\nA crosswalk is a file that maps equivalences between the elements of two or more metadata schemas. This allows for the conversion of metadata from one schema to another, increased interoperability between datasets, and the enhancing of datasets by combining data from different fields."
+  },
+  {
+    "objectID": "appendix/glossary.html#data-documentation-initiative-ddi",
+    "href": "appendix/glossary.html#data-documentation-initiative-ddi",
+    "title": "Glossary",
+    "section": "Data Documentation Initiative (DDI)",
+    "text": "Data Documentation Initiative (DDI)\nThe standard metadata schema for human survey data. The DDI Alliance maintains two metadata schemas in active use, the DDI-Codebook (DDI 2.5) and the DDI Lifecycle (DDI 3). They also maintain controlled vocabularies and other schemas. For more see: https://ddialliance.org/."
+  },
+  {
+    "objectID": "appendix/glossary.html#data-information-knowledge-wisdom-dikw-pyramid",
+    "href": "appendix/glossary.html#data-information-knowledge-wisdom-dikw-pyramid",
+    "title": "Glossary",
+    "section": "Data Information Knowledge Wisdom (DIKW) Pyramid",
+    "text": "Data Information Knowledge Wisdom (DIKW) Pyramid\nA loosely organized model that defines the relationships between data, information, knowledge, and wisdom. In this pyramid, data is a series of raw observations, stimuli, or symbols that are refined as information. Information are data that has been interrogated and made useful. It is processed data that has meaning and purpose. Next is knowledge. Knowledge is a synthesis of information over time from multiple sources combined with contextual information and experience. Finally comes wisdom which is implicit knowledge based on experience applying knowledge to different situations. Wisdom allows user to ask and answer why we would use information or knowledge in a certain way without apparent thought."
+  },
+  {
+    "objectID": "appendix/glossary.html#data-uncertainty",
+    "href": "appendix/glossary.html#data-uncertainty",
+    "title": "Glossary",
+    "section": "Data Uncertainty",
+    "text": "Data Uncertainty\nThe degree to which data is inaccurate, imprecise, untrusted, or unknown. All complex systems have a degree of uncertainty inherent within them. A dataset with a high proportion of NA values (missingness) has a high level of uncertainty."
+  },
+  {
+    "objectID": "appendix/glossary.html#datacite",
+    "href": "appendix/glossary.html#datacite",
+    "title": "Glossary",
+    "section": "DataCite",
+    "text": "DataCite\nDataCite is a DOI Registration Agency that focuses on registering and managing DOIs for data and datasets. DataCite also maintains a citation standard."
+  },
+  {
+    "objectID": "appendix/glossary.html#dataset",
+    "href": "appendix/glossary.html#dataset",
+    "title": "Glossary",
+    "section": "Dataset",
+    "text": "Dataset\nThe dataset is the data that is to be preserved and shared. Each dataset has a designated community that defines the linguistic and conceptual needs of the metadata and documentation."
+  },
+  {
+    "objectID": "appendix/glossary.html#derived-data-product",
+    "href": "appendix/glossary.html#derived-data-product",
+    "title": "Glossary",
+    "section": "Derived Data Product",
+    "text": "Derived Data Product\nA derived data product is the analysis or aggregation of the dataset for reports, visualizations, or further analysis."
+  },
+  {
+    "objectID": "appendix/glossary.html#designated-commmunity",
+    "href": "appendix/glossary.html#designated-commmunity",
+    "title": "Glossary",
+    "section": "Designated Commmunity",
+    "text": "Designated Commmunity\nA designated community is the imagined set of users of a dataset or archive."
+  },
+  {
+    "objectID": "appendix/glossary.html#doi-digital-object-identifier",
+    "href": "appendix/glossary.html#doi-digital-object-identifier",
+    "title": "Glossary",
+    "section": "DOI (Digital Object Identifier)",
+    "text": "DOI (Digital Object Identifier)\nA DOI or digital object identifier is a persistent ID and URL for a digital object, whether an academic article, dataset, or derived data object."
+  },
+  {
+    "objectID": "appendix/glossary.html#embargo",
+    "href": "appendix/glossary.html#embargo",
+    "title": "Glossary",
+    "section": "Embargo",
+    "text": "Embargo\nA period in which access to a work that has been submitted to a distributor or publisher is restricted."
+  },
+  {
+    "objectID": "appendix/glossary.html#hierarchical-data",
+    "href": "appendix/glossary.html#hierarchical-data",
+    "title": "Glossary",
+    "section": "Hierarchical data",
+    "text": "Hierarchical data\nData organized in a hierarchy with parent and child elements. These elements are usually organized in a broader-than/narrower-than or a has-part/is-part-of relationship. This type of data is more flexible than a table of data since it isn’t limited to only two dimension."
+  },
+  {
+    "objectID": "appendix/glossary.html#human-readable",
+    "href": "appendix/glossary.html#human-readable",
+    "title": "Glossary",
+    "section": "Human Readable",
+    "text": "Human Readable\nData or documentation designed to be read by humans rather than machines. Typically, this is in documentation/natural language form but there are exceptions where a file is designed to be human and machine readable, like YAML."
+  },
+  {
+    "objectID": "appendix/glossary.html#information-thesaurus",
+    "href": "appendix/glossary.html#information-thesaurus",
+    "title": "Glossary",
+    "section": "Information Thesaurus",
+    "text": "Information Thesaurus\nA form of controlled vocabulary that maps semantic relationships between elements. These are typically organized hierarchically (broader-than/narrower-than) with synonyms (see also statements)"
+  },
+  {
+    "objectID": "appendix/glossary.html#internationalization",
+    "href": "appendix/glossary.html#internationalization",
+    "title": "Glossary",
+    "section": "Internationalization",
+    "text": "Internationalization\nAccording to the World Wide Web Consortium (W3C), internationalization is taking steps to develop content or applications in a way that will work for users from any culture, region, or language. Data Team standards state that we use internationalized and multilingual controlled vocabularies where and when feasible in our reuse datasets."
+  },
+  {
+    "objectID": "appendix/glossary.html#json-javascript-object-notation",
+    "href": "appendix/glossary.html#json-javascript-object-notation",
+    "title": "Glossary",
+    "section": "JSON (JavaScript Object Notation)",
+    "text": "JSON (JavaScript Object Notation)\nA data serialization format used in APIs. It is derived from JSON but is language independent and typically viewed as lightweight compared to XML. It works by creating key-value pairs with records and subgroups surrounded by brackets."
+  },
+  {
+    "objectID": "appendix/glossary.html#knowledge-organization-system",
+    "href": "appendix/glossary.html#knowledge-organization-system",
+    "title": "Glossary",
+    "section": "Knowledge Organization System",
+    "text": "Knowledge Organization System\nA concept system or scheme used to organize materials (digital or physical) to retrieve or manage items in those materials. It can refer to a wide range of tools including subject headings, controlled vocabularies, topic maps, information thesauri, lists, ontologies, authority files, etc. Broadly speaking this is the material in the scheme rather than the structure or schema."
+  },
+  {
+    "objectID": "appendix/glossary.html#latex",
+    "href": "appendix/glossary.html#latex",
+    "title": "Glossary",
+    "section": "LaTeX",
+    "text": "LaTeX\nLaTeX is a document preparation markup language used in scientific documents and outputs a pdf. It’s a complex language with many packages and the ability to write macros, allowing for intricate formatting and making it the more flexible than markdown or HTML."
+  },
+  {
+    "objectID": "appendix/glossary.html#linked-data",
+    "href": "appendix/glossary.html#linked-data",
+    "title": "Glossary",
+    "section": "Linked data",
+    "text": "Linked data\nLinked data is data organized as a triple (node-relationship-node or subject-predicate-object). This structure creates a graph and allows for non-hierarchical relationships between objects."
+  },
+  {
+    "objectID": "appendix/glossary.html#machine-readable",
+    "href": "appendix/glossary.html#machine-readable",
+    "title": "Glossary",
+    "section": "Machine Readable",
+    "text": "Machine Readable\nA program or document designed to be read by machines rather than humans."
+  },
+  {
+    "objectID": "appendix/glossary.html#make-data-count",
+    "href": "appendix/glossary.html#make-data-count",
+    "title": "Glossary",
+    "section": "Make Data Count",
+    "text": "Make Data Count\nAn international project to standardize metrics on research data use, especially views, downloads and citations, by combining various community existing standards into an open framework. It relies on Crossref and DataCite’s Event APIs. See: https://makedatacount.org/"
+  },
+  {
+    "objectID": "appendix/glossary.html#markdown",
+    "href": "appendix/glossary.html#markdown",
+    "title": "Glossary",
+    "section": "Markdown",
+    "text": "Markdown\nA lightweight and simple markup language for creating formatted text. For a cheat sheet that covers most markdown syntax see: https://www.markdownguide.org/cheat-sheet/"
+  },
+  {
+    "objectID": "appendix/glossary.html#markup-language",
+    "href": "appendix/glossary.html#markup-language",
+    "title": "Glossary",
+    "section": "Markup language",
+    "text": "Markup language\nA set of rules that uses tags to define formatting and other elements within a document. It is both human and machine readable."
+  },
+  {
+    "objectID": "appendix/glossary.html#metadata",
+    "href": "appendix/glossary.html#metadata",
+    "title": "Glossary",
+    "section": "Metadata",
+    "text": "Metadata\nMetadata is the context, definitions, descriptions of the values in a dataset. This can include labels, study information, authorship, titles, funders, etc."
+  },
+  {
+    "objectID": "appendix/glossary.html#natural-language-data",
+    "href": "appendix/glossary.html#natural-language-data",
+    "title": "Glossary",
+    "section": "Natural Language data",
+    "text": "Natural Language data\nA file of plain text or audio that is designed for human consumption, following the rules of a grammar along with idioms and other linguistic elements."
+  },
+  {
+    "objectID": "appendix/glossary.html#open-license",
+    "href": "appendix/glossary.html#open-license",
+    "title": "Glossary",
+    "section": "Open License",
+    "text": "Open License\nThe legal statement alongside a work (including a dataset) that allows free content and software to be distributed and used with few if any restrictions."
+  },
+  {
+    "objectID": "appendix/glossary.html#open-science",
+    "href": "appendix/glossary.html#open-science",
+    "title": "Glossary",
+    "section": "Open Science",
+    "text": "Open Science\nOpen science is the movement to make scientific research (including publications, data, physical samples, and software) and its dissemination acceptable to the public with limited to no restrictions."
+  },
+  {
+    "objectID": "appendix/glossary.html#orcid-open-researcher-and-contributor-id",
+    "href": "appendix/glossary.html#orcid-open-researcher-and-contributor-id",
+    "title": "Glossary",
+    "section": "ORCID (Open Researcher and Contributor ID)",
+    "text": "ORCID (Open Researcher and Contributor ID)\nA PID, in the form of an alphanumeric code, that identifies authors and contributors to scholarly works. ORCID also allows users to maintain a record of their work on their website."
+  },
+  {
+    "objectID": "appendix/glossary.html#pid-persistent-identifier",
+    "href": "appendix/glossary.html#pid-persistent-identifier",
+    "title": "Glossary",
+    "section": "PID (Persistent Identifier)",
+    "text": "PID (Persistent Identifier)\nA unique and persistent identifier that identifies an agent, organization, location, or work. These are permanent identifiers, akin to an identification number from a government."
+  },
+  {
+    "objectID": "appendix/glossary.html#preservation-file-formats",
+    "href": "appendix/glossary.html#preservation-file-formats",
+    "title": "Glossary",
+    "section": "Preservation file formats",
+    "text": "Preservation file formats\nPreferred file formats to preserve data or datasets in perpetuity. These are usually lossless and non-proprietary. For tabular datasets, the preferred format is csv."
+  },
+  {
+    "objectID": "appendix/glossary.html#repositories",
+    "href": "appendix/glossary.html#repositories",
+    "title": "Glossary",
+    "section": "Repositories",
+    "text": "Repositories\nA digital storage space for researchers and research organizations to deposit datasets and derived data objects associated with their research.\nSocial Science Research Data Repositories\n\nDataverse: An open source repository that maintains its collections in https://schema.org/’s schemas.\nInter-university Consortium for Political and Social Research (ICPSR): The oldest social science repository, established in 1962, and hosted by the Institute for Social Research at the University of Michigan.\nQualitative Data Repository (QDR): A Dataverse instance dedicated to archiving and preserving data generated through qualitative research methods. This project is hosted at the Center for Qualitative and Multi-Method Inquiry at Syracuse University.\n\nResearch Lifecycle Repositories\n\nDryad: An international open-access research data repository for complete, re-usable, open datasets. All datasets are licensed under a CC0 (Creative Commons Zero) waiver. There is a submission fee.\n\nfigshare: A repository designed for derived data objects and research outputs. figshare accepts data in any format making it more flexible than other repositories.\nOpen Science Framework (OSF): An open platform designed to manage data throughout its lifecycle and enable collaboration. OSF hosts a number of services including preprints, preregistrations, and meeting and conference support. It also offers useful integrations into other repositories and systems.\nZenodo: A general-purpose open-access repository operated by CERN. Allows for the deposit of research papers, datasets and research software.\n\nCode Repositories\n\nGithub: Repository for software development and version control using git. There’s the ability to assign a DOI with Zenodo in Github. Owned by Microsoft.\nGitlab: A software development platform and version control system using git designed to be a set of collaboration tools and a code repository. Gitlab has built in continuous integration/continuous delivery (CI/CD) and DevOps features.\nBitbucket: A software development platform and version control system using git designed for teams. It is a product of Atlassian, the owners of Trello, Confluence, Jira, and Sourcetree.\n\nDomain Specific Repositories\n\nHumanitarian Data eXchange (HDX): A repository that hosts international humanitarian data. The repository is hosted by the Center for Humanitarian Data in the United Nations Office for the Coordination of Humanitarian Affairs (OCHA). While not necessarily a research data repository, HDX allows for metadata records.\n\nInstitutional Repositories\n\nNYU Faculty Digital Archive: Repository of NYU faculty scholarship."
+  },
+  {
+    "objectID": "appendix/glossary.html#schema",
+    "href": "appendix/glossary.html#schema",
+    "title": "Glossary",
+    "section": "Schema",
+    "text": "Schema\nThe structure of a metadata file, database or other digital object."
+  },
+  {
+    "objectID": "appendix/glossary.html#tabular-data",
+    "href": "appendix/glossary.html#tabular-data",
+    "title": "Glossary",
+    "section": "Tabular data",
+    "text": "Tabular data\nData that exists in a table with an x and y position. Usually viewed as a spreadsheet."
+  },
+  {
+    "objectID": "appendix/glossary.html#tidy-data",
+    "href": "appendix/glossary.html#tidy-data",
+    "title": "Glossary",
+    "section": "Tidy data",
+    "text": "Tidy data\nA data organizing philosophy that organizes data as one row per object/observation with the properties as columns/variables. It is the cornerstone of the tidyverse R package. It’s an alternative name for a data matrix."
+  },
+  {
+    "objectID": "appendix/glossary.html#yaml-yaml-aint-markup-language",
+    "href": "appendix/glossary.html#yaml-yaml-aint-markup-language",
+    "title": "Glossary",
+    "section": "YAML (YAML Ain’t Markup Language)",
+    "text": "YAML (YAML Ain’t Markup Language)\nA human-readable data serialization language that is usually used for configuration files and for data storage. It is an official subset of and compatible with JSON."
+  },
+  {
+    "objectID": "appendix/glossary.html#xml-extensible-markup-language",
+    "href": "appendix/glossary.html#xml-extensible-markup-language",
+    "title": "Glossary",
+    "section": "XML (eXtensible Markup Language)",
+    "text": "XML (eXtensible Markup Language)\nThe oldest markup and data serialization language used for representing structured information. XML typically has a schema and can represent data or metadata. For example, DDI codebooks are written in XML."
+  },
+  {
+    "objectID": "appendix/index.html",
+    "href": "appendix/index.html",
+    "title": "Appendix",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nGlossary\n\n\n\n\n\n\nResources\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "appendix/resources.html",
+    "href": "appendix/resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Data Organization in Spreadsheets for Social Scientists: Data Carpentry"
+  },
+  {
+    "objectID": "appendix/resources.html#cheatsheets",
+    "href": "appendix/resources.html#cheatsheets",
+    "title": "Resources",
+    "section": "Cheatsheets",
+    "text": "Cheatsheets\n\nMarkdown Basic Syntax\nW3C SQL Tutorial"
+  },
+  {
+    "objectID": "appendix/resources.html#useful-organizations",
+    "href": "appendix/resources.html#useful-organizations",
+    "title": "Resources",
+    "section": "Useful Organizations",
+    "text": "Useful Organizations\n\nThe PID Forum\nData Documentation Initiative\nData Curation Network\nDataCite\nCrossRef\nDigital Curation Centre"
+  },
+  {
+    "objectID": "appendix/resources.html#metadata-schemas-and-controlled-vocabularies",
+    "href": "appendix/resources.html#metadata-schemas-and-controlled-vocabularies",
+    "title": "Resources",
+    "section": "Metadata schemas and controlled vocabularies",
+    "text": "Metadata schemas and controlled vocabularies\n\nSchemas\n\nData Documentation Initiative (DDI)\nDublin Core Metadta Initiative (DC)\nschema.org\nDatacite\nHumanitarian eXchange Language (HXL)\n\n\n\nControlled vocabularies\n\nUNESCO Thesaurus\nMedical Subject Headings (MeSH)\nIPTC NewsCodes\nIFLA’s Guidelines for Multilingual Thesauri"
+  },
+  {
+    "objectID": "appendix/resources.html#bibliography",
+    "href": "appendix/resources.html#bibliography",
+    "title": "Resources",
+    "section": "Bibliography",
+    "text": "Bibliography\n\nData and Digital Curation\n\nCurry, E., Freitas, A., & O’Riáin, S. (2010). The role of community-driven data curation for enterprises. In Wood, D. (eds). Linking enterprise data. Springer, Boston, MA. https://doi.org/10.1007/978-1-4419-7665-9_2\nHiggins, S. (2008). The DCC Curation Lifecycle Model. The International Journal of Digital Curation, 1(3), 134-140. doi: 10.2218/ijdc.v3i1.48\n\n\n\nData Sharing\n\nBorgman, C. L. (2012). The conundrum of sharing research data. Journal of the American Society for Information Science and Technology, 63, 1059-1078. doi: 10.1002/asi.22634\nCragin, M. H., Palmer, C. L., & Carlson, J. R. (2010). Data sharing, small science and institutional repositories. Philosophical Transactions of the Royal Society, 368, 4023-4038. doi: 10.1098/rsta.2010.0165\nCurty, R., Yoon, A., Jeng., W., & Qin, J. (2016). Untangling data sharing and reuse in social sciences. Proceedings of the Association for Information Science and Technology, 53(1), 1-5. doi: 10.1002/pra2.2016.14505301025\nWills, C., Greenberg, J., & White, H. (2012). Analysis and synthesis of metadata goals for scientific data. Journal for the American Society for Information Science & Technology, 63, 1505-1520. doi: 10.1002/asi.22683\n\n\n\nData Sharing in Psychology\n\nMeyer M.N. (2018). Practical Tips for Ethical Data Sharing. Advances in Methods and Practices in Psychological Science, 1(1), 131-144. doi: 10.1177/2515245917747656.\nRoss, M. W., Iguchi, M. Y., & Panicker, S. (2018). Ethical aspects of data sharing and research participant protections. The American psychologist, 73(2), 138–145. doi: 10.1037/amp0000240.\nTowse, J. N., Ellis, D. A., & Towse, A. S. (2021). Opening Pandora’s Box: Peeking inside Psychology’s data sharing practices, and seven recommendations for change. Behavior research methods, 53(4), 1455-1468. doi: 10.3758/s13428-020-01486-1.\n\n\n\nData Reuse\n\nCurty, R. G. (2016). Factors influencing research data reuse in the social sciences: An exploratory study. International Journal of Digital Curation, 11(1), 96-117. doi: 10.2218/ijdc.v11i1.401.\nBuckner, Elizabeth, Daniel Shephard, and Anne Smiley. (2022). Beyond Numbers: The Use and Usefulness of Data for Education in Emergencies. Journal on Education in Emergencies, 8(1), 214-42. doi: 10.33682/tgfd-m9eg.\nFaniel, I. M., Kriesberg, A., & Yakel, E. (2016). Social scientists’ satisfaction with data reuse. Journal of the Association for Information Science and Technology, 67(6), 1401-1416. doi: 10.1002/asi.23480.\nKarcher, S., Kirilova, D., Pagé, C., & Weber, N. (2021). How Data Curation Enables Epistemically Responsible Reuse of Qualitative Data. The Qualitative Report, 26(6), 1996-2010. doi: 10.46743/2160-3715/2021.5012.\nWallis, J. C., Rolando, E., & Borgman, C. L. (2013). If we share data, will anyone use them? Data sharing and reuse in the long tail of science and technology. PLoSONE, 8(7), e67332. doi: 10.1371/journal.pone.0067332\n\n\n\nArchiving\n\nBaker, K. S., Duerr, R. E., & Parsons, M. A. (2015). Scientific knowledge mobilization: Co-evolution of data products and designated communities. International Journal of Digital Curation, 10(2), 110-135. doi: 10.2218/ijdc.v10i2.346\nBettivia, R. S., 2016, The power of imaginary users: Designated communities in the OAIS reference model. Proceedings of the Association for Information Science and Technology, 53(1), 1-9. doi: 10.1002/pra2.2016.14505301038.\nBoutard, G., 2020. Alter-Value in Data Reuse: Non-Designated Communities and Creative Processes. Data Science Journal, 19(1), p.23. doi: 10.5334/dsj-2020-023.\nDonaldson, D. R., Zegler-Poleska, E., Yarmey, L. (2020). Data managers’ perspectives on OAIS designated communities and the FAIR principles: mediation, tools and conceptual models. Journal of Documentation, 76(6), 1261-1277. doi: 10.1108/JD-10-2019-0204\nParsons, M.A. and Duerr, R. (2005), “Designating user communities for scientific data: challenges and solutions”, Data Science Journal, 4(24), 31-38. doi: 10.2481/dsj.4.31.\n\n\n\nProtecting Vulnerable Data Subjects\n\nCalamai, S., Kolletzek, C., & Kelli, A. (2019, May). Towards a protocol for the curation and dissemination of vulnerable people archives. In Selected papers from the CLARIN Annual Conference 2018. Linköping Electronic Conference Proceedings 159 (28–38). https://www.researchgate.net/publication/342832401_Towards_a_protocol_for_the_curation_and_dissemination_of_vulnerable_people_archives\nMalgieri, G., & González Fuster, G. (2021), The Vulnerable Data Subject: A Gendered Data Subject?. Available at SSRN. https://ssrn.com/abstract=3913249 or http://dx.doi.org/10.2139/ssrn.3913249\nMalgieri, G., & Niklas, J. (2020). Vulnerable Data Subjects. Computer Law & Security Review, 37, 105415. doi: 10.1016/j.clsr.2020.105415\nTiffin, N., George A., & LeFevre, A.E. (2019). How to use relevant data for maximal benefit with minimal risk: digital health data governance to protect vulnerable populations in low-income and middle-income countries. BMJ Global Health, 4(2). doi: 10.1136/bmjgh-2019-001395\nAggregated data provides a false sense of security [blog], https://iapp.org/news/a/aggregated-data-provides-a-false-sense-of-security/\n\n\n\nData Sovereignty\nToward a More Just Library: Participatory Design with Native American Students: https://quod.lib.umich.edu/w/weave/12535642.0001.901?view=text;rgn=main"
+  },
+  {
+    "objectID": "curation/DEIA.html",
+    "href": "curation/DEIA.html",
+    "title": "Diversity, Equity, Inclusion, and Accessibility in Data",
+    "section": "",
+    "text": "Broadly speaking, data is the product of surveillance or observation collected for a purpose or intervention. Data represents things in the “real world”, whether a person, place, object, organism, idea or etc. and can implicitly or explicitly contain various biases from the “real world.”"
+  },
+  {
+    "objectID": "curation/DEIA.html#bias-in-data",
+    "href": "curation/DEIA.html#bias-in-data",
+    "title": "Diversity, Equity, Inclusion, and Accessibility in Data",
+    "section": "Bias in Data",
+    "text": "Bias in Data\nData is imbued with biases at every stage of a data product’s lifecycle (whether raw data, processed data, a subset of the data, data analysis, or published data). This bias may come from the original purpose of the data collection, the data collectors, or the data subjects. It may come from the population from which the data subjects were chosen and be more macro in nature. It may also come from enhancing the dataset with other data for non-benign purposes. It is for this reason that data curators, librarians and others are concerned with Diversity, Equity, Inclusion and Accessibility (DEIA) and reducing the potential vulnerability of the data subject."
+  },
+  {
+    "objectID": "curation/DEIA.html#data-deia-resources",
+    "href": "curation/DEIA.html#data-deia-resources",
+    "title": "Diversity, Equity, Inclusion, and Accessibility in Data",
+    "section": "Data DEIA resources",
+    "text": "Data DEIA resources\nFor a short and non-comprehensive list resources on how DEIA has and continues to impact data curation, collection, and management see:\n\nData Feminism1\nThis book is a fundamental critical data studies book that looks at data from a gender perspective, exposing various social biases that are or can be implicit in datasets and analytics. Critical data studies is the application of critical theory to data. Critical theory can broadly be described as an academic approach that focuses on reflective assessment and critique of society and culture to reveal and challenge power structures.\n\n\nThe CARE Principles for Indigenous Data Governance2\nThis is a complementary set of principles to the FAIR Principles, encapsulated by the hashtag #BeFAIRandCARE. It is dedicated to correcting historic power differentials and contexts by ensuring that indigenous peoples maintain sovereignty over their data. CARE consists of four principles: Collective Benefit; Authority to Control; Responsibility; and Ethics.3\n\n\nThe Data Equity Framework4\nThis framework by WE ALL COUNT5: project for equity in data science seeks to make data products, analysis and research more equitable. WE ALL COUNT sees equity as a continual goal or process and defines data equity “around the principles of fairness, transparency, inclusion and justice regardless of who may be experiencing them.”\nThe framework breaks down data work into seven stages to find decision points where projects can be made more equitable. These stages are\n\nFunding\nMotivation\nProject Design\nData Collection & Sourcing\nAnalysis\nInterpretation\nCommunication and Distribution"
+  },
+  {
+    "objectID": "curation/DMP.html",
+    "href": "curation/DMP.html",
+    "title": "Data Management Plans",
+    "section": "",
+    "text": "Data Management Plans (DMPs) are living documents that outline how data will be managed, secured, shared, archived, and destroyed (if necessary). They are based on organizational policies and capabilities as well as the Data Use Agreement with the funder(s) and IRB proposals and approvals. Below are three sample DMPs."
+  },
+  {
+    "objectID": "curation/DMP.html#ties-owns-raw-and-processed-data",
+    "href": "curation/DMP.html#ties-owns-raw-and-processed-data",
+    "title": "Data Management Plans",
+    "section": "TIES owns raw and processed data",
+    "text": "TIES owns raw and processed data\n\nData Management Plan\nResearch Products\nThis data management plan outlines the expectations of data storing, sharing, dissemination, and archiving for any project that may use funds from this  proposal. Any project using funds from this proposal planning to collect data on human subjects must have IRB approval.\nInternal Data Sharing\nAll data will be retained for a period of no less than three years per NYU’s Data Retention and Access Policy. Copies of all data will be kept on NYU Box, which performs regular backups. To facilitate streamlined data pipelines, data may also be stored on a NYU Global TIES for Children (NYU-TIES) instance of the Open Science Framework (OSF), Github, or another version control capable repository host. Any raw, identifiable data collected through a variety of methods (e.g., surveys, interview protocols, structured observations, administrative data, implementation data) will only be available to the research and data teams for quality assurance, processing, preliminary analysis, and anonymization. Only anonymized data will be used for published or publicly presented analysis. Identifiable data used during the cleaning process will be encrypted in transit and at rest.\nCollaboration with Partners or Subcontractors\nShould data collection be handled by a partner organization, the partner and/or subcontractor must have their own IRB and a DMP approved by NYU-TIES that governs data collection and management. NYU-TIES will also submit its own IRB proposal adhering to the guidelines outlined herein for the receipt of any identifiable data. The partner must ensure that the data is encrypted at rest and in transit. The partner and NYU-TIES shall hold joint ownership of the data. Ownership of and access to the derived data products shall be guided by the agreement between NYU-TIES and the partner and/or subcontractor.\nDissemination, Access, and Sharing of Unpublished Data\nAll shared data will be accompanied by data dictionaries, metadata that describe the content of the data. The data dictionaries will adhere to the Data Documentation Initiative (DDI) 2.5 or above standard to maximize long-term shareability. Deidentified data sharing prior to publication will be managed on a case-by-case basis, approved by the PI and Co-PI. Individuals wishing to acquire data in this manner must sign a data use agreement, authored by NYU-TIES, that includes a requirement to destroy copies of the data once the sharing agreement terminates. Raw, identifiable data will never be shared. Deidentified data will be published on our Dataverse instance on the Harvard Dataverse. The data may be subject to an embargo, allowed up to one year after the end of this proposal’s period end. Details about methodology will be hosted on the shareable data’s respective Dataverse repository, as well as copies of all measures used.\nCode and supplemental artifacts that help generate the published data will be hosted on an Open Science Framework project. All published assets will be licensed with a Creative Commons Attribution Share-Alike license.\nData Archiving and Publishing\nAny raw or potentially identifiable data will be preserved on NYU Box for a period of no less than three years. Code and supplemental artifacts that help generate the published data will be hosted on an Open Science Framework project.\nThe Data Team within NYU-TIES will manage and curate any published project or replication data for publications by depositing itted to a FAIRthe Dataverse repository listed in re3data.org, the Registry of Research Data Repositories. Data may be subject to an embargo, allowed up to one year after the end of this proposal’s period end. Details about methodology will be hosted on the shareable data’s respective repository in the metadata and documentation.\nData will be published with a custom license that protects the identities and wellbeing of the subjects. In situations where an open data license is suitable, data will be published using an open data license, like the Open Data Commons Attribution License. All concurrent metadata and documentation will be licensed with a Creative Commons Attribution or Attribution Share-Alike license. Destruction of the identifiable raw data will follow NYU’s Data Retention and Access Policy and other relevant policies."
+  },
+  {
+    "objectID": "curation/DMP.html#ties-shares-ownership-with-data-collector",
+    "href": "curation/DMP.html#ties-shares-ownership-with-data-collector",
+    "title": "Data Management Plans",
+    "section": "TIES shares ownership with data collector",
+    "text": "TIES shares ownership with data collector\n\nData Management Plan\nResearch Products\nThis data management plan outlines the expectations of data storing, sharing, dissemination, and archiving for any project that may use funds from this  proposal in coordination with , the data collector. Any project using funds from this proposal planning to collect data on human subjects must have IRB approval.\nInternal Data Sharing\nAll data will be retained for a period of no less than three years per NYU’s Data Retention and Access Policy. Copies of all data will be kept on NYU Box, which performs regular backups. To facilitate streamlined data pipelines, data may also be stored on a NYU Global TIES for Children (NYU-TIES) instance of the Open Science Framework (OSF), Github, or another version control capable repository host. NYU Box is password-protected and requires multiple levels of authentication. Any raw, identifiable data collected through a variety of methods (e.g., surveys, interview protocols, structured observations, administrative data, implementation data) will only be available to the research and data teams for quality assurance, processing, preliminary analysis, and anonymization.. Only anonymized data will be used for published or publicly presented analysis. Identifiable data used during the cleaning process will be encrypted in transit and at rest.\nCollaboration with Partners or Subcontractors\nData collection is to be handled by .  has their own IRB and a DMP that governs data collection and management. NYU-TIES will also submit its own IRB proposal adhering to the guidelines outlined herein for the receipt of any identifiable data. The partner must ensure that the data is encrypted at rest and in transit. The partner and NYU-TIES shall hold joint ownership of the ) data and derived datasets(?).\nAll subcontractors must have their own IRB and a DMP that governs data collection and management. NYU-TIES and  will maintain co-ownership over the data. At the end of the contract the subcontractor must agree to destroy the data in accordance to NYU-TIES and  policies. Ownership of and access to the derived data products created by the subcontractor shall be guided by the agreement between NYU-TIES and the partner and/or subcontractor.\nDissemination, Access, and Sharing of Unpublished Data\nAll shared data will be accompanied by data dictionaries, metadata that describe the content of the data. The data dictionaries will adhere to the Data Documentation Initiative (DDI) 2.5 or above standard to maximize long-term shareability. Deidentified data sharing prior to publication will be managed on a case-by-case basis, approved by the PI and Co-PI. Individuals wishing to acquire data in this manner must sign a data use agreement, authored by NYU-TIES, that includes a requirement to destroy copies of the data once the sharing agreement terminates. Raw, identifiable data will never be shared.\nData Archiving and Publishing\nAny raw or potentially identifiable data will be preserved on NYU Box for a period of no less than three years. Code and supplemental artifacts that help generate the published data will be hosted on an Open Science Framework project.\nThe Data Team within NYU-TIES will manage and curate any published project or replication data for publications by depositing it to a FAIR listed in re3data.org, the Registry of Research Data Repositories. Data may be subject to an embargo, allowed up to one year after the end of this proposal’s period end. Details about methodology will be hosted on the shareable data’s respective repository in the metadata and documentation.\nData will be published with a custom license that protects the identities and wellbeing of the subjects. In situations where an open data license is suitable, data will be published using an open data license, like the Open Data Commons Attribution License. All concurrent metadata and documentation will be licensed with a Creative Commons Attribution or Attribution Share-Alike license. Destruction of the identifiable raw data will follow NYU’s Data Retention and Access Policy and other relevant policies."
+  },
+  {
+    "objectID": "curation/DMP.html#ties-is-a-subcontractor-without-ownership",
+    "href": "curation/DMP.html#ties-is-a-subcontractor-without-ownership",
+    "title": "Data Management Plans",
+    "section": "TIES is a subcontractor without ownership",
+    "text": "TIES is a subcontractor without ownership\n\nData Management Plan\nResearch Products\nThis data management plan outlines the expectations of data storing, sharing, dissemination, and archiving for any project that may use funds from this  proposal in coordination with , the data owner. Any project using funds from this proposal planning to collect data on human subjects must have IRB approval. NYU-TIES is not responsible for the data quality of the data provided by .\nInternal Data Sharing\nAll data will be retained for the duration of the relationship between NYU-TIES and  according to the terms of data use agreement. Copies of all data will be kept on NYU Box, which performs regular backups. To facilitate streamlined data pipelines, data may also be stored on a NYU Global TIES for Children (NYU-TIES) instance of the Open Science Framework (OSF), Github, or another version control capable repository host. NYU Box is password-protected and requires multiple levels of authentication. If provided by the data owner, any raw, identifiable data collected through a variety of methods (e.g., surveys, interview protocols, structured observations, administrative data, implementation data) will only be available to the research and data teams for quality assurance, processing, and anonymization. Only anonymized data will be used for analytical uses according to the terms of the data use agreement with . Identifiable data used during the cleaning process will be encrypted in transit and at rest. Identifiable data used during the cleaning process will be encrypted in transit and at rest.\nCollaboration with Partners or Subcontractors\nData will be provided by .  has their own IRB and a DMP that governs data collection and management. NYU-TIES will also submit its own IRB proposal adhering to the guidelines outlined herein for the receipt of any identifiable data. The data owner must ensure that the data is encrypted at rest and in transit. NYU-TIES shall hold access rights to the data and derived datasets/data products in line with the agreement with .\nData Archiving and Publishing\nAt the end of the contract NYU-TIES agrees to destroy the provided data in accordance with NYU-TIES and  policies and data use agreement.\nThe Data Team within NYU-TIES will manage and curate any derived data products by depositing it to a FAIR listed in re3data.org, the Registry of Research Data Repositories, and according to the agreement with . A derived data product is a data product produced by manipulating the original dataset and may include new datasets, tables, graphics, analysis, and other products. These derived data products may be subject to an embargo, allowed up to one year after the end of this proposal’s period end. Details about methodology will be hosted on the repository in the metadata and documentation.\nDerived data products will be published according to the agreement with . Open data will be published under the Open Data Commons Attribution License. All concurrent metadata and documentation will be licensed with a Creative Commons Attribution or Attribution Share-Alike license."
+  },
+  {
+    "objectID": "curation/active_curation.html",
+    "href": "curation/active_curation.html",
+    "title": "Active Curation",
+    "section": "",
+    "text": "A main precept of the Global TIES for Children Data Team is to use, encourage, and build tools to institute active data curation. Active curation is the process where data and metadata are captured early in the research data lifecycle and then continuously refined until publication and, if needed, afterwards.\nActive curation was promoted by the Sustainable Environment/Actionable Data (SEAD) project that was sponsored as part of the U.S.A. National Science Foundation’s DataNet program. DataNet sought to build capabilities that would serve the data management and curation needs of individual researchers and small research teams in long tail science. The ultimate goal was to fix traditional approaches to data curation, which separated curation from the overall research lifecycle and led to post-hoc curation."
+  },
+  {
+    "objectID": "curation/active_curation.html#removing-the-risk-of-post-hoc-curation",
+    "href": "curation/active_curation.html#removing-the-risk-of-post-hoc-curation",
+    "title": "Active Curation",
+    "section": "Removing the risk of Post-hoc Curation",
+    "text": "Removing the risk of Post-hoc Curation\nActive curation removes the risk of post-hoc curation. Post-hoc curation is when data is generated and curated at the end of the lifecycle. More crudely it can be referred to as “upload & dump.” This process leads to poor labeling, unclear and insufficient metadata, and non-FAIR datasets. This is due to lag between collection, processing and archiving which leads to lost provenance, collection and processing protocol details being lost, and makes verification and replication impossible. Datasets that are curated post-hoc are more likely to only include data related to publication, limiting its reuse."
+  },
+  {
+    "objectID": "curation/active_curation.html#data-team-active-curation-processes-and-tools",
+    "href": "curation/active_curation.html#data-team-active-curation-processes-and-tools",
+    "title": "Active Curation",
+    "section": "Data Team active curation processes and tools",
+    "text": "Data Team active curation processes and tools\n\nData pipeline\n\nBlueprints and dictionaries\nID verification (anara)\nData collection wave harmonization (panelcleaner)\nIssue fixes\n\nCuration\n\nSelection and use of controlled vocabularies\nMetadata Curation Tool\nrddi"
+  },
+  {
+    "objectID": "curation/active_curation.html#quality-assurance-processes",
+    "href": "curation/active_curation.html#quality-assurance-processes",
+    "title": "Active Curation",
+    "section": "Quality Assurance processes",
+    "text": "Quality Assurance processes\n\nRubrics\nCodebooks"
+  },
+  {
+    "objectID": "curation/citation.html",
+    "href": "curation/citation.html",
+    "title": "Citation formats",
+    "section": "",
+    "text": "Both datasets and derived data products need to be citable and cited after archiving. TIES follows the DataCite citation format for datasets and the APA style guide for derived data products (communication materials, policy briefs, posters, presentations, academic articles, preprints, etc.)"
+  },
+  {
+    "objectID": "curation/citation.html#dataset",
+    "href": "curation/citation.html#dataset",
+    "title": "Citation formats",
+    "section": "Dataset",
+    "text": "Dataset\nWe use the DataCite format to cite datasets (https://datacite.org/cite-your-data.html). The basic citation format is as follows:\n\nCreator (PublicationYear). Title. Publisher. Identifier\n\nThere are also two optional properties. If used the citation format is:\n\nCreator (PublicationYear). Title. Version. Publisher. ResourceType. Identifier.\n\nThe APA style guide also has a dataset citation format:\n\nAuthor or Rightsholder, A. A. (Year). Title (Version Number) [Description of Form]. Publisher. Identifier or URL.\n\nThe Datacite format is preferable because it’s an open format and the DOI registration agency for datasets. There’s no differentiation between Publisher and Distributor in the citations. My preference is to include both in order to recognize the publishers (like Global TIES & IRC) and distributor (repository).\n\nCreators (Publication Year). Title. Publisher [Publisher]. Distributor [distributor]. Identifier."
+  },
+  {
+    "objectID": "curation/citation.html#academic-works",
+    "href": "curation/citation.html#academic-works",
+    "title": "Citation formats",
+    "section": "Academic works",
+    "text": "Academic works\nWe use APA citation style to cite articles, books, and preprints. The below cases are 6th edition.\n\nArticles\n\nLast Name, First Initial. Second Initial. (Year). Title. Journal, Volume(Issue), pages. DOI link.\n\n\n\nBook\n\nAuthor last name, First Initial. Second Initial. (Year). Book title: Subtitle. Publisher. URL\n\n\nAuthor last name, First Initial. Second Initial. (Ed.). (Year). Book title: Subtitle. Publisher. URL link\n\n\n\nBook chapter\n\nChapter Author’s Last Name, First Initial. Second Initial. (Year). Chapter title. In Editor First initial. Second Initial. Editor Last Name (Ed.). Book title: Subtitle (edition, Volume, pages). Publisher Name. identifier or url link.\n\n\n\nConference sessions, poster abstracts and poster presentations\n\nPresenter last name, First initial. Second initial (date of conference). Title of presentation or poster [type of work]. Conference title. Conference location. URL or identifier link.\n\n\n\nPreprint\n\nLast Name, First Initial. Second Initial. (Year). Title. Preprint repository. URL or DOI link."
+  },
+  {
+    "objectID": "curation/citation.html#research-instrument",
+    "href": "curation/citation.html#research-instrument",
+    "title": "Citation formats",
+    "section": "Research instrument",
+    "text": "Research instrument\nWe use APA citation style to cite research instrumentation (surveys, items, etc).\n\nAuthor last name, First initial., Second initial. (Year). Title [format of work]. URL or doi link."
+  },
+  {
+    "objectID": "curation/citation.html#derived-data-product",
+    "href": "curation/citation.html#derived-data-product",
+    "title": "Citation formats",
+    "section": "Derived data product",
+    "text": "Derived data product\nWe use APA citation style to cite derived data products, preferably hosted on figshare.\n\nVisual (video or photograph) or audio work\n\nCreator last name, First initial. Second Initial. (Year, Month Day). Title of work [Description of media, graph or table]. Source. URL or DOI link.\n\n\n\nPolicy Brief or report\n\nOrganization (Year, Month Day). Title of work Policy brief or report. Source. URL or DOI link."
+  },
+  {
+    "objectID": "curation/dataset_curation.html",
+    "href": "curation/dataset_curation.html",
+    "title": "Dataset Curation Standards",
+    "section": "",
+    "text": "The goal of the Data Team when archiving, sharing, and preserving data products (datasets and derived data products) is to reduce data uncertainty and serve specific designated communities including the source community. Datasets and derived data products are archived according to the Open Archival Information System (OAIS) and the FAIR standards of scientific data management. They are shared in a way that protects and respects TIES survey respondents.\nThe Data Team seeks to curate datasets actively. This involves building tools and processes to assist in capturing and refining metadata at the study and variable level as early as possible in the research data lifecycle.\nBelow are a list of general concepts followed by various standards for different kinds of datasets. The appendix has background material/definitions for common curation practices."
+  },
+  {
+    "objectID": "curation/dataset_curation.html#active-curation",
+    "href": "curation/dataset_curation.html#active-curation",
+    "title": "Dataset Curation Standards",
+    "section": "Active Curation",
+    "text": "Active Curation\nThe process of capturing and data and metadata early and refining it throughout the data life cycle.1"
+  },
+  {
+    "objectID": "curation/dataset_curation.html#data-uncertainty",
+    "href": "curation/dataset_curation.html#data-uncertainty",
+    "title": "Dataset Curation Standards",
+    "section": "Data Uncertainty",
+    "text": "Data Uncertainty\nThis is the degree to which data is inaccurate, imprecise, untrusted, or unknown. All complex systems have a degree of uncertainty inherent within them. Practically this means that when designing data products, efforts should be made to reduce or remove missingness and ensure that data products are properly described with metadata/documentation where applicable."
+  },
+  {
+    "objectID": "curation/dataset_curation.html#desginated-community",
+    "href": "curation/dataset_curation.html#desginated-community",
+    "title": "Dataset Curation Standards",
+    "section": "Desginated Community",
+    "text": "Desginated Community\nThis is the audience for a data product and can be an imagined group or persona. The term is borrowed from the Open Archival Information System (OAIS) Reference Model and defined as “an identified group of potential Consumers who should be able to understand a particular set of information.” Each designated community has its own Knowledge Base. The Knowledge Base of a DC can change over time to the point where the archive would need to update and enhance preserved information to make it understandable again for the DC."
+  },
+  {
+    "objectID": "curation/dataset_curation.html#conceptual-structure",
+    "href": "curation/dataset_curation.html#conceptual-structure",
+    "title": "Dataset Curation Standards",
+    "section": "Conceptual Structure",
+    "text": "Conceptual Structure\nThe conceptual structure of a dataset exists in the metadata and consists of controlled vocabularies that exist as permanent URLs. It defines the concepts that underlies the elements and variables and increases interoperability."
+  },
+  {
+    "objectID": "curation/fair.html",
+    "href": "curation/fair.html",
+    "title": "FAIR Standards",
+    "section": "",
+    "text": "These standards were published in 2016 by Mark Wilkinson in the journal Scientific Data1 and are considered the standard for scientific data assets and products. They can also be referred to as the FAIR Principles and are applied to data, metadata, and documentation.\nFAIR stands for Findable, Accessible, Interoperable, and Reusable. These standards are intended for both humans and machines and apply to both human-readable and machine-readable files.\n\nFindable\n\n(Meta)data are assigned globally unique and persistent identifiers\nData are described with rich metadata\nMetadata clearly and explicitly include the identifier of the data they describe\n(Meta)data are registered or indexed in a searchable resource\n\n\n\nAccessible\n\n(Meta)data are retrievable by their identifier using a standardized communication protocol\nThe protocol is open, free and universally implementable\nThe protocol allows for an authentication and authorisation where necessary\nMetadata should be accessible even when the data is no longer available\n\n\n\nInteroperable\n\n(Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation\n(Meta)data use vocabularies that follow the FAIR principles\n(Meta)data include qualified references to other (meta)data\n\n\n\nReusable\n\n(Meta)data are richly described with a plurality of accurate and relevant attributes\n(Meta)data are released with a clear and accessible data usage license\n(Meta)data are associated with detailed provenance\n(Meta)data meet domain-relevant community standards\n\n\n\n\nSee also\n\nCuration\nDiversity, Equity, Inclusion, and Accessibility in Data\nFAIR Principles list\n\n\n\n\n\n\nFootnotes\n\n\nhttps://doi.org/10.1038/sdata.2016.18↩︎"
+  },
+  {
+    "objectID": "curation/index.html",
+    "href": "curation/index.html",
+    "title": "Curation",
+    "section": "",
+    "text": "Active Curation\n\n\n\ncuration\n\n\n\n\n\n12/12/22, 4:35:38 PM\n\n\n\n\n\n\n\n\n\n\nCitation formats\n\n\n\ncuration\n\n\n\n\n\n12/12/22, 2:03:03 PM\n\n\n\n\n\n\n\n\n\n\nData Management Plans\n\n\n\nstandards\n\n\ncuration\n\n\ndmp\n\n\n\n\n\n12/12/22, 7:53:23 PM\n\n\n\n\n\n\n\n\n\n\nData Storage\n\n\n\npolicy\n\n\n\n\n\n12/12/22, 2:00:49 PM\n\n\n\n\n\n\n\n\n\n\nDataset Curation Standards\n\n\n\ncuration\n\n\nstandards\n\n\n\n\n\n12/12/22, 2:15:38 PM\n\n\n\n\n\n\n\n\n\n\nDataset Restrictions & Embargoes\n\n\n\nstandards\n\n\npolicy\n\n\n\n\n\n12/12/22, 3:37:12 PM\n\n\n\n\n\n\n\n\n\n\nDiversity, Equity, Inclusion, and Accessibility in Data\n\n\n\ncuration\n\n\nstandards\n\n\ndei\n\n\n\n\n\n12/10/22, 11:44:03 PM\n\n\n\n\n\n\n\n\n\n\nFAIR Standards\n\n\n\nstandards\n\n\n\n\n\n12/12/22, 4:33:06 PM\n\n\n\n\n\n\n\n\n\n\nSpreadsheet standards and practices\n\n\n\nstandards\n\n\n\n\n\n12/10/22, 10:28:19 PM\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "curation/restrictions_embargoes.html",
+    "href": "curation/restrictions_embargoes.html",
+    "title": "Dataset Restrictions & Embargoes",
+    "section": "",
+    "text": "Data and dataset restrictions and embargoes are access limitations placed on the data. This can be done for entire datasets or specific variables or variable groups. Restrictions and embargoes can also happen at different user levels, restricting access for different groups."
+  },
+  {
+    "objectID": "curation/restrictions_embargoes.html#definitions",
+    "href": "curation/restrictions_embargoes.html#definitions",
+    "title": "Dataset Restrictions & Embargoes",
+    "section": "Definitions",
+    "text": "Definitions\n\nVulnerability\nThe academic debate on vulnerability is complex and spans bioethics, law, philosophy, and other fields. We adapt Florencia Luna’s layer approach to vulnerability that rejects the view of vulnerability as a fixed attribute or label of an individual in favor of vulnerability as multiple layers constructed by status, time, and location. This allows for us to take a nuanced, intersectional approach for our data subjects that focuses on risk management and mitigation.\n\n\nRestriction\nA dataset, variable, or measure that is restricted from access with no time frame for release. There may be levels of restriction that allow access to certain groups.\n\n\nEmbargo\n\nA dataset, variable, or measure that is not available until a certain date."
+  },
+  {
+    "objectID": "curation/restrictions_embargoes.html#reasons-to-restrict-access",
+    "href": "curation/restrictions_embargoes.html#reasons-to-restrict-access",
+    "title": "Dataset Restrictions & Embargoes",
+    "section": "Reasons to restrict access",
+    "text": "Reasons to restrict access\nData may be restricted due to contractual/legal reasons including partner relationships represented in Data Use Agreements and consent forms, ethical responsibilities to protect vulnerable data subjects from re-identification attacks, because data collection is not complete, and/or to allow for analytical work to be completed."
+  },
+  {
+    "objectID": "curation/restrictions_embargoes.html#how-to-restrict-access",
+    "href": "curation/restrictions_embargoes.html#how-to-restrict-access",
+    "title": "Dataset Restrictions & Embargoes",
+    "section": "How to restrict access",
+    "text": "How to restrict access\nRaw data or internal data are always restricted. In the case of raw data that restriction is permanent and governed by the data use agreement and data management plan. Internal data is restricted, however, the PIs may set up an access application and contract to grant access after the data quality is deemed acceptable by the Data Team and PIs.\n\nComplete datasets\nDatasets may be published in an embargoed format in a repository. This may be necessary to fulfill funder or other agreements. In these cases, the repository and codebook metadata will outline the details of the embargo, including an end date. These datasets will also have completed metadata which will be licensed under an appropriate Creative Commons license.\nBelow is a sample DDI codeBook on how to embargo an entire dataset. We rely heavily on the dataAccs and useStmt elements and their child elements in the stdyDscr. It is also recommended to include the contact element and ,verStmt. elements in the citation branches. By setting the ID attributes in dataAccs elements we can link them directly to affected var and varGrp elements using the access attribute.\n<codeBook>\n  <stdyDscr>\n    <citation>\n      <titlStmt>\n        <titl>Sample codebook</titl>\n      </titlStmt>\n    </citation>\n    <dataAccs>\n      <setAvail>\n        <avlStatus ID=\"s_a_1\">This dataset is currently under embargo until YYYY-MM-DD.</avlStatus>\n        <complete ID=\"c1\">Due to embargo provisions, data values for some variables have been masked. Users should consult the data definition statements to see which variables are under embargo. A new version of the collection will be released after embargoes are lifted.</complete>\n        <notes>Insert other notes here</note>\n      </setAvail>\n      <useStmt>\n        <conditions>The dataset is embargoed. Potential users of this dataset are advised to contact the PI...<conditions>\n        <restrctn>For access or use restrictions. Specify types of users if use is restricted to or for those types.</restrctn>\n        <specPerm ID=\"sp1\" required=\"yes\" formNo=\"ABC123\" url = \"https://www.form.xyz/ABC123\">Users may apply to access this dataset before the embargo ends by filling out an access application and a confidentiality  agreement with Global TIES for Children</specPerm>\n      </useStmt>\n  </stdyDscr>\n\n\nPartial datasets\nDatasets may also be published but restrict or embargo individual or groups of variables. This may be desirable when publishing the data in an incomplete form could result in a public good. In these cases, the description of the variable need to be included in the codebook and documentation along with details of the restriction or embargo including the reasoning behind the restrictions. These restrictions or embargoes can be permanent or temporary depending on the reason.\nIn addition to the elements listed above, here it’s recommended to list the restrictions or embargoes on individual variables in the dataDscr and the reasoning behind them. Either the security and embargo elements should be used in var. In addition, the access attribute linking the var or varGrp to the appropriate elements in dataAccs should be used. This will allow us to reduce repetition, especially for useStmt child elements.\n<codeBook>\n  <stdyDscr>\n    <citation>\n      <titlStmt>\n        <titl>Sample codebook</titl>\n      </titlStmt>\n    </citation>\n    ...\n  </stdyDscr>\n  <dataDscr>\n    <var name=\"ABC1\" access=\"sp1\">\n      <labl>Restricted variable label</labl>\n      <qstn>Original question asked</qstn>\n      <anlysUnit>This variable describes identifiable information about the student</anlysUnit>\n      <universe>Individual 8 years old</universe>\n      <security date=\"YYYY-MM-DD\">This variable has been restricted to protect the identity of the subject</security>\n  </dataDscr>\n\n\nReplication / verification datasets\nFor these cases, data is implicitly restricted because the datasets are limited to the data and variables used in the study. Here, it is important to outline the process of how the data was filtered from the general dataset. This will avoid future data exclusion, where the study consists of less observations than the dataset as a whole with no explanation, in the main dataset when it’s published. This can be done using the codeBook/stdyDscr/dataAccs/setAvail/complete element to describe how a replication/verification dataset chose its subjects."
+  },
+  {
+    "objectID": "curation/restrictions_embargoes.html#processes-to-gain-access",
+    "href": "curation/restrictions_embargoes.html#processes-to-gain-access",
+    "title": "Dataset Restrictions & Embargoes",
+    "section": "Processes to gain access",
+    "text": "Processes to gain access\nAccess to restricted data may be granted in two forms.\n\nAccess application and acceptance of the dataset license\nAccess application and contract with Global TIES with Children including a confidentiality agreement and data use agreement."
+  },
+  {
+    "objectID": "curation/restrictions_embargoes.html#restrictions-and-fair-standards",
+    "href": "curation/restrictions_embargoes.html#restrictions-and-fair-standards",
+    "title": "Dataset Restrictions & Embargoes",
+    "section": "Restrictions and FAIR standards",
+    "text": "Restrictions and FAIR standards\nWhile it may seem that restricting or embargoing datasets goes against the “A” in FAIR, accessibility, it does not if done correctly. In FAIR, accessibility means that the process to access the dataset is published in an open licensed document and is included in the dataset. Limiting access through restrictions or embargoes can have positive benefits for the researchers, funders, and data subjects if done with thought and care."
+  },
+  {
+    "objectID": "curation/spreadsheets.html",
+    "href": "curation/spreadsheets.html",
+    "title": "Spreadsheet standards and practices",
+    "section": "",
+    "text": "This section goes over proper spreadsheet design and maintenance. Like datasets, spreadsheets should be designed to reduce data uncertainty ensuring that each spreadsheet is clear and concise. To accomplish this we rely on a few methods and tools."
+  },
+  {
+    "objectID": "curation/spreadsheets.html#uses",
+    "href": "curation/spreadsheets.html#uses",
+    "title": "Spreadsheet standards and practices",
+    "section": "Uses",
+    "text": "Uses\nSpreadsheets are used to hold data and metadata. They are not for transformations either through macros or formulas. Transformations and analysis occur within the data processing pipeline and other tools."
+  },
+  {
+    "objectID": "curation/spreadsheets.html#tidy-data",
+    "href": "curation/spreadsheets.html#tidy-data",
+    "title": "Spreadsheet standards and practices",
+    "section": "Tidy Data",
+    "text": "Tidy Data\nAll spreadsheets should follow the tidy data philosophy laid out by Hadley Wickham in the article “Tidy Data.” This paper and Tidy Data in general sets one row per observation with each variable or property in a column. Each row should have a unique persistent identifier (PID).\nIn addition to organizing spreadsheet data into a tidy format, to reduce data uncertainty and missingness in the spreadsheet, it is Data Team pracitce to use multiple smaller spreadsheets rather than wide spreadsheets that combine multiple universes and response units. In this way, we would keep teacher responses separate from student responses and classroom data separate from school data. Relationships between spreadsheets are designed using the PID as foreign keys, following an entity relationship model similar to a RDMS.\n\nTidy Data Spreadsheet/Table example\n\n\n\nID\nVariable1\nVaribale2\nVariable3\n\n\n\n\nobservation1\nvalue\nvalue\nvalue\n\n\nobservation2\nvalue\nvalue\nvalue\n\n\nobservation3\nvalue\nvalue\nvalue\n\n\n…\n…\n…\n…\n\n\n…\n…\n…\n…\n\n\n…\n…\n…\n…"
+  },
+  {
+    "objectID": "curation/spreadsheets.html#spreadsheet-file-type",
+    "href": "curation/spreadsheets.html#spreadsheet-file-type",
+    "title": "Spreadsheet standards and practices",
+    "section": "Spreadsheet file type",
+    "text": "Spreadsheet file type\nThe preferred file type for spreadsheets is .csv (comma separated value) or .tsv (tab separated value). These are platform and application neutral, open, and non-proprietary data formats making them suitable for archiving and preservation.\nOther file types like .xlsx (Microsoft Excel) are not used because they are proprietary and not human readable or usable in version control systems."
+  },
+  {
+    "objectID": "curation/spreadsheets.html#spreadsheet-applications",
+    "href": "curation/spreadsheets.html#spreadsheet-applications",
+    "title": "Spreadsheet standards and practices",
+    "section": "Spreadsheet applications",
+    "text": "Spreadsheet applications\n\nOpenOffice Calc: The preferred spreadsheet applicaiton of the Data Team due to it natively using Unicode\nMicrosoft Excel: Non-preferred application due to it being commercial proprietary software, not open source, and doesn’t natively support Unicode.\nGoogle Sheets: Not for data (not sure why but not for data)"
+  },
+  {
+    "objectID": "curation/spreadsheets.html#resources",
+    "href": "curation/spreadsheets.html#resources",
+    "title": "Spreadsheet standards and practices",
+    "section": "Resources",
+    "text": "Resources\n\nData Organization in Spreadsheets for Social Scientists from Data Carpentry"
+  },
+  {
+    "objectID": "curation/storage.html",
+    "href": "curation/storage.html",
+    "title": "Data Storage",
+    "section": "",
+    "text": "The Data Team manages all TIES data using Datalad, and all data are hosted at this GIN repository."
+  },
+  {
+    "objectID": "curation/storage.html#data-stages",
+    "href": "curation/storage.html#data-stages",
+    "title": "Data Storage",
+    "section": "Data stages",
+    "text": "Data stages\nThe Data Team adheres to the following guidance and timeline for different stages of data:\n\n\n\n\n\n\n\n\n\n\nStage\nDescription\nAvailability\nDe-identified / anonymized?\nArchive branch\n\n\n\n\nraw\nSource data from data collection.\nNever\nNo\nN/A\n\n\nnightly\nData under development that the Data Team believes may be ready for preliminary analysis by the research team. The Data Team expects to work iteratively with the research team to identify potential issues.\nNo later than one month after data collection wave.\nYes\nN/A\n\n\nrc\nStands for release candidate. Data and documentation that is replication-grade (fully ready for analysis).\nNo later than 6 months after collection wave.\nYes\nreleases/<project>/rc<version>.x\n\n\nreuse\nData and documentation that is ready for reuse and to be deposited in a data repository.\nNo later than one year after collection.\nYes\nreleases/<project>/v<version>.x\n\n\nexports\nReplication-grade data needed for specific analysis projects.\nAs needed\nYes\nexports/<export>/v<version>.x"
+  },
+  {
+    "objectID": "curation/storage.html#data-access",
+    "href": "curation/storage.html#data-access",
+    "title": "Data Storage",
+    "section": "Data access",
+    "text": "Data access\nThe Data Team follows the following guidance on data access if there is no explicit Data Use Agreement (DUA) in place:\n\n\n\n\n\n\n\n\nStage\nWho can access\nHow to get access if you don’t already have it\n\n\n\n\nraw\nData Team & PI(s)\nDisallowed completely\n\n\nnightly\nData Team & Research Team\nGenerally disallowed. Consult with PI(s) if you really need access to nightly data\n\n\nrc\nData Team & Research Team\nConsult with PIs\n\n\nreuse\nAll of TIES\nConsult with Data Team\n\n\nexports\nData Team & Requester\nCase-by-case basis. Consult with Data Team & Requester\n\n\n\nIf there is a DUA, please consult the guidance in the contract instead. The Data Team can help you identify the access you may be granted."
+  },
+  {
+    "objectID": "guides/index.html",
+    "href": "guides/index.html",
+    "title": "Guides",
+    "section": "",
+    "text": "Project Structure\n\n\n\nguide\n\n\n\n\n\n12/10/22, 4:57:36 PM\n\n\n\n\n\n\n\n\n\n\nR Style Guide\n\n\n\nguide\n\n\nr\n\n\n\n\n\n12/10/22, 4:23:45 PM\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "guides/projects.html",
+    "href": "guides/projects.html",
+    "title": "Project Structure",
+    "section": "",
+    "text": "The Data Team uses a variety of technologies, mainly in the R ecosystem, to create its data projects. Each project has a similar file structure to maintain consistency and replicability across projects:\nWhat’s important note from the outset is that data are not inside in these projects. Each project is versioned with git and hosted on TIES’ GitHub organization page. Most of our data are sensitive to some degree, so our operational practice is to load data directly via APIs or read from NYU Box.\nProject templates can be created with the internal tool dtproj."
+  },
+  {
+    "objectID": "guides/projects.html#blueprints",
+    "href": "guides/projects.html#blueprints",
+    "title": "Project Structure",
+    "section": "blueprints",
+    "text": "blueprints\nThe Data Team uses its blueprintr package to build, test, and document datasets. blueprintr is akin to dbt, but it is designed to manage a whole host of metadata, a necessary task for dissemination of project findings and data publication. Moreover, blueprintr operates without a connection to a data warehouse, given the assumptions of low connectivity and technical availability that the Data Team operates in.\nEach blueprint is a pair of two files:\n\nThe blueprint definition file: an R script with a single blueprint() command. This file details how to generate the desired dataset and optionally includes arbitrary metadata at dataset/table level.\nThe blueprint metadata file: a CSV file with, at minimum, the columns name, type, and description. This file enumerates the variable-level metadata.\n\nHere is an example blueprint definition file:\n\nblueprint(\n  \"ch_scales\",\n  description = \"Self-Regulation & Self-Regulated Learning\",\n  command =\n    .TARGET(\"verified_child_data\") %>%\n      select(\n        unique_id,\n        c_id_01,\n        starts_with(\"c_sr_\"),\n        starts_with(\"c_srl_\")\n      ) %>%\n      shorten_domain_prefixes() %>%\n      enumerator_regulation_score() %>%\n      basic_number_renaming() %>%\n      drop_underscore_in_vars(\n        c(\"sr\", \"srl\"),\n        \"^.*{var}_(\\\\d+)r?$\"\n      )\n)\n\nAnd here is an example metadata CSV for the same blueprint:\n\n\n\n \n  \n    name \n    type \n    title \n    description \n    coding \n    tests \n    scale \n    section \n  \n \n\n  \n    unique_id \n    character \n    Survey submission ID \n     \n     \n     \n     \n    IDs \n  \n  \n    cid_1 \n    character \n    Child ID \n     \n     \n    has_no_duplicates() \n     \n    IDs \n  \n  \n    csr4 \n    integer \n    csr4 \n    Some kids find it easy to sit still when they are bored\nBUT\nOther kids find it hard to sit still when they are bored\nAre you more like the kids that find it easy or hard? \n    coding(code(\"\"Really easy\"\", 3), code(\"\"Kind of easy\"\", 2), code(\"\"Kind of hard\"\", 1), code(\"\"Really hard\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulation \n    Child Self-Regulation \n  \n  \n    csr5 \n    integer \n    csr5 \n    Some kids find it easy to remember what they are supposed to do \nBUT \nOther kids find it hard to remember what they are supposed to do \nAre you more like the kids that find it easy or hard? \n    coding(code(\"\"Really easy\"\", 3), code(\"\"Kind of easy\"\", 2), code(\"\"Kind of hard\"\", 1), code(\"\"Really hard\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulation \n    Child Self-Regulation \n  \n  \n    csr8 \n    integer \n    csr8 \n    Some kids find it easy to obey rules\nBUT\nOther kids find it hard to obey rules\nAre you more like the kids that find it easy or hard? \n    coding(code(\"\"Really easy\"\", 3), code(\"\"Kind of easy\"\", 2), code(\"\"Kind of hard\"\", 1), code(\"\"Really hard\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulation \n    Child Self-Regulation \n  \n  \n    csr10 \n    integer \n    csr10 \n    Some kids find it easy to be careful\nBUT\nOther kids find it hard to be careful\nAre you more like the kids that find it easy or hard? \n    coding(code(\"\"Really easy\"\", 3), code(\"\"Kind of easy\"\", 2), code(\"\"Kind of hard\"\", 1), code(\"\"Really hard\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulation \n    Child Self-Regulation \n  \n  \n    csr12 \n    integer \n    csr12 \n    Some kids find it easy to think before they act\nBUT\nOther kids find it hard to think before they act\nAre you more like the kids that find it easy or hard? \n    coding(code(\"\"Really easy\"\", 3), code(\"\"Kind of easy\"\", 2), code(\"\"Kind of hard\"\", 1), code(\"\"Really hard\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulation \n    Child Self-Regulation \n  \n  \n    csr13 \n    integer \n    csr13 \n    Some kids find it easy to pay attention to their schoolwork\nBUT\nOther kids find it hard to pay attention to their schoolwork\nAre you more like the kids that find it easy or hard? \n    coding(code(\"\"Really easy\"\", 3), code(\"\"Kind of easy\"\", 2), code(\"\"Kind of hard\"\", 1), code(\"\"Really hard\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulation \n    Child Self-Regulation \n  \n  \n    csr15 \n    integer \n    csr15 \n    Some kids find it easy to focus on things that are important\nBUT\nOther kids find it hard to focus on things that are important\nAre you more like the kids that find it easy or hard? \n    coding(code(\"\"Really easy\"\", 3), code(\"\"Kind of easy\"\", 2), code(\"\"Kind of hard\"\", 1), code(\"\"Really hard\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulation \n    Child Self-Regulation \n  \n  \n    csr16 \n    integer \n    csr16 \n    Some kids find it easy to work on a project until they are finished\nBUT\nOther kids find it hard to work on a project until they are finished\nAre you more like the kids that find it easy or hard? \n    coding(code(\"\"Really easy\"\", 3), code(\"\"Kind of easy\"\", 2), code(\"\"Kind of hard\"\", 1), code(\"\"Really hard\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulation \n    Child Self-Regulation \n  \n  \n    csr17 \n    integer \n    csr17 \n    Some kids find it easy to concentrate on one thing for a long time\nBUT\nOther kids find it hard to concentrate on one thing for a long time\nAre you more like the kids that find it easy or hard? \n    coding(code(\"\"Really easy\"\", 3), code(\"\"Kind of easy\"\", 2), code(\"\"Kind of hard\"\", 1), code(\"\"Really hard\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulation \n    Child Self-Regulation \n  \n  \n    csr18 \n    integer \n    csr18 \n    Some kids find it easy to stay focused on their goals\nBUT\nOther kids find it hard to stay focused on their goals\nAre you more like the kids that find it easy or hard? \n    coding(code(\"\"Really easy\"\", 3), code(\"\"Kind of easy\"\", 2), code(\"\"Kind of hard\"\", 1), code(\"\"Really hard\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulation \n    Child Self-Regulation \n  \n  \n    csrl1 \n    integer \n    csrl1 \n    Some kids make sure no one disturbs them when they study at home. Would you say you are like them? [pause for response]. \nNow that you decided that you [ARE/ARE NOT] like them. [If Yes] Are you \"\"A lot\"\" or \"\"Kind of \"\" like them? [If No] Are you \"\"A little\"\" or \"\"Not at all \"\" like them? [pause for response] \n    coding(code(\"\"A lot like them\"\", 3), code(\"\"Kind of like them\"\", 2), code(\"\"A little like them\"\", 1), code(\"\"Not at all like them\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulated Learning \n    Child Self-Regulated Learning \n  \n  \n    csrl3 \n    integer \n    csrl3 \n    Some kids try to find a quiet place to study at home. Would you say you are like them? [pause for response]. \nNow that you decided that you [ARE/ARE NOT] like them. [If Yes] Are you \"\"A lot\"\" or \"\"Kind of \"\" like them? [If No] Are you \"\"A little\"\" or \"\"Not at all \"\" like them? [pause for response] \n    coding(code(\"\"A lot like them\"\", 3), code(\"\"Kind of like them\"\", 2), code(\"\"A little like them\"\", 1), code(\"\"Not at all like them\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulated Learning \n    Child Self-Regulated Learning \n  \n  \n    csrl4 \n    integer \n    csrl4 \n    Some kids ask their friends or family for help when they are struggling with their homework. Would you say you are like them? [pause for response]. \nNow that you decided that you [ARE/ARE NOT] like them. [If Yes] Are you \"\"A lot\"\" or \"\"Kind of \"\" like them? [If No] Are you \"\"A little\"\" or \"\"Not at all \"\" like them? [pause for response] \n    coding(code(\"\"A lot like them\"\", 3), code(\"\"Kind of like them\"\", 2), code(\"\"A little like them\"\", 1), code(\"\"Not at all like them\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulated Learning \n    Child Self-Regulated Learning \n  \n  \n    csrl10 \n    integer \n    csrl10 \n    Some kids encourage themselves or tell themselves \"\"you can do it\"\" when they are struggling with their homework. Would you say you are like them? [pause for response]. \nNow that you decided that you [ARE/ARE NOT] like them. [If Yes] Are you \"\"A lot\"\" or \"\"Kind of \"\" like them? [If No] Are you \"\"A little\"\" or \"\"Not at all \"\" like them? [pause for response] \n    coding(code(\"\"A lot like them\"\", 3), code(\"\"Kind of like them\"\", 2), code(\"\"A little like them\"\", 1), code(\"\"Not at all like them\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulated Learning \n    Child Self-Regulated Learning \n  \n  \n    csrl15 \n    integer \n    csrl15 \n    Some kids review the instructions before starting their homework. Would you say you are like them? \n    coding(code(\"\"A lot like them\"\", 3), code(\"\"Kind of like them\"\", 2), code(\"\"A little like them\"\", 1), code(\"\"Not at all like them\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulated Learning \n    Child Self-Regulated Learning \n  \n  \n    csrl16 \n    integer \n    csrl16 \n    Some kids try to calm down or take a deep breath when they are struggling with their homework. Would you say you are like them? \n    coding(code(\"\"A lot like them\"\", 3), code(\"\"Kind of like them\"\", 2), code(\"\"A little like them\"\", 1), code(\"\"Not at all like them\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulated Learning \n    Child Self-Regulated Learning \n  \n  \n    csrl17 \n    integer \n    csrl17 \n    Some kids try to \"\"take their time\"\" and do their homework with patience. Would you say you are like them? \n    coding(code(\"\"A lot like them\"\", 3), code(\"\"Kind of like them\"\", 2), code(\"\"A little like them\"\", 1), code(\"\"Not at all like them\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulated Learning \n    Child Self-Regulated Learning \n  \n  \n    csrl18 \n    integer \n    csrl18 \n    Some kids take little breaks when working on challenging homework. Would you say you are like them? \n    coding(code(\"\"A lot like them\"\", 3), code(\"\"Kind of like them\"\", 2), code(\"\"A little like them\"\", 1), code(\"\"Not at all like them\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulated Learning \n    Child Self-Regulated Learning \n  \n  \n    csrl19 \n    integer \n    csrl19 \n    Some kids gather their notebooks or any materials they need before they start their homework. Would you say you are like them? \n    coding(code(\"\"A lot like them\"\", 3), code(\"\"Kind of like them\"\", 2), code(\"\"A little like them\"\", 1), code(\"\"Not at all like them\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulated Learning \n    Child Self-Regulated Learning \n  \n  \n    csrl20 \n    integer \n    csrl20 \n    Some kids look for information in their notes, videos, books, internet or exercises when they are struggling with their homework. Would you say you are like them? \n    coding(code(\"\"A lot like them\"\", 3), code(\"\"Kind of like them\"\", 2), code(\"\"A little like them\"\", 1), code(\"\"Not at all like them\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulated Learning \n    Child Self-Regulated Learning \n  \n  \n    csrl21 \n    integer \n    csrl21 \n    Some kids prepare for an exam by reviewing their notes or making study materials. Would you say you are like them? \n    coding(code(\"\"A lot like them\"\", 3), code(\"\"Kind of like them\"\", 2), code(\"\"A little like them\"\", 1), code(\"\"Not at all like them\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulated Learning \n    Child Self-Regulated Learning \n  \n  \n    csrl24 \n    integer \n    csrl24 \n    Some kids look to see how hard their homework is before deciding whether they will work on their homework or do something fun. Would you say you are like them? \n    coding(code(\"\"A lot like them\"\", 3), code(\"\"Kind of like them\"\", 2), code(\"\"A little like them\"\", 1), code(\"\"Not at all like them\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulated Learning \n    Child Self-Regulated Learning \n  \n  \n    csrl22 \n    integer \n    csrl22 \n    Some kids prepare for an exam by doing practice tests to see where they are having trouble. Would you say you are like them? \n    coding(code(\"\"A lot like them\"\", 3), code(\"\"Kind of like them\"\", 2), code(\"\"A little like them\"\", 1), code(\"\"Not at all like them\"\", 0)) \n    in_set(c(0:3, NA)) \n    Child Self-Regulated Learning \n    Child Self-Regulated Learning \n  \n\n\n\n\nThese metadata CSVs have three required fields:\n\nname: The variable name\ntype: The variable type (usually “character”, “integer”, “double”, or “logical”)\ndescription: Description of the variable content. If the dataset corresponds to a survey, this is usually the question wording in English.\n\nThere are often other columns:\n\ncoding: If the variable is categorical, this contains the label-value mapping for the variable, written with rcoder syntax.\ntests: Any content tests on the data\nscale: If the variable belongs to a psychometric scale, the name of the scale. This is used for identifying variable groups for psychometric descriptive statistics.\ntitle: A shorter description for the variable, used as a variable label when exported to Stata\nsection: Codebook section; if no section is assigned, the codebook will place the variable into the “Other” section\nsection_description: Description for the section. Useful for providing extra context for the codebook section.\ngroup: Codebook subsection / variable group. Useful to have for combining a collection of variables together e.g. a scale\ngroup_description: Description for the variable group. Useful for adding an introductory statement asked before each question in the group."
+  },
+  {
+    "objectID": "guides/projects.html#codebooks",
+    "href": "guides/projects.html#codebooks",
+    "title": "Project Structure",
+    "section": "codebooks",
+    "text": "codebooks\n“Codebooks” are essentially data dictionaries, targeted for social science research. They commonly include enumerations of variables in a dataset, as well as their descriptions and (when applicable) categorical codings. Some codebooks also include methodology descriptions and other descriptive statistics of the data.\nThe codebooks folder contains HTML codebook exports of selected blueprints, as indicated by the presence of blueprintr::bp_export_codebook() in the blueprint definition file:\n\nblueprint(\n  \"ch_scales\",\n  description = \"Self-Regulation & Self-Regulated Learning\",\n  command =\n    some_command()\n) |>\n  bp_export_codebook()\n\nUnless otherwise agreed upon, these codebooks are for internal purposes only. They are mainly present to support TIES’ members in their research."
+  },
+  {
+    "objectID": "guides/projects.html#config",
+    "href": "guides/projects.html#config",
+    "title": "Project Structure",
+    "section": "config",
+    "text": "config\nThe config folder has two main R files:\n\nenvironment.R\npackages.R\n\nOther project-specific files, like YAML configuration, may be stored in this folder.\n\nenvironment.R\nSensitive information necessary for pipeline function, like API keys and passwords, must be stored as environment variables and never checked into version control. Environment variables are generally stored in a personal .Renviron file, but it is our practice to load them into global variables at the start of the pipeline to avoid unnecessary calls to Sys.getenv().\nHere is an example environment.R:\n\nBOX_PATH <- Sys.getenv(\"BOX_PATH\", unset = NULL)\nF_RUN_TESTS <- as.logical(Sys.getenv(\"F_RUN_TESTS\", unset = \"FALSE\"))\nF_NIGHTLY <- as.logical(Sys.getenv(\"F_NIGHTLY\", unset = \"FALSE\"))\n\nCACHE_PASSPHRASE <- Sys.getenv(\"CACHE_PASSPHRASE\", unset = NULL)\n\n\n\npackages.R\nThis file serves two purposes:\n\nCapture soft dependencies in the project code (i.e. packages that are required but not directly referred to in the code)\nAttach packages via library() to make those packages’ exported functions available across the entire pipeline\n\nOur project structure uses renv to manage the specific versions of packages employed in our pipeline to improve replicability. renv is able to capture these dependencies via code inspection; however sometimes a soft dependency (one that is not explicitly stated in the code) can occur e.g. a package depends on another for some plotting routine. To capture these dependecies, we place a reference to one of the package’s functions in packages.R so that renv can treat that package as a hard dependency.\nUse of library() should be restricted to packages that are used extensively. As stated in @ref(rstyle-funcs-package-deps), it is preferred to use package::func() syntax in function writing; moreover, it is preferred the same style throughout most of the pipeline definition as well for clarity and long-term maintenance.\nExample of packages.R:\n\n# Retain suggested packages in renv\nlabelled::to_labelled\nkableExtra::kable_as_image\nstyler::style_dir # Format-on-save capability in VSCode\nlanguageserver::run # Necessary for VSCode to work in renv projects\n\n# Attach packages used in the entire pipeline here\nlibrary(targets)\nlibrary(tarchetypes)\nlibrary(tidytable)\nlibrary(blueprintr)\nlibrary(rcoder)"
+  },
+  {
+    "objectID": "guides/styling-r.html",
+    "href": "guides/styling-r.html",
+    "title": "R Style Guide",
+    "section": "",
+    "text": "We use the Tidyverse Style Guide as a base for our style guide. Any deviations or elaborations are described here.\nAs recommended in the Tidyverse Style Guide, you are encouraged to use {styler} to autoformat your code. {lintr}, which comes with our Visual Studio Code profile, checks your syntax as you type and provides hints to ensure your code adheres to the style guide."
+  },
+  {
+    "objectID": "guides/styling-r.html#syntax",
+    "href": "guides/styling-r.html#syntax",
+    "title": "R Style Guide",
+    "section": "Syntax",
+    "text": "Syntax\n\nObject names\nAdhere to snake_case names for variables. Use concise yet informative names – this can be difficult! While dots are common in base R names (see is.na()), please refrain from using dot.case since dots do have syntactic meaning by defining S3 generic methods.\n# Good\nfamily_name\nworker\n\n# Bad\nfileName\nlong.variable.with.dots\n\n# Chaos\nMixed_Case_With_Underscores\nABSOLUTELY.NOT\nFor global constants or variables referring to environment variables, use UPPER_CASE_SNAKE_CASE. This is to signify that these variables are not to be modified at runtime. You can create “locked bindings”, but this naming style immediately conveys the intention.\nALLOW_EXPORTS <- Sys.getenv(\"ALLOW_EXPORTS\")\n\n\nControl flow\n\nIf statements\nWhen checking the truthiness of a variable in the if condition, be sure to wrap it in isTRUE() – especially if the variable is provided by the user. For example:\nsome_func <- function(x, cond = FALSE) {\n  if (isTRUE(cond)) {\n    # ... Do something ...\n  }\n}\n\nsome_func(1:5, cond = NULL)\nIf isTRUE() were omitted in favor of if (cond) {...}, then this would cause an error since NULL is technically a length-0 object in R. The condition to if must be length-1; isTRUE() ensures that requirement.\n\n\n\nPipes\nIn general, prefer the base R pipe introduced in R 4.0: |>. If you use the “Fira Code” typeface, you can take advantage of its font ligatures that visually combine the individual | and > symbols into a right arrow."
+  },
+  {
+    "objectID": "guides/styling-r.html#rstyle-funcs",
+    "href": "guides/styling-r.html#rstyle-funcs",
+    "title": "R Style Guide",
+    "section": "Functions",
+    "text": "Functions\n\nDependencies on other packages\nUse the package::func() qualified call styling for referring to functions from other packages, unless it is cumbersome to do so (e.g. the pipe %>% from magrittr would have to be referred to as magrittr::`%>%`(), which defeats the purpose of using the pipe). This makes it easier for long-term maintenance since the package dependency is explicitly stated.\n# Good\nclean_some_data <- function(dat) {\n  dat |> \n    tidytable::mutate.(var = sum(x)) # mutate.() is known to be from tidytable\n}\n\n# Bad\nclean_some_data <- function(dat) {\n  dat |> \n    mutate.(var = sum(x)) # mutate.() could be from anywhere!\n}"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Team Handbook",
+    "section": "",
+    "text": "This is a website that documents the work and process of the TIES Data Team.\nOur mission is to develop open-science tooling for providing archival quality data products and capacity to research team members and external stakeholders with integrity and in a timely fashion.\n\n\n\nRead our statement of purpose\nSee our list of members\nTake a look at our sections below\nClick the search icon in the top-right to look for a specific topic\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\nThis website is (and will always be) free to use, and is licensed under the Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) License."
+  },
+  {
+    "objectID": "team/index.html",
+    "href": "team/index.html",
+    "title": "Team",
+    "section": "",
+    "text": "Data Team Purpose\n\n\n\n\n12/12/22, 12:48:50 PM\n\n\n\n\n\n\n\n\n\n\nData Team Structure\n\n\n\n\n12/12/22, 12:47:45 PM\n\n\n\n\n\n\n\n\n\n\nData Team Workflow\n\n\n\n\n12/12/22, 12:20:04 PM\n\n\n\n\n\n\n\n\n\n\nOther Data Team Services\n\n\n\n\n12/12/22, 12:49:52 PM\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "team/other_services.html",
+    "href": "team/other_services.html",
+    "title": "Other Data Team Services",
+    "section": "",
+    "text": "To generate documentation and reports, the Data Team uses literate programming, a programming philosophy that interweaves (or knits) together a markup language with a programming language in order to generate human readable documents. These documents can include codebooks, dataset documentation, or reports.\n\n\n\n\n\n\nNote\n\n\n\nIn order to generate the documentation, the information needed for the report has to be provided by the PIs or requester in a structured format e.g. a YAML file, JSON file, or a set of tables.\n\n\n\n\nR Markdown files are native to RStudio1 and use a notebook interface to weave together natural language, markup language, and code. Notebook is a document with programmatic chunks that can be executive independently of the generated document. Jupyter notebook is another notebook format, more typically used with Python and in data science.\nPosit2 provides a cheat sheet3 for R Markdown. Other useful packages include {bookdown}4, {kableExtra}5 (for tables), and {flextable}6 (for tables).\n\n\n\nTo create static documents we rely on three markup languages.\n\nmarkdown: Lightweight markup language to add formatting to natural language data. Can be used in multiple output formats (word docs, pdf, web pages, presentations, etc.There’s also various flavors of markdown including Github and Trello. Cheat sheet: https://www.markdownguide.org/cheat-sheet/\nHyperText Markup Language (HTML): Used to structure a web page and its content. Consists of elements that can enclose, wrap, or format natural langauge data or other values. To set a uniform format for documents, the Data Team can use Cascading Style Sheets (CSS). Cheat sheet: https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf\nLaTeX: Document preparation system used for the communication and publication of scientific documents. Outputs pdf and allows for more intricate formatting, especially of scientific/mathematical formulas. LaTeX is more complex than markdown and HTML, allowing for more intricate customization, including custom macros. A file called preface.tex can be used to uniformly format documents. An example from the Urban Institute can be found in this Github repository. Overleaf is an online LaTeX editor that can be used for collaborative writing."
+  },
+  {
+    "objectID": "team/other_services.html#research-impact",
+    "href": "team/other_services.html#research-impact",
+    "title": "Other Data Team Services",
+    "section": "Research Impact",
+    "text": "Research Impact\nThe impact of a dataset, publication, or author can be measured using a variety of metrics including the H-Index, times, cited, journal impact factor, or social media and internet reach. This is called bibliometrics or sciencometrics. Nontraditional impact metrics are known as altmetrics. The Data Team can help you measure and track the impact of your research, data, or other derived data products on their own or against other benchmarks, usually a bibliographic corpus around a theme or academic field.\nCaveat\nImpact is determined by the data source. Don’t be surprised if your H-Index changes depending on the corpus of research documents/database being used. Also, there are various ways of hacking the below basic terms, especially H-Index so always take research impact metrics with a grain of salt.\nIt’s also important to note that every academic work has a half life (the period in which it reaches half of its reach) and velocity, the speed at which it gets to its half life and full reach. Once an article reaches its full reach, it can become obsolete. The period to reach this point though has been growing due to the ease of access in online databases.\n\nBibliometric Terms\n\nH-Index: an author metric that matches the most times an article has been cited and the number of articles an author has published. There’s a slew of adaptations to the H-Index as well as Google Scholar’s I10 Index (the number of articles cited 10 times).\nTimes cited: the number of times an article has been cited by other peer reviewed articles within a database\nJournal Impact Factor: ratio between the number of times articles in a journal has been cited and the number of citable articles.\nImmediacy index: the average number of times a journal article was cited in the year it was published.\n\n\n\nAltmetrics\nAltmetrics are alternative metrics that measure an article’s non-academic impact in social media, the news, Wikipedia, public policy, teaching, etc. They’re viewed as being complimentary to bibliometrics.\nCommon altmetrics used:\n\nAltmetric Attention score: The Altmetric score is a score that weights the different kinds of non-academic mentions an article received. A list of the sources is at https://www.altmetric.com/about-our-data/our-sources/. This score is generated by the Altmetric.com, a subsidiary of Digital Science.\nMendeley readers: Mendeley is a social bookmarking site and citation manager for academic articles. They track the number of saves on the site as Mendeley Readers. From the user provided information they then provide metrics on their readers that have saved a specific article. Mendeley readers has been shown to have some predictive power as to the impact of an article."
+  },
+  {
+    "objectID": "team/other_services.html#data-visualization",
+    "href": "team/other_services.html#data-visualization",
+    "title": "Other Data Team Services",
+    "section": "Data Visualization",
+    "text": "Data Visualization\nData visualizations, the practice of using charts, graphs and plots to transmit information about data, is one of the services that the Data Team can provide to TIES staff.\nData visualization allows staff to use visual storytelling, making complex analytic and informational points about a dataset in an easier more accessible format. Unlike text, visualizations clearer and more direct points about a data.\nTypically, the data team will build visualizations using the R package ggplot2.\n\nTypes of data visualization\nBelow are the four general types of data visualizations.\n\nComparative: Compares two different sets of data (either two different datasets, two subsets of the dame datasets, or even two different research questions)\nCompositional: Describes parts of a whole in a dataset\nDistributional: Shows all possible values of a dataset and where and how they occur in an instance space\nRelational: How variables in a dataset influence one another\n\n\n\nParts of a data visualizaiton\nBesides the visualization itself, a data visualization can have any of the below aspects. Each aspect gives the viewer information on the data that the visualization is representing.\n\naxis\ntitle/subtitle\nlegend\nlabels\nnotes\n\n\n\nTypes of visualizations\nFor examples of visualizations that the Data Team can build see https://www.data-to-viz.com/."
+  },
+  {
+    "objectID": "team/other_services.html#dashboards",
+    "href": "team/other_services.html#dashboards",
+    "title": "Other Data Team Services",
+    "section": "Dashboards",
+    "text": "Dashboards\nDashboards are a collection of visualizations typically used for business intelligence analytics. They use visualizations, legends, drop down menus, number and timelines and other graphics as filters for the entire dashboard. This allows the user to explore metrics or KPIs within a dataset.\nDashboards also usually allow the user to join datasets from different sources, using joins from SQL/RDMS to merge them together. This allows the dashboard designer to find new actionable insights.\n\nDashboard Applications\n\nGoogle Data Studio\nTableau\nMicrosoft Power BI\n\nThe Data Team will usually use Google Data Studio to build a dashboard because it’s free to use and incorporates the same privacy features and capabilities as the Google Platform."
+  },
+  {
+    "objectID": "team/purpose.html",
+    "href": "team/purpose.html",
+    "title": "Data Team Purpose",
+    "section": "",
+    "text": "Modern research projects are vast and complex, incorporating many partner, funder, and publisher requirements. The Data Team works to fill the information gap at TIES to develop and use data products for internal and external teams."
+  },
+  {
+    "objectID": "team/purpose.html#rationale",
+    "href": "team/purpose.html#rationale",
+    "title": "Data Team Purpose",
+    "section": "Rationale",
+    "text": "Rationale\nThe Data Team responds to two major needs:\n\nThe need for timely and accurate datasets that meet FAIR standards and allow for replication and reuse.\nThe need for deliberate engagement with emerging open science and data security principles and practices\n\nThe Data Team presents an opportunity to meet these needs via innovation through application of new technologies, software, and methods (e.g. machine learning). More and more publishers are requiring datasets for publication that require these needs. Datasets will follow a “TIES” standard and format that allow them to be recognized as a TIES public good. We aim to advance the development and practice of these standards in the EiE realm."
+  },
+  {
+    "objectID": "team/purpose.html#research-lifecycle-buckets",
+    "href": "team/purpose.html#research-lifecycle-buckets",
+    "title": "Data Team Purpose",
+    "section": "Research Lifecycle Buckets",
+    "text": "Research Lifecycle Buckets\nThe Data Team answers these needs by thoroughly integrated into the research lifecycle. We offer a handful of services for research teams to meet these needs:\n\nPre- and post-award support: Draft, review, and provide feedback on data use agreements, IP terms, and data sharing provisions in contracts\nData collection support: Consult with research teams on KoBo/data collection software programming to reduce manual entry errors, provide guidance on nightly checks, etc.\nDataset production for internal use: Data harmonization, verification, and production of datasets within:\n\n1 month for nightly data for preliminary analysis\n3 months for analysis data for publishable analyses\n\nBasic descriptive analyses and reports: Production of descriptive reports (e.g., item and scale descriptives, data visualizations) that can be used internally and shared with partners; can link to psychometric report packages\nActive data curation:\n\nProduction and dissemination of datasets that meet replication and reuse standards and adhere to FAIR standards\nPromotes cross-Center coherence in our internally- and externally-shared data\n\nInternal capacity strengthening:\n\nCentralized information management with off-the-shelf or custom tooling, including the Item Bank for cross-project investigation\nWorkshops and targeted support on R, Git, data dashboards, citation metrics, etc.\n\nExternal capacity strengthening: Modules on data standards and database basics\nInnovation iteration: Application of data science principles and technologies to research team problem\nResearch impact: Creating and adapting analytic, predictive modeling, and data visualization tools to measure the impact of TIES publications, datasets, reports and etc in comparison to academic field and SDG benchmarks"
+  },
+  {
+    "objectID": "team/structure.html",
+    "href": "team/structure.html",
+    "title": "Data Team Structure",
+    "section": "",
+    "text": "The Data Team is a central component of NYU Global TIES for Children, reporting to the Executive Team. It is composed of Core and Advisory members:\n\n\n\n\n\n\n\nCore\nAdvisory\n\n\n\n\nPatrick Anker: Team lead, Infrastructure\nCarly Tubbs Dolan: Deputy Director, Budget advisor\n\n\nHillary Gao: Data processing, software engineering\nHa Yeon Kim: Sr. Research Scientist, Technical advisor\n\n\nDan Woulfin: Data archival & sharing, information management & analysis\n\n\n\n\nCore members are usually Data Associates, responsible for the day-to-day tasks.\nAdvisory members guide the Data Team in their priorities given the needs of other research teams and provide outlook support for the data team roadmap."
+  },
+  {
+    "objectID": "team/workflow.html",
+    "href": "team/workflow.html",
+    "title": "Data Team Workflow",
+    "section": "",
+    "text": "Working with data is an iterative task. Often, we don’t have a full understanding of what data we have — even if we spend months working on creating seamless data ingest and processing schemes. Unlike the world of data science, where data collection is done by the minute with well-understood and limited data sources in a centralized database, most of our work comes down to including new data sources that have potentially many errors — random or structural. Delivering a polished dataset to researchers is the ultimate goal, but it can take literal years to achieve that goal."
+  },
+  {
+    "objectID": "team/workflow.html#agile-and-nightlies",
+    "href": "team/workflow.html#agile-and-nightlies",
+    "title": "Data Team Workflow",
+    "section": "Agile and Nightlies",
+    "text": "Agile and Nightlies\nWe adopt a style of the Agile method, an iterative project management style that attempts to deliver smaller bits of completed work in set amounts of time to end users.\nFor a data team in a research group, our goal is to quickly — without sacrificing quality — turn around data to the research teams. Prioritizing finishing all of the data to the acceptable level that we want before handing off to the research team is not feasible. Instead we will adopt a system of nightly builds that the researchers can experiment with and develop their analysis routines, understanding that the data is not in a totally polished state. The nightlies will incorporate work completed during our sprints."
+  },
+  {
+    "objectID": "team/workflow.html#sprints",
+    "href": "team/workflow.html#sprints",
+    "title": "Data Team Workflow",
+    "section": "Sprints",
+    "text": "Sprints\nSprints are two-week (10 business day) iterations consisting of an agreed-upon task list. During a sprint, we will only work on the queue of tasks from that list, the “Ready” tasks. If new work has been identified, Team members will add their tasks to the Backlog. The Team Lead will sequence these tasks given the Team’s OKRs, roadmap, and task point workload toward the end of the sprint. On the last day of the sprint, we will conduct a retrospective and talk about any issues that may have cropped up (tasks too complicated, tasks not in scope) and problem solve: refactor any work that may not be relevant, re-sequence tasks that may have fallen behind, etc. After that, we will agree upon the next queue of tasks and start the next sprint. We’ll follow this schedule:\n\nSprint schedule\n\nTuesday, week 1 (Day 1): Start sprint\nMonday, week 2 (Day 5): Data Team Meeting to sync with Advisory members\nTuesday, week 2 (Day 6): Last day to request a review on a Pull Request (if required)\nThursday, week 2 (Day 8): Last day to add new tasks to the Backlog\nFriday, week 2 (Day 9): Team Lead amends sequence for next sprint\nMonday, week 3 (Day 10): Last day to merge PRs. End of Sprint DTM — retrospective and plan for next\n\nTo limit distractions, the view of the Asana board will be limited to the tasks sequenced for the current sprint, except on the End of Sprint DTM."
+  },
+  {
+    "objectID": "team/workflow.html#task-pointing",
+    "href": "team/workflow.html#task-pointing",
+    "title": "Data Team Workflow",
+    "section": "Task Pointing",
+    "text": "Task Pointing\nEstimating time for a task is non-trivial and usually wrong, especially with code and raw data involved. Instead of that, tasks can be scored by the amount of perceived effort: what are the task requirements (if they are all known), what dependencies does the task have, how much interaction with people external to the Data Team is there, etc. We’ll refer to the GitLab Data Team Handbook for a point reference system:\n\n1 point: The simplest possible change including documentation changes. We are confident there will be no side effects.\n2 points: A simple change (minimal code changes), where we understand all of the requirements.\n3 points: A typical change, with understood requirements but some complicating factors\n5 points: A more complex change. Requirements are probably understood or there might be dependencies outside the Data Team.\n8 points: A complex change, that will involve much of the codebase or will require lots of input from others to determine the requirements.\n13 points: A significant change that has dependencies and we likely still don’t understand all of the requirements. It’s unlikely we would commit to this in a sprint, and the preference would be to further clarify requirements and/or break into smaller Issues.\n\nYou can see that the point systems are not linear. Indeed, they are Fibonacci numbers, which scale exponentially. The idea is that more complicated efforts are so much harder to estimate work than easier tasks, and while people try to estimate linearly, that typically fails.\nThat being said, as we’re starting to adopt this system, you can roughly assign these time estimates to the point system:\n\nA 1- to 2-point task takes about 3 - 4 hours of dedicated work\nA 13-point task takes at least 4 business days (32 hours) of dedicated work"
+  },
+  {
+    "objectID": "team/workflow.html#sequencing",
+    "href": "team/workflow.html#sequencing",
+    "title": "Data Team Workflow",
+    "section": "Sequencing",
+    "text": "Sequencing\nA task will be officially sequenced once it has a value in the “Sprint” field. The sprint names follow baseball hitter ordering:\n\nAt bat: The current sprint\nOn deck: The next sprint (two weeks out)\nIn the hole: The sprint four weeks out\nCleaning up: The sprint six weeks out\n\nPlanning this far ahead is enabled through the Task Point system. Each sprint will have a total sum of task points. The average number of points we complete in a sprint is called our velocity. As the use of the Task Point system improves, the ability to plan further out will be more accurate as our velocity will be well-defined."
+  },
+  {
+    "objectID": "team/workflow.html#prioritization",
+    "href": "team/workflow.html#prioritization",
+    "title": "Data Team Workflow",
+    "section": "Prioritization",
+    "text": "Prioritization\nAlong with workload scored with Task Points, prioritization will be achieved through the “Prioritization” field which should encapsulate the type of work priority:\n\nOps: Immediately needed fixes or requests in the realm of operations e.g. potential security issues, incorrectly working data needed for research with near deadline, broken data pipelines, buggy software in production, etc.\nOKRs: Work associated with Data Team quarterly or yearly goals\nPD: Work that is aimed at professional development, a new goal in AY2022\nOther: Anything else, e.g. dealing with technical debt, non-goal-focused documentation, etc.\n\nThe board should be sorted by “Prioritization” to ensure that the highest priority tasks are ordered first at the top of the boards."
+  }
+]

@@ -1,0 +1,161 @@
+---
+title: Project Structure
+categories: [guide]
+---
+
+<!--:guide:r:-->
+
+The Data Team uses a variety of technologies, mainly in the R ecosystem, to create its data projects. Each project has a similar file structure to maintain consistency and replicability across projects:
+
+```
+.github/         # All Github configuration [optional]
+  workflows/     # All CI workflow definition files [optional]
+blueprints/      # Contains all "blueprints" of datasets
+codebooks/       # Contains exported codebooks of select datasets, depending on blueprint definition
+config/
+  environment.R  # Definitions of all environment variables used in this project
+  packages.R     # Any `library()` for packages to be available across the project
+R/               # All definitions for custom functions employed in the pipeline
+.Rprofile        # Supplemental file that primarily sets up `renv`
+_targets.R       # The main workflow orchestration definition file
+renv.lock        # Package dependency state capture file for `renv`
+```
+
+What's important note from the outset is that **data are not inside in these projects**. Each project is versioned with [git](https://git-scm.org) and hosted on [TIES' GitHub organization page](https://github.com/nyuglobalties). Most of our data are sensitive to some degree, so our operational practice is to load data directly via APIs or read from [NYU Box](https://nyu.app.box.com).
+
+Project templates can be created with the internal tool [dtproj](https://github.com/nyuglobalties/dtproj).
+
+## `blueprints`
+
+The Data Team uses its [`blueprintr`](https://nyuglobalties.github.io/blueprintr) package to build, test, and document datasets. `blueprintr` is akin to [dbt](https://getdbt.com), but it is designed to manage a whole host of metadata, a necessary task for dissemination of project findings and data publication. Moreover, `blueprintr` operates without a connection to a data warehouse, given the assumptions of low connectivity and technical availability that the Data Team operates in.
+
+Each **blueprint** is a pair of two files:
+
+1. **The blueprint definition file**: an R script with a single `blueprint()` command. This file details how to generate the desired dataset and optionally includes arbitrary metadata at dataset/table level.
+1. **The blueprint metadata file**: a CSV file with, at minimum, the columns `name`, `type`, and `description`. This file enumerates the variable-level metadata.
+
+Here is an example blueprint definition file:
+
+```{r example-blueprint, eval=FALSE}
+blueprint(
+  "ch_scales",
+  description = "Self-Regulation & Self-Regulated Learning",
+  command =
+    .TARGET("verified_child_data") %>%
+      select(
+        unique_id,
+        c_id_01,
+        starts_with("c_sr_"),
+        starts_with("c_srl_")
+      ) %>%
+      shorten_domain_prefixes() %>%
+      enumerator_regulation_score() %>%
+      basic_number_renaming() %>%
+      drop_underscore_in_vars(
+        c("sr", "srl"),
+        "^.*{var}_(\\d+)r?$"
+      )
+)
+```
+
+And here is an example metadata CSV for the same blueprint:
+
+```{r, results='asis', echo=FALSE}
+meta <- data.table::fread(here::here("data/ch_scales.csv"))
+
+meta |>
+  kableExtra::kbl() |>
+  kableExtra::scroll_box(width = "100%", height = "200px")
+```
+
+These metadata CSVs have three required fields:
+
+- **name**: The variable name
+- **type**: The variable type (usually "character", "integer", "double", or "logical")
+- **description**: Description of the variable content. If the dataset corresponds to a survey, this is usually the question wording in English.
+
+There are often other columns:
+
+- **coding**: If the variable is categorical, this contains the label-value mapping for the variable, written with [rcoder](https://nyuglobalties.github.io/rcoder) syntax.
+- **tests**: Any content tests on the data
+- **scale**: If the variable belongs to a psychometric scale, the name of the scale. This is used for identifying variable groups for psychometric descriptive statistics.
+- **title**: A shorter description for the variable, used as a variable label when exported to Stata
+- **section**: Codebook section; if no section is assigned, the codebook will place the variable into the "Other" section
+- **section_description**: Description for the section. Useful for providing extra context for the codebook section.
+- **group**: Codebook subsection / variable group. Useful to have for combining a collection of variables together e.g. a scale
+- **group_description**: Description for the variable group. Useful for adding an introductory statement asked before each question in the group.
+
+## `codebooks`
+
+"Codebooks" are essentially [data dictionaries](https://en.wikipedia.org/wiki/Data_dictionary), targeted for social science research. They commonly include enumerations of variables in a dataset, as well as their descriptions and (when applicable) categorical codings. Some codebooks also include methodology descriptions and other descriptive statistics of the data.
+
+The `codebooks` folder contains HTML codebook exports of selected blueprints, as indicated by the presence of `blueprintr::bp_export_codebook()` in the blueprint definition file:
+
+```{r, eval=FALSE}
+blueprint(
+  "ch_scales",
+  description = "Self-Regulation & Self-Regulated Learning",
+  command =
+    some_command()
+) |>
+  bp_export_codebook()
+```
+
+Unless otherwise agreed upon, **these codebooks are for internal purposes only**. They are mainly present to support TIES' members in their research.
+
+## `config`
+
+The `config` folder has two main R files:
+
+- `environment.R`
+- `packages.R`
+
+Other project-specific files, like YAML configuration, may be stored in this folder.
+
+### `environment.R`
+
+Sensitive information necessary for pipeline function, like API keys and passwords, **must** be stored as environment variables and **never** checked into version control. Environment variables are generally stored in a personal [`.Renviron`](https://rstats.wtf/r-startup.html#renviron) file, but it is our practice to load them into global variables at the start of the pipeline to avoid unnecessary calls to `Sys.getenv()`.
+
+Here is an example `environment.R`:
+
+```{r, eval=FALSE}
+BOX_PATH <- Sys.getenv("BOX_PATH", unset = NULL)
+F_RUN_TESTS <- as.logical(Sys.getenv("F_RUN_TESTS", unset = "FALSE"))
+F_NIGHTLY <- as.logical(Sys.getenv("F_NIGHTLY", unset = "FALSE"))
+
+CACHE_PASSPHRASE <- Sys.getenv("CACHE_PASSPHRASE", unset = NULL)
+```
+
+### `packages.R`
+
+This file serves two purposes:
+
+1. Capture soft dependencies in the project code (i.e. packages that are required but not directly referred to in the code)
+1. Attach packages via `library()` to make those packages' exported functions available across the entire pipeline
+
+Our project structure uses [`renv`](https://rstudio.github.io/renv/articles/renv.html) to manage the specific versions of packages employed in our pipeline to improve replicability. `renv` is able to capture these dependencies via code inspection; however sometimes a soft dependency (one that is not explicitly stated in the code) can occur e.g. a package depends on another for some plotting routine. To capture these dependecies, we place a reference to one of the package's functions in `packages.R` so that `renv` can treat that package as a hard dependency.
+
+Use of `library()` should be restricted to packages that are used extensively. As stated in \@ref(rstyle-funcs-package-deps), it is preferred to use `package::func()` syntax in function writing; moreover, it is preferred the same style throughout most of the pipeline definition as well for clarity and long-term maintenance.
+
+Example of `packages.R`:
+
+```{r, eval=FALSE}
+# Retain suggested packages in renv
+labelled::to_labelled
+kableExtra::kable_as_image
+styler::style_dir # Format-on-save capability in VSCode
+languageserver::run # Necessary for VSCode to work in renv projects
+
+# Attach packages used in the entire pipeline here
+library(targets)
+library(tarchetypes)
+library(tidytable)
+library(blueprintr)
+library(rcoder)
+```
+
+---
+
+# See also
+
+- [Guides](index.qmd)

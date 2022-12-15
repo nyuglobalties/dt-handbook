@@ -1,0 +1,84 @@
+---
+title: Data Team Workflow
+subtitle: How the Data Team schedules work 
+---
+
+Working with data is an iterative task. 
+Often, we don't have a full understanding of what data we have &mdash; even if we spend months working on creating seamless data ingest and processing schemes. 
+Unlike the world of data science, where data collection is done by the minute with well-understood and limited data sources in a centralized database, most of our work comes down to including new data sources that have potentially many errors &mdash; random or structural. 
+Delivering a polished dataset to researchers is the ultimate goal, but it can take literal years to achieve that goal.
+
+## Agile and Nightlies
+We adopt a style of the Agile method, an iterative project management style that attempts to deliver smaller bits of completed work in set amounts of time to end users. 
+
+For a data team in a research group, our goal is to quickly &mdash; without sacrificing quality &mdash; turn around data to the research teams. 
+Prioritizing finishing all of the data to the acceptable level that we want before handing off to the research team is not feasible. 
+Instead we will adopt a system of nightly builds that the researchers can experiment with and develop their analysis routines, understanding that the data is not in a totally polished state. 
+The nightlies will incorporate work completed during our sprints.
+
+## Sprints
+Sprints are two-week (10 business day) iterations consisting of an agreed-upon task list. During a sprint, we will only work on the queue of tasks from that list, the "Ready" tasks. 
+If new work has been identified, Team members will add their tasks to the Backlog. 
+The Team Lead will sequence these tasks given the Team's OKRs, roadmap, and task point workload toward the end of the sprint. 
+On the last day of the sprint, we will conduct a retrospective and talk about any issues that may have cropped up (tasks too complicated, tasks not in scope) and problem solve: refactor any work that may not be relevant, re-sequence tasks that may have fallen behind, etc. 
+After that, we will agree upon the next queue of tasks and start the next sprint. We'll follow this schedule:
+
+### Sprint schedule
+
+- **Tuesday, week 1 (Day 1)**: Start sprint
+- **Monday, week 2 (Day 5)**: Data Team Meeting to sync with Advisory members
+- **Tuesday, week 2 (Day 6)**: Last day to request a review on a Pull Request (if required)
+- **Thursday, week 2 (Day 8)**: Last day to add new tasks to the Backlog
+- **Friday, week 2 (Day 9)**: Team Lead amends sequence for next sprint
+- **Monday, week 3 (Day 10)**: Last day to merge PRs. End of Sprint DTM — retrospective and plan for next 
+
+To limit distractions, the view of the [Asana board](https://app.asana.com/0/1200054901504374/1200054901504374) will be limited to the tasks sequenced for the current sprint, except on the End of Sprint DTM.
+
+## Task Pointing
+Estimating time for a task is non-trivial and usually wrong, especially with code and raw data involved. 
+Instead of that, tasks can be scored by the amount of perceived effort: what are the task requirements (if they are all known), what dependencies does the task have, how much interaction with people external to the Data Team is there, etc. 
+We'll refer to the [GitLab Data Team Handbook](https://about.gitlab.com/handbook/business-ops/data-team/how-we-work/#issue-pointing) for a point reference system:
+
+- **1 point**: The simplest possible change including documentation changes. We are confident there will be no side effects.
+- **2 points**: A simple change (minimal code changes), where we understand all of the requirements.
+- **3 points**: A typical change, with understood requirements but some complicating factors
+- **5 points**: A more complex change. Requirements are _probably_ understood or there might be dependencies outside the Data Team.
+- **8 points**: A complex change, that will involve much of the codebase or will require lots of input from others to determine the requirements.
+- **13 points**: A significant change that has dependencies and we likely still don't understand all of the requirements. It's unlikely we would commit to this in a sprint, and the preference would be to further clarify requirements and/or break into smaller Issues.
+
+You can see that the point systems are not linear. 
+Indeed, they are Fibonacci numbers, which scale exponentially.
+The idea is that more complicated efforts are so much harder to estimate work than easier tasks, and while people try to estimate linearly, that typically fails.
+
+That being said, as we're starting to adopt this system, you can roughly assign these time estimates to the point system:
+
+- A 1- to 2-point task takes about **3 - 4 hours** of dedicated work
+- A 13-point task takes **at least 4 business days (32 hours)** of dedicated work
+
+## Sequencing
+A task will be officially sequenced once it has a value in the "Sprint" field. The sprint names follow baseball hitter ordering:
+
+- **At bat**: The current sprint
+- **On deck**: The next sprint (two weeks out)
+- **In the hole**: The sprint four weeks out
+- **Cleaning up**: The sprint six weeks out
+
+Planning this far ahead is enabled through the Task Point system. 
+Each sprint will have a total sum of task points. 
+The average number of points we complete in a sprint is called our _velocity_. As the use of the Task Point system improves, the ability to plan further out will be more accurate as our velocity will be well-defined.
+
+## Prioritization
+Along with workload scored with Task Points, prioritization will be achieved through the "Prioritization" field which should encapsulate the type of work priority:
+
+- **Ops**: Immediately needed fixes or requests in the realm of operations e.g. potential security issues, incorrectly working data needed for research with near deadline, broken data pipelines, buggy software in production, etc.
+- **OKRs**: Work associated with Data Team quarterly or yearly goals
+- **PD**: Work that is aimed at professional development, a new goal in AY2022
+- **Other**: Anything else, e.g. dealing with technical debt, non-goal-focused documentation, etc.
+
+The board should be sorted by "Prioritization" to ensure that the highest priority tasks are ordered first at the top of the boards.
+
+---
+
+# See also
+
+- [Team](index.qmd)

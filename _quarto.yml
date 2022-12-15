@@ -1,0 +1,31 @@
+project:
+  type: website
+  execute-dir: project
+  output-dir: docs
+  render:
+    - "*.qmd"
+
+website:
+  title: "Data Team Handbook"
+  description: "Handbook of guides and practices for the NYU Global TIES Data Team"
+  search: true
+  repo-url: https://github.com/nyuglobalties/dt-handbook
+  repo-actions: [edit, issue]
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: team/purpose.qmd
+        text: About
+    right:
+      - href: https://twitter.com/nyuglobalties
+        icon: twitter
+        aria-label: Twitter account for NYU Global TIES for Children
+
+format:
+  html:
+    theme: pulse
+    css: styles.css
+    toc: true
+    toc-location: left
+    link-external-icon: true
