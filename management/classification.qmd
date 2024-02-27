@@ -1,0 +1,41 @@
+---
+title: Data Classification
+categories: [policy, data]
+listing:
+  - id: see-also
+    type: table
+    contents: ['index.qmd', '../curation/dataset_curation.qmd', '../curation/restrictions_embargo.qmd']
+    fields: ['title', 'categories']
+---
+
+The Data Team uses a consistent naming convention to document data stages and access guidelines. All [data storage](storage.qmd) locations user this convention.
+
+## Data stages
+
+The Data Team adheres to the following guidance and timeline for different stages of data:
+
+ | Stage         | Description                                                                                                                                                                                                     | Availability                                              | De-identified / anonymized?   | Archive branch                                 |
+ | :------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | --------------------------------------------------------: | ----------------------------: | ---------------------------------------------: |
+ | **raw**       | Source data from data collection.                                                                                                                                                                               | **Never**                                                 | **No**                        | N/A                                            |
+ | **nightly**   | Data under development that the Data Team believes may be ready for preliminary analysis by the research team. The Data Team expects to work iteratively with the research team to identify potential issues.   | No later than **one month** after data collection wave.   | Yes                           | N/A                                            |
+ | **rc**        | Stands for release candidate. Data and documentation that is replication-grade (fully ready for analysis).                                                                                                      | No later than **6 months** after collection wave.         | Yes                           | `releases/<project>/rc<version>.x`             |
+ | **reuse**     | Data and documentation that is ready for reuse and to be deposited in a data repository.                                                                                                                        | No later than **one year** after collection.              | Yes                           | `releases/<project>/v<version>.x`              |
+ | **exports**   | Replication-grade data needed for specific analysis projects.                                                                                                                                                   | As needed                                                 | Yes                           | `exports/<export>/v<version>.x`                |
+
+## Data access
+
+The Data Team follows the following guidance on data access if there is no explicit Data Use Agreement (DUA) in place:
+
+ | Stage         | Who can access              | How to get access if you don’t already have it                                       |
+ | :------------ | --------------------------: | -----------------------------------------------------------------------------------: |
+ | **raw**       | Data Team & PI(s)           | Disallowed completely                                                                |
+ | **nightly**   | Data Team & Research Team   | Generally disallowed. Consult with PI(s) if you really need access to nightly data   |
+ | **rc**        | Data Team & Research Team   | Consult with PIs                                                                     |
+ | **reuse**     | All of TIES                 | Consult with Data Team                                                               |
+ | **exports**   | Data Team & Requester       | Case-by-case basis. Consult with Data Team & Requester                               |
+
+If there is a DUA, please consult the guidance in the contract instead. The Data Team can help you identify the access you may be granted.
+
+---
+
+# See also

@@ -10,9 +10,10 @@ listing:
   fields: [title, description]
   contents:
     - curation/index.qmd
-    - appendix/index.qmd
-    - team/index.qmd
+    - management/index.qmd
     - guides/index.qmd
+    - team/index.qmd
+    - appendix/index.qmd
 ---
 
 # Welcome

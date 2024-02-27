@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Team Handbook - Team</title>
+<title>Data Team Handbook - Data Storage</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,20 +71,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-see-also .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-file-modified','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-see-also'] = new List('listing-see-also', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -174,19 +174,35 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#box" id="toc-box" class="nav-link active" data-scroll-target="#box">Box</a>
+  <ul class="collapse">
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><code>Data</code></a></li>
+  <li><a href="#data-team" id="toc-data-team" class="nav-link" data-scroll-target="#data-team"><code>data-team</code></a></li>
+  </ul></li>
+  <li><a href="#gin" id="toc-gin" class="nav-link" data-scroll-target="#gin">GIN</a></li>
+  <li><a href="#dataverse" id="toc-dataverse" class="nav-link" data-scroll-target="#dataverse">Dataverse</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/management/storage.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div></div></div>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Team</h1>
-</div>
+<h1 class="title">Data Storage</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">policy</div>
+    <div class="quarto-category">data</div>
+  </div>
+  </div>
 
 
 
@@ -202,77 +218,136 @@ window.Quarto = {
 </header>
 
 
+<p>The Data Team hosted different kinds of data in several locations: data to be used by research scientists at the Center or beyond is on <a href="https://nyu.app.box.com/">Box</a>, and internal data to the Data Team needed for the data processing pipeline is on <a href="https://gin.g-node.org/">GIN</a>. Sensitive credentials are stored on Box.</p>
+<section id="box" class="level2">
+<h2 class="anchored" data-anchor-id="box">Box</h2>
+<p>The Data Team maintained two primary folders on Box: <code>Data</code> and <code>data-team</code>. All deputy directors maintain “Co-Owner” permissions for each of these folders.</p>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data"><code>Data</code></h3>
+<p>All datasets for end-use are located in <a href="https://nyu.app.box.com/folder/147034807624"><code>Data</code></a>. The folder structure for <code>Data</code> follows this scheme:</p>
+<pre><code>Data/
+  [project-slug]/
+    raw/
+      ...
+    exports/
+      ...
+    nightly/
+      ...
+    rc/
+      ...
+    reuse/
+      ...</code></pre>
+<p>The nomenclature employed within its project folder follows the <a href="https://nyuglobalties.github.io/dt-handbook/curation/storage.html">data stage scheme</a>. Access guidelines for each data stage are also provided in the handbook.</p>
+<section id="project-ids" class="level4">
+<h4 class="anchored" data-anchor-id="project-ids">Project IDs</h4>
+<!-- Data Project slugs README -->
+<p>All project slugs listed here are consistent with the slugs used in <a href="https://github.com/nyuglobalties/data-processing"><code>data-processing</code></a>.</p>
+<ul>
+<li><strong><code>gobee</code></strong>: Gobee EdTech application pilot study in 2021</li>
+<li><strong><code>peru-md</code></strong>: Measurement development project in cooperation with the Peruvian Ministry of Education in 2020</li>
+<li><strong><code>ptl</code></strong>: 2023 Bangladeshi iRRRd longitudinal and CDA studies within the Play to Learn portfolio, in partnership with <a href="https://www.icddrb.org/">icddr,b</a></li>
+<li><strong><code>qitabi</code></strong>: <a href="https://www.worldlearning.org/program/quality-instruction-towards-access-and-basic-education-improvement-2/">QITABI</a> and QITABI 2 project, in partnership with World Learning</li>
+<li><strong><code>rti-lego</code></strong>: PLAY 1.0</li>
+<li><strong><code>rul</code></strong>: <a href="https://globaltiesforchildren.nyu.edu/as-findings">Reach Up and Learn</a> data archiving efforts</li>
+</ul>
+</section>
+</section>
+<section id="data-team" class="level3">
+<h3 class="anchored" data-anchor-id="data-team"><code>data-team</code></h3>
+<p>All Data Team auxiliary files (credentials, planning documents, reports, etc) are stored in <a href="https://nyu.app.box.com/folder/141355112641"><code>data-team</code></a>. The folder structure for <code>data-team</code> is as follows:</p>
+<pre><code>credentials/
+  ...
+data/
+  ...
+misc/
+  ...
+planning/
+  okrs/
+    ...
+  scoping/
+    ...
+reports/
+  ...</code></pre>
+<section id="credentials" class="level4">
+<h4 class="anchored" data-anchor-id="credentials"><code>credentials</code></h4>
+<!-- credentials README -->
+<p>The most significant folder in <code>data-team</code>, <code>credentials</code> holds all sensitive data necessary for accessing or rendering data, e.g.&nbsp;passwords, secret keys, and access tokens. Two rules for this folder must be adhered to:</p>
+<ol type="1">
+<li><strong>Unrestricted access to this folder is unadvised</strong>. Instead, share individual files or subfolders on an as-needed basis.</li>
+<li>Moreover, unless you are working with <code>data-processing</code>, <strong>do not make any copies of the files contained within</strong>.</li>
+<li><strong>Do not create any shared links to contents within this folder</strong>. Instead, use Box’s “Share” option to email-invite individuals to access contents.</li>
+</ol>
+<p>Each folder’s contents are outlined:</p>
+<ol type="1">
+<li><strong><code>aura-db</code></strong> [<em>inactive</em>]: neo4j Aura database credentials used when investigating graph database backend for Item Bank project</li>
+<li><strong><code>data-credentials_pele</code></strong> [<em>inactive</em>]: Data encryption keys for 3EA, Lebanon Teacher Professional Development, and Peru Measurement Development projects</li>
+<li><strong><code>data-proc-creds</code></strong>: Credential files needed to operate the <code>data-processing</code> project</li>
+<li><strong><code>iati-credentials</code></strong> [<em>inactive</em>]: User account credentials for IATI, needed for ERICC inception period</li>
+<li><strong><code>ukds-credentials</code></strong>: UK Data Service credentials, needed for 3EA Niger year 2 data deposit</li>
+</ol>
+</section>
+</section>
+</section>
+<section id="gin" class="level2">
+<h2 class="anchored" data-anchor-id="gin">GIN</h2>
+<p><a href="https://gin.g-node.org">GIN</a> is a data version control system freely available for researchers in neuroscience and related fields, hosted at the <a href="https://neuro.bio.lmu.de/">Ludwig-Maximilians University of Munich</a>. This data store is primarily used for data version and intermediate processing for the <a href="../guides/data-processing.html"><code>data-processing</code></a> project. Its primary audience is those who wish to contribute code to <code>data-proc</code> for the purpose of keeping all data asset production in the same location.</p>
+<p>The data files are <a href="https://gin.g-node.org/nyuglobalties/data">located in this repository</a>. The directory structure follows that of the <a href="../management/classification.html">data scheme</a> used <a href="#box">above</a>.</p>
+</section>
+<section id="dataverse" class="level2">
+<h2 class="anchored" data-anchor-id="dataverse">Dataverse</h2>
+<p>Published data, for reuse or replication, is located on the <a href="https://dataverse.harvard.edu/dataverse/global-ties-for-children">Harvard Dataverse</a> following our <a href="../curation/dataset_curation.html">data curation standards</a>. Administrative access to TIES’ dataverse is provided to all members of the deputy directorate.</p>
 
 
 
+</section>
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1706120530423" data-listing-reading-time-sort="3" data-listing-word-count-sort="421">
-<a href="../team/purpose.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Data Team Purpose
-</h5>
+<div class="quarto-listing quarto-listing-container-table" id="listing-see-also">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-see-also-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-see-also'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title-sort" data-direction="asc">
+          Title
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<div class="card-footer">
-<div class="card-file-modified listing-file-modified">
-<p>1/24/24, 1:22:10 PM</p>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1706120530423" data-listing-reading-time-sort="1" data-listing-word-count-sort="106">
-<a href="../team/structure.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Data Team Structure
-</h5>
-</div>
-<div class="card-footer">
-<div class="card-file-modified listing-file-modified">
-<p>1/24/24, 1:22:10 PM</p>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1706120530423" data-listing-reading-time-sort="5" data-listing-word-count-sort="980">
-<a href="../team/workflow.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Data Team Workflow
-</h5>
-</div>
-<div class="card-footer">
-<div class="card-file-modified listing-file-modified">
-<p>1/24/24, 1:22:10 PM</p>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1706120530422" data-listing-reading-time-sort="6" data-listing-word-count-sort="1070">
-<a href="../team/other_services.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Other Data Team Services
-</h5>
-</div>
-<div class="card-footer">
-<div class="card-file-modified listing-file-modified">
-<p>1/24/24, 1:22:10 PM</p>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+<th>
+Categories
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-categories="policy,data" data-listing-file-modified-sort="1708917638807" data-listing-reading-time-sort="10" data-listing-word-count-sort="1917" data-listing-title-sort="Data Classification" data-listing-filename-sort="classification.qmd">
+<td>
+<a href="../management/classification.html" class="title listing-title">Data Classification</a>
+</td>
+<td>
+<span class="listing-categories">policy, data</span>
+</td>
+</tr>
+<tr data-index="1" data-listing-file-modified-sort="1708905912106" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Data Management" data-listing-filename-sort="index.qmd">
+<td>
+<a href="../management/index.html" class="title listing-title">Data Management</a>
+</td>
+<td>
+<span class="listing-categories">&nbsp;</span>
+</td>
+</tr>
+</tbody>
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
@@ -684,4 +759,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/team/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/management/storage.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

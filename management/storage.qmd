@@ -1,0 +1,90 @@
+---
+title: Data Storage
+categories: [policy, data]
+listing:
+  - id: see-also
+    type: table
+    contents: ['index.qmd', 'classification.qmd']
+    fields: ['title', 'categories']
+---
+
+The Data Team hosted different kinds of data in several locations: data to be used by research scientists at the Center or beyond is on [Box](https://nyu.app.box.com/), and internal data to the Data Team needed for the data processing pipeline is on [GIN](https://gin.g-node.org/). Sensitive credentials are stored on Box.
+
+## Box
+
+The Data Team maintained two primary folders on Box: `Data` and `data-team`. All deputy directors maintain "Co-Owner" permissions for each of these folders.
+
+### `Data`
+
+All datasets for end-use are located in [`Data`](https://nyu.app.box.com/folder/147034807624). The folder structure for `Data` follows this scheme:
+
+```
+Data/
+  [project-slug]/
+    raw/
+      ...
+    exports/
+      ...
+    nightly/
+      ...
+    rc/
+      ...
+    reuse/
+      ...
+```
+
+The nomenclature employed within its project folder follows the [data stage scheme](https://nyuglobalties.github.io/dt-handbook/curation/storage.html). Access guidelines for each data stage are also provided in the handbook.
+
+#### Project IDs
+
+<!-- Data Project slugs README -->
+```{r, echo=FALSE, results='asis'}
+md_lines <- readLines(here::here("management/data-project-slugs/README.md"))
+
+md_lines |>
+  tail(n = length(md_lines) - 1) |>
+  paste0(collapse = "\n") |>
+  knitr::raw_output(markers = c("", ""))
+```
+
+### `data-team`
+
+All Data Team auxiliary files (credentials, planning documents, reports, etc) are stored in [`data-team`](https://nyu.app.box.com/folder/141355112641). The folder structure for `data-team` is as follows:
+
+```
+credentials/
+  ...
+data/
+  ...
+misc/
+  ...
+planning/
+  okrs/
+    ...
+  scoping/
+    ...
+reports/
+  ...
+```
+
+#### `credentials`
+
+<!-- credentials README -->
+```{r, echo=FALSE, results='asis'}
+md_lines <- readLines(here::here("management/credentials-info/README.md"))
+
+md_lines |>
+  tail(n = length(md_lines) - 1) |>
+  paste0(collapse = "\n") |>
+  knitr::raw_output(markers = c("", ""))
+```
+
+## GIN
+
+[GIN](https://gin.g-node.org) is a data version control system freely available for researchers in neuroscience and related fields, hosted at the [Ludwig-Maximilians University of Munich](https://neuro.bio.lmu.de/). This data store is primarily used for data version and intermediate processing for the [`data-processing`](../guides/data-processing.qmd) project. Its primary audience is those who wish to contribute code to `data-proc` for the purpose of keeping all data asset production in the same location.
+
+The data files are [located in this repository](https://gin.g-node.org/nyuglobalties/data). The directory structure follows that of the [data scheme](classification.qmd) used [above](#box).
+
+## Dataverse
+
+Published data, for reuse or replication, is located on the [Harvard Dataverse](https://dataverse.harvard.edu/dataverse/global-ties-for-children) following our [data curation standards](../curation/dataset_curation.qmd). Administrative access to TIES' dataverse is provided to all members of the deputy directorate.

@@ -1,0 +1,9 @@
+---
+title: Data Management
+listing:
+  contents: ["*.qmd", "!index.qmd"]
+  sort: title
+  type: grid
+  categories: true
+  fields: [title, file-modified, categories]
+---

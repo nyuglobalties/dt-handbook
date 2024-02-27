@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Team Handbook - Team</title>
+<title>Data Team Handbook - Data Classification</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,20 +71,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-see-also .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-file-modified','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-see-also'] = new List('listing-see-also', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -174,19 +174,31 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-stages" id="toc-data-stages" class="nav-link active" data-scroll-target="#data-stages">Data stages</a></li>
+  <li><a href="#data-access" id="toc-data-access" class="nav-link" data-scroll-target="#data-access">Data access</a></li>
+  <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See also</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/management/classification.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div></div></div>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Team</h1>
-</div>
+<h1 class="title">Data Classification</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">policy</div>
+    <div class="quarto-category">data</div>
+  </div>
+  </div>
 
 
 
@@ -202,77 +214,167 @@ window.Quarto = {
 </header>
 
 
+<p>The Data Team uses a consistent naming convention to document data stages and access guidelines. All <a href="../management/storage.html">data storage</a> locations user this convention.</p>
+<section id="data-stages" class="level2">
+<h2 class="anchored" data-anchor-id="data-stages">Data stages</h2>
+<p>The Data Team adheres to the following guidance and timeline for different stages of data:</p>
+<table class="table">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 58%">
+<col style="width: 16%">
+<col style="width: 8%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Stage</th>
+<th style="text-align: right;">Description</th>
+<th style="text-align: right;">Availability</th>
+<th style="text-align: right;">De-identified / anonymized?</th>
+<th style="text-align: right;">Archive branch</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>raw</strong></td>
+<td style="text-align: right;">Source data from data collection.</td>
+<td style="text-align: right;"><strong>Never</strong></td>
+<td style="text-align: right;"><strong>No</strong></td>
+<td style="text-align: right;">N/A</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>nightly</strong></td>
+<td style="text-align: right;">Data under development that the Data Team believes may be ready for preliminary analysis by the research team. The Data Team expects to work iteratively with the research team to identify potential issues.</td>
+<td style="text-align: right;">No later than <strong>one month</strong> after data collection wave.</td>
+<td style="text-align: right;">Yes</td>
+<td style="text-align: right;">N/A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>rc</strong></td>
+<td style="text-align: right;">Stands for release candidate. Data and documentation that is replication-grade (fully ready for analysis).</td>
+<td style="text-align: right;">No later than <strong>6 months</strong> after collection wave.</td>
+<td style="text-align: right;">Yes</td>
+<td style="text-align: right;"><code>releases/&lt;project&gt;/rc&lt;version&gt;.x</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>reuse</strong></td>
+<td style="text-align: right;">Data and documentation that is ready for reuse and to be deposited in a data repository.</td>
+<td style="text-align: right;">No later than <strong>one year</strong> after collection.</td>
+<td style="text-align: right;">Yes</td>
+<td style="text-align: right;"><code>releases/&lt;project&gt;/v&lt;version&gt;.x</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>exports</strong></td>
+<td style="text-align: right;">Replication-grade data needed for specific analysis projects.</td>
+<td style="text-align: right;">As needed</td>
+<td style="text-align: right;">Yes</td>
+<td style="text-align: right;"><code>exports/&lt;export&gt;/v&lt;version&gt;.x</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-access" class="level2">
+<h2 class="anchored" data-anchor-id="data-access">Data access</h2>
+<p>The Data Team follows the following guidance on data access if there is no explicit Data Use Agreement (DUA) in place:</p>
+<table class="table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 21%">
+<col style="width: 67%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Stage</th>
+<th style="text-align: right;">Who can access</th>
+<th style="text-align: right;">How to get access if you don’t already have it</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>raw</strong></td>
+<td style="text-align: right;">Data Team &amp; PI(s)</td>
+<td style="text-align: right;">Disallowed completely</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>nightly</strong></td>
+<td style="text-align: right;">Data Team &amp; Research Team</td>
+<td style="text-align: right;">Generally disallowed. Consult with PI(s) if you really need access to nightly data</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>rc</strong></td>
+<td style="text-align: right;">Data Team &amp; Research Team</td>
+<td style="text-align: right;">Consult with PIs</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>reuse</strong></td>
+<td style="text-align: right;">All of TIES</td>
+<td style="text-align: right;">Consult with Data Team</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>exports</strong></td>
+<td style="text-align: right;">Data Team &amp; Requester</td>
+<td style="text-align: right;">Case-by-case basis. Consult with Data Team &amp; Requester</td>
+</tr>
+</tbody>
+</table>
+<p>If there is a DUA, please consult the guidance in the contract instead. The Data Team can help you identify the access you may be granted.</p>
+<hr>
+</section>
+<section id="see-also" class="level1">
+<h1>See also</h1>
 
 
 
+</section>
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1706120530423" data-listing-reading-time-sort="3" data-listing-word-count-sort="421">
-<a href="../team/purpose.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Data Team Purpose
-</h5>
+<div class="quarto-listing quarto-listing-container-table" id="listing-see-also">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-see-also-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-see-also'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title-sort" data-direction="asc">
+          Title
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<div class="card-footer">
-<div class="card-file-modified listing-file-modified">
-<p>1/24/24, 1:22:10 PM</p>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1706120530423" data-listing-reading-time-sort="1" data-listing-word-count-sort="106">
-<a href="../team/structure.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Data Team Structure
-</h5>
-</div>
-<div class="card-footer">
-<div class="card-file-modified listing-file-modified">
-<p>1/24/24, 1:22:10 PM</p>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1706120530423" data-listing-reading-time-sort="5" data-listing-word-count-sort="980">
-<a href="../team/workflow.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Data Team Workflow
-</h5>
-</div>
-<div class="card-footer">
-<div class="card-file-modified listing-file-modified">
-<p>1/24/24, 1:22:10 PM</p>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1706120530422" data-listing-reading-time-sort="6" data-listing-word-count-sort="1070">
-<a href="../team/other_services.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Other Data Team Services
-</h5>
-</div>
-<div class="card-footer">
-<div class="card-file-modified listing-file-modified">
-<p>1/24/24, 1:22:10 PM</p>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+<th>
+Categories
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-file-modified-sort="1708905912106" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Data Management" data-listing-filename-sort="index.qmd">
+<td>
+<a href="../management/index.html" class="title listing-title">Data Management</a>
+</td>
+<td>
+<span class="listing-categories">&nbsp;</span>
+</td>
+</tr>
+<tr data-index="1" data-categories="curation,standards" data-listing-file-modified-sort="1706120530403" data-listing-reading-time-sort="6" data-listing-word-count-sort="1005" data-listing-title-sort="Dataset Curation Standards" data-listing-filename-sort="dataset_curation.qmd">
+<td>
+<a href="../curation/dataset_curation.html" class="title listing-title">Dataset Curation Standards</a>
+</td>
+<td>
+<span class="listing-categories">curation, standards</span>
+</td>
+</tr>
+</tbody>
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
@@ -684,4 +786,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/team/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/management/classification.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

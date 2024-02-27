@@ -23,8 +23,7 @@
     "items": [
       "/curation/active_curation.html",
       "/curation/index.html",
-      "/curation/DMP.html",
-      "/curation/storage.html"
+      "/curation/DMP.html"
     ]
   },
   {
@@ -51,6 +50,7 @@
   {
     "listing": "/guides/index.html",
     "items": [
+      "/guides/data-processing.html",
       "/guides/projects.html",
       "/guides/styling-r.html"
     ]
@@ -60,6 +60,7 @@
     "items": [
       "/appendix/index.html",
       "/curation/index.html",
+      "/management/index.html",
       "/guides/index.html",
       "/team/index.html"
     ]
@@ -71,6 +72,27 @@
       "/team/structure.html",
       "/team/workflow.html",
       "/team/other_services.html"
+    ]
+  },
+  {
+    "listing": "/management/index.html",
+    "items": [
+      "/management/classification.html",
+      "/management/storage.html"
+    ]
+  },
+  {
+    "listing": "/management/storage.html",
+    "items": [
+      "/management/classification.html",
+      "/management/index.html"
+    ]
+  },
+  {
+    "listing": "/management/classification.html",
+    "items": [
+      "/management/index.html",
+      "/curation/dataset_curation.html"
     ]
   }
 ]

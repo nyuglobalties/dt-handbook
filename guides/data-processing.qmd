@@ -1,0 +1,34 @@
+---
+title: Data Processing Project
+categories: [guide]
+---
+
+For most of the data projects under the purview of the TIES Data Team, there is a one-stop shop for all code related to the "data pipeline": [**`data-processing`**](https://github.com/nyuglobalties/data-processing), sometimes known as **`data-proc`**. `data-proc` is a [monorepo](https://en.wikipedia.org/wiki/Monorepo) of many research projects, each mostly following the [data project structure](projects.qmd) outlined in this handbook. Please read that document before continuing with this one to get the full context of each folder.
+
+The Data Team uses a variety of technologies, mainly in the R ecosystem, to create its data projects. Each project has a similar file structure to maintain consistency and replicability across projects:
+
+```
+.github/         # All Github configuration [optional]
+  workflows/     # All CI workflow definition files [optional]
+blueprints/      # Contains all "blueprints" of datasets
+codebooks/       # Contains exported codebooks of select datasets, depending on blueprint definition
+config/
+  environment.R  # Definitions of all environment variables used in this project
+  packages.R     # Any `library()` for packages to be available across the project
+R/               # All definitions for custom functions employed in the pipeline
+.Rprofile        # Supplemental file that primarily sets up `renv`
+_targets.R       # The main workflow orchestration definition file
+renv.lock        # Package dependency state capture file for `renv`
+```
+
+What's important note from the outset is that **data are not inside in these projects**. Each project is versioned with [git](https://git-scm.org) and hosted on [TIES' GitHub organization page](https://github.com/nyuglobalties). Most of our data are sensitive to some degree, so our operational practice is to load data directly via APIs or read from [NYU Box](https://nyu.app.box.com).
+
+Project templates can be created with the internal tool [dtproj](https://github.com/nyuglobalties/dtproj).
+
+## `blueprints`
+
+---
+
+# See also
+
+- [Guides](index.qmd)
