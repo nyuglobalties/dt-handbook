@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Global TIES for Children Data Team">
-<meta name="description" content="This is a compendium of knowledge for the TIES Data Team, both for internal capacity development and for external communication for accountability. This work includes technical information about our practices and non-technical guides to support our colleagues.">
 
-<title>Data Team Handbook</title>
+<title>Data Team Handbook - Data Team Workflow</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,67 +66,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-section-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-section-listing'] = new List('listing-section-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="floating nav-fixed">
@@ -140,7 +78,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Data Team Handbook</span>
     </a>
   </div>
@@ -151,11 +89,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./team/purpose.html"> 
+    <a class="nav-link" href="../team/purpose.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -180,12 +118,17 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a>
+  <li><a href="#agile-and-nightlies" id="toc-agile-and-nightlies" class="nav-link active" data-scroll-target="#agile-and-nightlies">Agile and Nightlies</a></li>
+  <li><a href="#sprints" id="toc-sprints" class="nav-link" data-scroll-target="#sprints">Sprints</a>
   <ul class="collapse">
-  <li><a href="#orientation" id="toc-orientation" class="nav-link" data-scroll-target="#orientation">Orientation</a></li>
+  <li><a href="#sprint-schedule" id="toc-sprint-schedule" class="nav-link" data-scroll-target="#sprint-schedule">Sprint schedule</a></li>
   </ul></li>
+  <li><a href="#task-pointing" id="toc-task-pointing" class="nav-link" data-scroll-target="#task-pointing">Task Pointing</a></li>
+  <li><a href="#sequencing" id="toc-sequencing" class="nav-link" data-scroll-target="#sequencing">Sequencing</a></li>
+  <li><a href="#prioritization" id="toc-prioritization" class="nav-link" data-scroll-target="#prioritization">Prioritization</a></li>
+  <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See also</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/team/workflow.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -196,24 +139,14 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Team Handbook</h1>
+<h1 class="title">Data Team Workflow</h1>
+<p class="subtitle lead">How the Data Team schedules work</p>
 </div>
 
-<div>
-  <div class="description">
-    <p>This is a compendium of knowledge for the TIES Data Team, both for internal capacity development and for external communication for accountability. This work includes technical information about our practices and non-technical guides to support our colleagues.</p>
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Global TIES for Children Data Team </p>
-          </div>
-  </div>
     
   
     
@@ -224,131 +157,76 @@ window.Quarto = {
 </header>
 
 
-<section id="welcome" class="level1">
-<h1>Welcome</h1>
-<p>This is a website that documents the work and process of the TIES Data Team.</p>
-<p>Our mission is <strong>to develop open-science tooling for providing archival quality data products and capacity to research team members and external stakeholders with integrity and in a timely fashion.</strong></p>
-<section id="orientation" class="level2">
-<h2 class="anchored" data-anchor-id="orientation">Orientation</h2>
-<ul>
-<li>Read our <a href="./team/purpose.html">statement of purpose</a></li>
-<li>See our <a href="./team/structure.html">list of members</a></li>
-<li>Take a look at our sections below</li>
-<li>Click the search icon in the top-right to look for a specific topic</li>
-</ul>
-<div id="listing-section-listing" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./appendix/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Appendix
-</h5>
-<div class="card-text listing-description">
-
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title-sort" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Title
-</th>
-<th>
-Author
-</th>
-</tr>
-</thead>…<tbody class="list"><tr data-index="0" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="10" data-listing-word-count-sort="1826" data-listing-title-sort="Glossary" data-listing-filename-sort="glossary.qmd"><td></td><td><span class="listing-author"></span></td></tr><tr data-index="1" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="4" data-listing-word-count-sort="743" data-listing-title-sort="Resources" data-listing-filename-sort="resources.qmd"><td></td><td><span class="listing-author"></span></td></tr></tbody></table><div class="listing-no-matching d-none"></div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./curation/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Curation
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1709006135528" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./management/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Data Management
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1709006135528" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./guides/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Guides
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1709006135528" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./team/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Team
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-<hr>
-<p>This website is (and will always be) <strong>free to use</strong>, and is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a> License.</p>
-
-
-
+<p>Working with data is an iterative task. Often, we don’t have a full understanding of what data we have — even if we spend months working on creating seamless data ingest and processing schemes. Unlike the world of data science, where data collection is done by the minute with well-understood and limited data sources in a centralized database, most of our work comes down to including new data sources that have potentially many errors — random or structural. Delivering a polished dataset to researchers is the ultimate goal, but it can take literal years to achieve that goal.</p>
+<section id="agile-and-nightlies" class="level2">
+<h2 class="anchored" data-anchor-id="agile-and-nightlies">Agile and Nightlies</h2>
+<p>We adopt a style of the Agile method, an iterative project management style that attempts to deliver smaller bits of completed work in set amounts of time to end users.</p>
+<p>For a data team in a research group, our goal is to quickly — without sacrificing quality — turn around data to the research teams. Prioritizing finishing all of the data to the acceptable level that we want before handing off to the research team is not feasible. Instead we will adopt a system of nightly builds that the researchers can experiment with and develop their analysis routines, understanding that the data is not in a totally polished state. The nightlies will incorporate work completed during our sprints.</p>
 </section>
+<section id="sprints" class="level2">
+<h2 class="anchored" data-anchor-id="sprints">Sprints</h2>
+<p>Sprints are two-week (10 business day) iterations consisting of an agreed-upon task list. During a sprint, we will only work on the queue of tasks from that list, the “Ready” tasks. If new work has been identified, Team members will add their tasks to the Backlog. The Team Lead will sequence these tasks given the Team’s OKRs, roadmap, and task point workload toward the end of the sprint. On the last day of the sprint, we will conduct a retrospective and talk about any issues that may have cropped up (tasks too complicated, tasks not in scope) and problem solve: refactor any work that may not be relevant, re-sequence tasks that may have fallen behind, etc. After that, we will agree upon the next queue of tasks and start the next sprint. We’ll follow this schedule:</p>
+<section id="sprint-schedule" class="level3">
+<h3 class="anchored" data-anchor-id="sprint-schedule">Sprint schedule</h3>
+<ul>
+<li><strong>Tuesday, week 1 (Day 1)</strong>: Start sprint</li>
+<li><strong>Monday, week 2 (Day 5)</strong>: Data Team Meeting to sync with Advisory members</li>
+<li><strong>Tuesday, week 2 (Day 6)</strong>: Last day to request a review on a Pull Request (if required)</li>
+<li><strong>Thursday, week 2 (Day 8)</strong>: Last day to add new tasks to the Backlog</li>
+<li><strong>Friday, week 2 (Day 9)</strong>: Team Lead amends sequence for next sprint</li>
+<li><strong>Monday, week 3 (Day 10)</strong>: Last day to merge PRs. End of Sprint DTM — retrospective and plan for next</li>
+</ul>
+<p>To limit distractions, the view of the <a href="https://app.asana.com/0/1200054901504374/1200054901504374">Asana board</a> will be limited to the tasks sequenced for the current sprint, except on the End of Sprint DTM.</p>
+</section>
+</section>
+<section id="task-pointing" class="level2">
+<h2 class="anchored" data-anchor-id="task-pointing">Task Pointing</h2>
+<p>Estimating time for a task is non-trivial and usually wrong, especially with code and raw data involved. Instead of that, tasks can be scored by the amount of perceived effort: what are the task requirements (if they are all known), what dependencies does the task have, how much interaction with people external to the Data Team is there, etc. We’ll refer to the <a href="https://about.gitlab.com/handbook/business-ops/data-team/how-we-work/#issue-pointing">GitLab Data Team Handbook</a> for a point reference system:</p>
+<ul>
+<li><strong>1 point</strong>: The simplest possible change including documentation changes. We are confident there will be no side effects.</li>
+<li><strong>2 points</strong>: A simple change (minimal code changes), where we understand all of the requirements.</li>
+<li><strong>3 points</strong>: A typical change, with understood requirements but some complicating factors</li>
+<li><strong>5 points</strong>: A more complex change. Requirements are <em>probably</em> understood or there might be dependencies outside the Data Team.</li>
+<li><strong>8 points</strong>: A complex change, that will involve much of the codebase or will require lots of input from others to determine the requirements.</li>
+<li><strong>13 points</strong>: A significant change that has dependencies and we likely still don’t understand all of the requirements. It’s unlikely we would commit to this in a sprint, and the preference would be to further clarify requirements and/or break into smaller Issues.</li>
+</ul>
+<p>You can see that the point systems are not linear. Indeed, they are Fibonacci numbers, which scale exponentially. The idea is that more complicated efforts are so much harder to estimate work than easier tasks, and while people try to estimate linearly, that typically fails.</p>
+<p>That being said, as we’re starting to adopt this system, you can roughly assign these time estimates to the point system:</p>
+<ul>
+<li>A 1- to 2-point task takes about <strong>3 - 4 hours</strong> of dedicated work</li>
+<li>A 13-point task takes <strong>at least 4 business days (32 hours)</strong> of dedicated work</li>
+</ul>
+</section>
+<section id="sequencing" class="level2">
+<h2 class="anchored" data-anchor-id="sequencing">Sequencing</h2>
+<p>A task will be officially sequenced once it has a value in the “Sprint” field. The sprint names follow baseball hitter ordering:</p>
+<ul>
+<li><strong>At bat</strong>: The current sprint</li>
+<li><strong>On deck</strong>: The next sprint (two weeks out)</li>
+<li><strong>In the hole</strong>: The sprint four weeks out</li>
+<li><strong>Cleaning up</strong>: The sprint six weeks out</li>
+</ul>
+<p>Planning this far ahead is enabled through the Task Point system. Each sprint will have a total sum of task points. The average number of points we complete in a sprint is called our <em>velocity</em>. As the use of the Task Point system improves, the ability to plan further out will be more accurate as our velocity will be well-defined.</p>
+</section>
+<section id="prioritization" class="level2">
+<h2 class="anchored" data-anchor-id="prioritization">Prioritization</h2>
+<p>Along with workload scored with Task Points, prioritization will be achieved through the “Prioritization” field which should encapsulate the type of work priority:</p>
+<ul>
+<li><strong>Ops</strong>: Immediately needed fixes or requests in the realm of operations e.g.&nbsp;potential security issues, incorrectly working data needed for research with near deadline, broken data pipelines, buggy software in production, etc.</li>
+<li><strong>OKRs</strong>: Work associated with Data Team quarterly or yearly goals</li>
+<li><strong>PD</strong>: Work that is aimed at professional development, a new goal in AY2022</li>
+<li><strong>Other</strong>: Anything else, e.g.&nbsp;dealing with technical debt, non-goal-focused documentation, etc.</li>
+</ul>
+<p>The board should be sorted by “Prioritization” to ensure that the highest priority tasks are ordered first at the top of the boards.</p>
+<hr>
+</section>
+<section id="see-also" class="level1">
+<h1>See also</h1>
+<ul>
+<li><a href="../team/index.html">Team</a></li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -759,4 +637,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/team/workflow.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

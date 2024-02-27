@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Global TIES for Children Data Team">
-<meta name="description" content="This is a compendium of knowledge for the TIES Data Team, both for internal capacity development and for external communication for accountability. This work includes technical information about our practices and non-technical guides to support our colleagues.">
 
-<title>Data Team Handbook</title>
+<title>Data Team Handbook - Citation formats</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,20 +71,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-section-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-see-also .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-section-listing'] = new List('listing-section-listing', options);
+    window['quarto-listings']['listing-see-also'] = new List('listing-see-also', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -130,7 +128,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="floating nav-fixed">
@@ -140,7 +138,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Data Team Handbook</span>
     </a>
   </div>
@@ -151,11 +149,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./team/purpose.html"> 
+    <a class="nav-link" href="../team/purpose.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -180,12 +178,24 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link active" data-scroll-target="#dataset">Dataset</a></li>
+  <li><a href="#academic-works" id="toc-academic-works" class="nav-link" data-scroll-target="#academic-works">Academic works</a>
   <ul class="collapse">
-  <li><a href="#orientation" id="toc-orientation" class="nav-link" data-scroll-target="#orientation">Orientation</a></li>
+  <li><a href="#articles" id="toc-articles" class="nav-link" data-scroll-target="#articles">Articles</a></li>
+  <li><a href="#book" id="toc-book" class="nav-link" data-scroll-target="#book">Book</a></li>
+  <li><a href="#book-chapter" id="toc-book-chapter" class="nav-link" data-scroll-target="#book-chapter">Book chapter</a></li>
+  <li><a href="#conference-sessions-poster-abstracts-and-poster-presentations" id="toc-conference-sessions-poster-abstracts-and-poster-presentations" class="nav-link" data-scroll-target="#conference-sessions-poster-abstracts-and-poster-presentations">Conference sessions, poster abstracts and poster presentations</a></li>
+  <li><a href="#preprint" id="toc-preprint" class="nav-link" data-scroll-target="#preprint">Preprint</a></li>
   </ul></li>
+  <li><a href="#research-instrument" id="toc-research-instrument" class="nav-link" data-scroll-target="#research-instrument">Research instrument</a></li>
+  <li><a href="#derived-data-product" id="toc-derived-data-product" class="nav-link" data-scroll-target="#derived-data-product">Derived data product</a>
+  <ul class="collapse">
+  <li><a href="#visual-video-or-photograph-or-audio-work" id="toc-visual-video-or-photograph-or-audio-work" class="nav-link" data-scroll-target="#visual-video-or-photograph-or-audio-work">Visual (video or photograph) or audio work</a></li>
+  <li><a href="#policy-brief-or-report" id="toc-policy-brief-or-report" class="nav-link" data-scroll-target="#policy-brief-or-report">Policy Brief or report</a></li>
+  </ul></li>
+  <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See also</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/curation/citation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -196,24 +206,16 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Team Handbook</h1>
-</div>
-
-<div>
-  <div class="description">
-    <p>This is a compendium of knowledge for the TIES Data Team, both for internal capacity development and for external communication for accountability. This work includes technical information about our practices and non-technical guides to support our colleagues.</p>
+<h1 class="title">Citation formats</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">curation</div>
   </div>
-</div>
+  </div>
+
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Global TIES for Children Data Team </p>
-          </div>
-  </div>
     
   
     
@@ -224,40 +226,103 @@ window.Quarto = {
 </header>
 
 
-<section id="welcome" class="level1">
-<h1>Welcome</h1>
-<p>This is a website that documents the work and process of the TIES Data Team.</p>
-<p>Our mission is <strong>to develop open-science tooling for providing archival quality data products and capacity to research team members and external stakeholders with integrity and in a timely fashion.</strong></p>
-<section id="orientation" class="level2">
-<h2 class="anchored" data-anchor-id="orientation">Orientation</h2>
-<ul>
-<li>Read our <a href="./team/purpose.html">statement of purpose</a></li>
-<li>See our <a href="./team/structure.html">list of members</a></li>
-<li>Take a look at our sections below</li>
-<li>Click the search icon in the top-right to look for a specific topic</li>
-</ul>
-<div id="listing-section-listing" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./appendix/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Appendix
-</h5>
-<div class="card-text listing-description">
+<p>Both datasets and derived data products need to be citable and cited after archiving. TIES follows the DataCite citation format for datasets and the APA style guide for derived data products (communication materials, policy briefs, posters, presentations, academic articles, preprints, etc.)</p>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>We use the DataCite format to cite datasets (https://datacite.org/cite-your-data.html). The basic citation format is as follows:</p>
+<blockquote class="blockquote">
+<p>Creator (PublicationYear). Title. Publisher. Identifier</p>
+</blockquote>
+<p>There are also two optional properties. If used the citation format is:</p>
+<blockquote class="blockquote">
+<p>Creator (PublicationYear). Title. Version. Publisher. ResourceType. Identifier.</p>
+</blockquote>
+<p>The APA style guide also has a dataset citation format:</p>
+<blockquote class="blockquote">
+<p>Author or Rightsholder, A. A. (Year). Title (Version Number) [Description of Form]. Publisher. Identifier or URL.</p>
+</blockquote>
+<p>The Datacite format is preferable because it’s an open format and the DOI registration agency for datasets. There’s no differentiation between Publisher and Distributor in the citations. My preference is to include both in order to recognize the publishers (like Global TIES &amp; IRC) and distributor (repository).</p>
+<blockquote class="blockquote">
+<p>Creators (Publication Year). Title. Publisher [Publisher]. Distributor [distributor]. Identifier.</p>
+</blockquote>
+</section>
+<section id="academic-works" class="level2">
+<h2 class="anchored" data-anchor-id="academic-works">Academic works</h2>
+<p>We use APA citation style to cite articles, books, and preprints. The below cases are 6th edition.</p>
+<section id="articles" class="level3">
+<h3 class="anchored" data-anchor-id="articles">Articles</h3>
+<blockquote class="blockquote">
+<p>Last Name, First Initial. Second Initial. (Year). Title. Journal, Volume(Issue), pages. DOI link.</p>
+</blockquote>
+</section>
+<section id="book" class="level3">
+<h3 class="anchored" data-anchor-id="book">Book</h3>
+<blockquote class="blockquote">
+<p>Author last name, First Initial. Second Initial. (Year). Book title: Subtitle. Publisher. URL</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Author last name, First Initial. Second Initial. (Ed.). (Year). Book title: Subtitle. Publisher. URL link</p>
+</blockquote>
+</section>
+<section id="book-chapter" class="level3">
+<h3 class="anchored" data-anchor-id="book-chapter">Book chapter</h3>
+<blockquote class="blockquote">
+<p>Chapter Author’s Last Name, First Initial. Second Initial. (Year). Chapter title. In Editor First initial. Second Initial. Editor Last Name (Ed.). Book title: Subtitle (edition, Volume, pages). Publisher Name. identifier or url link.</p>
+</blockquote>
+</section>
+<section id="conference-sessions-poster-abstracts-and-poster-presentations" class="level3">
+<h3 class="anchored" data-anchor-id="conference-sessions-poster-abstracts-and-poster-presentations">Conference sessions, poster abstracts and poster presentations</h3>
+<blockquote class="blockquote">
+<p>Presenter last name, First initial. Second initial (date of conference). Title of presentation or poster [type of work]. Conference title. Conference location. URL or identifier link.</p>
+</blockquote>
+</section>
+<section id="preprint" class="level3">
+<h3 class="anchored" data-anchor-id="preprint">Preprint</h3>
+<blockquote class="blockquote">
+<p>Last Name, First Initial. Second Initial. (Year). Title. Preprint repository. URL or DOI link.</p>
+</blockquote>
+</section>
+</section>
+<section id="research-instrument" class="level2">
+<h2 class="anchored" data-anchor-id="research-instrument">Research instrument</h2>
+<p>We use APA citation style to cite research instrumentation (surveys, items, etc).</p>
+<blockquote class="blockquote">
+<p>Author last name, First initial., Second initial. (Year). Title [format of work]. URL or doi link.</p>
+</blockquote>
+</section>
+<section id="derived-data-product" class="level2">
+<h2 class="anchored" data-anchor-id="derived-data-product">Derived data product</h2>
+<p>We use APA citation style to cite derived data products, preferably hosted on figshare.</p>
+<section id="visual-video-or-photograph-or-audio-work" class="level3">
+<h3 class="anchored" data-anchor-id="visual-video-or-photograph-or-audio-work">Visual (video or photograph) or audio work</h3>
+<blockquote class="blockquote">
+<p>Creator last name, First initial. Second Initial. (Year, Month Day). Title of work [Description of media, graph or table]. Source. URL or DOI link.</p>
+</blockquote>
+</section>
+<section id="policy-brief-or-report" class="level3">
+<h3 class="anchored" data-anchor-id="policy-brief-or-report">Policy Brief or report</h3>
+<blockquote class="blockquote">
+<p>Organization (Year, Month Day). Title of work <a href="#policy-brief-or-report">Policy brief or report</a>. Source. URL or DOI link.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="see-also" class="level1">
+<h1>See also</h1>
 
+
+
+</section>
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-see-also">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+     <select id="listing-see-also-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-see-also'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
        <option value="" disabled="" selected="" hidden="">Order By</option>
        <option value="index" data-direction="asc">Default</option>
          <option value="listing-title-sort" data-direction="asc">
           Title
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
         </option>
      </select>
   </div>
@@ -270,88 +335,28 @@ Appendix
 <thead>
 <tr>
 <th>
-Title
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
 </th>
 <th>
-Author
+Categories
 </th>
 </tr>
-</thead>…<tbody class="list"><tr data-index="0" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="10" data-listing-word-count-sort="1826" data-listing-title-sort="Glossary" data-listing-filename-sort="glossary.qmd"><td></td><td><span class="listing-author"></span></td></tr><tr data-index="1" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="4" data-listing-word-count-sort="743" data-listing-title-sort="Resources" data-listing-filename-sort="resources.qmd"><td></td><td><span class="listing-author"></span></td></tr></tbody></table><div class="listing-no-matching d-none"></div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./curation/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Curation
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1709006135528" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./management/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Data Management
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1709006135528" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./guides/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Guides
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1709006135528" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./team/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Team
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Curation" data-listing-filename-sort="index.qmd">
+<td>
+<a href="../curation/index.html" class="title listing-title">Curation</a>
+</td>
+<td>
+<span class="listing-categories">&nbsp;</span>
+</td>
+</tr>
+</tbody>
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div>
-<hr>
-<p>This website is (and will always be) <strong>free to use</strong>, and is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a> License.</p>
-
-
-
-</section>
-</section>
-
-</main> <!-- /main -->
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -759,4 +764,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/curation/citation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

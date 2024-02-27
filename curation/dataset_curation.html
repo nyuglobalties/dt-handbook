@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Global TIES for Children Data Team">
-<meta name="description" content="This is a compendium of knowledge for the TIES Data Team, both for internal capacity development and for external communication for accountability. This work includes technical information about our practices and non-technical guides to support our colleagues.">
 
-<title>Data Team Handbook</title>
+<title>Data Team Handbook - Dataset Curation Standards</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,20 +71,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-section-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-see-also .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-section-listing'] = new List('listing-section-listing', options);
+    window['quarto-listings']['listing-see-also'] = new List('listing-see-also', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -130,7 +128,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="floating nav-fixed">
@@ -140,7 +138,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Data Team Handbook</span>
     </a>
   </div>
@@ -151,11 +149,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./team/purpose.html"> 
+    <a class="nav-link" href="../team/purpose.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -180,12 +178,17 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a>
-  <ul class="collapse">
-  <li><a href="#orientation" id="toc-orientation" class="nav-link" data-scroll-target="#orientation">Orientation</a></li>
-  </ul></li>
+  <li><a href="#active-curation" id="toc-active-curation" class="nav-link active" data-scroll-target="#active-curation">Active Curation</a></li>
+  <li><a href="#data-uncertainty" id="toc-data-uncertainty" class="nav-link" data-scroll-target="#data-uncertainty">Data Uncertainty</a></li>
+  <li><a href="#desginated-community" id="toc-desginated-community" class="nav-link" data-scroll-target="#desginated-community">Desginated Community</a></li>
+  <li><a href="#conceptual-structure" id="toc-conceptual-structure" class="nav-link" data-scroll-target="#conceptual-structure">Conceptual Structure</a></li>
+  <li><a href="#raw-dataset-standards" id="toc-raw-dataset-standards" class="nav-link" data-scroll-target="#raw-dataset-standards">Raw Dataset Standards</a></li>
+  <li><a href="#internal-datasets-standards" id="toc-internal-datasets-standards" class="nav-link" data-scroll-target="#internal-datasets-standards">Internal Datasets Standards</a></li>
+  <li><a href="#replicationverification-datasets-standards" id="toc-replicationverification-datasets-standards" class="nav-link" data-scroll-target="#replicationverification-datasets-standards">Replication/Verification Datasets Standards</a></li>
+  <li><a href="#datasets-for-reuse-standards" id="toc-datasets-for-reuse-standards" class="nav-link" data-scroll-target="#datasets-for-reuse-standards">Datasets for Reuse Standards</a></li>
+  <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See also</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/curation/dataset_curation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -196,24 +199,17 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Team Handbook</h1>
-</div>
-
-<div>
-  <div class="description">
-    <p>This is a compendium of knowledge for the TIES Data Team, both for internal capacity development and for external communication for accountability. This work includes technical information about our practices and non-technical guides to support our colleagues.</p>
+<h1 class="title">Dataset Curation Standards</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">curation</div>
+    <div class="quarto-category">standards</div>
   </div>
-</div>
+  </div>
+
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Global TIES for Children Data Team </p>
-          </div>
-  </div>
     
   
     
@@ -224,40 +220,141 @@ window.Quarto = {
 </header>
 
 
-<section id="welcome" class="level1">
-<h1>Welcome</h1>
-<p>This is a website that documents the work and process of the TIES Data Team.</p>
-<p>Our mission is <strong>to develop open-science tooling for providing archival quality data products and capacity to research team members and external stakeholders with integrity and in a timely fashion.</strong></p>
-<section id="orientation" class="level2">
-<h2 class="anchored" data-anchor-id="orientation">Orientation</h2>
-<ul>
-<li>Read our <a href="./team/purpose.html">statement of purpose</a></li>
-<li>See our <a href="./team/structure.html">list of members</a></li>
-<li>Take a look at our sections below</li>
-<li>Click the search icon in the top-right to look for a specific topic</li>
-</ul>
-<div id="listing-section-listing" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./appendix/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Appendix
-</h5>
-<div class="card-text listing-description">
+<p>The goal of the Data Team when archiving, sharing, and preserving data products (datasets and derived data products) is to reduce data uncertainty and serve specific designated communities including the source community. Datasets and derived data products are archived according to the Open Archival Information System (OAIS) and the FAIR standards of scientific data management. They are shared in a way that protects and respects TIES survey respondents.</p>
+<p>The Data Team seeks to curate datasets actively. This involves building tools and processes to assist in capturing and refining metadata at the study and variable level as early as possible in the research data lifecycle.</p>
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Raw Datasets</th>
+<th>Internal Datasets</th>
+<th>Replication/Verification Datasets</th>
+<th>Reuse Datasets</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Designated Communities</strong></td>
+<td>TIES Data Team</td>
+<td>TIES Staff</td>
+<td>Academic and scholarly users</td>
+<td>Academic and scholarly users, host country (government) users, NGO users</td>
+</tr>
+<tr class="even">
+<td><strong>Metadata Requirements</strong></td>
+<td>None</td>
+<td>limited</td>
+<td>targeted towards academic use including academic schemas</td>
+<td>complete DDI codebook</td>
+</tr>
+<tr class="odd">
+<td><strong>Language / Internationalization standards</strong></td>
+<td>None</td>
+<td>English and language of host country</td>
+<td>English and language of article</td>
+<td>English and language of host country</td>
+</tr>
+<tr class="even">
+<td><strong>Derived data products</strong></td>
+<td>Internal datasets</td>
+<td>Internal reports, policy briefs, presentations</td>
+<td>academic articles</td>
+<td>policy briefs, presentations</td>
+</tr>
+<tr class="odd">
+<td><strong>Repository / Storage solution</strong></td>
+<td>according to DUA/DMP</td>
+<td>according to DUA/DMP</td>
+<td>journal approved or sponsored repository</td>
+<td>Harvard Dataverse</td>
+</tr>
+<tr class="even">
+<td><strong>Deidentification/Anonymization level</strong></td>
+<td>None</td>
+<td>Deidentified</td>
+<td>Anonymized</td>
+<td>Anonymized</td>
+</tr>
+<tr class="odd">
+<td><strong>Quality Assurance Level</strong></td>
+<td>Low</td>
+<td>Medium</td>
+<td>High</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<p>Below are a list of general concepts followed by various standards for different kinds of datasets. The appendix has background material/definitions for common curation practices.</p>
+<section id="active-curation" class="level2">
+<h2 class="anchored" data-anchor-id="active-curation"><a href="../curation/active_curation.html">Active Curation</a></h2>
+<p>The process of capturing and data and metadata early and refining it throughout the data life cycle.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</section>
+<section id="data-uncertainty" class="level2">
+<h2 class="anchored" data-anchor-id="data-uncertainty">Data Uncertainty</h2>
+<p>This is the degree to which data is inaccurate, imprecise, untrusted, or unknown. All complex systems have a degree of uncertainty inherent within them. Practically this means that when designing data products, efforts should be made to reduce or remove missingness and ensure that data products are properly described with metadata/documentation where applicable.</p>
+</section>
+<section id="desginated-community" class="level2">
+<h2 class="anchored" data-anchor-id="desginated-community">Desginated Community</h2>
+<p>This is the audience for a data product and can be an imagined group or persona. The term is borrowed from the Open Archival Information System (OAIS) Reference Model and defined as “an identified group of potential Consumers who should be able to understand a particular set of information.” Each designated community has its own Knowledge Base. The Knowledge Base of a DC can change over time to the point where the archive would need to update and enhance preserved information to make it understandable again for the DC.</p>
+</section>
+<section id="conceptual-structure" class="level2">
+<h2 class="anchored" data-anchor-id="conceptual-structure">Conceptual Structure</h2>
+<p>The conceptual structure of a dataset exists in the metadata and consists of controlled vocabularies that exist as permanent URLs. It defines the concepts that underlies the elements and variables and increases interoperability.</p>
+<hr>
+</section>
+<section id="raw-dataset-standards" class="level1">
+<h1>Raw Dataset Standards</h1>
+<p>Datasets of raw data from the data collector in whatever format it’s received. Has identifiable information and can be multiple files.</p>
+<p>Basic study level metadata is collected or collated from preregistrations and pre-analysis plans. Variable level metadata is limited to variable names and labels. At this stage there is no conceptual structure.</p>
+<p>Due to the sensitive nature of these data, Data use agreements and data management plans disallow the sharing of these datasets. The only derived product from raw data are in process deidentified datasets designated for internal use.</p>
+<hr>
+</section>
+<section id="internal-datasets-standards" class="level1">
+<h1>Internal Datasets Standards</h1>
+<p>Data that is being processed by the Data Team but available to other Global TIES staffmembers. This data is in the process of being cleaned and deidentified. The output of this cleaning is in a csv file.</p>
+<p>At this point study and variable level metadata has been moved into a YAML file and follows the DDI-Codebook (2.5) schema. The metadata is focused on the needs of TIES staff and partners, therefore it does not yet include a conceptual structure for interoperability.</p>
+<p>Terms of use are still determined by the data use agreement and data management plan. Typically, this data is not shared outside of partners or through an application procedure. The data is also held according to the DUA and DMP, usually in an NYU storage solution (Box) or in private repositories.</p>
+<p>As the data is prepared, deidentified, and getting close to finalized, derived data products may be created from it, namely data dictionaries, policy briefs, presentations, and funder reports. Metadata shared with funder reports may be multilingual in the language of the funder or partner.</p>
+<hr>
+</section>
+<section id="replicationverification-datasets-standards" class="level1">
+<h1>Replication/Verification Datasets Standards</h1>
+<p>These datasets are generated in support of an academic derived data product (article, presentation, poster). Data is limited to the variables and measures used in the academic work and is produced in a single csv file. These datasets may include code used to generate the derived data product.</p>
+<p>Metadata is generated in a DDI-Codebook and as documentation in a pdf. Study level metadata is focused on discovery and linked to the published article. Variable level metadata have labels and categories. A conceptual structure constructed from academic controlled vocabularies is used.</p>
+<p>Data is licensed using a standard or custom license depending on the sensitivity of the data.</p>
+<hr>
+</section>
+<section id="datasets-for-reuse-standards" class="level1">
+<h1>Datasets for Reuse Standards</h1>
+<p>These datasets are designed for reuse on a wider scale than a replication/verification dataset. To remove data uncertainty, multiple csv files may be used. In these files, all variables in a study are included, as long as there’s no potential harm to the data subject. In cases where the inclusion of a variable may lead to the risk of identification, it may be embargoed or recoded to limit risk.</p>
+<p>The metadata is generated in a DDI-Codebook and as documentation in a pdf. Study level metadata is complete, with conceptual structures to address a larger designated community than other datasets. Variable level metadata includes a data dictionary, variable grouping, conceptual structures, and summary statistics, including visualizations where appropriate.</p>
+<p>Datasets are deposited in <a href="../curation/fair.html">FAIR</a> repositories that provide the most discoverability. Currently, we deposit reuse datasets in Harvard Dataverse<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> because it is indexed in Google Dataset Search. The data is licensed under a custom license to increase protection of our data subjects.</p>
+<hr>
+</section>
+<section id="see-also" class="level1">
+<h1>See also</h1>
 
+
+
+</section>
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-see-also">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+     <select id="listing-see-also-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-see-also'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
        <option value="" disabled="" selected="" hidden="">Order By</option>
        <option value="index" data-direction="asc">Default</option>
          <option value="listing-title-sort" data-direction="asc">
           Title
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
         </option>
      </select>
   </div>
@@ -270,88 +367,50 @@ Appendix
 <thead>
 <tr>
 <th>
-Title
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
 </th>
 <th>
-Author
+Categories
 </th>
 </tr>
-</thead>…<tbody class="list"><tr data-index="0" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="10" data-listing-word-count-sort="1826" data-listing-title-sort="Glossary" data-listing-filename-sort="glossary.qmd"><td></td><td><span class="listing-author"></span></td></tr><tr data-index="1" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="4" data-listing-word-count-sort="743" data-listing-title-sort="Resources" data-listing-filename-sort="resources.qmd"><td></td><td><span class="listing-author"></span></td></tr></tbody></table><div class="listing-no-matching d-none"></div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./curation/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Curation
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1709006135528" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./management/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Data Management
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1709006135528" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./guides/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Guides
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1709006135528" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./team/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Team
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-categories="curation" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="2" data-listing-word-count-sort="271" data-listing-title-sort="Active Curation" data-listing-filename-sort="active_curation.qmd">
+<td>
+<a href="../curation/active_curation.html" class="title listing-title">Active Curation</a>
+</td>
+<td>
+<span class="listing-categories">curation</span>
+</td>
+</tr>
+<tr data-index="1" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Curation" data-listing-filename-sort="index.qmd">
+<td>
+<a href="../curation/index.html" class="title listing-title">Curation</a>
+</td>
+<td>
+<span class="listing-categories">&nbsp;</span>
+</td>
+</tr>
+<tr data-index="2" data-categories="standards,curation,dmp" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="10" data-listing-word-count-sort="1949" data-listing-title-sort="Data Management Plans" data-listing-filename-sort="DMP.qmd">
+<td>
+<a href="../curation/DMP.html" class="title listing-title">Data Management Plans</a>
+</td>
+<td>
+<span class="listing-categories">standards, curation, dmp</span>
+</td>
+</tr>
+</tbody>
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div>
-<hr>
-<p>This website is (and will always be) <strong>free to use</strong>, and is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a> License.</p>
+</div><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
-
-
-</section>
-</section>
-
-</main> <!-- /main -->
+<ol>
+<li id="fn1"><p><a href="https://doi.org/10.2218/ijdc.v12i2.552" class="uri">https://doi.org/10.2218/ijdc.v12i2.552</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><a href="https://dataverse.harvard.edu/" class="uri">https://dataverse.harvard.edu/</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -759,4 +818,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/curation/dataset_curation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

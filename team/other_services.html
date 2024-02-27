@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Global TIES for Children Data Team">
-<meta name="description" content="This is a compendium of knowledge for the TIES Data Team, both for internal capacity development and for external communication for accountability. This work includes technical information about our practices and non-technical guides to support our colleagues.">
 
-<title>Data Team Handbook</title>
+<title>Data Team Handbook - Other Data Team Services</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,67 +66,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-section-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-section-listing'] = new List('listing-section-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="floating nav-fixed">
@@ -140,7 +78,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Data Team Handbook</span>
     </a>
   </div>
@@ -151,11 +89,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./team/purpose.html"> 
+    <a class="nav-link" href="../team/purpose.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -180,12 +118,29 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a>
+  <li><a href="#documentation-generation" id="toc-documentation-generation" class="nav-link active" data-scroll-target="#documentation-generation">Documentation Generation</a>
   <ul class="collapse">
-  <li><a href="#orientation" id="toc-orientation" class="nav-link" data-scroll-target="#orientation">Orientation</a></li>
+  <li><a href="#r-markdown-files" id="toc-r-markdown-files" class="nav-link" data-scroll-target="#r-markdown-files">R Markdown files</a></li>
+  <li><a href="#markup-languages" id="toc-markup-languages" class="nav-link" data-scroll-target="#markup-languages">Markup languages</a></li>
   </ul></li>
+  <li><a href="#research-impact" id="toc-research-impact" class="nav-link" data-scroll-target="#research-impact">Research Impact</a>
+  <ul class="collapse">
+  <li><a href="#bibliometric-terms" id="toc-bibliometric-terms" class="nav-link" data-scroll-target="#bibliometric-terms">Bibliometric Terms</a></li>
+  <li><a href="#altmetrics" id="toc-altmetrics" class="nav-link" data-scroll-target="#altmetrics">Altmetrics</a></li>
+  </ul></li>
+  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization">Data Visualization</a>
+  <ul class="collapse">
+  <li><a href="#types-of-data-visualization" id="toc-types-of-data-visualization" class="nav-link" data-scroll-target="#types-of-data-visualization">Types of data visualization</a></li>
+  <li><a href="#parts-of-a-data-visualizaiton" id="toc-parts-of-a-data-visualizaiton" class="nav-link" data-scroll-target="#parts-of-a-data-visualizaiton">Parts of a data visualizaiton</a></li>
+  <li><a href="#types-of-visualizations" id="toc-types-of-visualizations" class="nav-link" data-scroll-target="#types-of-visualizations">Types of visualizations</a></li>
+  </ul></li>
+  <li><a href="#dashboards" id="toc-dashboards" class="nav-link" data-scroll-target="#dashboards">Dashboards</a>
+  <ul class="collapse">
+  <li><a href="#dashboard-applications" id="toc-dashboard-applications" class="nav-link" data-scroll-target="#dashboard-applications">Dashboard Applications</a></li>
+  </ul></li>
+  <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See also</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/team/other_services.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -196,24 +151,13 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Team Handbook</h1>
+<h1 class="title">Other Data Team Services</h1>
 </div>
 
-<div>
-  <div class="description">
-    <p>This is a compendium of knowledge for the TIES Data Team, both for internal capacity development and for external communication for accountability. This work includes technical information about our practices and non-technical guides to support our colleagues.</p>
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Global TIES for Children Data Team </p>
-          </div>
-  </div>
     
   
     
@@ -224,134 +168,130 @@ window.Quarto = {
 </header>
 
 
-<section id="welcome" class="level1">
-<h1>Welcome</h1>
-<p>This is a website that documents the work and process of the TIES Data Team.</p>
-<p>Our mission is <strong>to develop open-science tooling for providing archival quality data products and capacity to research team members and external stakeholders with integrity and in a timely fashion.</strong></p>
-<section id="orientation" class="level2">
-<h2 class="anchored" data-anchor-id="orientation">Orientation</h2>
+<section id="documentation-generation" class="level2">
+<h2 class="anchored" data-anchor-id="documentation-generation">Documentation Generation</h2>
+<p>To generate documentation and reports, the Data Team uses literate programming, a programming philosophy that interweaves (or knits) together a markup language with a programming language in order to generate human readable documents. These documents can include codebooks, dataset documentation, or reports.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In order to generate the documentation, the information needed for the report has to be provided by the PIs or requester in a structured format e.g.&nbsp;a YAML file, JSON file, or a set of tables.</p>
+</div>
+</div>
+<section id="r-markdown-files" class="level3">
+<h3 class="anchored" data-anchor-id="r-markdown-files">R Markdown files</h3>
+<p>R Markdown files are native to RStudio<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and use a notebook interface to weave together natural language, markup language, and code. Notebook is a document with programmatic chunks that can be executive independently of the generated document. Jupyter notebook is another notebook format, more typically used with Python and in data science.</p>
+<p>Posit<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> provides a cheat sheet<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> for R Markdown. Other useful packages include {bookdown}<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, {kableExtra}<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> (for tables), and {flextable}<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> (for tables).</p>
+</section>
+<section id="markup-languages" class="level3">
+<h3 class="anchored" data-anchor-id="markup-languages">Markup languages</h3>
+<p>To create static documents we rely on three markup languages.</p>
 <ul>
-<li>Read our <a href="./team/purpose.html">statement of purpose</a></li>
-<li>See our <a href="./team/structure.html">list of members</a></li>
-<li>Take a look at our sections below</li>
-<li>Click the search icon in the top-right to look for a specific topic</li>
+<li><strong>markdown</strong>: Lightweight markup language to add formatting to natural language data. Can be used in multiple output formats (word docs, pdf, web pages, presentations, etc.There’s also various flavors of markdown including Github and Trello. Cheat sheet: <a href="https://www.markdownguide.org/cheat-sheet/" class="uri">https://www.markdownguide.org/cheat-sheet/</a></li>
+<li><strong>HyperText Markup Language (HTML)</strong>: Used to structure a web page and its content. Consists of elements that can enclose, wrap, or format natural langauge data or other values. To set a uniform format for documents, the Data Team can use Cascading Style Sheets (CSS). Cheat sheet: <a href="https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf" class="uri">https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf</a></li>
+<li><strong>LaTeX</strong>: Document preparation system used for the communication and publication of scientific documents. Outputs pdf and allows for more intricate formatting, especially of scientific/mathematical formulas. LaTeX is more complex than markdown and HTML, allowing for more intricate customization, including custom macros. A file called preface.tex can be used to uniformly format documents. An example from the Urban Institute can be found in this <a href="https://github.com/UrbanInstitute/rmarkdown-factsheets">Github repository</a>. Overleaf is an online LaTeX editor that can be used for collaborative writing.</li>
 </ul>
-<div id="listing-section-listing" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./appendix/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Appendix
-</h5>
-<div class="card-text listing-description">
-
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title-sort" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Title
-</th>
-<th>
-Author
-</th>
-</tr>
-</thead>…<tbody class="list"><tr data-index="0" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="10" data-listing-word-count-sort="1826" data-listing-title-sort="Glossary" data-listing-filename-sort="glossary.qmd"><td></td><td><span class="listing-author"></span></td></tr><tr data-index="1" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="4" data-listing-word-count-sort="743" data-listing-title-sort="Resources" data-listing-filename-sort="resources.qmd"><td></td><td><span class="listing-author"></span></td></tr></tbody></table><div class="listing-no-matching d-none"></div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./curation/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Curation
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1709006135528" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./management/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Data Management
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1709006135528" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./guides/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Guides
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1709006135528" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./team/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Team
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+</section>
+</section>
+<section id="research-impact" class="level2">
+<h2 class="anchored" data-anchor-id="research-impact">Research Impact</h2>
+<p>The impact of a dataset, publication, or author can be measured using a variety of metrics including the H-Index, times, cited, journal impact factor, or social media and internet reach. This is called bibliometrics or sciencometrics. Nontraditional impact metrics are known as altmetrics. The Data Team can help you measure and track the impact of your research, data, or other derived data products on their own or against other benchmarks, usually a bibliographic corpus around a theme or academic field.</p>
+<p><strong>Caveat</strong></p>
+<p>Impact is determined by the data source. Don’t be surprised if your H-Index changes depending on the corpus of research documents/database being used. Also, there are various ways of hacking the below basic terms, especially H-Index so always take research impact metrics with a grain of salt.</p>
+<p>It’s also important to note that every academic work has a <em>half life</em> (the period in which it reaches half of its reach) and <em>velocity</em>, the speed at which it gets to its half life and full reach. Once an article reaches its full reach, it can become obsolete. The period to reach this point though has been growing due to the ease of access in online databases.</p>
+<section id="bibliometric-terms" class="level3">
+<h3 class="anchored" data-anchor-id="bibliometric-terms">Bibliometric Terms</h3>
+<ul>
+<li><strong>H-Index</strong>: an author metric that matches the most times an article has been cited and the number of articles an author has published. There’s a slew of adaptations to the H-Index as well as Google Scholar’s I10 Index (the number of articles cited 10 times).</li>
+<li><strong>Times cited</strong>: the number of times an article has been cited by other peer reviewed articles within a database</li>
+<li><strong>Journal Impact Factor</strong>: ratio between the number of times articles in a journal has been cited and the number of citable articles.</li>
+<li><strong>Immediacy index</strong>: the average number of times a journal article was cited in the year it was published.</li>
+</ul>
+</section>
+<section id="altmetrics" class="level3">
+<h3 class="anchored" data-anchor-id="altmetrics">Altmetrics</h3>
+<p>Altmetrics are alternative metrics that measure an article’s non-academic impact in social media, the news, Wikipedia, public policy, teaching, etc. They’re viewed as being complimentary to bibliometrics.</p>
+<p>Common altmetrics used:</p>
+<ul>
+<li><strong>Altmetric Attention score</strong>: The Altmetric score is a score that weights the different kinds of non-academic mentions an article received. A list of the sources is at <a href="https://www.altmetric.com/about-our-data/our-sources/" class="uri">https://www.altmetric.com/about-our-data/our-sources/</a>. This score is generated by the Altmetric.com, a subsidiary of Digital Science.</li>
+<li><strong>Mendeley readers</strong>: Mendeley is a social bookmarking site and citation manager for academic articles. They track the number of saves on the site as Mendeley Readers. From the user provided information they then provide metrics on their readers that have saved a specific article. Mendeley readers has been shown to have some predictive power as to the impact of an article.</li>
+</ul>
+</section>
+</section>
+<section id="data-visualization" class="level2">
+<h2 class="anchored" data-anchor-id="data-visualization">Data Visualization</h2>
+<p>Data visualizations, the practice of using charts, graphs and plots to transmit information about data, is one of the services that the Data Team can provide to TIES staff.</p>
+<p>Data visualization allows staff to use visual storytelling, making complex analytic and informational points about a dataset in an easier more accessible format. Unlike text, visualizations clearer and more direct points about a data.</p>
+<p>Typically, the data team will build visualizations using the R package <code>ggplot2</code>.</p>
+<section id="types-of-data-visualization" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-data-visualization">Types of data visualization</h3>
+<p>Below are the four general types of data visualizations.</p>
+<ul>
+<li><strong>Comparative</strong>: Compares two different sets of data (either two different datasets, two subsets of the dame datasets, or even two different research questions)</li>
+<li><strong>Compositional</strong>: Describes parts of a whole in a dataset</li>
+<li><strong>Distributional</strong>: Shows all possible values of a dataset and where and how they occur in an instance space</li>
+<li><strong>Relational</strong>: How variables in a dataset influence one another</li>
+</ul>
+</section>
+<section id="parts-of-a-data-visualizaiton" class="level3">
+<h3 class="anchored" data-anchor-id="parts-of-a-data-visualizaiton">Parts of a data visualizaiton</h3>
+<p>Besides the visualization itself, a data visualization can have any of the below aspects. Each aspect gives the viewer information on the data that the visualization is representing.</p>
+<ul>
+<li>axis</li>
+<li>title/subtitle</li>
+<li>legend</li>
+<li>labels</li>
+<li>notes</li>
+</ul>
+</section>
+<section id="types-of-visualizations" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-visualizations">Types of visualizations</h3>
+<p>For examples of visualizations that the Data Team can build see <a href="https://www.data-to-viz.com/" class="uri">https://www.data-to-viz.com/</a>.</p>
+</section>
+</section>
+<section id="dashboards" class="level2">
+<h2 class="anchored" data-anchor-id="dashboards">Dashboards</h2>
+<p>Dashboards are a collection of visualizations typically used for business intelligence analytics. They use visualizations, legends, drop down menus, number and timelines and other graphics as filters for the entire dashboard. This allows the user to explore metrics or KPIs within a dataset.</p>
+<p>Dashboards also usually allow the user to join datasets from different sources, using joins from SQL/RDMS to merge them together. This allows the dashboard designer to find new actionable insights.</p>
+<section id="dashboard-applications" class="level3">
+<h3 class="anchored" data-anchor-id="dashboard-applications">Dashboard Applications</h3>
+<ul>
+<li><a href="https://datastudio.google.com/u/0/">Google Data Studio</a></li>
+<li><a href="https://www.tableau.com/">Tableau</a></li>
+<li><a href="https://powerbi.microsoft.com/en-us/">Microsoft Power BI</a></li>
+</ul>
+<p>The Data Team will usually use Google Data Studio to build a dashboard because it’s free to use and incorporates the same privacy features and capabilities as the Google Platform.</p>
 <hr>
-<p>This website is (and will always be) <strong>free to use</strong>, and is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a> License.</p>
-
+</section>
+</section>
+<section id="see-also" class="level1">
+<h1>See also</h1>
+<ul>
+<li><a href="../team/index.html">Team (listing)</a></li>
+<li><a href="../curation/index.html">Curation</a></li>
+</ul>
 
 
 </section>
-</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p><a href="https://posit.co/products/open-source/rstudio/" class="uri">https://posit.co/products/open-source/rstudio/</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><a href="https://posit.co/" class="uri">https://posit.co/</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf" class="uri">https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p><a href="https://bookdown.org/" class="uri">https://bookdown.org/</a><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p><a href="https://haozhu233.github.io/kableExtra/" class="uri">https://haozhu233.github.io/kableExtra/</a><a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p><a href="https://davidgohel.github.io/flextable/" class="uri">https://davidgohel.github.io/flextable/</a><a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -759,4 +699,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/team/other_services.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

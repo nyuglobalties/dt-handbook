@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Global TIES for Children Data Team">
-<meta name="description" content="This is a compendium of knowledge for the TIES Data Team, both for internal capacity development and for external communication for accountability. This work includes technical information about our practices and non-technical guides to support our colleagues.">
 
-<title>Data Team Handbook</title>
+<title>Data Team Handbook - Resources</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,67 +66,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-section-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-section-listing'] = new List('listing-section-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="floating nav-fixed">
@@ -140,7 +78,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Data Team Handbook</span>
     </a>
   </div>
@@ -151,11 +89,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./team/purpose.html"> 
+    <a class="nav-link" href="../team/purpose.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -180,12 +118,26 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a>
+  <li><a href="#tutorials" id="toc-tutorials" class="nav-link active" data-scroll-target="#tutorials">Tutorials</a></li>
+  <li><a href="#cheatsheets" id="toc-cheatsheets" class="nav-link" data-scroll-target="#cheatsheets">Cheatsheets</a></li>
+  <li><a href="#useful-organizations" id="toc-useful-organizations" class="nav-link" data-scroll-target="#useful-organizations">Useful Organizations</a></li>
+  <li><a href="#metadata-schemas-and-controlled-vocabularies" id="toc-metadata-schemas-and-controlled-vocabularies" class="nav-link" data-scroll-target="#metadata-schemas-and-controlled-vocabularies">Metadata schemas and controlled vocabularies</a>
   <ul class="collapse">
-  <li><a href="#orientation" id="toc-orientation" class="nav-link" data-scroll-target="#orientation">Orientation</a></li>
+  <li><a href="#schemas" id="toc-schemas" class="nav-link" data-scroll-target="#schemas">Schemas</a></li>
+  <li><a href="#controlled-vocabularies" id="toc-controlled-vocabularies" class="nav-link" data-scroll-target="#controlled-vocabularies">Controlled vocabularies</a></li>
+  </ul></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a>
+  <ul class="collapse">
+  <li><a href="#data-and-digital-curation" id="toc-data-and-digital-curation" class="nav-link" data-scroll-target="#data-and-digital-curation">Data and Digital Curation</a></li>
+  <li><a href="#data-sharing" id="toc-data-sharing" class="nav-link" data-scroll-target="#data-sharing">Data Sharing</a></li>
+  <li><a href="#data-sharing-in-psychology" id="toc-data-sharing-in-psychology" class="nav-link" data-scroll-target="#data-sharing-in-psychology">Data Sharing in Psychology</a></li>
+  <li><a href="#data-reuse" id="toc-data-reuse" class="nav-link" data-scroll-target="#data-reuse">Data Reuse</a></li>
+  <li><a href="#archiving" id="toc-archiving" class="nav-link" data-scroll-target="#archiving">Archiving</a></li>
+  <li><a href="#protecting-vulnerable-data-subjects" id="toc-protecting-vulnerable-data-subjects" class="nav-link" data-scroll-target="#protecting-vulnerable-data-subjects">Protecting Vulnerable Data Subjects</a></li>
+  <li><a href="#data-sovereignty" id="toc-data-sovereignty" class="nav-link" data-scroll-target="#data-sovereignty">Data Sovereignty</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/appendix/resources.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -196,24 +148,13 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Team Handbook</h1>
+<h1 class="title">Resources</h1>
 </div>
 
-<div>
-  <div class="description">
-    <p>This is a compendium of knowledge for the TIES Data Team, both for internal capacity development and for external communication for accountability. This work includes technical information about our practices and non-technical guides to support our colleagues.</p>
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Global TIES for Children Data Team </p>
-          </div>
-  </div>
     
   
     
@@ -224,128 +165,111 @@ window.Quarto = {
 </header>
 
 
-<section id="welcome" class="level1">
-<h1>Welcome</h1>
-<p>This is a website that documents the work and process of the TIES Data Team.</p>
-<p>Our mission is <strong>to develop open-science tooling for providing archival quality data products and capacity to research team members and external stakeholders with integrity and in a timely fashion.</strong></p>
-<section id="orientation" class="level2">
-<h2 class="anchored" data-anchor-id="orientation">Orientation</h2>
+<section id="tutorials" class="level2">
+<h2 class="anchored" data-anchor-id="tutorials">Tutorials</h2>
 <ul>
-<li>Read our <a href="./team/purpose.html">statement of purpose</a></li>
-<li>See our <a href="./team/structure.html">list of members</a></li>
-<li>Take a look at our sections below</li>
-<li>Click the search icon in the top-right to look for a specific topic</li>
+<li><a href="https://datacarpentry.org/spreadsheets-socialsci/">Data Organization in Spreadsheets for Social Scientists</a>: <strong>Data Carpentry</strong></li>
 </ul>
-<div id="listing-section-listing" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./appendix/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Appendix
-</h5>
-<div class="card-text listing-description">
-
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title-sort" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Title
-</th>
-<th>
-Author
-</th>
-</tr>
-</thead>…<tbody class="list"><tr data-index="0" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="10" data-listing-word-count-sort="1826" data-listing-title-sort="Glossary" data-listing-filename-sort="glossary.qmd"><td></td><td><span class="listing-author"></span></td></tr><tr data-index="1" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="4" data-listing-word-count-sort="743" data-listing-title-sort="Resources" data-listing-filename-sort="resources.qmd"><td></td><td><span class="listing-author"></span></td></tr></tbody></table><div class="listing-no-matching d-none"></div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1709006135520" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./curation/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Curation
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1709006135528" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./management/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Data Management
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1709006135528" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./guides/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Guides
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1709006135528" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./team/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Team
-</h5>
-<div class="card-text listing-description">
-2/27/24, 3:55:35 AM
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-<hr>
-<p>This website is (and will always be) <strong>free to use</strong>, and is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a> License.</p>
-
+</section>
+<section id="cheatsheets" class="level2">
+<h2 class="anchored" data-anchor-id="cheatsheets">Cheatsheets</h2>
+<ul>
+<li><a href="https://www.markdownguide.org/basic-syntax/">Markdown Basic Syntax</a></li>
+<li>W3C <a href="https://www.w3schools.com/sql/">SQL Tutorial</a></li>
+</ul>
+</section>
+<section id="useful-organizations" class="level2">
+<h2 class="anchored" data-anchor-id="useful-organizations">Useful Organizations</h2>
+<ul>
+<li><a href="https://pidforum.org/">The PID Forum</a></li>
+<li>Data Documentation Initiative</li>
+<li><a href="https://datacurationnetwork.org/#">Data Curation Network</a></li>
+<li>DataCite</li>
+<li>CrossRef</li>
+<li><a href="https://www.dcc.ac.uk/">Digital Curation Centre</a></li>
+</ul>
+</section>
+<section id="metadata-schemas-and-controlled-vocabularies" class="level2">
+<h2 class="anchored" data-anchor-id="metadata-schemas-and-controlled-vocabularies">Metadata schemas and controlled vocabularies</h2>
+<section id="schemas" class="level3">
+<h3 class="anchored" data-anchor-id="schemas">Schemas</h3>
+<ul>
+<li>Data Documentation Initiative (DDI)</li>
+<li>Dublin Core Metadta Initiative (DC)</li>
+<li>schema.org</li>
+<li>Datacite</li>
+<li>Humanitarian eXchange Language (HXL)</li>
+</ul>
+</section>
+<section id="controlled-vocabularies" class="level3">
+<h3 class="anchored" data-anchor-id="controlled-vocabularies">Controlled vocabularies</h3>
+<ul>
+<li><a href="http://vocabularies.unesco.org/browser/thesaurus/en/">UNESCO Thesaurus</a></li>
+<li><a href="https://www.nlm.nih.gov/mesh/meshhome.html">Medical Subject Headings (MeSH)</a></li>
+<li>IPTC <a href="https://iptc.org/standards/newscodes/">NewsCodes</a></li>
+<li>IFLA’s <a href="https://repository.ifla.org/bitstream/123456789/631/1/ifla-professional-reports-nr-115-en.pdf">Guidelines for Multilingual Thesauri</a></li>
+</ul>
+</section>
+</section>
+<section id="bibliography" class="level2">
+<h2 class="anchored" data-anchor-id="bibliography">Bibliography</h2>
+<section id="data-and-digital-curation" class="level3">
+<h3 class="anchored" data-anchor-id="data-and-digital-curation">Data and Digital Curation</h3>
+<ul>
+<li>Curry, E., Freitas, A., &amp; O’Riáin, S. (2010). The role of community-driven data curation for enterprises. In Wood, D. (eds). <em>Linking enterprise data</em>. Springer, Boston, MA. <a href="https://doi.org/10.1007/978-1-4419-7665-9_2" class="uri">https://doi.org/10.1007/978-1-4419-7665-9_2</a></li>
+<li>Higgins, S. (2008). The DCC Curation Lifecycle Model. <em>The International Journal of Digital Curation</em>, 1(3), 134-140. doi: <a href="https://doi.org/10.2218/ijdc.v3i1.48">10.2218/ijdc.v3i1.48</a></li>
+</ul>
+</section>
+<section id="data-sharing" class="level3">
+<h3 class="anchored" data-anchor-id="data-sharing">Data Sharing</h3>
+<ul>
+<li>Borgman, C. L. (2012). The conundrum of sharing research data. <em>Journal of the American Society for Information Science and Technology</em>, 63, 1059-1078. doi: <a href="https://doi.org/10.1002/asi.22634">10.1002/asi.22634</a></li>
+<li>Cragin, M. H., Palmer, C. L., &amp; Carlson, J. R. (2010). Data sharing, small science and institutional repositories. Philosophical Transactions of the Royal Society, 368, 4023-4038. doi: <a href="http://doi.org/10.1098/rsta.2010.0165">10.1098/rsta.2010.0165</a></li>
+<li>Curty, R., Yoon, A., Jeng., W., &amp; Qin, J. (2016). Untangling data sharing and reuse in social sciences. <em>Proceedings of the Association for Information Science and Technology</em>, 53(1), 1-5. doi: <a href="https://doi.org/10.1002/pra2.2016.14505301025">10.1002/pra2.2016.14505301025</a></li>
+<li>Wills, C., Greenberg, J., &amp; White, H. (2012). Analysis and synthesis of metadata goals for scientific data. Journal for the American Society for Information Science &amp; Technology, 63, 1505-1520. doi: <a href="https://doi.org/10.1002/asi.22683">10.1002/asi.22683</a></li>
+</ul>
+</section>
+<section id="data-sharing-in-psychology" class="level3">
+<h3 class="anchored" data-anchor-id="data-sharing-in-psychology">Data Sharing in Psychology</h3>
+<ul>
+<li>Meyer M.N. (2018). Practical Tips for Ethical Data Sharing. <em>Advances in Methods and Practices in Psychological Science</em>, 1(1), 131-144. doi: <a href="https://journals.sagepub.com/doi/full/10.1177/2515245917747656">10.1177/2515245917747656</a>.</li>
+<li>Ross, M. W., Iguchi, M. Y., &amp; Panicker, S. (2018). Ethical aspects of data sharing and research participant protections. <em>The American psychologist</em>, 73(2), 138–145. doi: <a href="https://doi.org/10.1037/amp0000240">10.1037/amp0000240</a>.</li>
+<li>Towse, J. N., Ellis, D. A., &amp; Towse, A. S. (2021). Opening Pandora’s Box: Peeking inside Psychology’s data sharing practices, and seven recommendations for change. <em>Behavior research methods</em>, 53(4), 1455-1468. doi: <a href="https://doi.org/10.3758/s13428-020-01486-1">10.3758/s13428-020-01486-1</a>.</li>
+</ul>
+</section>
+<section id="data-reuse" class="level3">
+<h3 class="anchored" data-anchor-id="data-reuse">Data Reuse</h3>
+<ul>
+<li>Curty, R. G. (2016). Factors influencing research data reuse in the social sciences: An exploratory study. <em>International Journal of Digital Curation</em>, 11(1), 96-117. doi: <a href="https://doi.org/10.2218/ijdc.v11i1.401">10.2218/ijdc.v11i1.401</a>.</li>
+<li>Buckner, Elizabeth, Daniel Shephard, and Anne Smiley. (2022). Beyond Numbers: The Use and Usefulness of Data for Education in Emergencies. <em>Journal on Education in Emergencies</em>, 8(1), 214-42. doi: <a href="https://doi.org/10.33682/tgfd-m9eg">10.33682/tgfd-m9eg</a>.</li>
+<li>Faniel, I. M., Kriesberg, A., &amp; Yakel, E. (2016). Social scientists’ satisfaction with data reuse. <em>Journal of the Association for Information Science and Technology</em>, 67(6), 1401-1416. doi: <a href="https://doi.org/10.1002/asi.23480">10.1002/asi.23480</a>.</li>
+<li>Karcher, S., Kirilova, D., Pagé, C., &amp; Weber, N. (2021). How Data Curation Enables Epistemically Responsible Reuse of Qualitative Data. <em>The Qualitative Report</em>, 26(6), 1996-2010. doi: <a href="https://doi.org/10.46743/2160-3715/2021.5012">10.46743/2160-3715/2021.5012</a>.</li>
+<li>Wallis, J. C., Rolando, E., &amp; Borgman, C. L. (2013). If we share data, will anyone use them? Data sharing and reuse in the long tail of science and technology. <em>PLoSONE</em>, 8(7), e67332. doi: <a href="https://doi.org/10.1371/journal.pone.0067332">10.1371/journal.pone.0067332</a></li>
+</ul>
+</section>
+<section id="archiving" class="level3">
+<h3 class="anchored" data-anchor-id="archiving">Archiving</h3>
+<ul>
+<li>Baker, K. S., Duerr, R. E., &amp; Parsons, M. A. (2015). Scientific knowledge mobilization: Co-evolution of data products and designated communities. <em>International Journal of Digital Curation</em>, 10(2), 110-135. doi: <a href="https://doi.org/10.2218/ijdc.v10i2.346">10.2218/ijdc.v10i2.346</a></li>
+<li>Bettivia, R. S., 2016, The power of imaginary users: Designated communities in the OAIS reference model. <em>Proceedings of the Association for Information Science and Technology</em>, 53(1), 1-9. doi: <a href="https://doi.org/10.1002/pra2.2016.14505301038">10.1002/pra2.2016.14505301038</a>.</li>
+<li>Boutard, G., 2020. Alter-Value in Data Reuse: Non-Designated Communities and Creative Processes. <em>Data Science Journal</em>, 19(1), p.23. doi: <a href="http://doi.org/10.5334/dsj-2020-023">10.5334/dsj-2020-023</a>.</li>
+<li>Donaldson, D. R., Zegler-Poleska, E., Yarmey, L. (2020). Data managers’ perspectives on OAIS designated communities and the FAIR principles: mediation, tools and conceptual models. <em>Journal of Documentation</em>, 76(6), 1261-1277. doi: <a href="https://doi.org/10.1108/JD-10-2019-0204">10.1108/JD-10-2019-0204</a></li>
+<li>Parsons, M.A.&nbsp;and Duerr, R. (2005), “Designating user communities for scientific data: challenges and solutions”, <em>Data Science Journal</em>, 4(24), 31-38. doi: <a href="https://doi.org/10.2481/dsj.4.31">10.2481/dsj.4.31</a>.</li>
+</ul>
+</section>
+<section id="protecting-vulnerable-data-subjects" class="level3">
+<h3 class="anchored" data-anchor-id="protecting-vulnerable-data-subjects">Protecting Vulnerable Data Subjects</h3>
+<ul>
+<li><p>Calamai, S., Kolletzek, C., &amp; Kelli, A. (2019, May). Towards a protocol for the curation and dissemination of vulnerable people archives. In <em>Selected papers from the CLARIN Annual Conference 2018</em>. Linköping Electronic Conference Proceedings 159 (28–38). <a href="https://www.researchgate.net/publication/342832401_Towards_a_protocol_for_the_curation_and_dissemination_of_vulnerable_people_archives" class="uri">https://www.researchgate.net/publication/342832401_Towards_a_protocol_for_the_curation_and_dissemination_of_vulnerable_people_archives</a></p></li>
+<li><p>Malgieri, G., &amp; González Fuster, G. (2021), The Vulnerable Data Subject: A Gendered Data Subject?. <em>Available at SSRN</em>. <a href="https://ssrn.com/abstract=3913249" class="uri">https://ssrn.com/abstract=3913249</a> or <a href="http://dx.doi.org/10.2139/ssrn.3913249" class="uri">http://dx.doi.org/10.2139/ssrn.3913249</a></p></li>
+<li><p>Malgieri, G., &amp; Niklas, J. (2020). Vulnerable Data Subjects. <em>Computer Law &amp; Security Review</em>, 37, 105415. doi: <a href="https://doi.org/10.1016/j.clsr.2020.105415">10.1016/j.clsr.2020.105415</a></p></li>
+<li><p>Tiffin, N., George A., &amp; LeFevre, A.E. (2019). How to use relevant data for maximal benefit with minimal risk: digital health data governance to protect vulnerable populations in low-income and middle-income countries. <em>BMJ Global Health</em>, 4(2). doi: <a href="http://dx.doi.org/10.1136/bmjgh-2019-001395">10.1136/bmjgh-2019-001395</a></p></li>
+<li><p>Aggregated data provides a false sense of security [blog], https://iapp.org/news/a/aggregated-data-provides-a-false-sense-of-security/</p></li>
+</ul>
+</section>
+<section id="data-sovereignty" class="level3">
+<h3 class="anchored" data-anchor-id="data-sovereignty">Data Sovereignty</h3>
+<p>Toward a More Just Library: Participatory Design with Native American Students: https://quod.lib.umich.edu/w/weave/12535642.0001.901?view=text;rgn=main</p>
 
 
 </section>
@@ -759,4 +683,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/nyuglobalties/dt-handbook/edit/main/appendix/resources.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nyuglobalties/dt-handbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
